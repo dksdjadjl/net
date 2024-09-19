@@ -1,0 +1,1195 @@
+
+<!doctype html>
+<html lang="en-US" id="html">
+<head> 
+    <script src="https://www.googleoptimize.com/optimize.js?id=GTM-N6QRZFG"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="shortcut icon" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-180x180.png" />
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v23.4 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Troubleshooting EIGRP Route Advertisement</title><link rel="preload" data-rocket-preload as="image" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/logo.svg" fetchpriority="high">
+	<meta name="description" content="This lesson covers the most common EIGRP Route Advertisement issues and how to solve them." />
+	<link rel="canonical" href="https://networklessons.com/eigrp/troubleshooting-eigrp-route-advertisement" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Troubleshooting EIGRP Route Advertisement" />
+	<meta property="og:description" content="This lesson covers the most common EIGRP Route Advertisement issues and how to solve them." />
+	<meta property="og:url" content="https://networklessons.com/eigrp/troubleshooting-eigrp-route-advertisement" />
+	<meta property="og:site_name" content="NetworkLessons.com" />
+	<meta property="article:published_time" content="2015-04-17T09:58:12+00:00" />
+	<meta property="article:modified_time" content="2021-12-23T09:28:40+00:00" />
+	<meta property="og:image" content="https://cdn.networklessons.com/wp-content/uploads/2015/04/man-caught-in-red-tape.jpg" />
+	<meta property="og:image:width" content="346" />
+	<meta property="og:image:height" content="346" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Rene Molenaar" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Rene Molenaar" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="22 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://networklessons.com/eigrp/troubleshooting-eigrp-route-advertisement","url":"https://networklessons.com/eigrp/troubleshooting-eigrp-route-advertisement","name":"Troubleshooting EIGRP Route Advertisement","isPartOf":{"@id":"https://networklessons.com/#website"},"primaryImageOfPage":{"@id":"https://networklessons.com/eigrp/troubleshooting-eigrp-route-advertisement#primaryimage"},"image":{"@id":"https://networklessons.com/eigrp/troubleshooting-eigrp-route-advertisement#primaryimage"},"thumbnailUrl":"https://cdn.networklessons.com/wp-content/uploads/2015/04/man-caught-in-red-tape.jpg","datePublished":"2015-04-17T09:58:12+00:00","dateModified":"2021-12-23T09:28:40+00:00","author":{"@id":"https://networklessons.com/#/schema/person/a210ceb8a2b14b76e03c27d3c65850c2"},"description":"This lesson covers the most common EIGRP Route Advertisement issues and how to solve them.","breadcrumb":{"@id":"https://networklessons.com/eigrp/troubleshooting-eigrp-route-advertisement#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://networklessons.com/eigrp/troubleshooting-eigrp-route-advertisement"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://networklessons.com/eigrp/troubleshooting-eigrp-route-advertisement#primaryimage","url":"https://cdn.networklessons.com/wp-content/uploads/2015/04/man-caught-in-red-tape.jpg","contentUrl":"https://cdn.networklessons.com/wp-content/uploads/2015/04/man-caught-in-red-tape.jpg","width":346,"height":346,"caption":"Caught in Red Tape"},{"@type":"BreadcrumbList","@id":"https://networklessons.com/eigrp/troubleshooting-eigrp-route-advertisement#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Networklessons.com","item":"https://networklessons.com/"},{"@type":"ListItem","position":2,"name":"EIGRP","item":"https://networklessons.com/eigrp"},{"@type":"ListItem","position":3,"name":"Troubleshooting EIGRP Route Advertisement"}]},{"@type":"WebSite","@id":"https://networklessons.com/#website","url":"https://networklessons.com/","name":"NetworkLessons.com","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://networklessons.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://networklessons.com/#/schema/person/a210ceb8a2b14b76e03c27d3c65850c2","name":"Rene Molenaar","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://networklessons.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/d676347ef395e3b3a6a056aaf5546311?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/d676347ef395e3b3a6a056aaf5546311?s=96&d=mm&r=g","caption":"Rene Molenaar"},"description":"René - CCIE #41726 is the creator of Networklessons.com where he writes about networking topics like Cisco, Routing, Switching, Linux, Wireless &amp; Security. He also created GNS3Vault.com where people can study Cisco labs for free.","sameAs":["https://networklessons.com"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//player.vimeo.com' />
+<link rel='dns-prefetch' href='//cdn.networklessons.com' />
+<link rel='dns-prefetch' href='//googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//googleoptimize.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//tag.getdrip.com' />
+<link rel='dns-prefetch' href='//facebook.com' />
+
+<link href='https://cdn.networklessons.com' rel='preconnect' />
+<link rel='stylesheet' id='mp-theme-css' href='https://cdn.networklessons.com/wp-content/plugins/memberpress/css/ui/theme.css?ver=1.11.34' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://cdn.networklessons.com/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2' type='text/css' media='all' />
+<style id='safe-svg-svg-icon-style-inline-css' type='text/css'>
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='arve-css' href='https://cdn.networklessons.com/wp-content/plugins/advanced-responsive-video-embedder/build/main.css?ver=755e5bf2bfafc15e7cc1' type='text/css' media='all' />
+<link rel='stylesheet' id='arve-pro-css' href='https://cdn.networklessons.com/wp-content/plugins/arve-pro/build/main.css?ver=eea34735566740155d0f' type='text/css' media='all' />
+<link rel='stylesheet' id='emnl-custom-styling-various-plugins-css' href='https://cdn.networklessons.com/wp-content/plugins/emnl-custom-css-various-plugins/emnl-custom-css-various-plugins.css?ver=1720772937' type='text/css' media='all' />
+<link rel='stylesheet' id='affwp-forms-css' href='https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/css/forms.min.css?ver=2.26.0' type='text/css' media='all' />
+<link rel='stylesheet' id='ez-toc-css' href='https://cdn.networklessons.com/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.69.1' type='text/css' media='all' />
+<style id='ez-toc-inline-css' type='text/css'>
+div#ez-toc-container .ez-toc-title {font-size: 100%;}div#ez-toc-container .ez-toc-title {font-weight: 700;}div#ez-toc-container ul li {font-size: 100%;}div#ez-toc-container ul li {font-weight: 500;}div#ez-toc-container nav ul ul li {font-size: 90%;}div#ez-toc-container {background: #f9f9f9;border: 1px solid #e6e6e6;}div#ez-toc-container p.ez-toc-title , #ez-toc-container .ez_toc_custom_title_icon , #ez-toc-container .ez_toc_custom_toc_icon {color: #000000;}div#ez-toc-container ul.ez-toc-list a {color: #5381b5;}div#ez-toc-container ul.ez-toc-list a:hover {color: #5381b5;}div#ez-toc-container ul.ez-toc-list a:visited {color: #5381b5;}
+.ez-toc-container-direction {direction: ltr;}.ez-toc-counter ul{counter-reset: item ;}.ez-toc-counter nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }.ez-toc-widget-direction {direction: ltr;}.ez-toc-widget-container ul{counter-reset: item ;}.ez-toc-widget-container nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }
+</style>
+<link rel='stylesheet' id='if-menu-site-css-css' href='https://cdn.networklessons.com/wp-content/plugins/if-menu/assets/if-menu-site.css?ver=6.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='networklessons-style-css' href='https://cdn.networklessons.com/wp-content/themes/networklessons/dist/app.css?ver=1724843461' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-style-css' href='https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/magnific-popup.css?ver=1.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bellows-css' href='https://cdn.networklessons.com/wp-content/plugins/bellows-pro/pro/assets/css/bellows.min.css?ver=1.4.3' type='text/css' media='all' />
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="jquery-cookie-js-extra">
+/* <![CDATA[ */
+var affwp_scripts = {"ajaxurl":"https:\/\/networklessons.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/js/jquery.cookie.min.js?ver=1.4.0" id="jquery-cookie-js"></script>
+<script type="text/javascript" id="affwp-tracking-js-extra">
+/* <![CDATA[ */
+var affwp_debug_vars = {"integrations":{"memberpress":"MemberPress"},"version":"2.26.0","currency":"USD","ref_cookie":"affwp_ref","visit_cookie":"affwp_ref_visit_id","campaign_cookie":"affwp_campaign"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/js/tracking.min.js?ver=2.26.0" id="affwp-tracking-js"></script>
+<link rel="https://api.w.org/" href="https://networklessons.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://networklessons.com/wp-json/wp/v2/posts/7026" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://networklessons.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.6.2" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://networklessons.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklessons.com%2Feigrp%2Ftroubleshooting-eigrp-route-advertisement" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://networklessons.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklessons.com%2Feigrp%2Ftroubleshooting-eigrp-route-advertisement&#038;format=xml" />
+<style id="bellows-custom-generated-css">
+
+/** Bellows Custom Tweaks (General Settings) **/
+
+/** Bellows Custom Tweaks (General Settings) **/
+/* More compact look of menu */
+.bellows .bellows-nav * { line-height: 1.75em; }
+.bellows .bellows-nav .bellows-submenu .bellows-target { padding-left: 20px;}
+.bellows .bellows-nav .bellows-target,
+.bellows .bellows-nav .bellows-submenu .bellows-target { padding: 2px;}
+
+/* Move toggle icons to left instead of right of text labels */
+.bellows .bellows-nav .bellows-subtoggle { width: 30px; left:0; }
+.bellows .bellows-nav .bellows-menu-item > .bellows-target > .bellows-target-text { margin-left: 30px; }
+.bellows .bellows-nav .bellows-subtoggle .fa { top: 40%; }
+
+/* Move toggle icons and lower level items to the right */
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-1 .bellows-subtoggle { left: 25px; }
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-1 .bellows-target { padding-left: 25px; }
+
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-2 .bellows-subtoggle { left: 50px; }
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-2 .bellows-target { padding-left: 50px; }
+
+
+/* SIDEBAR ONLY STYLING */
+
+/* Set all text to default black */
+#sidebar .bellows .bellows-nav a.bellows-target { color: #000000 }
+
+/* Set parent menu items bold and colored */
+#sidebar .bellows.bellows-main .bellows-nav .bellows-current-menu-item > .bellows-target,
+#sidebar .bellows.bellows-main .bellows-nav .bellows-current-menu-ancestor > .bellows-target { color:#557fae; font-weight: bold; }
+
+/* Set current post bold and colored */
+#sidebar .bellows .bellows-current-menu-item { font-weight: bold; color:#557fae; }
+
+/* Toggle icons on same height */
+#sidebar .bellows .bellows-nav .bellows-subtoggle .fa { top: 44%; }
+
+
+
+/* Status: Loaded from Transient */
+
+</style>		<script type="text/javascript">
+		var AFFWP = AFFWP || {};
+		AFFWP.referral_var = 'affid';
+		AFFWP.expiration = 1;
+		AFFWP.debug = 0;
+
+
+		AFFWP.referral_credit_last = 0;
+		</script>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to manual -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"visitorLoginState":"logged-in","visitorType":"subscriber","visitorEmail":"harthomp@protonmail.com","visitorEmailHash":"30617de159321682ca448e5d89fc5cae66131a43cdfff8865f5d749c58146885","visitorId":65289,"visitorIP":"203.63.201.230","pagePostType":"post","pagePostType2":"single-post","pageCategory":["ccnp-enarsi-300-410","ccnp-tshoot","eigrp"],"IsActiveMember":"true","UserFullName":"Harrison Thompson buckley"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script>
+		if (typeof gtag == "undefined") {
+			function gtag(){dataLayer.push(arguments);}
+		}
+
+		gtag("consent", "default", {
+			"analytics_storage": "granted",
+			"ad_storage": "granted",
+			"ad_user_data": "granted",
+			"ad_personalization": "granted",
+			"functionality_storage": "granted",
+			"security_storage": "granted",
+			"personalization_storage": "granted",
+		});
+</script>
+<script data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWFSBS');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel="apple-touch-icon" sizes="180x180" href="/wp-content/uploads/fbrfg/apple-touch-icon.png?v=69P4gG4Gpq">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/fbrfg/favicon-32x32.png?v=69P4gG4Gpq">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/uploads/fbrfg/favicon-16x16.png?v=69P4gG4Gpq">
+<link rel="manifest" href="/wp-content/uploads/fbrfg/site.webmanifest?v=69P4gG4Gpq">
+<link rel="mask-icon" href="/wp-content/uploads/fbrfg/safari-pinned-tab.svg?v=69P4gG4Gpq" color="#5381b5">
+<link rel="shortcut icon" href="/wp-content/uploads/fbrfg/favicon.ico?v=69P4gG4Gpq">
+<meta name="msapplication-TileColor" content="#5381b5">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml?v=69P4gG4Gpq">
+<meta name="theme-color" content="#5381b5">		<style>
+			.algolia-search-highlight {
+				background-color: #fffbcc;
+				border-radius: 2px;
+				font-style: normal;
+			}
+		</style>
+		<script type="application/ld+json" class="emnl-schema-breadcrumbs">{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 0,"name": "Home","item": "https://networklessons.com"},{"@type": "ListItem","position": 1,"name": "EIGRP","item": "https://networklessons.com/eigrp"},{"@type": "ListItem","position": 2,"name": "Troubleshooting EIGRP Route Advertisement","item": "https://networklessons.com/eigrp/troubleshooting-eigrp-route-advertisement"}]}</script>
+</head>
+
+
+<body class="post-template-default single single-post postid-7026 single-format-standard logged-in" data-theme="light">
+
+<!-- GTM Container placement set to manual -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWFSBS" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script>
+  if ( localStorage.getItem('siteTheme') ) {
+    document.body.setAttribute('data-theme', localStorage.getItem('siteTheme'));
+  }
+</script>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+	<header class="site-header">
+		        <div class="site-header-inner">
+            <div class="container">
+                <div class="row sm-gutters main-row">
+                    <div class="col-lg-4 col-8">
+                        <a href="https://networklessons.com/" class="logo">
+                            <img fetchpriority="high" width="524" height="141" src="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/logo.svg" alt="NetworkLessons.com" />
+                        </a>
+                    </div>
+                                                                <div class="col-lg-8 col-4 col-navigation">
+                            <nav id="site-navigation" class="main-navigation">
+                                <div class="menu-primary-container"><ul id="primary-menu" class="menu"><li id="menu-item-10143" class="expanded menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10143"><a href="https://networklessons.com/courses">Courses <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-59830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59830"><a href="https://networklessons.com/cisco">Cisco <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-65214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65214"><a href="https://networklessons.com/cisco/ccna-200-301">CCNA 200-301</a></li>
+		<li id="menu-item-65219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65219"><a href="https://networklessons.com/cisco/ccnp-encor-350-401">CCNP ENCOR 350-401 v1.1</a></li>
+		<li id="menu-item-65218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65218"><a href="https://networklessons.com/cisco/ccnp-enarsi-300-410">CCNP ENARSI 300-410 v1.1</a></li>
+		<li id="menu-item-65217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65217"><a href="https://networklessons.com/cisco/ccie-enterprise-infrastructure">CCIE Enterprise Infrastructure</a></li>
+		<li id="menu-item-65216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65216"><a href="https://networklessons.com/cisco/asa-firewall">ASA Firewall</a></li>
+		<li id="menu-item-65774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65774"><a href="https://networklessons.com/cisco/cisco-sd-wan">Cisco SD-WAN</a></li>
+	</ul>
+</li>
+	<li id="menu-item-59831" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59831"><a href="https://networklessons.com/routing-switching">Routing &#038; Switching <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-65232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65232"><a href="https://networklessons.com/subnetting">Subnetting</a></li>
+		<li id="menu-item-65233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65233"><a href="https://networklessons.com/switching">Switching</a></li>
+		<li id="menu-item-65231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65231"><a href="https://networklessons.com/spanning-tree">Spanning-Tree</a></li>
+		<li id="menu-item-65222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65222"><a href="https://networklessons.com/frame-relay">Frame-Relay</a></li>
+		<li id="menu-item-65230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65230"><a href="https://networklessons.com/rip">RIP</a></li>
+		<li id="menu-item-65221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65221"><a href="https://networklessons.com/eigrp">EIGRP</a></li>
+		<li id="menu-item-65227" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65227"><a href="https://networklessons.com/ospf">OSPF</a></li>
+		<li id="menu-item-65224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65224"><a href="https://networklessons.com/is-is">IS-IS</a></li>
+		<li id="menu-item-65215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65215"><a href="https://networklessons.com/bgp">BGP</a></li>
+		<li id="menu-item-65226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65226"><a href="https://networklessons.com/multicast">Multicast</a></li>
+		<li id="menu-item-65223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65223"><a href="https://networklessons.com/ipv6">IPv6</a></li>
+		<li id="menu-item-65229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65229"><a href="https://networklessons.com/quality-of-service">Quality of Service</a></li>
+		<li id="menu-item-65225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65225"><a href="https://networklessons.com/mpls">MPLS</a></li>
+	</ul>
+</li>
+	<li id="menu-item-73291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-73291"><a href="#">Data Center <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-73294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73294"><a href="https://networklessons.com/vxlan">VXLAN</a></li>
+	</ul>
+</li>
+	<li id="menu-item-65228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65228"><a href="https://networklessons.com/python">Python</a></li>
+	<li id="menu-item-65234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65234"><a href="https://networklessons.com/uncategorized">Miscellaneous</a></li>
+	<li id="menu-item-70698" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70698"><a href="https://networklessons.com/labs">Labs</a></li>
+	<li id="menu-item-64907" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-64907"><a href="#">Legacy <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-33774" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33774"><a href="https://networklessons.com/cisco/ccna-routing-switching-icnd1-100-105">CCNA R&#038;S ICND1 100-105</a></li>
+		<li id="menu-item-40575" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-40575"><a href="https://networklessons.com/cisco/ccna-routing-switching-icnd2-200-105">CCNA R&#038;S ICND2 200-105</a></li>
+		<li id="menu-item-20090" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20090"><a href="https://networklessons.com/cisco/ccnp-route">CCNP ROUTE</a></li>
+		<li id="menu-item-20092" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20092"><a href="https://networklessons.com/cisco/ccnp-switch">CCNP SWITCH</a></li>
+		<li id="menu-item-20093" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-20093"><a href="https://networklessons.com/cisco/ccnp-tshoot">CCNP TSHOOT</a></li>
+		<li id="menu-item-20089" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20089"><a href="https://networklessons.com/cisco/ccie-routing-switching">CCIE R&#038;S</a></li>
+		<li id="menu-item-38428" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38428"><a href="https://networklessons.com/cisco/ccie-routing-switching-written">CCIE R&#038;S Written</a></li>
+		<li id="menu-item-65220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65220"><a href="https://networklessons.com/cisco/evolving-technologies">Evolving Technologies</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8339"><a href="https://networklessons.com/new-lessons"><i class="fa fa-plus"></i> New Lessons</a></li>
+	<li id="menu-item-64135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64135"><a href="https://networklessons.com/updated-lessons"><i class="fas fa-pen"></i> Updated Lessons</a></li>
+	<li id="menu-item-7347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7347"><a href="https://networklessons.com/member-ideas"><i class="fa fa-lightbulb"></i> Lesson Ideas</a></li>
+</ul>
+</li>
+<li id="menu-item-8715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8715"><a href="https://forum.networklessons.com">Forum</a></li>
+<li id="menu-item-23483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23483"><a href="https://networklessons.com/support">Support</a></li>
+<li id="menu-item-65967" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-65967"><a href="#">Tools <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-65968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65968"><a href="https://www.cloudshark.org/collections/WTRpgLI-GQSDfgzkQixICg">Packet Captures</a></li>
+	<li id="menu-item-65969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65969"><a href="https://notes.networklessons.com">Notes</a></li>
+	<li id="menu-item-65970" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65970"><a href="https://networklessons.com/tools-and-resources">Resources</a></li>
+	<li id="menu-item-68327" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68327"><a href="https://networklessons.com/networklessons-exams">Practice Exams</a></li>
+</ul>
+</li>
+<li id="menu-item-22148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-22148"><a href="#"><i class="fa fa-user"></i> <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-5629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5629"><a href="https://networklessons.com/myaccount">My Account Settings</a></li>
+	<li id="menu-item-68092" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68092"><a href="https://networklessons.com/member-dashboard">Member Dashboard</a></li>
+	<li id="menu-item-22285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22285"><a href="https://networklessons.com/upgrade-to-annual-membership"><b><font color="#FFC469">UPGRADE TO ANNUAL &#038; Get 2 Months FREE!</font></b></a></li>
+	<li id="menu-item-56969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56969"><a href="https://networklessons.com/wp-login.php?action=logout">Logout</a></li>
+</ul>
+</li>
+</ul></div>                                <div class="main-navigation-close">
+                                    <i class="far fa-times"></i>
+                                </div>
+                            </nav>
+                            <div class="main-navigation-toggle">
+                                <span class="icon"></span>
+                            </div>
+                            <div class="d-none d-xl-block">
+                                
+
+<form role="search" method="get" class="search-form" action="https://networklessons.com/">
+    <label for="search-form-66e2e6d192f43" class="sr-only">
+        <span class="screen-reader-text">Search for:</span>
+    </label>
+
+    <div class="input-group">
+        <input type="search" id="search-form-66e2e6d192f43" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" />
+        <div class="input-group-append">
+            <button type="submit" class="search-submit btn btn-white">
+                <span class="screen-reader-text">Search</span>
+                <i class="far fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="fullpage-overlay main-navigation-overlay"></div>
+	</header>
+    
+            <div class="d-xl-none">
+            
+
+<form role="search" method="get" class="search-form" action="https://networklessons.com/">
+    <label for="search-form-66e2e6d192faf" class="sr-only">
+        <span class="screen-reader-text">Search for:</span>
+    </label>
+
+    <div class="input-group">
+        <input type="search" id="search-form-66e2e6d192faf" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" />
+        <div class="input-group-append">
+            <button type="submit" class="search-submit btn btn-white">
+                <span class="screen-reader-text">Search</span>
+                <i class="far fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>        </div>
+    
+	<div class="site-content container">
+    <div class="breadcrumbs" style="font-size: 12px;">You are here: <a href="https://networklessons.com">Home</a> » <a href="https://networklessons.com/eigrp">EIGRP</a></div>	<div class="site-content-row row">
+	<div id="primary" class="content-area col-md-8">
+		<main id="main" class="site-main">
+                            <div class="site-actions-toolbar d-md-none">
+                    <div class="site-action js--dark-mode">
+                        <i class="far fa-adjust"></i>
+                    </div>
+                </div>
+            
+		
+<article id="post-7026" class="main-post post-7026 post type-post status-publish format-standard has-post-thumbnail hentry category-ccnp-enarsi-300-410 category-ccnp-tshoot category-eigrp">
+	<header class="entry-header">
+                            <h1 class="entry-title">Troubleshooting EIGRP Route Advertisement</h1>        	</header>
+	<div class="entry-content">
+                    <div class="the-content">
+                <div id="ez-toc-container" class="ez-toc-v2_0_69_1 counter-hierarchy ez-toc-counter ez-toc-custom ez-toc-container-direction">
+<div class="ez-toc-title-container"><p class="ez-toc-title">Lesson Contents</p>
+</div><nav><ul class='ez-toc-list ez-toc-list-level-1 ' ><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-1" href="#EIGRP_Distribute-List" title="EIGRP Distribute-List">EIGRP Distribute-List</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-2" href="#EIGRP_Discontiguous_Network" title="EIGRP Discontiguous Network">EIGRP Discontiguous Network</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-3" href="#EIGRP_Summarization" title="EIGRP Summarization">EIGRP Summarization</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-4" href="#EIGRP_Summary_not_advertised" title="EIGRP Summary not advertised">EIGRP Summary not advertised</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-5" href="#EIGRP_Split_Horizon" title="EIGRP Split Horizon">EIGRP Split Horizon</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-6" href="#EIGRP_Redistribution_Sub-Optimal_Routing" title="EIGRP Redistribution Sub-Optimal Routing">EIGRP Redistribution Sub-Optimal Routing</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-7" href="#EIGRP_Redistribution_Seed_Metric" title="EIGRP Redistribution Seed Metric">EIGRP Redistribution Seed Metric</a></li></ul></nav></div>
+<p>EIGRP (just like OSPF or BGP) establishes a neighbor adjacency before it exchanges any routing information. If your neighbor adjacency is up and running, this post is for you. If it&#8217;s not working, check out my <a title="Troubleshooting EIGRP Neighbor Adjacency" href="https://networklessons.com/eigrp/troubleshooting-eigrp-neighbor-adjacency">troubleshooting EIGRP neighbor adjacency lesson</a> first.</p>
+<p>Having said that, let&#8217;s fix some missing route advertisements!</p>
+<p>Most of the time you are expecting to see a certain network in the routing table but it’s not there. I’ll show you a number of things that could go wrong with EIGRP and how to fix them, here are the most common errors:</p>
+<ul>
+<li>Someone configured a distribute-list so routing information is being filtered.</li>
+<li>Auto-summarization has been configured or someone created a manual summary.</li>
+<li>Split-horizon is preventing the advertisement of routing information.</li>
+<li>Redistribution has been configured but information from EIGRP is not being used.</li>
+<li>Redistribution has been configured but no EIGRP external routes are showing up.</li>
+</ul>
+<p>Let&#8217;s look at these issues.</p>
+<h2><span class="ez-toc-section" id="EIGRP_Distribute-List"></span>EIGRP Distribute-List<span class="ez-toc-section-end"></span></h2>
+<p><img fetchpriority="high" decoding="async" class="alignnone size-full wp-image-7035" src="https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-two-loopbacks.png" alt="R1 R2 two loopbacks" width="640" height="130" srcset="https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-two-loopbacks.png 640w, https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-two-loopbacks-300x61.png 300w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<p>Let’s start with a simple topology. R1 and R2 are running EIGRP and each router has a loopback interface. Here’s the configuration of both routers:</p>
+<pre><code>R1(config)#<strong>router eigrp 12</strong>
+R1(config-router)#<strong>no auto-summary</strong>
+R1(config-router)#<strong>network 1.1.1.0 0.0.0.255</strong>
+R1(config-router)#<strong>network 192.168.12.0 0.0.0.255</strong></code></pre>
+<pre><code>R2(config)#<strong>router eigrp 12</strong>
+R2(config-router)#<strong>no auto-summary</strong> 
+R2(config-router)#<strong>network 2.2.2.0 0.0.0.255</strong>
+R2(config-router)#<strong>network 192.168.12.0 0.0.0.255</strong></code></pre>
+<p>Everything is working fine until a couple of weeks later one of the users is complaining that they are unable to reach the 2.2.2.0 /24 network from behind R1. You take a look at the routing table on R1 and this is what you see:</p>
+<pre><code>R1#<strong>show ip route</strong>
+
+Gateway of last resort is not set
+
+C    192.168.12.0/24 is directly connected, FastEthernet0/0
+     1.0.0.0/24 is subnetted, 1 subnets
+C       1.1.1.0 is directly connected, Loopback0</code></pre>
+<p>For some reason you don’t see network 2.2.2.0 /24 in the routing table. Let&#8217;s check if R1 is using a filter:</p>
+<pre><code>R1#<strong>show ip protocols | include filter</strong>
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set</code></pre>
+<p>I can see no distribute lists have been configured on R1. What about R2? Let&#8217;s check its routing table:</p>
+<pre><code>R2#<strong>show ip route</strong>
+
+Gateway of last resort is not set
+
+C    192.168.12.0/24 is directly connected, FastEthernet0/0
+     1.0.0.0/24 is subnetted, 1 subnets
+<span style="color: #ff0000;">D       1.1.1.0 [90/156160] via 192.168.12.1</span>, 00:14:01, FastEthernet0/0
+     2.0.0.0/24 is subnetted, 1 subnets
+<span style="color: #ff0000;">C       2.2.2.0 is directly connected</span>, Loopback0</code></pre>
+<p>R2 does have network 1.1.1.0 /24 in its routing table and 2.2.2.0 /24 is showing up as directly connected. Let’s do a quick debug to see what is going on.</p>
+<pre><code>R2#<strong>debug ip eigrp</strong> 
+IP-EIGRP Route Events debugging is on
+IP-EIGRP(Default-IP-Routing-Table:12): 2.2.2.0/24 - <span style="color: #ff0000;">denied by distribute list</span></code></pre>
+<p>A debug quickly shows us what is going on. It make tight a while before you see this message or you can reset the EIGRP neighbor adjacency to speed things up. As you can see network 2.2.2.0 /24 is being denied because of a distribute list. You can see it here:</p>
+<pre><code>R2#<strong>show ip protocols | include filter</strong>
+  <span style="color: #ff0000;">Outgoing update filter list for all interfaces is 1</span>
+  Incoming update filter list for all interfaces is not set</code></pre>
+<p>R2 has an outbound distribute-list that refers to access-list 1. You can also see this in the configuration:</p>
+<pre><code>R2#<strong>show run | section eigrp</strong>
+router eigrp 12
+ network 2.2.2.0 0.0.0.255
+ network 192.168.12.0
+ <span style="color: #ff0000;">distribute-list 1 out</span>
+ no auto-summary</code></pre>
+<p>Let&#8217;s take a closer look at the access-list:</p>
+<pre><code>R2#<strong>show access-lists</strong> 
+Standard IP access list 1
+    <span style="color: #ff0000;">10 deny   2.2.2.0, wildcard bits 0.0.0.255 (5 matches)</span>
+    20 permit any (5 matches)</code></pre>
+<p>It&#8217;s denying 2.2.2.0 /24. Let&#8217;s get rid of this distribute-list:</p>
+<pre><code>R2(config)#<strong>router eigrp 12</strong>
+R2(config-router)#<strong>no distribute-list 1 out</strong></code></pre>
+<p>And now we take a look at R1 again:</p>
+<pre><code>R1#<strong>show ip route</strong>
+
+Gateway of last resort is not set
+
+C    192.168.12.0/24 is directly connected, FastEthernet0/0
+     1.0.0.0/24 is subnetted, 1 subnets
+C       1.1.1.0 is directly connected, Loopback0
+     2.0.0.0/24 is subnetted, 1 subnets
+<span style="color: #ff0000;">D       2.2.2.0 [90/156160] via 192.168.12.2</span>, 00:00:13, FastEthernet0/0</code></pre>
+<p>There it is, problem solved!</p>
+<p><strong>Lesson learned: If the network commands are correct, check if you have a distribute-list that is preventing prefixes from being advertised or installed in the routing table.</strong></p>
+<div class="notice-box  note   ">Keep in mind that distribute-lists can be applied in- or outbound.</div>
+<h2><span class="ez-toc-section" id="EIGRP_Discontiguous_Network"></span>EIGRP Discontiguous Network<span class="ez-toc-section-end"></span></h2>
+<p>Onto the next scenario, same two routers but different networks on the loopbacks:</p>
+<p><img decoding="async" class="alignnone size-full wp-image-7036" src="https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-eigrp-discontigious-network.png" alt="R1 R2 discontigious network" width="640" height="143" srcset="https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-eigrp-discontigious-network.png 640w, https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-eigrp-discontigious-network-300x67.png 300w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<p>Below you will find the network commands on R1 and R2:</p>
+<pre><code>R1(config)#<strong>router eigrp 12</strong>
+R1(config-router)#<strong>network 192.168.12.0</strong>
+R1(config-router)#<strong>network 10.0.0.0</strong></code></pre>
+<pre><code>R2(config)#<strong>router eigrp 12</strong>
+R2(config-router)#<strong>network 192.168.12.0</strong>
+R2(config-router)#<strong>network 10.0.0.0</strong></code></pre>
+<p>It’s a pretty basic configuration as you can see. Let&#8217;s check the routing tables:</p>
+<pre><code>R1#<strong>show ip route</strong>
+
+Gateway of last resort is not set
+
+C    192.168.12.0/24 is directly connected, FastEthernet0/0
+     10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+C       10.1.1.0/24 is directly connected, Loopback0
+<span style="color: #ff0000;">D       10.0.0.0/8 is a summary, 00:00:07, Null0</span></code></pre>
+<pre><code>R2#<strong>show ip route</strong>
+
+Gateway of last resort is not set
+
+C    192.168.12.0/24 is directly connected, FastEthernet0/0
+     10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+C       10.2.2.0/24 is directly connected, Loopback0
+<span style="color: #ff0000;">D       10.0.0.0/8 is a summary, 00:00:15, Null0</span></code></pre>
+<p>Looking at the routing tables, I don’t see network 10.1.1.0 /24 or 10.2.2.0 /24. I do see an entry for the 10.0.0.0/8 network pointing to the null0 interface on both routers. This entry only shows up when summarization is configured and it’s used to prevent routing loops. Let&#8217;s enable a debug:</p>
+<pre><code>R2#<strong>debug ip eigrp</strong> 
+IP-EIGRP Route Events debugging is on</code></pre>
+<p>Now I&#8217;ll reset the neighbor adjacency so that the routers exchange routes again:</p>
+<pre><code>R2#<strong>clear ip eigrp 12 neighbors</strong></code></pre>
+<p>Here&#8217;s what you will see on R2:</p>
+<pre><code>R2#
+IP-EIGRP(Default-IP-Routing-Table:12): 192.168.12.0/24 - do advertise out FastEthernet0/0
+IP-EIGRP(Default-IP-Routing-Table:12): 10.2.2.0/24 - <span style="color: #ff0000;">don't advertise out FastEthernet0/0</span>
+IP-EIGRP(Default-IP-Routing-Table:12): 10.0.0.0/8 - do advertise out FastEthernet0/0</code></pre>
+<p>Here’s our answer. The debug tells us that 10.2.2.0 /24 should not be advertised but 10.0.0.0 /8 has to be advertised (a summary). This can happen because of 2 reasons:</p>
+<ul>
+<li>Summarization was configured by someone.</li>
+<li>Auto-summary is enabled for EIGRP.</li>
+</ul>
+<p>Let&#8217;s see take a closer look at the configuration:</p>
+<pre><code>R1#<strong>show run | section eigrp</strong>
+router eigrp 12
+ network 10.0.0.0
+ network 192.168.12.0
+ <span style="color: #ff0000;">auto-summary</span></code></pre>
+<pre><code>R2#<strong>show run | section eigrp</strong>
+router eigrp 12
+ network 10.0.0.0
+ network 192.168.12.0
+ <span style="color: #ff0000;">auto-summary</span></code></pre>
+<p>As you can see auto-summary is enabled for EIGRP. Depending on the IOS version this is enabled or disabled by default. Let&#8217;s disable it:</p>
+<pre><code>R1(config)#<strong>router eigrp 12</strong>
+R1(config-router)#<strong>no auto-summary</strong></code></pre>
+<pre><code>R2(config)#<strong>router eigrp 12</strong>
+R2(config-router)#<strong>no auto-summary</strong></code></pre>
+<p>Now take a look at the routing tables:</p>
+<pre><code>R1#<strong>show ip route</strong>
+
+C    192.168.12.0/24 is directly connected, FastEthernet0/0
+     10.0.0.0/24 is subnetted, 2 subnets
+<span style="color: #ff0000;">D       10.2.2.0 [90/156160] via 192.168.12.2</span>, 00:00:22, FastEthernet0/0
+C       10.1.1.0 is directly connected, Loopback0</code></pre>
+<pre><code>R2#<strong>show ip route</strong>
+
+C    192.168.12.0/24 is directly connected, FastEthernet0/0
+     10.0.0.0/24 is subnetted, 2 subnets
+C       10.2.2.0 is directly connected, Loopback0
+<span style="color: #ff0000;">D       10.1.1.0 [90/156160] via 192.168.12.1</span>, 00:16:24, FastEthernet0/0</code></pre>
+<p>Now we see both networks appearing in the routing table.</p>
+<p><strong>Lesson learned: If EIGRP auto-summary is enabled you might end up with discontiguous networks.</strong></p>
+<h2><span class="ez-toc-section" id="EIGRP_Summarization"></span>EIGRP Summarization<span class="ez-toc-section-end"></span></h2>
+<p>Let me show you another issue that can arise with summarization. In the example above we have 2 routers but different networks:</p>
+<p><img decoding="async" class="alignnone size-full wp-image-7037" src="https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-172-16-networks.png" alt="R1 R2 172.16 networks" width="678" height="251" srcset="https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-172-16-networks.png 678w, https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-172-16-networks-300x111.png 300w" sizes="(max-width: 678px) 100vw, 678px" /></p>
+<p>R1 has network 172.16.1.0 /24 on a loopback interface and R2 has network 172.16.2.0 /24 and 172.16.22.0 /24 on its loopback interfaces. Let me show you the EIGRP configuration of both routers:</p>
+<pre><code>R1#
+router eigrp 12
+ network 172.16.1.0 0.0.0.255
+ network 192.168.12.0
+ auto-summary</code></pre>
+<pre><code>R2#
+router eigrp 12
+ network 172.16.2.0 0.0.0.255
+ network 172.16.22.0 0.0.0.255
+ network 192.168.12.0
+ no auto-summary</code></pre>
+<p>You can see that all networks are advertised. Note that R1 has auto-summary enabled and R2 has auto-summary disabled. R2 has a summary configured:</p>
+<pre><code>R2#
+interface FastEthernet0/0
+ip summary-address eigrp 12 172.16.0.0 255.255.0.0 5</code></pre>
+<p>Someone configured a summary on R2 and is sending it towards R1. The summary that was created is 172.16.0.0 /16. Let&#8217;s take a look at the routing table of R1:</p>
+<pre><code>R1#<strong>show ip route</strong> 
+
+C    192.168.12.0/24 is directly connected, FastEthernet0/0
+     172.16.0.0/16 is variably subnetted, 2 subnets, 2 masks
+<span style="color: #ff0000;">D       172.16.0.0/16 is a summary, 00:30:07, Null0</span>
+C       172.16.1.0/24 is directly connected, Loopback0</code></pre>
+<p>However if I look at the routing table of R1 it doesn’t show up. We do see an entry for the 172.16.0.0 /16 network but it’s pointing to the null0 interface…not towards R2. What is going on here? A debug gives us the answer:</p>
+<pre><code>R2#<strong>debug ip eigrp</strong> 
+IP-EIGRP Route Events debugging is on</code></pre>
+<pre><code>R2#<strong>clear ip eigrp 12 neighbors</strong></code></pre>
+<p>I’ll do a clear ip eigrp neighbors too just to speed things up. Here&#8217;s what we see:</p>
+<pre><code>R2#
+IP-EIGRP(Default-IP-Routing-Table:12): 192.168.12.0/24 - do advertise out FastEthernet0/0
+IP-EIGRP(Default-IP-Routing-Table:12): 172.16.2.0/24 - don't advertise out FastEthernet0/0
+IP-EIGRP(Default-IP-Routing-Table:12): 172.16.22.0/24 - don't advertise out FastEthernet0/0
+IP-EIGRP(Default-IP-Routing-Table:12): <span style="color: #ff0000;">172.16.0.0/16 - do advertise out FastEthernet0/0</span></code></pre>
+<p>Looking at the debug we can see that R2 is working properly. It’s advertising the 172.16.0.0 /16 summary route as it should. This means the problem has to be at R1.</p>
+<p>Let&#8217;s debug R1:</p>
+<pre><code>R1#<strong>debug ip eigrp</strong> 
+IP-EIGRP Route Events debugging is on</code></pre>
+<p>Here&#8217;s what we see:</p>
+<pre><code>R1#
+IP-EIGRP(Default-IP-Routing-Table:12): Processing incoming UPDATE packet
+IP-EIGRP(Default-IP-Routing-Table:12): Int 172.16.0.0/16 M 156160 - 25600 130560 SM 128256 - 256 128000
+IP-EIGRP(Default-IP-Routing-Table:12): route installed for 172.16.0.0  (Summary)
+IP-EIGRP(Default-IP-Routing-Table:12): <span style="color: #ff0000;">172.16.0.0/16 routing table not updated thru 192.168.12.2</span></code></pre>
+<p>We can see that R1 receives the summary route from R2 but decides not to use it. Why? We can find the answer in the topology table:</p>
+<pre><code>R1#<strong>show ip eigrp topology 172.16.0.0</strong>
+IP-EIGRP (AS 12): Topology entry for 172.16.0.0/16
+  State is Passive, Query origin flag is 1, 1 Successor(s), FD is 128256
+  Routing Descriptor Blocks:
+  0.0.0.0 <span style="color: #ff0000;">(Null0)</span>, from 0.0.0.0, Send flag is 0x0
+      <span style="color: #ff0000;">Composite metric is (128256/0)</span>, Route is Internal
+      Vector metric:
+        Minimum bandwidth is 10000000 Kbit
+        Total delay is 5000 microseconds
+        Reliability is 255/255
+        Load is 1/255
+        Minimum MTU is 1514
+        Hop count is 0
+  192.168.12.2 (FastEthernet0/0), <span style="color: #ff0000;">from 192.168.12.2</span>, Send flag is 0x0
+      <span style="color: #ff0000;">Composite metric is (156160</span>/128256), Route is Internal
+      Vector metric:
+        Minimum bandwidth is 100000 Kbit
+        Total delay is 5100 microseconds
+        Reliability is 255/255
+        Load is 1/255
+        Minimum MTU is 1500
+        Hop count is 1</code></pre>
+<p>Above you can see that it does have the 172.16.0.0 /16 summary from R2 in its EIGRP topology table but R1 decides not to use it because the entry to the null0 interface is a better path. To fix this issue, we should get rid of the null0 route. Disabling auto-summary will do the job:</p>
+<pre><code>R1(config)#<strong>router eigrp 12</strong>
+R1(config-router)#<strong>no auto-summary</strong></code></pre>
+<p>Now take a look again at the routing table of R1:</p>
+<pre><code>R1#<strong>show ip route</strong>
+
+C    192.168.12.0/24 is directly connected, FastEthernet0/0
+     172.16.0.0/16 is variably subnetted, 2 subnets, 2 masks
+<span style="color: #ff0000;">D       172.16.0.0/16 [90/156160] via 192.168.12.2</span>, 00:00:51, FastEthernet0/0
+C       172.16.1.0/24 is directly connected, Loopback0</code></pre>
+<p>There we go. Disabling auto summarization removes the null0 entry and now the summary of R2 can be installed…problem solved!</p>
+<p><strong>Lesson learned: EIGRP auto-summary creates an entry to the null0 interface which might prevent the installation of summaries you receive from neighbor routers.</strong></p>
+<h2><span class="ez-toc-section" id="EIGRP_Summary_not_advertised"></span>EIGRP Summary not advertised<span class="ez-toc-section-end"></span></h2>
+<p>There is one more summarization issue I want to show you, here&#8217;s the topology:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-7038" src="https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-loopback-summarization-issue-eigrp.png" alt="R1 R2 loopback summarization issue" width="594" height="251" srcset="https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-loopback-summarization-issue-eigrp.png 594w, https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-loopback-summarization-issue-eigrp-300x127.png 300w" sizes="(max-width: 594px) 100vw, 594px" /></p>
+<p>Here&#8217;s the configuration:</p>
+<pre><code>R1#
+router eigrp 12
+ network 192.168.12.0
+ no auto-summary</code></pre>
+<pre><code>R2#
+router eigrp 12
+ network 172.16.2.0 0.0.0.255
+ network 172.16.22.0 0.0.0.255
+ network 192.168.12.0
+ no auto-summary</code></pre>
+<p>All networks are advertised and auto summarization is disabled on both routers. R2 has a summary:</p>
+<pre><code>R2#
+interface FastEthernet0/0
+ip summary-address eigrp 12 172.16.0.0 255.255.0.0 5</code></pre>
+<p>This summary will be advertised to R1. However, R1 doesn&#8217;t have it:</p>
+<pre><code>R1#<strong>show ip route</strong> 
+
+C    192.168.12.0/24 is directly connected, FastEthernet0/0</code></pre>
+<p>Unfortunately I’m not seeing anything on R1. Let’s check R2 to see what is wrong:</p>
+<pre><code>R2#<strong>debug ip eigrp</strong> 
+IP-EIGRP Route Events debugging is on</code></pre>
+<pre><code>R2#<strong>clear ip eigrp 12 neighbors</strong></code></pre>
+<p>When it comes to troubleshooting networking not Google but debug and show commands are your friends. Here&#8217;s what we see:</p>
+<pre><code>R2#
+IP-EIGRP(Default-IP-Routing-Table:12): <span style="color: #ff0000;">192.168.12.0/24 - do advertise out FastEthernet0/0</span></code></pre>
+<p>Hmm this is the only network that R2 is advertising. Let&#8217;s check the routing table of R2:</p>
+<pre><code>R2#<strong>show ip route</strong>
+
+C    192.168.12.0/24 is directly connected, FastEthernet0/0</code></pre>
+<p>One of the golden rules of routing: You can’t advertise what you don’t have. Apparently R2 only knows about network 192.168.12.0 /24. Let&#8217;s check the interface:</p>
+<pre><code>R2#<strong>show ip interface brief</strong>
+Interface               IP-Address      OK? Method Status                Protocol
+FastEthernet0/0         192.168.12.2    YES manual up                    up      
+<span style="color: #ff0000;">Loopback0               172.16.2.2</span>      YES manual administratively down down    
+<span style="color: #ff0000;">Loopback1               172.16.22.22</span>    YES manual administratively down down</code></pre>
+<p>Uhoh…this looks like a Friday afternoon error! Someone left a shutdown command on the loopback interfaces. Let&#8217;s enable them:</p>
+<pre><code>R2(config)#<strong>interface loopback 0</strong>
+R2(config-if)#<strong>no shutdown</strong>
+R2(config)#<strong>interface loopback 1</strong>
+R2(config-if)#<strong>no shutdown</strong></code></pre>
+<p>If you left the debug enabled then you&#8217;ll see the route advertisement:</p>
+<pre><code>R2#
+IP-EIGRP(Default-IP-Routing-Table:12): 172.16.2.0/24 - don't advertise out FastEthernet0/0
+IP-EIGRP(Default-IP-Routing-Table:12): 172.16.22.0/24 - don't advertise out FastEthernet0/0
+IP-EIGRP(Default-IP-Routing-Table:12): <span style="color: #ff0000;">172.16.0.0/16 - do advertise out FastEthernet0/0</span></code></pre>
+<p>Now we see that the summary is being advertised. Here&#8217;s the routing table of R1:</p>
+<pre><code>R1#<strong>show ip route | include 172.16.0.0</strong>
+<span style="color: #ff0000;">D    172.16.0.0/16 [90/156160] via 192.168.12.2</span>, 00:09:39, FastEthernet0/0</code></pre>
+<p>Now we see the summary in the routing table of R1, problem solved!</p>
+<p><strong>Lesson learned: You can’t advertise wat you don’t have in your routing table.</strong></p>
+<div class="notice-box  note   ">The last problem might be simple but there’s an important lesson you should not forget: In order for a summary route to be advertised at least one prefix that falls within the summary range has to be in the routing table of the advertising router!</div>
+<h2><span class="ez-toc-section" id="EIGRP_Split_Horizon"></span>EIGRP Split Horizon<span class="ez-toc-section-end"></span></h2>
+<p>Here&#8217;s something new for you, a different topology:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-7039" src="https://cdn.networklessons.com/wp-content/uploads/2015/04/eigrp-hub-spoke-split-horizon.png" alt="EIGRP Hub Spoke Split Horizon" width="865" height="381" srcset="https://cdn.networklessons.com/wp-content/uploads/2015/04/eigrp-hub-spoke-split-horizon.png 865w, https://cdn.networklessons.com/wp-content/uploads/2015/04/eigrp-hub-spoke-split-horizon-300x132.png 300w" sizes="(max-width: 865px) 100vw, 865px" /></p>
+<p>In the picture above we have a frame-relay hub and spoke topology. Spoke1 and Spoke2 each have a loopback interface which we will advertise in EIGRP. Here’s the relevant configuration of all routers:</p>
+<pre><code>Hub(config)#<strong>router eigrp 123</strong>
+Hub(config-router)#<strong>no auto-summary</strong>
+Hub(config-router)#<strong>network 192.168.123.0</strong></code></pre>
+<pre><code>Spoke1(config-if)#<strong>router eigrp 123</strong>
+Spoke1(config-router)#<strong>no auto-summary</strong> 
+Spoke1(config-router)#<strong>network 192.168.123.0</strong>
+Spoke1(config-router)#<strong>network 2.2.2.0 0.0.0.255</strong></code></pre>
+<pre><code>Spoke2(config)#<strong>router eigrp 123</strong>
+Spoke2(config-router)#<strong>no auto-summary</strong> 
+Spoke2(config-router)#<strong>network 192.168.123.0</strong>
+Spoke2(config-router)#<strong>network 3.3.3.0 0.0.0.255</strong></code></pre>
+<p>As you can see all networks are advertised. Let&#8217;s check the routing tables&#8230;we&#8217;ll start with the hub router:</p>
+<pre><code>Hub#<strong>show ip route</strong>
+
+C    192.168.123.0/24 is directly connected, Serial0/0
+     2.0.0.0/24 is subnetted, 1 subnets
+<span style="color: #ff0000;">D       2.2.2.0 [90/2297856] via 192.168.123.2</span>, 00:00:11, Serial0/0
+     3.0.0.0/24 is subnetted, 1 subnets
+<span style="color: #ff0000;">D       3.3.3.0 [90/2297856] via 192.168.123.3</span>, 00:00:03, Serial0/0</code></pre>
+<p>Our hub router sees the networks of the 2 spoke routers. What about the spokes?</p>
+<pre><code>Spoke1#<strong>show ip route</strong>
+
+C    192.168.123.0/24 is directly connected, Serial0/0
+     2.0.0.0/24 is subnetted, 1 subnets
+C       2.2.2.0 is directly connected, Loopback0 </code></pre>
+<pre><code>Spoke2#<strong>show ip route</strong>
+
+C    192.168.123.0/24 is directly connected, Serial0/0
+     3.0.0.0/24 is subnetted, 1 subnets
+C       3.3.3.0 is directly connected, Loopback0</code></pre>
+<p>Unfortunately our spoke routers don’t see anything…what&#8217;s going on here? Let&#8217;s enable a debug:</p>
+<pre><code>Hub#<strong>debug ip eigrp</strong> 
+IP-EIGRP Route Events debugging is on</code></pre>
+<p>We&#8217;ll reset the neighbor adjacencies to force the routers to send the route advertisements again:</p>
+<pre><code>Hub#<strong>clear ip eigrp 123 neighbors</strong></code></pre>
+<p>Here&#8217;s what you will see:</p>
+<pre><code>R1# processing incoming UPDATE packet
+IP-EIGRP(Default-IP-Routing-Table:123): <span style="color: #ff0000;">Processing incoming UPDATE packet</span>
+IP-EIGRP(Default-IP-Routing-Table:123): <span style="color: #ff0000;">Int 3.3.3.0/24 metric 2297856</span> - 1657856 640000
+IP-EIGRP(Default-IP-Routing-Table:123): <span style="color: #ff0000;">Processing incoming UPDATE packet</span>
+IP-EIGRP(Default-IP-Routing-Table:123): <span style="color: #ff0000;">Int 2.2.2.0/24 M 2297856</span> - 1657856 640000 SM 128256 - 256 128000
+IP-EIGRP(Default-IP-Routing-Table:123): route installed for 2.2.2.0  ()
+IP-EIGRP(Default-IP-Routing-Table:123): <span style="color: #ff0000;">192.168.123.0/24 - do advertise out Serial0/0</span></code></pre>
+<p>In the debug we can see that our Hub router learns about network 2.2.2.0 /24 and 3.3.3.0 /24 but only advertises network 192.168.123.0 /24 to the spoke routers. Split horizon is preventing the advertisements from one spoke router to another. (If you learn something on an interface…don’t advertise it out of the same interface again). Let&#8217;s disable split horizon:</p>
+<pre><code>Hub(config)#<strong>interface Serial 0/0</strong>
+Hub(config-if)#<strong>no ip split-horizon eigrp 123</strong></code></pre>
+<p>Let’s disable split horizon on the serial interface of the Hub router. Take a look at the debug of the hub router now:</p>
+<pre><code>Hub#
+IP-EIGRP(Default-IP-Routing-Table:123): 192.168.123.0/24 - do advertise out Serial0/0
+IP-EIGRP(Default-IP-Routing-Table:123): <span style="color: #ff0000;">3.3.3.0/24 - do advertise out Serial0/0</span>
+IP-EIGRP(Default-IP-Routing-Table:123): <span style="color: #ff0000;">2.2.2.0/24 - do advertise out Serial0/0</span></code></pre>
+<p>Now we can see that the Hub router does advertise all networks. Let&#8217;s see if the spoke routers installed the routes:</p>
+<pre><code>Spoke1#<strong>show ip route</strong>
+
+C    192.168.123.0/24 is directly connected, Serial0/0
+     2.0.0.0/24 is subnetted, 1 subnets
+C       2.2.2.0 is directly connected, Loopback0
+     3.0.0.0/24 is subnetted, 1 subnets
+<span style="color: #ff0000;">D       3.3.3.0 [90/2809856] via 192.168.123.1</span>, 00:16:02, Serial0/0</code></pre>
+<pre><code>Spoke2#<strong>show ip route</strong>
+
+C    192.168.123.0/24 is directly connected, Serial0/0
+     2.0.0.0/24 is subnetted, 1 subnets
+<span style="color: #ff0000;">D       2.2.2.0 [90/2809856] via 192.168.123.1</span>, 00:16:33, Serial0/0
+     3.0.0.0/24 is subnetted, 1 subnets
+C       3.3.3.0 is directly connected, Loopback0</code></pre>
+<p>The spoke routers can now learn about each other’s networks since split horizon has been disabled. This is looking good but we are not done yet. <strong>Lesson learned: RIP and EIGRP are distance vector routing protocols and use split horizon. Split horizon prevents the advertisement of a prefix out of the interface where we learned it on.</strong></p>
+<p>Even though we solved this problem, there is still another issue we have to deal with. Take a look at these pings:</p>
+<pre><code>Spoke1#<strong>ping 3.3.3.3</strong>
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 3.3.3.3, timeout is 2 seconds:
+.....
+<span style="color: #ff0000;">Success rate is 0 percent (0/5)</span></code></pre>
+<pre><code>Spoke2#<strong>ping 2.2.2.2</strong>
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 2.2.2.2, timeout is 2 seconds:
+.....
+<span style="color: #ff0000;">Success rate is 0 percent (0/5)</span></code></pre>
+<p>Even though the networks show up in the routing tables I’m unable to ping from one spoke router to another. This is not an EIGRP problem but it’s related to frame-relay…we still have to fix it though.</p>
+<p>When Spoke1 sends an IP packet to Spoke2 the IP packet looks like this:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-7040" src="https://cdn.networklessons.com/wp-content/uploads/2015/04/ip-packet-source-destination.png" alt="IP Packet source destination" width="278" height="69" /></p>
+<p>First we need to check if Spoke1 knows where to send 3.3.3.3 to:</p>
+<pre><code>Spoke1#<strong>show ip route 3.3.3.3</strong>
+Routing entry for 3.3.3.0/24
+  Known via "eigrp 123", distance 90, metric 2809856, type internal
+  Redistributing via eigrp 123
+  Last update from <span style="color: #ff0000;">192.168.123.1</span> on Serial0/0, 00:38:10 ago
+  Routing Descriptor Blocks:
+  * 192.168.123.1, from 192.168.123.1, 00:38:10 ago, via Serial0/0
+      Route metric is 2809856, traffic share count is 1
+      Total delay is 45000 microseconds, minimum bandwidth is 1544 Kbit
+      Reliability 255/255, minimum MTU 1500 bytes
+      Loading 1/255, Hops 2</code></pre>
+<p>There’s an entry for 3.3.3.3 and the next hop IP address is 192.168.123.1 (Hub router). Are we able to reach 192.168.123.1?</p>
+<pre><code>Spoke1#<strong>ping 192.168.123.1</strong>
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.123.1, timeout is 2 seconds:
+!!!!!
+<span style="color: #ff0000;">Success rate is 100 percent (5/5</span>), round-trip min/avg/max = 1/4/8 ms</code></pre>
+<p>No problem at all, it seems Spoke1 is able to forward packets meant for network 3.3.3.0 /24. Let’s go to the Hub router:</p>
+<pre><code>Hub#<strong>ping 3.3.3.3</strong> 
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 3.3.3.3, timeout is 2 seconds:
+!!!!!
+<span style="color: #ff0000;">Success rate is 100 percent (5/5)</span>, round-trip min/avg/max = 4/4/4 ms</code></pre>
+<p>The Hub router has no issues sending traffic to network 3.3.3.0 /24 so at this moment we can draw the conclusion that the problem must be at router Spoke2. Take a look at the IP packet below:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-7040" src="https://cdn.networklessons.com/wp-content/uploads/2015/04/ip-packet-source-destination.png" alt="IP Packet source destination" width="278" height="69" /></p>
+<p>This is the IP packet that router Spoke2 receives, when it responds it will create a new IP packet that looks like this:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-7041" src="https://cdn.networklessons.com/wp-content/uploads/2015/04/ip-packet-source-destination-swapped.png" alt="ip-packet-source-destination-swapped" width="276" height="69" /></p>
+<p>Is spoke2 able to reach IP address 192.168.123.2? Time to find out!</p>
+<pre><code>Spoke2#<strong>ping 192.168.123.2</strong>
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.123.2, timeout is 2 seconds:
+.....
+<span style="color: #ff0000;">Success rate is 0 percent (0/5)</span></code></pre>
+<p>Now we know the problem…Spoke2 is unable to reach IP address 192.168.123.2. What is the issue?</p>
+<pre><code>Spoke2#<strong>show ip route | include 192.168.123.0</strong>
+<span style="color: #ff0000;">C    192.168.123.0/24 is directly connected, Serial0/0</span></code></pre>
+<p>If we look at the routing table of Spoke2 we can see that network 192.168.123.0 /24 is directly connected. From a layer 3 perspective we don’t have any issues. Time to move down the OSI model and check layer 2…or maybe in between layer 2 and 3:</p>
+<pre><code>Spoke2#<strong>show frame-relay map</strong> 
+Serial0/0 (up): ip 192.168.123.1 dlci 301(0x12D,0x48D0), dynamic,
+              broadcast,, status defined, active</code></pre>
+<p>Frame-relay uses Inverse ARP to bind layer 2 (DLCI) to layer 3 (IP address). You can see that there is no mapping for IP address 192.168.123.2. Let&#8217;s add one:</p>
+<pre><code>Spoke2(config)#<strong>interface Serial 0/0</strong>
+Spoke2(config-if)#<strong>frame-relay map ip 192.168.123.2 301</strong></code></pre>
+<p>Now check the frame-relay mappings again:</p>
+<pre><code>Spoke2#<strong>show frame-relay map</strong> 
+Serial0/0 (up): ip 192.168.123.1 dlci 301(0x12D,0x48D0), dynamic,
+              broadcast,, status defined, active
+<span style="color: #ff0000;">Serial0/0 (up): ip 192.168.123.2</span> dlci 301(0x12D,0x48D0), static,
+              CISCO, status defined, <span style="color: #ff0000;">active</span></code></pre>
+<p>Now router Spoke2 knows how to reach router Spoke1:</p>
+<pre><code>Spoke1#<strong>ping 3.3.3.3</strong>                             
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 3.3.3.3, timeout is 2 seconds:
+!!!!!
+<span style="color: #ff0000;">Success rate is 100 percent (5/5)</span>, round-trip min/avg/max = 8/10/16 ms</code></pre>
+<p>Finally router Spoke1 is able to ping router Spoke2’s loopback interface. When we try to ping from router Spoke2 to router Spoke1’s loopback interface we’ll have the same issue so we’ll add a frame-relay map statement there as well:</p>
+<pre><code>Spoke1(config)#<strong>interface Serial 0/0</strong>      
+Spoke1(config-if)#<strong>frame-relay map ip 192.168.123.3 201</strong> </code></pre>
+<pre><code>Spoke1#<strong>show frame-relay map</strong> 
+Serial0/0 (up): ip 192.168.123.1 dlci 201(0xC9,0x3090), dynamic,
+              broadcast,, status defined, active
+<span style="color: #ff0000;">Serial0/0 (up): ip 192.168.123.3</span> dlci 201(0xC9,0x3090), static,
+              CISCO, status defined, <span style="color: #ff0000;">active</span></code></pre>
+<p>Now we have an extra frame-relay mapping on router Spoke1. Let&#8217;s try to ping 2.2.2.2 from Spoke2:</p>
+<pre><code>Spoke2#<strong>ping 2.2.2.2</strong>                         
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 2.2.2.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 8/8/8 ms</code></pre>
+<p>And our ping is successful! <strong>Lesson learned: Make sure the next hop IP address is reachable and if needed add additional frame-relay map statements.</strong></p>
+<div class="notice-box  note   ">We just got a little sidetracked from EIGRP to solving frame-relay problems but that’s what network engineers do…sometimes troubleshooting is a deadly cocktail of multiple protocols. Another method of dealing with split-horizon is changing the point-to-multipoint configuration to a point-to-point configuration.</div>
+<h2><span class="ez-toc-section" id="EIGRP_Redistribution_Sub-Optimal_Routing"></span>EIGRP Redistribution Sub-Optimal Routing<span class="ez-toc-section-end"></span></h2>
+<p>Here’s a totally different scenario for you:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-7042" src="https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-r3-eigrp-rip-redistribution-troubleshooting.png" alt="R1 R2 R3 EIGRP RIP Redistribution Troubleshooting" width="521" height="507" srcset="https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-r3-eigrp-rip-redistribution-troubleshooting.png 521w, https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-r3-eigrp-rip-redistribution-troubleshooting-300x292.png 300w" sizes="(max-width: 521px) 100vw, 521px" /></p>
+<p>In the picture above R1 and R2 are running EIGRP AS 12. All routers are running RIP. R3 has a loopback interface with network 3.3.3.0 /24 that will be advertised in RIP. R2 is going to redistribute this network into EIGRP AS 12.</p>
+<p>Here are the EIGRP and RIP configurations of all routers:</p>
+<pre><code>R1#
+router eigrp 12
+ network 192.168.12.0
+ no auto-summary
+!
+router rip
+ version 2
+ network 192.168.13.0
+ no auto-summary </code></pre>
+<pre><code>R2#
+router eigrp 12
+ redistribute rip metric 1 1 1 1 1500
+ network 192.168.12.0
+ no auto-summary
+!
+router rip
+ version 2
+ redistribute eigrp 12 metric 5
+ network 192.168.23.0
+ no auto-summary</code></pre>
+<pre><code>R3# 
+ router rip
+ version 2
+ network 3.0.0.0
+ network 192.168.13.0
+ network 192.168.23.0
+ no auto-summary</code></pre>
+<p>Note that R2 has been configured for redistribution between EIGRP AS 12 and RIP. How does this influence our routing selections? Let&#8217;s take a look:</p>
+<pre><code>R1#<strong>show ip route 3.3.3.0</strong>          
+Routing entry for 3.3.3.0/24
+  Known via "rip", distance 120, metric 1
+  Redistributing via rip
+  Last update from 192.168.13.3 on Serial1/0, 00:00:06 ago
+  Routing Descriptor Blocks:
+  * 192.168.13.3, from 192.168.13.3, 00:00:06 ago, via Serial1/0
+      Route metric is 1, traffic share count is 1</code></pre>
+<p>R1 is sending traffic towards network 3.3.3.0 /24 using the serial link between R1 and R3. It would have been better if we would use the link between R1 and R2 because using the FastEthernet links is faster than the serial link. Take a look below:</p>
+<pre><code>R1#<strong>show ip eigrp topology 3.3.3.0 255.255.255.0</strong>
+IP-EIGRP (AS 12): <span style="color: #ff0000;">Topology entry for 3.3.3.0/24</span>
+  State is Passive, Query origin flag is 1, 0 Successor(s), FD is 4294967295
+  Routing Descriptor Blocks:
+  192.168.12.2 (FastEthernet0/0), from 192.168.12.2, Send flag is 0x0
+      Composite metric is (2560002816/2560000256), Route is External</code></pre>
+<p>We can look at the EIGRP topology table and see that R1 did learn about network 3.3.3.0 /24 through EIGRP from R2. So why are not we using this information instead of RIP?<br />
+The problem here is that EIGRP external routes has an AD (administrative distance) of 170 while RIP has an AD of 120.</p>
+<p>We can fix this problem by changing the AD:</p>
+<pre><code>R1(config)#<strong>router rip</strong>
+R1(config-router)#<strong>distance 175 192.168.13.3 0.0.0.</strong>0</code></pre>
+<p>In the example above I’m setting the AD to 175 for all RIP routes that we learn from IP address 192.168.13.3 (R3). Now check the routing table of R1 again:</p>
+<pre><code>R1#<strong>show ip route 3.3.3.0</strong>
+Routing entry for 3.3.3.0/24
+  <span style="color: #ff0000;">Known via "eigrp 12", distance 170</span>, metric 2560002816, type external
+  Redistributing via eigrp 12
+  Last update from 192.168.12.2 on FastEthernet0/0, 00:17:53 ago</code></pre>
+<pre><code>R1#<strong>show ip route | include 3.3.3.0</strong>
+<span style="color: #ff0000;">D EX    3.3.3.0 [170/2560002816] via 192.168.12.2</span>, 00:18:46, FastEthernet0/0</code></pre>
+<p>Since the AD of EIGRP external (170) is lower than the AD of my RIP routes (175) R1 will install the EIGRP external information. We are now using the FastEthernet links to get to network 3.3.3.0 /24…problem solved!</p>
+<p><strong>Lesson learned: Change the administrative distance to change traffic patterns but be aware; In more complex topologies this can also cause routing loops.</strong></p>
+<p>Redistribution is a complex topic, if you want to learn a bit more about this then you might want to read my <a title="Troubleshooting Metric Redistribution" href="https://networklessons.com/eigrp/troubleshooting-metric-redistribution">&#8220;metric related distribution issues&#8221; lesson</a>.</p>
+<h2><span class="ez-toc-section" id="EIGRP_Redistribution_Seed_Metric"></span>EIGRP Redistribution Seed Metric<span class="ez-toc-section-end"></span></h2>
+<p>Here&#8217;s another redistribution issue for you, we have a different topology:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-7043" src="https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-r3-eigrp-rip-redistribution-troubleshooting2.png" alt="r1-r2-r3-eigrp-rip-redistribution-troubleshooting2" width="936" height="162" srcset="https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-r3-eigrp-rip-redistribution-troubleshooting2.png 936w, https://cdn.networklessons.com/wp-content/uploads/2015/04/r1-r2-r3-eigrp-rip-redistribution-troubleshooting2-300x52.png 300w" sizes="(max-width: 936px) 100vw, 936px" /></p>
+<p>I have another redistribution situation for you. There are 3 routers and R2 is the router performing the redistribution between EIGRP AS 12 and RIP. Here are the configurations:</p>
+<pre><code>R1#
+router eigrp 12
+ network 192.168.12.0
+ no auto-summary</code></pre>
+<pre><code>R2#
+router eigrp 12
+ redistribute rip
+ network 192.168.12.0
+ no auto-summary
+!
+router rip
+ version 2
+ redistribute eigrp 12 metric 1
+ network 192.168.23.0
+ no auto-summary</code></pre>
+<pre><code>R3#
+router rip
+ version 2
+ network 3.0.0.0
+ network 192.168.23.0
+ no auto-summary</code></pre>
+<p>As you can see R1 is running EIGRP, R2 is running RIP and EIGRP and is doing redistribution, R3 is only running RIP. Take a look at the routing table of R1:</p>
+<pre><code>R1#<strong>show ip route</strong>
+
+C    192.168.12.0/24 is directly connected, FastEthernet0/0</code></pre>
+<p>I’m expecting to see some redistributed routes. Unfortunately there’s nothing here. What’s going on? Let&#8217;s check R2:</p>
+<pre><code>R2#<strong>show ip route rip</strong>
+     3.0.0.0/24 is subnetted, 1 subnets
+<span style="color: #ff0000;">R       3.3.3.0 [120/1] via 192.168.23.3</span>, 00:00:23, FastEthernet1/0</code></pre>
+<p>R2 is the router performing the redistribution and we can see that it has learned network 3.3.3.0 /24 through RIP. It should be redistributing this network into EIGRP.</p>
+<p>Is it in the topology table?</p>
+<pre><code>R2#<strong>show ip eigrp topology 3.3.3.0 255.255.255.0</strong>
+<span style="color: #ff0000;">% IP-EIGRP (AS 12): Route not in topology table</span></code></pre>
+<p>Hmm network 3.3.3.0 /24 is not in the EIGRP topology table of R2 even though we configured redistribution, let’s check the redistribution configuration:</p>
+<pre><code>R2#
+router eigrp 12
+ redistribute rip
+ network 192.168.12.0
+ no auto-summary</code></pre>
+<p>We do have the redistribute rip command but there’s <strong>no default seed metric</strong>. If you don’t specify a metric then the default seed metric will be <strong>infinite</strong>. In other words it’s unreachable. Let&#8217;s configure a seed metric:</p>
+<pre><code>R2(config)#<strong>router eigrp 12</strong>                   
+R2(config-router)#<strong>default-metric 1500 100 255 1 1500</strong></code></pre>
+<p>You need to specify the bandwidth, delay, load and reliability yourself. I just used some random values. Now take a look at R2 again:</p>
+<pre><code>R2#<strong>show ip eigrp topology 3.3.3.0 255.255.255.0</strong>
+IP-EIGRP (AS 12): <span style="color: #ff0000;">Topology entry for 3.3.3.0/24</span>
+  State is Passive, Query origin flag is 1, 1 Successor(s), FD is 1732096
+  Routing Descriptor Blocks:
+  192.168.23.3, from Redistributed, Send flag is 0x0
+      Composite metric is (1732096/0), Route is External</code></pre>
+<p>Now we see the 3.3.3.0 /24 network in the EIGRP topology table of R2. R1 should now be able to learn it:</p>
+<pre><code>R1#<strong>show ip route | include 3.3.3.0</strong>
+<span style="color: #ff0000;">D EX    3.3.3.0 [170/1734656] via 192.168.12.2</span>, 00:04:08, FastEthernet0/0</code></pre>
+<p>And as a result it can be advertised to R1…problem solved!</p>
+<p><strong>Lesson learned: When you redistribute a routing protocol into EIGRP you need to configure seed metrics.</strong></p>
+<p>That&#8217;s all I have for you, this should cover most of the &#8220;route advertisement&#8221; issues that you might encounter with EIGRP. I hope this has been helpful and if you have any questions, feel free to leave a comment!</p>
+            </div>
+                	</div>
+</article>
+		</main>
+	</div>
+
+
+<div class="widget-area col-md-4">
+            <div class="site-actions-toolbar d-none d-md-flex">
+            <div class="site-action js--dark-mode">
+                <i class="far fa-adjust"></i>
+            </div>
+        </div>
+        <aside id="secondary">
+        <section id="block-2" class="widget widget_block"><p><div class="urlspecificmenu-toggle">Lessons</div><div class="fullpage-overlay urlspecificmenu-overlay"></div><div class="urlspecificmenu"><div class="urlspecificmenu-close"><i class="far fa-times"></i></div>
+				<h2>Course Contents</h2><p>EIGRP</p><nav id="bellows-main-648" class="bellows bellows-nojs bellows-main bellows-source-menu bellows-align-full bellows-skin-none bellows-type-accordion bellows-expand-current"><ul id="menu-eigrp" class="bellows-nav" data-bellows-config="main"><li id="menu-item-18629" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18629 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 1: Introduction to EIGRP</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18630" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18630 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/introduction-to-eigrp" class="bellows-target"><span class="bellows-target-title bellows-target-text">Introduction to EIGRP</span></a></li>
+	<li id="menu-item-18631" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18631 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/basic-eigrp-configuration" class="bellows-target"><span class="bellows-target-title bellows-target-text">Basic EIGRP configuration</span></a></li>
+	<li id="menu-item-18632" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18632 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-over-frame-relay" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP over frame-relay</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18633" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18633 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 2: EIGRP Neighbor Adjacency</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18634" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18634 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-packets-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Packets</span></a></li>
+	<li id="menu-item-18635" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18635 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/detailed-look-of-eigrp-neighbor-adjacency" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Neighbor Adjacency</span></a></li>
+	<li id="menu-item-18636" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18636 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-neighbor-and-topology-table-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Neighbor and Topology Table</span></a></li>
+	<li id="menu-item-18637" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18637 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-hold-time-hello-packets" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Hold Time and Hello Packets</span></a></li>
+	<li id="menu-item-18638" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18638 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-unequal-cost-load-balancing" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Unequal Load Balancing</span></a></li>
+	<li id="menu-item-19042" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-19042 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-variance-command-example" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Variance Command Example</span></a></li>
+	<li id="menu-item-18639" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18639 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-k-values-formula" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP K Values</span></a></li>
+	<li id="menu-item-18640" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18640 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-k-values-configuration" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP K Values Configuration</span></a></li>
+	<li id="menu-item-18641" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18641 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-static-neighbor" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Static Neighbor</span></a></li>
+	<li id="menu-item-18642" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18642 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-passive-interface" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Passive Interface</span></a></li>
+	<li id="menu-item-18643" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18643 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/how-to-configure-eigrp-authentication" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Authentication</span></a></li>
+	<li id="menu-item-18644" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18644 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-authentication-per-neighbor" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Authentication per Neighbor</span></a></li>
+	<li id="menu-item-18999" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18999 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/troubleshooting-eigrp-neighbor-adjacency" class="bellows-target"><span class="bellows-target-title bellows-target-text">Troubleshooting EIGRP Neighbor Adjacency</span></a></li>
+	<li id="menu-item-53642" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-53642 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-otp-over-the-top" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP OTP (Over the Top)</span></a></li>
+	<li id="menu-item-53730" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-53730 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-graceful-shutdown" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Graceful Shutdown</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18645" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18645 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 3: EIGRP Filtering</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18646" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18646 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/how-to-filter-prefixes-with-distribute-list" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP distribute-list filtering</span></a></li>
+	<li id="menu-item-18647" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18647 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/how-to-configure-prefix-list-on-cisco-router" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP prefix-list filtering</span></a></li>
+	<li id="menu-item-18648" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18648 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-route-map-filtering" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP route-map filtering</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18649" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-current-menu-ancestor bellows-current-menu-parent bellows-menu-item-has-children bellows-menu-item-18649 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 4: EIGRP Advanced Features</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18650" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18650 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-queries-and-stuck-in-active" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Stuck in Active</span></a></li>
+	<li id="menu-item-46560" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-46560 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-dual-fsm-finite-state-machine" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP DUAL FSM</span></a></li>
+	<li id="menu-item-18651" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18651 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-stub-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Stub</span></a></li>
+	<li id="menu-item-53737" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-53737 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-stub-leak-map" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Stub Leak Map</span></a></li>
+	<li id="menu-item-18652" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18652 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-default-network-route" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Default Network</span></a></li>
+	<li id="menu-item-18653" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18653 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-router-id" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Router ID</span></a></li>
+	<li id="menu-item-18654" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18654 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/how-to-configure-eigrp-summarization" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Summarization</span></a></li>
+	<li id="menu-item-53766" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-53766 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-summary-leak-map" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Summary Leak Map</span></a></li>
+	<li id="menu-item-18655" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18655 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-auto-summary" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Auto-summary</span></a></li>
+	<li id="menu-item-18656" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18656 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-named-mode-configuration" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Named Mode</span></a></li>
+	<li id="menu-item-53678" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-53678 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-add-path-support" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Add Path Support</span></a></li>
+	<li id="menu-item-53819" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-53819 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-loop-free-alternate-lfa-fast-reroute-frr" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Loop-Free Alternate (LFA) Fast Reroute (FRR)</span></a></li>
+	<li id="menu-item-53519" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-53519 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-wide-metrics" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP Wide Metrics</span></a></li>
+	<li id="menu-item-18657" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18657 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-ip-bandwidth-percent" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP IP Bandwidth-percent</span></a></li>
+	<li id="menu-item-18658" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18658 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/ttl-2-eigrp-rip-packets-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP TTL=2 explained</span></a></li>
+	<li id="menu-item-19000" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-current-menu-item bellows-menu-item-19000 bellows-item-level-1 bellows-current-menu-item"><a  href="https://networklessons.com/eigrp/troubleshooting-eigrp-route-advertisement" class="bellows-target"><span class="bellows-target-title bellows-target-text">Troubleshooting EIGRP Route Advertisement</span></a></li>
+	<li id="menu-item-54887" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-54887 bellows-item-level-1"><a  href="https://networklessons.com/eigrp/eigrp-external-route-path-selection" class="bellows-target"><span class="bellows-target-title bellows-target-text">EIGRP External Route Path Selection</span></a></li>
+</ul>
+</li>
+</ul></nav></div></p>
+</section>    </aside>
+</div>
+
+</div><!-- end .row -->
+</div><!-- end .container -->
+<div class="container">
+<div class="row">
+
+    <div class="col-12">
+		
+		<div class="cmd_post_nav"><div class="cmd_previous"><a href="https://networklessons.com/eigrp/ttl-2-eigrp-rip-packets-explained" rel="prev"><strong>Previous Lesson</strong><br>EIGRP TTL=2 explained</a></div><div class="cmd_next"><a href="https://networklessons.com/eigrp/eigrp-external-route-path-selection" rel="next"><strong>Next Lesson</strong><br>EIGRP External Route Path Selection</a></div></div>	    
+        <hr>
+
+		    <div id="comments" class="comments-area discourse-comments-area">
+        <h2 class="comments-title discourse-comments-title">Forum Replies</h2>
+        <ol class="comment-list">		<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for hussien.samer" src="https://cdn-forum.networklessons.com/user_avatar/forum.networklessons.com/hussien.samer/64/2096_2.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/troubleshooting-eigrp-route-advertisement/1188" rel="external" class="url">hussien.samer</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Hi Rene,</p>
+<pre><code class="lang-auto">R2#
+interface FastEthernet0/0
+ip summary-address eigrp 12 172.16.0.0 255.255.0.0 5
+
+&amp;amp;nbsp;
+
+
+</code></pre>
+<p>What does the number 5 mean in the show information above ?</p>
+<p> </p>
+<p>And what about leak-map ? when do we use it ?</p>
+<p> </p>
+<pre><code>R1(config-if)#ip summary-address ei 1 172.16.0.0 255.255.254.0 ?
+leak-map Allow dynamic prefixes based on the leak-map
+&amp;lt;cr&amp;gt;
+</code></pre>
+<p>thanks.</p></p></div>
+			</article>
+		</li>
+				<li class="comment odd depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for ReneMolenaar" src="https://cdn-forum.networklessons.com/user_avatar/forum.networklessons.com/renemolenaar/64/488_2.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/troubleshooting-eigrp-route-advertisement/1188" rel="external" class="url">ReneMolenaar</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Hi Hussein,</p>
+<p>The “5” here is the administrative distance of the summary.</p>
+<p>The leak-map option can be used to “leak” certain prefixes from your example. You can use this to advertise a prefix that normally falls within the range of your summary.</p>
+<p>For example, let’s say you want to advertise summary 172.16.0.0/16 but also one specifix prefix, 172.16.1.0/24. You can use the leak map to get 172.16.1.0/24 “out” of the summary so that it can be advertised.</p>
+<p>Rene</p></p></div>
+			</article>
+		</li>
+				<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for mario_ramales" src="https://cdn-forum.networklessons.com/letter_avatar_proxy/v4/letter/m/e95f7d/64.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/troubleshooting-eigrp-route-advertisement/1188" rel="external" class="url">mario_ramales</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Hi Renee,</p>
+<p>I didn’t see a topic on this. But is there a way to perform preferred route selection based on a source prefix from the local router? For example lets say I have a router that has two equal cost paths to a network. Let’s say this router has three prefixes it is advertising too. Lets say that only for one prefix will choose one explicit path and the other two prefixes will still use equal load balancing.  The config should be made on the local router advertising the prefixes. Can this be done with EIGRP?</p></p></div>
+			</article>
+		</li>
+				<li class="comment odd depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for ReneMolenaar" src="https://cdn-forum.networklessons.com/user_avatar/forum.networklessons.com/renemolenaar/64/488_2.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/troubleshooting-eigrp-route-advertisement/1188" rel="external" class="url">ReneMolenaar</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Hi Mario,</p>
+<p>Routers normally only care about the destination, that’s it.</p>
+<p>If you want to make routing decisions based on the source then you can use policy based routing, take a look here:</p>
+<p><a href="https://networklessons.com/ip-routing/how-to-configure-policy-based-routing/">How to configure policy based routing</a></p>
+<p>Rene</p></p></div>
+			</article>
+		</li>
+				<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for wilder7bc" src="https://cdn-forum.networklessons.com/user_avatar/forum.networklessons.com/wilder7bc/64/1187_2.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/troubleshooting-eigrp-route-advertisement/1188" rel="external" class="url">wilder7bc</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>I don’t think this statement is true or at least its not in the perspective i am thinking about it:</p>
+<p>“Lesson learned: When you redistribute something into EIGRP you need to configure seed metrics.”</p>
+<p>I injected a static route into EIGRP in production and it worked and I did not add any metrics at all.</p>
+<p>I basically have talked about it before but I just added a route-map and used a match statement  and it showed up in EIGRP on the other router and everything worked great.  Before I tried it on production I built a GNS3 lab and tested it.</p>
+<p>So am I not understanding co</p><strong><a href="https://forum.networklessons.com/t/troubleshooting-eigrp-route-advertisement/1188/6" target="_blank">... Continue reading in our forum</a></strong></p></div>
+			</article>
+		</li>
+		</ol>
+        <div class="respond comment-respond">
+            <p id="reply-title" class="comment-reply-title"><strong><a href="https://forum.networklessons.com/t/troubleshooting-eigrp-route-advertisement/1188" target="_blank">8 more replies!</a></strong> Ask a question or join the discussion by visiting our <a href="https://forum.networklessons.com/t/troubleshooting-eigrp-route-advertisement/1188" target="_blank">Community Forum</a></p>
+        </div>
+    </div>
+        </div>
+
+
+		</div>
+	</div>
+
+	<footer class="site-footer">
+        <div class="container">
+            <div class="site-footer-inner">
+                <div class="copyright">
+                    &copy; 2013 - 2024 NetworkLessons.com 65289                </div>
+                <div class="menu-footer-container"><ul id="footer-menu" class="menu"><li id="menu-item-22469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22469"><a href="https://networklessons.com/disclaimer">Disclaimer</a></li>
+<li id="menu-item-22470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-22470"><a rel="privacy-policy" href="https://networklessons.com/privacy-policy">Privacy Policy</a></li>
+<li id="menu-item-22468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22468"><a href="https://networklessons.com/support">Support</a></li>
+<li id="menu-item-59827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59827"><a href="https://networklessons.com/about-networklessons-com">About</a></li>
+</ul></div>            </div>
+        </div>
+    </footer>
+</div>
+
+<script type="text/javascript">var algolia = {"debug":false,"application_id":"JYCQGPKUUY","search_api_key":"294cbcc6c53b2ccb6f80f0410f485afe","powered_by_enabled":false,"query":"","autocomplete":{"sources":[],"input_selector":"input[name='s']:not(.no-autocomplete):not(#adminbar-search)"},"indices":{"searchable_posts":{"name":"wp_searchable_posts","id":"searchable_posts","enabled":true,"replicas":[]}}};</script><script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.20.2" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" src="https://player.vimeo.com/api/player.js?ver=1.0" id="gtm4wp-vimeo-api-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-vimeo.js?ver=1.20.2" id="gtm4wp-vimeo-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/bundle.js?ver=1702771200" id="networklessons-script-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/jquery.magnific-popup.min.js?ver=1.1.0" id="magnific-popup-jquery-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/jquery.magnific-popup.js?ver=1.1.0" id="magnific-popup-core-js-js"></script>
+<script type="text/javascript" id="bellows-js-extra">
+/* <![CDATA[ */
+var bellows_data = {"config":{"main":{"folding":"multiple","current":"on","slide_speed":400}},"v":"1.4.3"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/bellows-pro/assets/js/bellows.min.js?ver=1.4.3" id="bellows-js"></script>
+
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

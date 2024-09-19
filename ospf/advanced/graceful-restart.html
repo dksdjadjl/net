@@ -1,0 +1,713 @@
+
+<!doctype html>
+<html lang="en-US" id="html">
+<head> 
+    <script src="https://www.googleoptimize.com/optimize.js?id=GTM-N6QRZFG"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="shortcut icon" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-180x180.png" />
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v23.4 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>OSPF Graceful Restart</title><link rel="preload" data-rocket-preload as="image" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/logo.svg" fetchpriority="high">
+	<meta name="description" content="OSPF graceful restart allows you to reset the OSPF process without interrupting data forwarding." />
+	<link rel="canonical" href="https://networklessons.com/cisco/ccie-routing-switching-written/ospf-graceful-restart" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="OSPF Graceful Restart" />
+	<meta property="og:description" content="OSPF graceful restart allows you to reset the OSPF process without interrupting data forwarding." />
+	<meta property="og:url" content="https://networklessons.com/cisco/ccie-routing-switching-written/ospf-graceful-restart" />
+	<meta property="og:site_name" content="NetworkLessons.com" />
+	<meta property="article:published_time" content="2017-08-30T13:41:17+00:00" />
+	<meta property="article:modified_time" content="2022-05-15T22:05:03+00:00" />
+	<meta property="og:image" content="https://cdn.networklessons.com/wp-content/uploads/2017/08/restart-symbol.jpg" />
+	<meta property="og:image:width" content="2000" />
+	<meta property="og:image:height" content="2000" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Rene Molenaar" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Rene Molenaar" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="6 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://networklessons.com/cisco/ccie-routing-switching-written/ospf-graceful-restart","url":"https://networklessons.com/cisco/ccie-routing-switching-written/ospf-graceful-restart","name":"OSPF Graceful Restart","isPartOf":{"@id":"https://networklessons.com/#website"},"primaryImageOfPage":{"@id":"https://networklessons.com/cisco/ccie-routing-switching-written/ospf-graceful-restart#primaryimage"},"image":{"@id":"https://networklessons.com/cisco/ccie-routing-switching-written/ospf-graceful-restart#primaryimage"},"thumbnailUrl":"https://cdn.networklessons.com/wp-content/uploads/2017/08/restart-symbol.jpg","datePublished":"2017-08-30T13:41:17+00:00","dateModified":"2022-05-15T22:05:03+00:00","author":{"@id":"https://networklessons.com/#/schema/person/a210ceb8a2b14b76e03c27d3c65850c2"},"description":"OSPF graceful restart allows you to reset the OSPF process without interrupting data forwarding.","breadcrumb":{"@id":"https://networklessons.com/cisco/ccie-routing-switching-written/ospf-graceful-restart#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://networklessons.com/cisco/ccie-routing-switching-written/ospf-graceful-restart"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://networklessons.com/cisco/ccie-routing-switching-written/ospf-graceful-restart#primaryimage","url":"https://cdn.networklessons.com/wp-content/uploads/2017/08/restart-symbol.jpg","contentUrl":"https://cdn.networklessons.com/wp-content/uploads/2017/08/restart-symbol.jpg","width":2000,"height":2000,"caption":"Restart Symbol"},{"@type":"BreadcrumbList","@id":"https://networklessons.com/cisco/ccie-routing-switching-written/ospf-graceful-restart#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Networklessons.com","item":"https://networklessons.com/"},{"@type":"ListItem","position":2,"name":"Cisco","item":"https://networklessons.com/cisco"},{"@type":"ListItem","position":3,"name":"CCIE Routing &amp; Switching Written","item":"https://networklessons.com/cisco/ccie-routing-switching-written"},{"@type":"ListItem","position":4,"name":"OSPF Graceful Restart"}]},{"@type":"WebSite","@id":"https://networklessons.com/#website","url":"https://networklessons.com/","name":"NetworkLessons.com","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://networklessons.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://networklessons.com/#/schema/person/a210ceb8a2b14b76e03c27d3c65850c2","name":"Rene Molenaar","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://networklessons.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/d676347ef395e3b3a6a056aaf5546311?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/d676347ef395e3b3a6a056aaf5546311?s=96&d=mm&r=g","caption":"Rene Molenaar"},"description":"René - CCIE #41726 is the creator of Networklessons.com where he writes about networking topics like Cisco, Routing, Switching, Linux, Wireless &amp; Security. He also created GNS3Vault.com where people can study Cisco labs for free.","sameAs":["https://networklessons.com"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//player.vimeo.com' />
+<link rel='dns-prefetch' href='//cdn.networklessons.com' />
+<link rel='dns-prefetch' href='//googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//googleoptimize.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//tag.getdrip.com' />
+<link rel='dns-prefetch' href='//facebook.com' />
+
+<link href='https://cdn.networklessons.com' rel='preconnect' />
+<link rel='stylesheet' id='mp-theme-css' href='https://cdn.networklessons.com/wp-content/plugins/memberpress/css/ui/theme.css?ver=1.11.34' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://cdn.networklessons.com/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2' type='text/css' media='all' />
+<style id='safe-svg-svg-icon-style-inline-css' type='text/css'>
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='arve-css' href='https://cdn.networklessons.com/wp-content/plugins/advanced-responsive-video-embedder/build/main.css?ver=755e5bf2bfafc15e7cc1' type='text/css' media='all' />
+<link rel='stylesheet' id='arve-pro-css' href='https://cdn.networklessons.com/wp-content/plugins/arve-pro/build/main.css?ver=eea34735566740155d0f' type='text/css' media='all' />
+<link rel='stylesheet' id='emnl-custom-styling-various-plugins-css' href='https://cdn.networklessons.com/wp-content/plugins/emnl-custom-css-various-plugins/emnl-custom-css-various-plugins.css?ver=1720772937' type='text/css' media='all' />
+<link rel='stylesheet' id='affwp-forms-css' href='https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/css/forms.min.css?ver=2.26.0' type='text/css' media='all' />
+<link rel='stylesheet' id='ez-toc-css' href='https://cdn.networklessons.com/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.69.1' type='text/css' media='all' />
+<style id='ez-toc-inline-css' type='text/css'>
+div#ez-toc-container .ez-toc-title {font-size: 100%;}div#ez-toc-container .ez-toc-title {font-weight: 700;}div#ez-toc-container ul li {font-size: 100%;}div#ez-toc-container ul li {font-weight: 500;}div#ez-toc-container nav ul ul li {font-size: 90%;}div#ez-toc-container {background: #f9f9f9;border: 1px solid #e6e6e6;}div#ez-toc-container p.ez-toc-title , #ez-toc-container .ez_toc_custom_title_icon , #ez-toc-container .ez_toc_custom_toc_icon {color: #000000;}div#ez-toc-container ul.ez-toc-list a {color: #5381b5;}div#ez-toc-container ul.ez-toc-list a:hover {color: #5381b5;}div#ez-toc-container ul.ez-toc-list a:visited {color: #5381b5;}
+.ez-toc-container-direction {direction: ltr;}.ez-toc-counter ul{counter-reset: item ;}.ez-toc-counter nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }.ez-toc-widget-direction {direction: ltr;}.ez-toc-widget-container ul{counter-reset: item ;}.ez-toc-widget-container nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }
+</style>
+<link rel='stylesheet' id='if-menu-site-css-css' href='https://cdn.networklessons.com/wp-content/plugins/if-menu/assets/if-menu-site.css?ver=6.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='networklessons-style-css' href='https://cdn.networklessons.com/wp-content/themes/networklessons/dist/app.css?ver=1724843461' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-style-css' href='https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/magnific-popup.css?ver=1.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bellows-css' href='https://cdn.networklessons.com/wp-content/plugins/bellows-pro/pro/assets/css/bellows.min.css?ver=1.4.3' type='text/css' media='all' />
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="jquery-cookie-js-extra">
+/* <![CDATA[ */
+var affwp_scripts = {"ajaxurl":"https:\/\/networklessons.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/js/jquery.cookie.min.js?ver=1.4.0" id="jquery-cookie-js"></script>
+<script type="text/javascript" id="affwp-tracking-js-extra">
+/* <![CDATA[ */
+var affwp_debug_vars = {"integrations":{"memberpress":"MemberPress"},"version":"2.26.0","currency":"USD","ref_cookie":"affwp_ref","visit_cookie":"affwp_ref_visit_id","campaign_cookie":"affwp_campaign"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/js/tracking.min.js?ver=2.26.0" id="affwp-tracking-js"></script>
+<link rel="https://api.w.org/" href="https://networklessons.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://networklessons.com/wp-json/wp/v2/posts/53425" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://networklessons.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.6.2" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://networklessons.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklessons.com%2Fcisco%2Fccie-routing-switching-written%2Fospf-graceful-restart" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://networklessons.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklessons.com%2Fcisco%2Fccie-routing-switching-written%2Fospf-graceful-restart&#038;format=xml" />
+<style id="bellows-custom-generated-css">
+
+/** Bellows Custom Tweaks (General Settings) **/
+
+/** Bellows Custom Tweaks (General Settings) **/
+/* More compact look of menu */
+.bellows .bellows-nav * { line-height: 1.75em; }
+.bellows .bellows-nav .bellows-submenu .bellows-target { padding-left: 20px;}
+.bellows .bellows-nav .bellows-target,
+.bellows .bellows-nav .bellows-submenu .bellows-target { padding: 2px;}
+
+/* Move toggle icons to left instead of right of text labels */
+.bellows .bellows-nav .bellows-subtoggle { width: 30px; left:0; }
+.bellows .bellows-nav .bellows-menu-item > .bellows-target > .bellows-target-text { margin-left: 30px; }
+.bellows .bellows-nav .bellows-subtoggle .fa { top: 40%; }
+
+/* Move toggle icons and lower level items to the right */
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-1 .bellows-subtoggle { left: 25px; }
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-1 .bellows-target { padding-left: 25px; }
+
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-2 .bellows-subtoggle { left: 50px; }
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-2 .bellows-target { padding-left: 50px; }
+
+
+/* SIDEBAR ONLY STYLING */
+
+/* Set all text to default black */
+#sidebar .bellows .bellows-nav a.bellows-target { color: #000000 }
+
+/* Set parent menu items bold and colored */
+#sidebar .bellows.bellows-main .bellows-nav .bellows-current-menu-item > .bellows-target,
+#sidebar .bellows.bellows-main .bellows-nav .bellows-current-menu-ancestor > .bellows-target { color:#557fae; font-weight: bold; }
+
+/* Set current post bold and colored */
+#sidebar .bellows .bellows-current-menu-item { font-weight: bold; color:#557fae; }
+
+/* Toggle icons on same height */
+#sidebar .bellows .bellows-nav .bellows-subtoggle .fa { top: 44%; }
+
+
+
+/* Status: Loaded from Transient */
+
+</style>		<script type="text/javascript">
+		var AFFWP = AFFWP || {};
+		AFFWP.referral_var = 'affid';
+		AFFWP.expiration = 1;
+		AFFWP.debug = 0;
+
+
+		AFFWP.referral_credit_last = 0;
+		</script>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to manual -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"visitorLoginState":"logged-in","visitorType":"subscriber","visitorEmail":"harthomp@protonmail.com","visitorEmailHash":"30617de159321682ca448e5d89fc5cae66131a43cdfff8865f5d749c58146885","visitorId":65289,"visitorIP":"203.63.201.230","pagePostType":"post","pagePostType2":"single-post","pageCategory":["ccie-routing-switching-written","ospf"],"IsActiveMember":"true","UserFullName":"Harrison Thompson buckley"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script>
+		if (typeof gtag == "undefined") {
+			function gtag(){dataLayer.push(arguments);}
+		}
+
+		gtag("consent", "default", {
+			"analytics_storage": "granted",
+			"ad_storage": "granted",
+			"ad_user_data": "granted",
+			"ad_personalization": "granted",
+			"functionality_storage": "granted",
+			"security_storage": "granted",
+			"personalization_storage": "granted",
+		});
+</script>
+<script data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWFSBS');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel="apple-touch-icon" sizes="180x180" href="/wp-content/uploads/fbrfg/apple-touch-icon.png?v=69P4gG4Gpq">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/fbrfg/favicon-32x32.png?v=69P4gG4Gpq">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/uploads/fbrfg/favicon-16x16.png?v=69P4gG4Gpq">
+<link rel="manifest" href="/wp-content/uploads/fbrfg/site.webmanifest?v=69P4gG4Gpq">
+<link rel="mask-icon" href="/wp-content/uploads/fbrfg/safari-pinned-tab.svg?v=69P4gG4Gpq" color="#5381b5">
+<link rel="shortcut icon" href="/wp-content/uploads/fbrfg/favicon.ico?v=69P4gG4Gpq">
+<meta name="msapplication-TileColor" content="#5381b5">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml?v=69P4gG4Gpq">
+<meta name="theme-color" content="#5381b5">		<style>
+			.algolia-search-highlight {
+				background-color: #fffbcc;
+				border-radius: 2px;
+				font-style: normal;
+			}
+		</style>
+		<script type="application/ld+json" class="emnl-schema-breadcrumbs">{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 0,"name": "Home","item": "https://networklessons.com"},{"@type": "ListItem","position": 1,"name": "OSPF","item": "https://networklessons.com/ospf"},{"@type": "ListItem","position": 2,"name": "OSPF Graceful Restart","item": "https://networklessons.com/ospf/ospf-graceful-restart"}]}</script>
+</head>
+
+
+<body class="post-template-default single single-post postid-53425 single-format-standard logged-in" data-theme="light">
+
+<!-- GTM Container placement set to manual -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWFSBS" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script>
+  if ( localStorage.getItem('siteTheme') ) {
+    document.body.setAttribute('data-theme', localStorage.getItem('siteTheme'));
+  }
+</script>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+	<header class="site-header">
+		        <div class="site-header-inner">
+            <div class="container">
+                <div class="row sm-gutters main-row">
+                    <div class="col-lg-4 col-8">
+                        <a href="https://networklessons.com/" class="logo">
+                            <img fetchpriority="high" width="524" height="141" src="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/logo.svg" alt="NetworkLessons.com" />
+                        </a>
+                    </div>
+                                                                <div class="col-lg-8 col-4 col-navigation">
+                            <nav id="site-navigation" class="main-navigation">
+                                <div class="menu-primary-container"><ul id="primary-menu" class="menu"><li id="menu-item-10143" class="expanded menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10143"><a href="https://networklessons.com/courses">Courses <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-59830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59830"><a href="https://networklessons.com/cisco">Cisco <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-65214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65214"><a href="https://networklessons.com/cisco/ccna-200-301">CCNA 200-301</a></li>
+		<li id="menu-item-65219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65219"><a href="https://networklessons.com/cisco/ccnp-encor-350-401">CCNP ENCOR 350-401 v1.1</a></li>
+		<li id="menu-item-65218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65218"><a href="https://networklessons.com/cisco/ccnp-enarsi-300-410">CCNP ENARSI 300-410 v1.1</a></li>
+		<li id="menu-item-65217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65217"><a href="https://networklessons.com/cisco/ccie-enterprise-infrastructure">CCIE Enterprise Infrastructure</a></li>
+		<li id="menu-item-65216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65216"><a href="https://networklessons.com/cisco/asa-firewall">ASA Firewall</a></li>
+		<li id="menu-item-65774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65774"><a href="https://networklessons.com/cisco/cisco-sd-wan">Cisco SD-WAN</a></li>
+	</ul>
+</li>
+	<li id="menu-item-59831" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59831"><a href="https://networklessons.com/routing-switching">Routing &#038; Switching <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-65232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65232"><a href="https://networklessons.com/subnetting">Subnetting</a></li>
+		<li id="menu-item-65233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65233"><a href="https://networklessons.com/switching">Switching</a></li>
+		<li id="menu-item-65231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65231"><a href="https://networklessons.com/spanning-tree">Spanning-Tree</a></li>
+		<li id="menu-item-65222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65222"><a href="https://networklessons.com/frame-relay">Frame-Relay</a></li>
+		<li id="menu-item-65230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65230"><a href="https://networklessons.com/rip">RIP</a></li>
+		<li id="menu-item-65221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65221"><a href="https://networklessons.com/eigrp">EIGRP</a></li>
+		<li id="menu-item-65227" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65227"><a href="https://networklessons.com/ospf">OSPF</a></li>
+		<li id="menu-item-65224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65224"><a href="https://networklessons.com/is-is">IS-IS</a></li>
+		<li id="menu-item-65215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65215"><a href="https://networklessons.com/bgp">BGP</a></li>
+		<li id="menu-item-65226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65226"><a href="https://networklessons.com/multicast">Multicast</a></li>
+		<li id="menu-item-65223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65223"><a href="https://networklessons.com/ipv6">IPv6</a></li>
+		<li id="menu-item-65229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65229"><a href="https://networklessons.com/quality-of-service">Quality of Service</a></li>
+		<li id="menu-item-65225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65225"><a href="https://networklessons.com/mpls">MPLS</a></li>
+	</ul>
+</li>
+	<li id="menu-item-73291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-73291"><a href="#">Data Center <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-73294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73294"><a href="https://networklessons.com/vxlan">VXLAN</a></li>
+	</ul>
+</li>
+	<li id="menu-item-65228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65228"><a href="https://networklessons.com/python">Python</a></li>
+	<li id="menu-item-65234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65234"><a href="https://networklessons.com/uncategorized">Miscellaneous</a></li>
+	<li id="menu-item-70698" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70698"><a href="https://networklessons.com/labs">Labs</a></li>
+	<li id="menu-item-64907" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-64907"><a href="#">Legacy <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-33774" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33774"><a href="https://networklessons.com/cisco/ccna-routing-switching-icnd1-100-105">CCNA R&#038;S ICND1 100-105</a></li>
+		<li id="menu-item-40575" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-40575"><a href="https://networklessons.com/cisco/ccna-routing-switching-icnd2-200-105">CCNA R&#038;S ICND2 200-105</a></li>
+		<li id="menu-item-20090" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20090"><a href="https://networklessons.com/cisco/ccnp-route">CCNP ROUTE</a></li>
+		<li id="menu-item-20092" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20092"><a href="https://networklessons.com/cisco/ccnp-switch">CCNP SWITCH</a></li>
+		<li id="menu-item-20093" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20093"><a href="https://networklessons.com/cisco/ccnp-tshoot">CCNP TSHOOT</a></li>
+		<li id="menu-item-20089" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20089"><a href="https://networklessons.com/cisco/ccie-routing-switching">CCIE R&#038;S</a></li>
+		<li id="menu-item-38428" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-38428"><a href="https://networklessons.com/cisco/ccie-routing-switching-written">CCIE R&#038;S Written</a></li>
+		<li id="menu-item-65220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65220"><a href="https://networklessons.com/cisco/evolving-technologies">Evolving Technologies</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8339"><a href="https://networklessons.com/new-lessons"><i class="fa fa-plus"></i> New Lessons</a></li>
+	<li id="menu-item-64135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64135"><a href="https://networklessons.com/updated-lessons"><i class="fas fa-pen"></i> Updated Lessons</a></li>
+	<li id="menu-item-7347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7347"><a href="https://networklessons.com/member-ideas"><i class="fa fa-lightbulb"></i> Lesson Ideas</a></li>
+</ul>
+</li>
+<li id="menu-item-8715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8715"><a href="https://forum.networklessons.com">Forum</a></li>
+<li id="menu-item-23483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23483"><a href="https://networklessons.com/support">Support</a></li>
+<li id="menu-item-65967" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-65967"><a href="#">Tools <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-65968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65968"><a href="https://www.cloudshark.org/collections/WTRpgLI-GQSDfgzkQixICg">Packet Captures</a></li>
+	<li id="menu-item-65969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65969"><a href="https://notes.networklessons.com">Notes</a></li>
+	<li id="menu-item-65970" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65970"><a href="https://networklessons.com/tools-and-resources">Resources</a></li>
+	<li id="menu-item-68327" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68327"><a href="https://networklessons.com/networklessons-exams">Practice Exams</a></li>
+</ul>
+</li>
+<li id="menu-item-22148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-22148"><a href="#"><i class="fa fa-user"></i> <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-5629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5629"><a href="https://networklessons.com/myaccount">My Account Settings</a></li>
+	<li id="menu-item-68092" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68092"><a href="https://networklessons.com/member-dashboard">Member Dashboard</a></li>
+	<li id="menu-item-22285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22285"><a href="https://networklessons.com/upgrade-to-annual-membership"><b><font color="#FFC469">UPGRADE TO ANNUAL &#038; Get 2 Months FREE!</font></b></a></li>
+	<li id="menu-item-56969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56969"><a href="https://networklessons.com/wp-login.php?action=logout">Logout</a></li>
+</ul>
+</li>
+</ul></div>                                <div class="main-navigation-close">
+                                    <i class="far fa-times"></i>
+                                </div>
+                            </nav>
+                            <div class="main-navigation-toggle">
+                                <span class="icon"></span>
+                            </div>
+                            <div class="d-none d-xl-block">
+                                
+
+<form role="search" method="get" class="search-form" action="https://networklessons.com/">
+    <label for="search-form-66e2eb0409918" class="sr-only">
+        <span class="screen-reader-text">Search for:</span>
+    </label>
+
+    <div class="input-group">
+        <input type="search" id="search-form-66e2eb0409918" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" />
+        <div class="input-group-append">
+            <button type="submit" class="search-submit btn btn-white">
+                <span class="screen-reader-text">Search</span>
+                <i class="far fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="fullpage-overlay main-navigation-overlay"></div>
+	</header>
+    
+            <div class="d-xl-none">
+            
+
+<form role="search" method="get" class="search-form" action="https://networklessons.com/">
+    <label for="search-form-66e2eb040998c" class="sr-only">
+        <span class="screen-reader-text">Search for:</span>
+    </label>
+
+    <div class="input-group">
+        <input type="search" id="search-form-66e2eb040998c" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" />
+        <div class="input-group-append">
+            <button type="submit" class="search-submit btn btn-white">
+                <span class="screen-reader-text">Search</span>
+                <i class="far fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>        </div>
+    
+	<div class="site-content container">
+    <div class="breadcrumbs" style="font-size: 12px;">You are here: <a href="https://networklessons.com">Home</a> » <a href="https://networklessons.com/ospf">OSPF</a></div>	<div class="site-content-row row">
+	<div id="primary" class="content-area col-md-8">
+		<main id="main" class="site-main">
+                            <div class="site-actions-toolbar d-md-none">
+                    <div class="site-action js--dark-mode">
+                        <i class="far fa-adjust"></i>
+                    </div>
+                </div>
+            
+		
+<article id="post-53425" class="main-post post-53425 post type-post status-publish format-standard has-post-thumbnail hentry category-ccie-routing-switching-written category-ospf tag-ip-routing tag-tuning">
+	<header class="entry-header">
+                            <h1 class="entry-title">OSPF Graceful Restart</h1>        	</header>
+	<div class="entry-content">
+                    <div class="the-content">
+                <div id="ez-toc-container" class="ez-toc-v2_0_69_1 counter-hierarchy ez-toc-counter ez-toc-custom ez-toc-container-direction">
+<div class="ez-toc-title-container"><p class="ez-toc-title">Lesson Contents</p>
+</div><nav><ul class='ez-toc-list ez-toc-list-level-1 ' ><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-1" href="#Restarting_Router" title="Restarting Router">Restarting Router</a><ul class='ez-toc-list-level-3' ><li class='ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-2" href="#Entering_graceful_restart" title="Entering graceful restart">Entering graceful restart</a></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-3" href="#During_graceful_restart" title="During graceful restart">During graceful restart</a></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-4" href="#Exiting_graceful_restart" title="Exiting graceful restart">Exiting graceful restart</a></li></ul></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-5" href="#Helper_Neighbor" title="Helper Neighbor">Helper Neighbor</a><ul class='ez-toc-list-level-3' ><li class='ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-6" href="#Entering_helper_mode" title="Entering helper mode">Entering helper mode</a></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-7" href="#Exiting_helper_mode" title="Exiting helper mode">Exiting helper mode</a></li></ul></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-8" href="#Conclusion" title="Conclusion">Conclusion</a></li></ul></nav></div>
+<p>When you reset the OSPF process, it drops all neighbor adjacencies. Other OSPF routers will have to rerun the SPF algorithm and figure out a new path in the network. With OSPF graceful restart, it allows you to restart the OSPF process on your router without dropping neighbor adjacencies. Your router will keep forwarding traffic while OSPF restarts and the network will not be interrupted.</p>
+<p>Here&#8217;s an example topology:</p>
+<p><img fetchpriority="high" decoding="async" class="alignnone size-full wp-image-53461" src="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-three-routers-two-hosts.png" alt="ospf three routers two hosts" width="634" height="264" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-three-routers-two-hosts.png 634w, https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-three-routers-two-hosts-300x125.png 300w" sizes="(max-width: 634px) 100vw, 634px" /></p>
+<p>Above we have three routers and two hosts. If the OSPF process on R2 is reset, there is no way for R1 and R3 to reach each other anymore. H1 and H2 will be unable to exchange any data. If we use graceful restart on R2, forwarding will not be interrupted while R2 restarts its OSPF process.</p>
+<p>How does it work?</p>
+<p>Graceful restart works by informing OSPF neighbors that it is going to restart. The router that is going to restart is called the <strong>restarting router</strong>, the restarting process is called the <strong>graceful restart mode. </strong>It starts by sending a link-local type 9 LSA called the <strong>grace LSA</strong> with a specified time called the <strong>grace period</strong>:</p>
+<p><img decoding="async" class="alignnone size-full wp-image-53462" src="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-grace-lsa.png" alt="ospf graceful restart grace lsa" width="634" height="267" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-grace-lsa.png 634w, https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-grace-lsa-300x126.png 300w" sizes="(max-width: 634px) 100vw, 634px" /></p>
+<p>When the neighbors of R2 receive the grace LSA, they will respond with an acknowledgment:</p>
+<p><img decoding="async" class="alignnone size-full wp-image-53463" src="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-ls-ack.png" alt="ospf graceful restart ls ack" width="634" height="267" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-ls-ack.png 634w, https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-ls-ack-300x126.png 300w" sizes="(max-width: 634px) 100vw, 634px" /></p>
+<p>R1 and R3, the neighbors of R2, are going to help with the graceful restart. These two routers will enter <strong>helper mode</strong> and are called the <strong>helper neighbors</strong>. During the grace period, R1 and R3 will act as if R2 is still out there even though they don&#8217;t receive any hello packets but will only do so if the topology doesn&#8217;t change during the graceful restart.</p>
+<p>During the time that the router is restarting, there are no changes to the routing table and forwarding tables, so traffic will be forwarded as usual:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-53464" src="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-data-forwarding-during-restart.png" alt="ospf graceful restart data forwarding during restart" width="676" height="319" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-data-forwarding-during-restart.png 676w, https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-data-forwarding-during-restart-300x142.png 300w" sizes="(max-width: 676px) 100vw, 676px" /></p>
+<p>Once OSPF has restarted, it will re-establish neighbor adjacencies with the helper routers:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-53468" src="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-reestablish-adjacencies.png" alt="ospf graceful restart re-establish adjacencies" width="634" height="264" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-reestablish-adjacencies.png 634w, https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-reestablish-adjacencies-300x125.png 300w" sizes="(max-width: 634px) 100vw, 634px" /></p>
+<p>When the graceful restart has completed, the restarting router flushes the grace LSA. The restarting router continues with its regular OSPF tasks. It will re-originate its LSAs to its neighbors:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-53478" src="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-flush-grace-lsa.png" alt="ospf graceful flush grace lsa" width="634" height="275" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-flush-grace-lsa.png 634w, https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-flush-grace-lsa-300x130.png 300w" sizes="(max-width: 634px) 100vw, 634px" /></p>
+<p>The restarting router continues with its regular OSPF tasks. It will re-originate its LSAs to its neighbors:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-53469" src="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-originate-lsa.png" alt="ospf graceful restart originate lsa" width="634" height="267" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-originate-lsa.png 634w, https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-restart-originate-lsa-300x126.png 300w" sizes="(max-width: 634px) 100vw, 634px" /></p>
+<p>And it will rerun SPF to refresh the routing table:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-53470" src="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-rerun-spf.png" alt="ospf graceful rerun spf" width="634" height="264" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-rerun-spf.png 634w, https://cdn.networklessons.com/wp-content/uploads/2017/08/ospf-graceful-rerun-spf-300x125.png 300w" sizes="(max-width: 634px) 100vw, 634px" /></p>
+<p>R2 has now successfully restarted while there was no network downtime.</p>
+<div class="notice-box  note   ">OSPF graceful restart is covered in <a href="https://tools.ietf.org/html/rfc3623" rel="nofollow">RFC 3623.</a>. Before the RFC, Cisco already implemented its own version of graceful restart called NSF (Non-Stop Forwarding). Cisco IOS supports both NSF and the RFC version of graceful restart.</div>
+<p>Most routers support helper mode but only routers with specific hardware support graceful restart. This is because routers require autonomous hardware for forwarding that is separated from the CPU. Cisco calls devices that support helper mode <strong>NSF-aware</strong> and devices that support graceful restart are called <strong>NSF-capable</strong>.</p>
+<p>Now you have an idea of how OSPF graceful restart works, let&#8217;s add some more detail to this story.</p>
+<h2><span class="ez-toc-section" id="Restarting_Router"></span>Restarting Router<span class="ez-toc-section-end"></span></h2>
+<h3><span class="ez-toc-section" id="Entering_graceful_restart"></span>Entering graceful restart<span class="ez-toc-section-end"></span></h3>
+<p>Performing the graceful restart occurs when you use the appropriate command on a router that has OSPF graceful restart enabled. The grace period should not exceed the LSRefreshTime (1800 seconds) to avoid LSAs from aging out on the restarting router.</p>
+<p>The restarting router enters the graceful restart by flooding the grace LSA. This is a type 9 LSA with a link-local scope. The grace LSA will be retransmitted until all adjacent neighbors have responded with an acknowledgment. If you don&#8217;t receive an acknowledgment from all neighbors, graceful restart will exit.</p>
+<h3><span class="ez-toc-section" id="During_graceful_restart"></span>During graceful restart<span class="ez-toc-section-end"></span></h3>
+<p>During the graceful restart the restarting router will:</p>
+<ul>
+<li>Not originate any LSA types 1-5 and 7. The idea behind graceful restart is that other routers in the network will use the LSAs of the restarting router that were originated before the graceful restart.</li>
+<li>Not modify or flush any self-originated LSAs that it receives from neighbors.</li>
+<li>Run some calculations to restore virtual links if required but does not install new OSPF routes in the routing table. It will use the entries in the routing table from before the graceful restart.</li>
+<li>Elect itself as the DR (Designated Router) if it was the DR before the graceful restart. It knows that it was the DR by looking at the hello packet of a neighbor, which lists the restarting router as the DR on the segment.</li>
+</ul>
+<h3><span class="ez-toc-section" id="Exiting_graceful_restart"></span>Exiting graceful restart<span class="ez-toc-section-end"></span></h3>
+<p>The restarting router will exit the graceful restart if any of the following events occurs:</p>
+<ul>
+<li>The restarting router has re-established all neighbor adjacencies. It knows this by looking at the neighbors in the router LSA (and the network LSA if it is the DR) from before the graceful restart and comparing those with the current neighbor adjacencies.</li>
+<li>The restarting router receives a router LSA that is not consistent with the router LSA from before the graceful restart. For example, if in our topology, R2 would receive a router LSA from R3 that does not include the link to R2 then something went wrong:
+<ul>
+<li>R3 doesn&#8217;t support graceful restart.</li>
+<li>R3 never received the grace LSA and never entered helper mode.</li>
+<li>R3 exited the helper mode before the graceful restart has ended.</li>
+</ul>
+</li>
+<li>The grace period has expired.</li>
+</ul>
+<p>Once the restarting router has exited the graceful restart, it will continue with its regular OSPF tasks. When the restarting router exits the graceful restart successfully or unsuccessfully, it will perform the following tasks:</p>
+<ul>
+<li>Router LSAs are re-originated to ensure they are up-to-date.</li>
+<li>Network LSAs are re-originated on segments where the restarting router is the DR.</li>
+<li>SPF runs and the routing table is updated. Any entries in the routing table that are no longer valid are removed.</li>
+<li>LSA type 3, 5 and 7 are originated if required.</li>
+<li>Any LSAs that were originated by the restarting router are flushed if no longer valid.</li>
+<li>Grace LSAs that the restarting router originated are flushed.</li>
+</ul>
+<h2><span class="ez-toc-section" id="Helper_Neighbor"></span>Helper Neighbor<span class="ez-toc-section-end"></span></h2>
+<p>The helper neighbor has an important role to help the restarting router.</p>
+<h3><span class="ez-toc-section" id="Entering_helper_mode"></span>Entering helper mode<span class="ez-toc-section-end"></span></h3>
+<p>When a router receives a grace LSA it enters helper mode and becomes a helper neighbor as long as it passed the following checks:</p>
+<ul>
+<li>The router has a full adjacency with the restarting router.</li>
+<li>There have been no changes in LSA type 1-5 and 7. It checks this by looking at the retransmission list for the restarting router:
+<ul>
+<li>If the list has any LSA type 1-5 or 7 then they must be periodic refreshes.</li>
+<li>If there are LSA type 1-5 or 7 on the list where the content has changed, then the helper neighbor will refuse to enter helper mode.</li>
+</ul>
+</li>
+<li>The grace period has not yet expired. The LS age of the grace LSA is less than the grace period that is specified in the body of the grace LSA.</li>
+<li>The router is to allow being a helper neighbor. This is something you can enable or disable.</li>
+<li>The router is not doing its own graceful restart.</li>
+</ul>
+<h3><span class="ez-toc-section" id="Exiting_helper_mode"></span>Exiting helper mode<span class="ez-toc-section-end"></span></h3>
+<p>The neighbor helper will exit helper mode when any of the following events happen:</p>
+<ul>
+<li>The grace LSA is flushed by the restarting router. This is a signal that the graceful restart has ended.</li>
+<li>The grace period in the grace LSA expires.</li>
+<li>The LSDB changes which tells us that there is a topology change, this terminates the graceful restart.</li>
+</ul>
+<p>When the neighbor helper exits helper mode, it re-originates its LSAs:</p>
+<ul>
+<li>It recalculates the DR for the segment.</li>
+<li>It re-originates its router LSA for the segment.</li>
+<li>If the neighbor helper is the DR, it re-originates the network LSA.</li>
+<li>If the segment is a virtual link, the neighbor helper re-originates the router LSA for the virtual link&#8217;s transit area.</li>
+</ul>
+<h2><span class="ez-toc-section" id="Conclusion"></span>Conclusion<span class="ez-toc-section-end"></span></h2>
+<p>In this lesson, you have learned how OSPF graceful restart allows you to keep forwarding traffic while the OSPF process is reset. If you want to know more details, you can find them in <a href="https://tools.ietf.org/html/rfc3623" rel="nofollow">RFC 3623.</a></p>
+            </div>
+                	</div>
+</article>
+		</main>
+	</div>
+
+
+<div class="widget-area col-md-4">
+            <div class="site-actions-toolbar d-none d-md-flex">
+            <div class="site-action js--dark-mode">
+                <i class="far fa-adjust"></i>
+            </div>
+        </div>
+        <aside id="secondary">
+        <section id="block-2" class="widget widget_block"><p><div class="urlspecificmenu-toggle">Lessons</div><div class="fullpage-overlay urlspecificmenu-overlay"></div><div class="urlspecificmenu"><div class="urlspecificmenu-close"><i class="far fa-times"></i></div>
+				<h2>Course Contents</h2><p>OSPF</p><nav id="bellows-main-649" class="bellows bellows-nojs bellows-main bellows-source-menu bellows-align-full bellows-skin-none bellows-type-accordion bellows-expand-current"><ul id="menu-ospf" class="bellows-nav" data-bellows-config="main"><li id="menu-item-18659" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18659 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 1: Introduction to OSPF</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18660" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18660 bellows-item-level-1"><a  href="https://networklessons.com/ospf/introduction-to-ospf" class="bellows-target"><span class="bellows-target-title bellows-target-text">Introduction to OSPF</span></a></li>
+	<li id="menu-item-18661" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18661 bellows-item-level-1"><a  href="https://networklessons.com/ospf/basic-ospf-configuration" class="bellows-target"><span class="bellows-target-title bellows-target-text">Basic OSPF Configuration</span></a></li>
+	<li id="menu-item-42663" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-42663 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-multi-area-configuration" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Multi Area Configuration</span></a></li>
+	<li id="menu-item-18662" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18662 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-reference-bandwidth" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Reference Bandwidth</span></a></li>
+	<li id="menu-item-18663" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18663 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-plain-text-authentication" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Plain Text Authentication</span></a></li>
+	<li id="menu-item-18664" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18664 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-md5-authentication" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF MD5 Authentication</span></a></li>
+	<li id="menu-item-47326" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-47326 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-hmac-sha-extended-authentication" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF SHA-HMAC Authentication</span></a></li>
+	<li id="menu-item-47354" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-47354 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-ttl-security-check" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF TTL Security Check</span></a></li>
+	<li id="menu-item-18665" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18665 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-default-route" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Default Route</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18666" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18666 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 2: OSPF Neighbor Adjacency</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18667" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18667 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-lsa-types-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF LSA Types</span></a></li>
+	<li id="menu-item-18668" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18668 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-lsas-and-lsdb-flooding-tutorial" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF LSAs and LSDB Flooding</span></a></li>
+	<li id="menu-item-18669" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18669 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-hello-and-dead-interval" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Hello and Dead Interval</span></a></li>
+	<li id="menu-item-18670" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18670 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-router-id" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Router ID</span></a></li>
+	<li id="menu-item-18671" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18671 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-packets-and-neighbor-discovery" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Packets and Neighbor Discovery</span></a></li>
+	<li id="menu-item-18672" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18672 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-drbdr-election-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF DR/BDR Election</span></a></li>
+	<li id="menu-item-18673" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18673 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-passive-interface" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Passive Interface</span></a></li>
+	<li id="menu-item-18997" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18997 bellows-item-level-1"><a  href="https://networklessons.com/ospf/troubleshooting-ospf-neighbor-adjacency" class="bellows-target"><span class="bellows-target-title bellows-target-text">Troubleshooting OSPF Neighbor Adjacency</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18674" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18674 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 3: OSPF Network Types</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18675" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18675 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-non-broadcast-network-type-over-frame-relay" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Non-Broadcast Network Type</span></a></li>
+	<li id="menu-item-18676" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18676 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-broadcast-network-type-over-frame-relay" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Broadcast Network Type</span></a></li>
+	<li id="menu-item-18677" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18677 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-point-to-multipoint-network-type-over-frame-relay" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Point-to-Multipoint Network Type</span></a></li>
+	<li id="menu-item-18678" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18678 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-point-to-multipoint-non-broadcast-network-type-over-frame-relay" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Point-to-Multipoint Non-Broadcast Network Type</span></a></li>
+	<li id="menu-item-18679" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18679 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-point-to-point-network-type-over-frame-relay" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Point-to-Point Network Type</span></a></li>
+	<li id="menu-item-18680" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18680 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-next-hop-ip-address-with-different-network-types" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Next Hop with Network Types</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18681" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18681 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 4: OSPF Stub Areas</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18682" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18682 bellows-item-level-1"><a  href="https://networklessons.com/ospf/introduction-to-ospf-stub-areas" class="bellows-target"><span class="bellows-target-title bellows-target-text">Introduction to OSPF Stub Areas</span></a></li>
+	<li id="menu-item-18683" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18683 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-stub-area" class="bellows-target"><span class="bellows-target-title bellows-target-text">How to configure OSPF Stub Area</span></a></li>
+	<li id="menu-item-18684" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18684 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-totally-stub-area" class="bellows-target"><span class="bellows-target-title bellows-target-text">How to configure OSPF Totally Stub</span></a></li>
+	<li id="menu-item-18685" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18685 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-nssa-not-so-stubby-area" class="bellows-target"><span class="bellows-target-title bellows-target-text">How to configure OSPF NSSA (Not So Stubby) Area</span></a></li>
+	<li id="menu-item-18686" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18686 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-totally-nssa-area" class="bellows-target"><span class="bellows-target-title bellows-target-text">How to configure OSPF Totally NSSA (Not So Stubby) Area</span></a></li>
+	<li id="menu-item-18687" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18687 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-nssa-p-bit-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF NSSA P-bit explained</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18688" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-current-menu-ancestor bellows-current-menu-parent bellows-menu-item-has-children bellows-menu-item-18688 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 5: Advanced OSPF Topics</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18689" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18689 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-summarization" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Summarization</span></a></li>
+	<li id="menu-item-19056" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-19056 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-distribute-list-filtering" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Distribute-List Filtering</span></a></li>
+	<li id="menu-item-18690" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18690 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-abr-type-3-lsa-filtering-on-cisco-ios" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF LSA Type 3 Filtering</span></a></li>
+	<li id="menu-item-18691" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18691 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-lsa-type-5-filtering-on-cisco-ios" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF LSA Type 5 Filtering</span></a></li>
+	<li id="menu-item-18692" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18692 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-virtual-link" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Virtual Link</span></a></li>
+	<li id="menu-item-55257" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55257 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-virtual-link-authentication" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Virtual Link Authentication</span></a></li>
+	<li id="menu-item-18693" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18693 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-path-selection-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Path Selection Explained</span></a></li>
+	<li id="menu-item-18694" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18694 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-read-the-ospf-database" class="bellows-target"><span class="bellows-target-title bellows-target-text">How to read the OSPF Database</span></a></li>
+	<li id="menu-item-18695" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18695 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospfv3-for-ipv4-configuration" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPFv3 for IPv4</span></a></li>
+	<li id="menu-item-18998" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18998 bellows-item-level-1"><a  href="https://networklessons.com/ospf/troubleshooting-ospf-route-advertisement" class="bellows-target"><span class="bellows-target-title bellows-target-text">Troubleshooting OSPF Route Advertisement</span></a></li>
+	<li id="menu-item-47412" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-47412 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-spf-scheduling-tuning-with-spf-throttling" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF SPF Scheduling and Throttling</span></a></li>
+	<li id="menu-item-47549" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-47549 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-lsa-throttling" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF LSA Throttling</span></a></li>
+	<li id="menu-item-47668" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-47668 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-incremental-spf" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Incremental SPF</span></a></li>
+	<li id="menu-item-47736" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-47736 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-prefix-suppression" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Prefix Suppression</span></a></li>
+	<li id="menu-item-52180" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-52180 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-stub-router" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Stub Router</span></a></li>
+	<li id="menu-item-52189" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-52189 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-graceful-shutdown" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Graceful Shutdown</span></a></li>
+	<li id="menu-item-53484" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-current-menu-item bellows-menu-item-53484 bellows-item-level-1 bellows-current-menu-item"><a  href="https://networklessons.com/ospf/ospf-graceful-restart" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Graceful Restart</span></a></li>
+	<li id="menu-item-54702" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-54702 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-loop-free-alternate-lfa-fast-reroute-frr" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Loop-Free Alternate (LFA) Fast Reroute (FRR)</span></a></li>
+	<li id="menu-item-54906" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-54906 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-remote-loop-free-alternate-lfa-fast-reroute-frr" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Remote Loop-Free Alternate (LFA) Fast Reroute (FRR)</span></a></li>
+</ul>
+</li>
+<li id="menu-item-71874" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-71874 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 6: Lab</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-71875" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-71875 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-professional-lab-1" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Professional Lab 1</span></a></li>
+</ul>
+</li>
+</ul></nav></div></p>
+</section>    </aside>
+</div>
+
+</div><!-- end .row -->
+</div><!-- end .container -->
+<div class="container">
+<div class="row">
+
+    <div class="col-12">
+		
+		<div class="cmd_post_nav"><div class="cmd_previous"><a href="https://networklessons.com/ospf/ospf-graceful-shutdown" rel="prev"><strong>Previous Lesson</strong><br>OSPF Graceful Shutdown</a></div><div class="cmd_next"><a href="https://networklessons.com/ospf/ospf-loop-free-alternate-lfa-fast-reroute-frr" rel="next"><strong>Next Lesson</strong><br>OSPF Loop-Free Alternate (LFA) Fast Reroute (FRR)</a></div></div>	    <p class="tags">Tags: <a href="https://networklessons.com/tag/ip-routing" rel="tag">IP Routing</a>, <a href="https://networklessons.com/tag/tuning" rel="tag">Tuning</a></p>
+        <hr>
+
+		    <div id="comments" class="comments-area discourse-comments-area">
+        <h2 class="comments-title discourse-comments-title">Forum Replies</h2>
+        <ol class="comment-list">		<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for Zaman.rubd" src="https://cdn-forum.networklessons.com/letter_avatar_proxy/v4/letter/z/45deac/64.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/ospf-graceful-restart/2109" rel="external" class="url">Zaman.rubd</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Hi Rene,<br>
+Thanks for your nice stuff .<br>
+So , how can we configure the Graceful restart  and First we have to check the device is supported or not ?? Thx</p>
+<p>br//zaman</p></p></div>
+			</article>
+		</li>
+				<li class="comment odd depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for lagapidis" src="https://cdn-forum.networklessons.com/user_avatar/forum.networklessons.com/lagapidis/64/4949_2.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/ospf-graceful-restart/2109" rel="external" class="url">lagapidis</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Hello Zaman</p>
+<p>You can find out about how to configure OSPF graceful restart at this <a href="https://www.cisco.com/c/en/us/td/docs/ios/12_0s/feature/guide/gr_ospf.html#wp1053055">Cisco Documentation</a>.  Note that OSPF graceful restart comes in two flavours: one which was implemented by Cisco, and one which is the IETF equivilent.  Both can be implemented on Cisco devices.  Because cisco Calls it Non Stop Forwarding, the command in both cases is <code>nsf</code>.  <code>nsf cisco</code> is used to implement the Cisco version while <code>nsf ietf</code> is use for the IETF version.</p>
+<p>Both commands are available in IOS version 12.2(33)SXH and later.</p>
+<p>I hope this has been helpful!</p>
+<p>Laz</p></p></div>
+			</article>
+		</li>
+				<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for saif.salah.apple" src="https://cdn-forum.networklessons.com/letter_avatar_proxy/v4/letter/s/71c47a/64.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/ospf-graceful-restart/2109" rel="external" class="url">saif.salah.apple</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Dear Agapides,<br>
+kindly,</p>
+<ol>
+<li>i have confuse about sentecnce “Once OSPF has restarted, it will re-establish neighbor adjacencies with the helper routers” it contradict ( sorry if wrong with  using word  I am not native), with concept of gracefull restart that neighbor adjacency is not down during ospf process restart…<br>
+2.usually i  clear ospf process when i make change in LSDB using filtering or summerization or any thing else change LSDB  ,so you  mentioned if  thers is changed in LSDB before &amp; after gracefull restart , it terminate gracefull restart   ( mean neighbo</li></ol><strong><a href="https://forum.networklessons.com/t/ospf-graceful-restart/2109/4" target="_blank">... Continue reading in our forum</a></strong></p></div>
+			</article>
+		</li>
+				<li class="comment odd depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for saif.salah.apple" src="https://cdn-forum.networklessons.com/letter_avatar_proxy/v4/letter/s/71c47a/64.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/ospf-graceful-restart/2109" rel="external" class="url">saif.salah.apple</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Dear Agapides,<br>
+from cisco documents,<br>
+During the NSF restart process, if neighbors that are not NSF-aware are detected on a network interface,NSF restart is aborted on the interface; however, NSF restart will continue on other interfaces.<br>
+is it mean  if router 2 detect router 3 is non helpler capable " support or configure ",it will reset adj with r3  during restart ospf process ,keep traffic not interrup with R1  need your clearfication</p></p></div>
+			</article>
+		</li>
+				<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for saif.salah.apple" src="https://cdn-forum.networklessons.com/letter_avatar_proxy/v4/letter/s/71c47a/64.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/ospf-graceful-restart/2109" rel="external" class="url">saif.salah.apple</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Dear sir<br>
+kindlty, related with nsf ietf helper strict-lsa-checking, if defalut behavior  when there have been  changes in LSA type 1-5 and 7. helper mode will be exit …why i need this command…</p></p></div>
+			</article>
+		</li>
+		</ol>
+        <div class="respond comment-respond">
+            <p id="reply-title" class="comment-reply-title"><strong><a href="https://forum.networklessons.com/t/ospf-graceful-restart/2109" target="_blank">18 more replies!</a></strong> Ask a question or join the discussion by visiting our <a href="https://forum.networklessons.com/t/ospf-graceful-restart/2109" target="_blank">Community Forum</a></p>
+        </div>
+    </div>
+        </div>
+
+
+		</div>
+	</div>
+
+	<footer class="site-footer">
+        <div class="container">
+            <div class="site-footer-inner">
+                <div class="copyright">
+                    &copy; 2013 - 2024 NetworkLessons.com 65289                </div>
+                <div class="menu-footer-container"><ul id="footer-menu" class="menu"><li id="menu-item-22469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22469"><a href="https://networklessons.com/disclaimer">Disclaimer</a></li>
+<li id="menu-item-22470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-22470"><a rel="privacy-policy" href="https://networklessons.com/privacy-policy">Privacy Policy</a></li>
+<li id="menu-item-22468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22468"><a href="https://networklessons.com/support">Support</a></li>
+<li id="menu-item-59827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59827"><a href="https://networklessons.com/about-networklessons-com">About</a></li>
+</ul></div>            </div>
+        </div>
+    </footer>
+</div>
+
+<script type="text/javascript">var algolia = {"debug":false,"application_id":"JYCQGPKUUY","search_api_key":"294cbcc6c53b2ccb6f80f0410f485afe","powered_by_enabled":false,"query":"","autocomplete":{"sources":[],"input_selector":"input[name='s']:not(.no-autocomplete):not(#adminbar-search)"},"indices":{"searchable_posts":{"name":"wp_searchable_posts","id":"searchable_posts","enabled":true,"replicas":[]}}};</script><script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.20.2" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" src="https://player.vimeo.com/api/player.js?ver=1.0" id="gtm4wp-vimeo-api-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-vimeo.js?ver=1.20.2" id="gtm4wp-vimeo-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/bundle.js?ver=1702771200" id="networklessons-script-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/jquery.magnific-popup.min.js?ver=1.1.0" id="magnific-popup-jquery-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/jquery.magnific-popup.js?ver=1.1.0" id="magnific-popup-core-js-js"></script>
+<script type="text/javascript" id="bellows-js-extra">
+/* <![CDATA[ */
+var bellows_data = {"config":{"main":{"folding":"multiple","current":"on","slide_speed":400}},"v":"1.4.3"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/bellows-pro/assets/js/bellows.min.js?ver=1.4.3" id="bellows-js"></script>
+
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

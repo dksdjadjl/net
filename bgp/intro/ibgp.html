@@ -1,0 +1,1131 @@
+
+<!doctype html>
+<html lang="en-US" id="html">
+<head> 
+    <script src="https://www.googleoptimize.com/optimize.js?id=GTM-N6QRZFG"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="shortcut icon" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-180x180.png" />
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v23.4 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Internal BGP (Border Gateway Protocol) explained</title><link rel="preload" data-rocket-preload as="image" href="https://cdn.networklessons.com/wp-content/uploads/2014/09/5-routers-3-AS1-AS2-AS3.png" imagesrcset="https://cdn.networklessons.com/wp-content/uploads/2014/09/5-routers-3-AS1-AS2-AS3.png 617w, https://cdn.networklessons.com/wp-content/uploads/2014/09/5-routers-3-AS1-AS2-AS3-279x300.png 279w, https://cdn.networklessons.com/wp-content/uploads/2014/09/5-routers-3-AS1-AS2-AS3-600x644.png 600w" imagesizes="(max-width: 617px) 100vw, 617px" fetchpriority="high">
+	<meta name="description" content="This lesson explains why we need Internal BGP, what IBGP split horizon is about and how to configure IBGP on Cisco IOS Routers." />
+	<link rel="canonical" href="https://networklessons.com/bgp/internal-bgp-border-gateway-protocol-explained" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Internal BGP (Border Gateway Protocol) explained" />
+	<meta property="og:description" content="This lesson explains why we need Internal BGP, what IBGP split horizon is about and how to configure IBGP on Cisco IOS Routers." />
+	<meta property="og:url" content="https://networklessons.com/bgp/internal-bgp-border-gateway-protocol-explained" />
+	<meta property="og:site_name" content="NetworkLessons.com" />
+	<meta property="article:published_time" content="2014-09-12T08:40:14+00:00" />
+	<meta property="article:modified_time" content="2024-01-17T19:27:57+00:00" />
+	<meta property="og:image" content="https://cdn.networklessons.com/wp-content/uploads/2014/09/digital-world-abstract.jpg" />
+	<meta property="og:image:width" content="346" />
+	<meta property="og:image:height" content="346" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Rene Molenaar" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Rene Molenaar" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="12 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://networklessons.com/bgp/internal-bgp-border-gateway-protocol-explained","url":"https://networklessons.com/bgp/internal-bgp-border-gateway-protocol-explained","name":"Internal BGP (Border Gateway Protocol) explained","isPartOf":{"@id":"https://networklessons.com/#website"},"primaryImageOfPage":{"@id":"https://networklessons.com/bgp/internal-bgp-border-gateway-protocol-explained#primaryimage"},"image":{"@id":"https://networklessons.com/bgp/internal-bgp-border-gateway-protocol-explained#primaryimage"},"thumbnailUrl":"https://cdn.networklessons.com/wp-content/uploads/2014/09/digital-world-abstract.jpg","datePublished":"2014-09-12T08:40:14+00:00","dateModified":"2024-01-17T19:27:57+00:00","author":{"@id":"https://networklessons.com/#/schema/person/a210ceb8a2b14b76e03c27d3c65850c2"},"description":"This lesson explains why we need Internal BGP, what IBGP split horizon is about and how to configure IBGP on Cisco IOS Routers.","breadcrumb":{"@id":"https://networklessons.com/bgp/internal-bgp-border-gateway-protocol-explained#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://networklessons.com/bgp/internal-bgp-border-gateway-protocol-explained"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://networklessons.com/bgp/internal-bgp-border-gateway-protocol-explained#primaryimage","url":"https://cdn.networklessons.com/wp-content/uploads/2014/09/digital-world-abstract.jpg","contentUrl":"https://cdn.networklessons.com/wp-content/uploads/2014/09/digital-world-abstract.jpg","width":346,"height":346,"caption":"Digital World Abstract"},{"@type":"BreadcrumbList","@id":"https://networklessons.com/bgp/internal-bgp-border-gateway-protocol-explained#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Networklessons.com","item":"https://networklessons.com/"},{"@type":"ListItem","position":2,"name":"BGP","item":"https://networklessons.com/bgp"},{"@type":"ListItem","position":3,"name":"Internal BGP (Border Gateway Protocol) explained"}]},{"@type":"WebSite","@id":"https://networklessons.com/#website","url":"https://networklessons.com/","name":"NetworkLessons.com","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://networklessons.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://networklessons.com/#/schema/person/a210ceb8a2b14b76e03c27d3c65850c2","name":"Rene Molenaar","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://networklessons.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/d676347ef395e3b3a6a056aaf5546311?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/d676347ef395e3b3a6a056aaf5546311?s=96&d=mm&r=g","caption":"Rene Molenaar"},"description":"René - CCIE #41726 is the creator of Networklessons.com where he writes about networking topics like Cisco, Routing, Switching, Linux, Wireless &amp; Security. He also created GNS3Vault.com where people can study Cisco labs for free.","sameAs":["https://networklessons.com"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//player.vimeo.com' />
+<link rel='dns-prefetch' href='//cdn.networklessons.com' />
+<link rel='dns-prefetch' href='//googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//googleoptimize.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//tag.getdrip.com' />
+<link rel='dns-prefetch' href='//facebook.com' />
+
+<link href='https://cdn.networklessons.com' rel='preconnect' />
+<link rel='stylesheet' id='mp-theme-css' href='https://cdn.networklessons.com/wp-content/plugins/memberpress/css/ui/theme.css?ver=1.11.34' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://cdn.networklessons.com/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2' type='text/css' media='all' />
+<style id='safe-svg-svg-icon-style-inline-css' type='text/css'>
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='arve-css' href='https://cdn.networklessons.com/wp-content/plugins/advanced-responsive-video-embedder/build/main.css?ver=755e5bf2bfafc15e7cc1' type='text/css' media='all' />
+<link rel='stylesheet' id='arve-pro-css' href='https://cdn.networklessons.com/wp-content/plugins/arve-pro/build/main.css?ver=eea34735566740155d0f' type='text/css' media='all' />
+<link rel='stylesheet' id='emnl-custom-styling-various-plugins-css' href='https://cdn.networklessons.com/wp-content/plugins/emnl-custom-css-various-plugins/emnl-custom-css-various-plugins.css?ver=1720772937' type='text/css' media='all' />
+<link rel='stylesheet' id='affwp-forms-css' href='https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/css/forms.min.css?ver=2.26.0' type='text/css' media='all' />
+<link rel='stylesheet' id='ez-toc-css' href='https://cdn.networklessons.com/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.69.1' type='text/css' media='all' />
+<style id='ez-toc-inline-css' type='text/css'>
+div#ez-toc-container .ez-toc-title {font-size: 100%;}div#ez-toc-container .ez-toc-title {font-weight: 700;}div#ez-toc-container ul li {font-size: 100%;}div#ez-toc-container ul li {font-weight: 500;}div#ez-toc-container nav ul ul li {font-size: 90%;}div#ez-toc-container {background: #f9f9f9;border: 1px solid #e6e6e6;}div#ez-toc-container p.ez-toc-title , #ez-toc-container .ez_toc_custom_title_icon , #ez-toc-container .ez_toc_custom_toc_icon {color: #000000;}div#ez-toc-container ul.ez-toc-list a {color: #5381b5;}div#ez-toc-container ul.ez-toc-list a:hover {color: #5381b5;}div#ez-toc-container ul.ez-toc-list a:visited {color: #5381b5;}
+.ez-toc-container-direction {direction: ltr;}.ez-toc-counter ul{counter-reset: item ;}.ez-toc-counter nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }.ez-toc-widget-direction {direction: ltr;}.ez-toc-widget-container ul{counter-reset: item ;}.ez-toc-widget-container nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }
+</style>
+<link rel='stylesheet' id='if-menu-site-css-css' href='https://cdn.networklessons.com/wp-content/plugins/if-menu/assets/if-menu-site.css?ver=6.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='networklessons-style-css' href='https://cdn.networklessons.com/wp-content/themes/networklessons/dist/app.css?ver=1724843461' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-style-css' href='https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/magnific-popup.css?ver=1.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bellows-css' href='https://cdn.networklessons.com/wp-content/plugins/bellows-pro/pro/assets/css/bellows.min.css?ver=1.4.3' type='text/css' media='all' />
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="jquery-cookie-js-extra">
+/* <![CDATA[ */
+var affwp_scripts = {"ajaxurl":"https:\/\/networklessons.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/js/jquery.cookie.min.js?ver=1.4.0" id="jquery-cookie-js"></script>
+<script type="text/javascript" id="affwp-tracking-js-extra">
+/* <![CDATA[ */
+var affwp_debug_vars = {"integrations":{"memberpress":"MemberPress"},"version":"2.26.0","currency":"USD","ref_cookie":"affwp_ref","visit_cookie":"affwp_ref_visit_id","campaign_cookie":"affwp_campaign"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/js/tracking.min.js?ver=2.26.0" id="affwp-tracking-js"></script>
+<link rel="https://api.w.org/" href="https://networklessons.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://networklessons.com/wp-json/wp/v2/posts/5117" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://networklessons.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.6.2" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://networklessons.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklessons.com%2Fbgp%2Finternal-bgp-border-gateway-protocol-explained" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://networklessons.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklessons.com%2Fbgp%2Finternal-bgp-border-gateway-protocol-explained&#038;format=xml" />
+<style id="bellows-custom-generated-css">
+
+/** Bellows Custom Tweaks (General Settings) **/
+
+/** Bellows Custom Tweaks (General Settings) **/
+/* More compact look of menu */
+.bellows .bellows-nav * { line-height: 1.75em; }
+.bellows .bellows-nav .bellows-submenu .bellows-target { padding-left: 20px;}
+.bellows .bellows-nav .bellows-target,
+.bellows .bellows-nav .bellows-submenu .bellows-target { padding: 2px;}
+
+/* Move toggle icons to left instead of right of text labels */
+.bellows .bellows-nav .bellows-subtoggle { width: 30px; left:0; }
+.bellows .bellows-nav .bellows-menu-item > .bellows-target > .bellows-target-text { margin-left: 30px; }
+.bellows .bellows-nav .bellows-subtoggle .fa { top: 40%; }
+
+/* Move toggle icons and lower level items to the right */
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-1 .bellows-subtoggle { left: 25px; }
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-1 .bellows-target { padding-left: 25px; }
+
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-2 .bellows-subtoggle { left: 50px; }
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-2 .bellows-target { padding-left: 50px; }
+
+
+/* SIDEBAR ONLY STYLING */
+
+/* Set all text to default black */
+#sidebar .bellows .bellows-nav a.bellows-target { color: #000000 }
+
+/* Set parent menu items bold and colored */
+#sidebar .bellows.bellows-main .bellows-nav .bellows-current-menu-item > .bellows-target,
+#sidebar .bellows.bellows-main .bellows-nav .bellows-current-menu-ancestor > .bellows-target { color:#557fae; font-weight: bold; }
+
+/* Set current post bold and colored */
+#sidebar .bellows .bellows-current-menu-item { font-weight: bold; color:#557fae; }
+
+/* Toggle icons on same height */
+#sidebar .bellows .bellows-nav .bellows-subtoggle .fa { top: 44%; }
+
+
+
+/* Status: Loaded from Transient */
+
+</style>		<script type="text/javascript">
+		var AFFWP = AFFWP || {};
+		AFFWP.referral_var = 'affid';
+		AFFWP.expiration = 1;
+		AFFWP.debug = 0;
+
+
+		AFFWP.referral_credit_last = 0;
+		</script>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to manual -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"visitorLoginState":"logged-in","visitorType":"subscriber","visitorEmail":"harthomp@protonmail.com","visitorEmailHash":"30617de159321682ca448e5d89fc5cae66131a43cdfff8865f5d749c58146885","visitorId":65289,"visitorIP":"203.63.201.230","pagePostType":"post","pagePostType2":"single-post","pageCategory":["bgp","ccie-routing-switching","ccie-routing-switching-written","ccna-routing-switching-icnd2-200-105","ccnp-enarsi-300-410","ccnp-encor-350-401","ccnp-route"],"IsActiveMember":"true","UserFullName":"Harrison Thompson buckley"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script>
+		if (typeof gtag == "undefined") {
+			function gtag(){dataLayer.push(arguments);}
+		}
+
+		gtag("consent", "default", {
+			"analytics_storage": "granted",
+			"ad_storage": "granted",
+			"ad_user_data": "granted",
+			"ad_personalization": "granted",
+			"functionality_storage": "granted",
+			"security_storage": "granted",
+			"personalization_storage": "granted",
+		});
+</script>
+<script data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWFSBS');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel="apple-touch-icon" sizes="180x180" href="/wp-content/uploads/fbrfg/apple-touch-icon.png?v=69P4gG4Gpq">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/fbrfg/favicon-32x32.png?v=69P4gG4Gpq">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/uploads/fbrfg/favicon-16x16.png?v=69P4gG4Gpq">
+<link rel="manifest" href="/wp-content/uploads/fbrfg/site.webmanifest?v=69P4gG4Gpq">
+<link rel="mask-icon" href="/wp-content/uploads/fbrfg/safari-pinned-tab.svg?v=69P4gG4Gpq" color="#5381b5">
+<link rel="shortcut icon" href="/wp-content/uploads/fbrfg/favicon.ico?v=69P4gG4Gpq">
+<meta name="msapplication-TileColor" content="#5381b5">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml?v=69P4gG4Gpq">
+<meta name="theme-color" content="#5381b5">		<style>
+			.algolia-search-highlight {
+				background-color: #fffbcc;
+				border-radius: 2px;
+				font-style: normal;
+			}
+		</style>
+		<script type="application/ld+json" class="emnl-schema-breadcrumbs">{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 0,"name": "Home","item": "https://networklessons.com"},{"@type": "ListItem","position": 1,"name": "BGP","item": "https://networklessons.com/bgp"},{"@type": "ListItem","position": 2,"name": "Internal BGP (Border Gateway Protocol) explained","item": "https://networklessons.com/bgp/internal-bgp-border-gateway-protocol-explained"}]}</script>
+</head>
+
+
+<body class="post-template-default single single-post postid-5117 single-format-standard logged-in" data-theme="light">
+
+<!-- GTM Container placement set to manual -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWFSBS" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script>
+  if ( localStorage.getItem('siteTheme') ) {
+    document.body.setAttribute('data-theme', localStorage.getItem('siteTheme'));
+  }
+</script>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+	<header class="site-header">
+		        <div class="site-header-inner">
+            <div class="container">
+                <div class="row sm-gutters main-row">
+                    <div class="col-lg-4 col-8">
+                        <a href="https://networklessons.com/" class="logo">
+                            <img width="524" height="141" src="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/logo.svg" alt="NetworkLessons.com" />
+                        </a>
+                    </div>
+                                                                <div class="col-lg-8 col-4 col-navigation">
+                            <nav id="site-navigation" class="main-navigation">
+                                <div class="menu-primary-container"><ul id="primary-menu" class="menu"><li id="menu-item-10143" class="expanded menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10143"><a href="https://networklessons.com/courses">Courses <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-59830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59830"><a href="https://networklessons.com/cisco">Cisco <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-65214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65214"><a href="https://networklessons.com/cisco/ccna-200-301">CCNA 200-301</a></li>
+		<li id="menu-item-65219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65219"><a href="https://networklessons.com/cisco/ccnp-encor-350-401">CCNP ENCOR 350-401 v1.1</a></li>
+		<li id="menu-item-65218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65218"><a href="https://networklessons.com/cisco/ccnp-enarsi-300-410">CCNP ENARSI 300-410 v1.1</a></li>
+		<li id="menu-item-65217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65217"><a href="https://networklessons.com/cisco/ccie-enterprise-infrastructure">CCIE Enterprise Infrastructure</a></li>
+		<li id="menu-item-65216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65216"><a href="https://networklessons.com/cisco/asa-firewall">ASA Firewall</a></li>
+		<li id="menu-item-65774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65774"><a href="https://networklessons.com/cisco/cisco-sd-wan">Cisco SD-WAN</a></li>
+	</ul>
+</li>
+	<li id="menu-item-59831" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59831"><a href="https://networklessons.com/routing-switching">Routing &#038; Switching <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-65232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65232"><a href="https://networklessons.com/subnetting">Subnetting</a></li>
+		<li id="menu-item-65233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65233"><a href="https://networklessons.com/switching">Switching</a></li>
+		<li id="menu-item-65231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65231"><a href="https://networklessons.com/spanning-tree">Spanning-Tree</a></li>
+		<li id="menu-item-65222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65222"><a href="https://networklessons.com/frame-relay">Frame-Relay</a></li>
+		<li id="menu-item-65230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65230"><a href="https://networklessons.com/rip">RIP</a></li>
+		<li id="menu-item-65221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65221"><a href="https://networklessons.com/eigrp">EIGRP</a></li>
+		<li id="menu-item-65227" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65227"><a href="https://networklessons.com/ospf">OSPF</a></li>
+		<li id="menu-item-65224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65224"><a href="https://networklessons.com/is-is">IS-IS</a></li>
+		<li id="menu-item-65215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65215"><a href="https://networklessons.com/bgp">BGP</a></li>
+		<li id="menu-item-65226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65226"><a href="https://networklessons.com/multicast">Multicast</a></li>
+		<li id="menu-item-65223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65223"><a href="https://networklessons.com/ipv6">IPv6</a></li>
+		<li id="menu-item-65229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65229"><a href="https://networklessons.com/quality-of-service">Quality of Service</a></li>
+		<li id="menu-item-65225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65225"><a href="https://networklessons.com/mpls">MPLS</a></li>
+	</ul>
+</li>
+	<li id="menu-item-73291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-73291"><a href="#">Data Center <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-73294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73294"><a href="https://networklessons.com/vxlan">VXLAN</a></li>
+	</ul>
+</li>
+	<li id="menu-item-65228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65228"><a href="https://networklessons.com/python">Python</a></li>
+	<li id="menu-item-65234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65234"><a href="https://networklessons.com/uncategorized">Miscellaneous</a></li>
+	<li id="menu-item-70698" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70698"><a href="https://networklessons.com/labs">Labs</a></li>
+	<li id="menu-item-64907" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-64907"><a href="#">Legacy <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-33774" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33774"><a href="https://networklessons.com/cisco/ccna-routing-switching-icnd1-100-105">CCNA R&#038;S ICND1 100-105</a></li>
+		<li id="menu-item-40575" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-40575"><a href="https://networklessons.com/cisco/ccna-routing-switching-icnd2-200-105">CCNA R&#038;S ICND2 200-105</a></li>
+		<li id="menu-item-20090" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-20090"><a href="https://networklessons.com/cisco/ccnp-route">CCNP ROUTE</a></li>
+		<li id="menu-item-20092" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20092"><a href="https://networklessons.com/cisco/ccnp-switch">CCNP SWITCH</a></li>
+		<li id="menu-item-20093" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20093"><a href="https://networklessons.com/cisco/ccnp-tshoot">CCNP TSHOOT</a></li>
+		<li id="menu-item-20089" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-20089"><a href="https://networklessons.com/cisco/ccie-routing-switching">CCIE R&#038;S</a></li>
+		<li id="menu-item-38428" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-38428"><a href="https://networklessons.com/cisco/ccie-routing-switching-written">CCIE R&#038;S Written</a></li>
+		<li id="menu-item-65220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65220"><a href="https://networklessons.com/cisco/evolving-technologies">Evolving Technologies</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8339"><a href="https://networklessons.com/new-lessons"><i class="fa fa-plus"></i> New Lessons</a></li>
+	<li id="menu-item-64135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64135"><a href="https://networklessons.com/updated-lessons"><i class="fas fa-pen"></i> Updated Lessons</a></li>
+	<li id="menu-item-7347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7347"><a href="https://networklessons.com/member-ideas"><i class="fa fa-lightbulb"></i> Lesson Ideas</a></li>
+</ul>
+</li>
+<li id="menu-item-8715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8715"><a href="https://forum.networklessons.com">Forum</a></li>
+<li id="menu-item-23483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23483"><a href="https://networklessons.com/support">Support</a></li>
+<li id="menu-item-65967" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-65967"><a href="#">Tools <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-65968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65968"><a href="https://www.cloudshark.org/collections/WTRpgLI-GQSDfgzkQixICg">Packet Captures</a></li>
+	<li id="menu-item-65969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65969"><a href="https://notes.networklessons.com">Notes</a></li>
+	<li id="menu-item-65970" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65970"><a href="https://networklessons.com/tools-and-resources">Resources</a></li>
+	<li id="menu-item-68327" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68327"><a href="https://networklessons.com/networklessons-exams">Practice Exams</a></li>
+</ul>
+</li>
+<li id="menu-item-22148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-22148"><a href="#"><i class="fa fa-user"></i> <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-5629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5629"><a href="https://networklessons.com/myaccount">My Account Settings</a></li>
+	<li id="menu-item-68092" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68092"><a href="https://networklessons.com/member-dashboard">Member Dashboard</a></li>
+	<li id="menu-item-22285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22285"><a href="https://networklessons.com/upgrade-to-annual-membership"><b><font color="#FFC469">UPGRADE TO ANNUAL &#038; Get 2 Months FREE!</font></b></a></li>
+	<li id="menu-item-56969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56969"><a href="https://networklessons.com/wp-login.php?action=logout">Logout</a></li>
+</ul>
+</li>
+</ul></div>                                <div class="main-navigation-close">
+                                    <i class="far fa-times"></i>
+                                </div>
+                            </nav>
+                            <div class="main-navigation-toggle">
+                                <span class="icon"></span>
+                            </div>
+                            <div class="d-none d-xl-block">
+                                
+
+<form role="search" method="get" class="search-form" action="https://networklessons.com/">
+    <label for="search-form-66e2ec056ce37" class="sr-only">
+        <span class="screen-reader-text">Search for:</span>
+    </label>
+
+    <div class="input-group">
+        <input type="search" id="search-form-66e2ec056ce37" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" />
+        <div class="input-group-append">
+            <button type="submit" class="search-submit btn btn-white">
+                <span class="screen-reader-text">Search</span>
+                <i class="far fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="fullpage-overlay main-navigation-overlay"></div>
+	</header>
+    
+            <div class="d-xl-none">
+            
+
+<form role="search" method="get" class="search-form" action="https://networklessons.com/">
+    <label for="search-form-66e2ec056ce9e" class="sr-only">
+        <span class="screen-reader-text">Search for:</span>
+    </label>
+
+    <div class="input-group">
+        <input type="search" id="search-form-66e2ec056ce9e" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" />
+        <div class="input-group-append">
+            <button type="submit" class="search-submit btn btn-white">
+                <span class="screen-reader-text">Search</span>
+                <i class="far fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>        </div>
+    
+	<div class="site-content container">
+    <div class="breadcrumbs" style="font-size: 12px;">You are here: <a href="https://networklessons.com">Home</a> » <a href="https://networklessons.com/bgp">BGP</a></div>	<div class="site-content-row row">
+	<div id="primary" class="content-area col-md-8">
+		<main id="main" class="site-main">
+                            <div class="site-actions-toolbar d-md-none">
+                    <div class="site-action js--dark-mode">
+                        <i class="far fa-adjust"></i>
+                    </div>
+                </div>
+            
+		
+<article id="post-5117" class="main-post post-5117 post type-post status-publish format-standard has-post-thumbnail hentry category-bgp category-ccie-routing-switching category-ccie-routing-switching-written category-ccna-routing-switching-icnd2-200-105 category-ccnp-enarsi-300-410 category-ccnp-encor-350-401 category-ccnp-route">
+	<header class="entry-header">
+                            <h1 class="entry-title">Internal BGP (Border Gateway Protocol) explained</h1>        	</header>
+	<div class="entry-content">
+                    <div class="the-content">
+                <div id="ez-toc-container" class="ez-toc-v2_0_69_1 counter-hierarchy ez-toc-counter ez-toc-custom ez-toc-container-direction">
+<div class="ez-toc-title-container"><p class="ez-toc-title">Lesson Contents</p>
+</div><nav><ul class='ez-toc-list ez-toc-list-level-1 ' ><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-1" href="#Configuration" title="Configuration">Configuration</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-2" href="#Verification" title="Verification">Verification</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-3" href="#IBGP_Neighbor_Adjacencies" title="IBGP Neighbor Adjacencies">IBGP Neighbor Adjacencies</a></li></ul></nav></div>
+<p>In this lesson, we&#8217;ll take a look at IBGP (Internal BGP). Students new to BGP often wonder why we have &#8220;external&#8221; and &#8220;internal&#8221; BGP. I&#8217;m not going to show you just a couple of quick commands but we&#8217;ll take a close look at IBGP and its configuration.<br />
+<br />
+<br />
+<span class="B6MhdLz9k0l3aF87MnBu4YoPakIqeED6r7LyyhsQpWjPYbo5QDzCXObvfcgKrNG3ZRuZcFgAIAmS"></p>
+<div class="arve" data-mode="normal" data-oembed="1" data-provider="vimeo" id="arve-vimeo-123774522" style="max-width:700px;" data-reset-after-played data-fullscreen="disabled">
+<div class="arve-inner">
+<div class="arve-embed arve-embed--has-aspect-ratio">
+<span class="arve-ar" style="padding-top:56.250000%"></span><iframe credentialless referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer &#039;none&#039;;ambient-light-sensor &#039;none&#039;;autoplay &#039;none&#039;;battery &#039;none&#039;;bluetooth &#039;none&#039;;browsing-topics &#039;none&#039;;camera &#039;none&#039;;ch-ua &#039;none&#039;;clipboard-read &#039;none&#039;;clipboard-write;display-capture &#039;none&#039;;document-domain &#039;none&#039;;domain-agent &#039;none&#039;;encrypted-media &#039;none&#039;;execution-while-not-rendered &#039;none&#039;;execution-while-out-of-viewport &#039;none&#039;;gamepad &#039;none&#039;;geolocation &#039;none&#039;;gyroscope &#039;none&#039;;hid &#039;none&#039;;identity-credentials-get &#039;none&#039;;idle-detection &#039;none&#039;;keyboard-map &#039;none&#039;;local-fonts &#039;none&#039;;magnetometer &#039;none&#039;;microphone &#039;none&#039;;midi &#039;none&#039;;navigation-override &#039;none&#039;;otp-credentials &#039;none&#039;;payment &#039;none&#039;;picture-in-picture;publickey-credentials-create &#039;none&#039;;publickey-credentials-get &#039;none&#039;;screen-wake-lock &#039;none&#039;;serial &#039;none&#039;;speaker-selection;sync-xhr &#039;none&#039;;usb &#039;none&#039;;web-share;window-management &#039;none&#039;;xr-spatial-tracking &#039;none&#039;;" allowfullscreen class="arve-iframe fitvidsignore" data-arve="arve-vimeo-123774522" data-src-no-ap="https://player.vimeo.com/video/123774522?dnt=0&amp;app_id=122963&amp;html5=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;autoplay=0" frameborder="0" height="393.75" name sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox allow-forms" scrolling="no" src="https://player.vimeo.com/video/123774522?dnt=0&#038;app_id=122963&#038;html5=1&#038;title=0&#038;byline=0&#038;portrait=0&#038;autoplay=0" width="700" title="nwl-ccnp-route-why-ibgp-720p" loading="lazy"></iframe></p>
+</div>
+</div>
+<p><script type="application/ld+json">{"@context":"http:\/\/schema.org\/","@id":"https:\/\/networklessons.com\/bgp\/internal-bgp-border-gateway-protocol-explained#arve-vimeo-123774522","type":"VideoObject","embedURL":"https:\/\/player.vimeo.com\/video\/123774522?dnt=0&app_id=122963&html5=1&title=0&byline=0&portrait=0&autoplay=0","name":"nwl-ccnp-route-why-ibgp-720p","thumbnailUrl":"https:\/\/i.vimeocdn.com\/video\/607238771-d48a0bbfaec29d3eec123b8dc4a4b308094f2f02e93544727add49ae8fed30f1-d_640","uploadDate":"2014-09-12T10:40:14+00:00","author":"NetworkLessons.com","duration":"PT5M43S","description":"1"}</script>
+</div>
+<p></span><br />
+<br />
+Let&#8217;s start with an example topology, and I&#8217;ll explain a couple of things:</p>
+<p><img fetchpriority="high" decoding="async" class="aligncenter size-full wp-image-5122" src="https://cdn.networklessons.com/wp-content/uploads/2014/09/5-routers-3-AS1-AS2-AS3.png" alt="5 Routers AS1 AS2 AS3" width="617" height="663" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/09/5-routers-3-AS1-AS2-AS3.png 617w, https://cdn.networklessons.com/wp-content/uploads/2014/09/5-routers-3-AS1-AS2-AS3-279x300.png 279w, https://cdn.networklessons.com/wp-content/uploads/2014/09/5-routers-3-AS1-AS2-AS3-600x644.png 600w" sizes="(max-width: 617px) 100vw, 617px" /></p>
+<p>Above, you see three autonomous systems and five routers. When AS1 wants to reach AS3, we have to cross AS2. This makes AS2 our <strong>transit AS</strong>. This is a typical scenario where AS1 and AS3 are customers and AS2 is the ISP.</p>
+<p>In our scenario, AS1 has a loopback interface with network 1.1.1.0 /24, and AS3 wants to reach this network. This means we&#8217;ll have to advertise this network through BGP. Here&#8217;s what it looks like:</p>
+<p><img decoding="async" class="alignnone size-full wp-image-55782" src="https://cdn.networklessons.com/wp-content/uploads/2014/07/bgp-synchronization-example-topology-ibgp-ebgp.png" alt="Bgp Synchronization Example Topology Ibgp Ebgp" width="617" height="663" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/07/bgp-synchronization-example-topology-ibgp-ebgp.png 617w, https://cdn.networklessons.com/wp-content/uploads/2014/07/bgp-synchronization-example-topology-ibgp-ebgp-279x300.png 279w" sizes="(max-width: 617px) 100vw, 617px" /></p>
+<p>&nbsp;</p>
+<p>So what is going on here? Let me explain it step-by-step:</p>
+<ol>
+<li>We need EBGP between AS1 and AS2 because these are two different autonomous systems. This allows us to advertise a prefix on R1 in BGP so that AS2 can learn it.</li>
+<li>We also need EBGP between AS2 and AS3 so R5 can learn prefixes through BGP.</li>
+<li>We need to get the prefix that R2 learned from R1 somehow to R5. We do this by configuring IBGP between R2 and R4, this allows R4 to advertise it to R5.</li>
+</ol>
+<p>So that&#8217;s the first reason we need IBGP&#8230;so you can <strong>advertise a prefix from one autonomous system to another</strong>. You might have a few questions after reading this:</p>
+<ol>
+<li>Why don&#8217;t we use OSPF (or EIGRP) on AS2 instead and redistribute the prefix on R2 from BGP into OSPF and on R4 from OSPF back into BGP?</li>
+<li>Doesn&#8217;t IBGP have to be directly connected?</li>
+<li>How are R2 and R4 able to reach each other through IBGP if we don&#8217;t have any routing protocol within AS2?</li>
+<li>What about R3? do we need IBGP?</li>
+</ol>
+<p>These are some of the questions I get all the time from students who are learning BGP. Here are the answers:</p>
+<ol>
+<li>Technically this is possible&#8230;we can run OSPF (or EIGRP) within AS2 and use redistribution between BGP and OSPF. In my example, R1 will only have a single prefix, so it&#8217;s no problem, but what if R1 had a full internet routing table? (over 900,000 prefixes since 2023). IGPs like OSPF or EIGRP are not able to handle that many prefixes so you&#8217;ll need BGP for this.</li>
+<li>IBGP does not have to be directly connected, this might be a little confusing when you only know about OSPF or EIGRP since they always form adjacencies on directly connected links.</li>
+<li>They are not! This is why we <strong>need an IGP within the AS</strong>. Since R2 and R4 are not directly connected, we&#8217;ll configure an IGP so that they can reach each other.</li>
+<li>I&#8217;ll give you the answer to this question in a bit&#8230;I want to show you what will go wrong if we don&#8217;t configure R3 🙂</li>
+</ol>
+<p>Enough reading for now. Let&#8217;s get our hands dirty with some configuration. We&#8217;ll start with BGP between R1/R2, R2/R4, and R4/5 as I just described.</p>
+<h2><span class="ez-toc-section" id="Configuration"></span>Configuration<span class="ez-toc-section-end"></span></h2>
+<p>First, we&#8217;ll configure R1 and R2. I am also advertising a prefix (on a loopback interface) in BGP:</p>
+<pre><code>R1(config)#<strong>interface loopback 0</strong>
+R1(config-if)#<strong>ip address 1.1.1.1 255.255.255.0</strong></code></pre>
+<pre><code>R1(config)#<strong>router bgp 1
+</strong>R1(config-router)#<strong>neighbor 192.168.12.2 remote-as 2</strong>
+R1(config-router)#<strong>network 1.1.1.0 mask 255.255.255.0</strong></code></pre>
+<pre><code>R2(config-router)#<strong>neighbor 192.168.12.1 remote-as 1</strong></code></pre>
+<p>That&#8217;s easy enough, just a few commands. Our next step will be to configure IBGP between R2 and R4&#8230;what IP addresses are we going to use for this? Let&#8217;s look at our options:</p>
+<pre><code>R2#<strong>show ip interface brief</strong>
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            <span style="color: #ff0000;">192.168.12.2</span>    YES NVRAM  up                    up
+FastEthernet1/0            <span style="color: #ff0000;">192.168.23.2</span>    YES NVRAM  up                    up</code></pre>
+<pre><code>R4#<strong>show ip interface brief</strong>
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            <span style="color: #ff0000;">192.168.34.4</span>    YES NVRAM  up                    up
+FastEthernet1/0            <span style="color: #ff0000;">192.168.45.4</span>    YES NVRAM  up                    up</code></pre>
+<p>I can use any of these IP addresses, but we need connectivity. That&#8217;s why we need an IGP like we talked about earlier. So, which IP addresses will we select? In this particular scenario, it really doesn&#8217;t matter since there is only 1 path between R2 and R4. What if we had multiple paths between R2 and R4?</p>
+<p>When there are <strong>multiple paths</strong>,<strong> it&#8217;s better to use a loopback interface</strong> with an IP address and to advertise that into your IGP. We will use the loopback interface as the source for our BGP session. Why?</p>
+<p>A physical interface can go down, which means the IP address on the interface is no longer reachable. A <strong>loopback interface will never go down</strong> unless the router crashes or when you &#8220;shut&#8221; it. This is why it&#8217;s best practice to use loopback interfaces when configuring IBGP.</p>
+<p>I&#8217;ll add a loopback interface on R2 and R4 and use these for IBGP, we&#8217;ll have to configure an IGP (I&#8217;ll use OSPF) to advertise them:</p>
+<pre><code>R2(config)#<strong>interface loopback 0</strong>
+R2(config-if)#<strong>ip address 2.2.2.2 255.255.255.0</strong></code></pre>
+<pre><code>R4(config)#<strong>interface loopback 0</strong>
+R4(config-if)#<strong>ip address 4.4.4.4 255.255.255.0</strong></code></pre>
+<p>That takes care of the loopback interfaces. Now we can enable OSPF:</p>
+<pre><code>R2(config)#<strong>router ospf 1</strong>
+R2(config-router)#<strong>network 192.168.23.0 0.0.0.255 area 0</strong>
+R2(config-router)#<strong>network 2.2.2.0 0.0.0.255 area 0</strong></code></pre>
+<pre><code>R3(config)#<strong>router ospf 1</strong>
+R3(config-router)#<strong>network 192.168.23.0 0.0.0.255 area 0</strong>
+R3(config-router)#<strong>network 192.168.34.0 0.0.0.255 area 0</strong></code></pre>
+<pre><code>R4(config)#<strong>router ospf 1</strong>
+R4(config-router)#<strong>network 192.168.34.0 0.0.0.255 area 0</strong>
+R4(config-router)#<strong>network 4.4.4.0 0.0.0.255 area 0</strong></code></pre>
+<p>Excellent, R2 and R4 will now be able to reach each other&#8217;s loopback interfaces. It&#8217;s not a bad idea to test this though:</p>
+<pre><code>R2#<strong>ping 4.4.4.4 source 2.2.2.2</strong>
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 4.4.4.4, timeout is 2 seconds:
+Packet sent with a source address of 2.2.2.2
+!!!!!
+<span style="color: #ff0000;">Success rate is 100 percent</span> (5/5), round-trip min/avg/max = 48/52/60 ms</code></pre>
+<p>Alright we are now prepared for IBGP between R2 and R4. Here&#8217;s what it looks like:</p>
+<pre><code>R2(config)#<strong>router bgp 2</strong>
+R2(config-router)#<strong>neighbor 4.4.4.4 remote-as 2</strong>
+R2(config-router)#<strong>neighbor 4.4.4.4 update-source loopback 0</strong></code></pre>
+<pre><code>R4(config)#<strong>router bgp 2</strong>
+R4(config-router)#<strong>neighbor 2.2.2.2 remote-as 2</strong>
+R4(config-router)#<strong>neighbor 2.2.2.2 update-source loopback 0</strong></code></pre>
+<p>This takes care of our IBGP session. Note that we have to use the <code><strong>update-source</strong></code> command to specify that we will use the loopback interfaces as the source for the IBGP session.</p>
+<p>Last but not least, let&#8217;s configure EBGP between R4 and R5:</p>
+<pre><code>R4(config)#<strong>router bgp 2</strong>
+R4(config-router)#<strong>neighbor 192.168.45.5 remote-as 3</strong></code></pre>
+<pre><code>R5(config)#<strong>router bgp 3</strong>
+R5(config-router)#<strong>neighbor 192.168.45.4 remote-as 2</strong></code></pre>
+<p>Great, that takes care of that. Whenever you configure BGP, you will see a message on the console that shows you that the neighbor adjacency has been established. You can also check it with the <code><strong>show ip bgp summary</strong></code> command.</p>
+<h2><span class="ez-toc-section" id="Verification"></span>Verification<span class="ez-toc-section-end"></span></h2>
+<p>If everything went OK, all routers should have learned about the 1.1.1.0 /24 prefix that I advertised on R1. Let&#8217;s see if that is true:</p>
+<p>First, we&#8217;ll check R1:</p>
+<pre><code>R1#<strong>show ip bgp</strong>
+BGP table version is 2, local router ID is 1.1.1.1
+Status codes: s suppressed, d damped, h history, * valid, &gt; best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+<span style="color: #ff0000;">*&gt; 1.1.1.0/24       0.0.0.0</span>                  0         32768 i</code></pre>
+<p>You can see that it is in the BGP table. This means that I successfully used the network command to advertise into BGP. The next hop is 0.0.0.0 since it originated on this router. If you don&#8217;t see anything here, then normally there are two reasons for this:</p>
+<ul>
+<li>You can&#8217;t advertise something in BGP that is not in your routing table. Make sure the interface is up/up.</li>
+<li>You typed an incorrect subnet mask when you used the network command (it has to be an exact match!).</li>
+</ul>
+<p>Let&#8217;s see what R2 thinks about this:</p>
+<pre><code>R2#<strong>show ip bgp</strong>
+BGP table version is 2, local router ID is 2.2.2.2
+Status codes: s suppressed, d damped, h history, * valid, &gt; best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+<span style="color: #ff0000;">*&gt; 1.1.1.0/24       192.168.12.1</span>             0             0 1 i</code></pre>
+<p>That&#8217;s looking good too. R2 knows about our prefix, you can see that the next hop is the IP address of R1. If you take a closer look, you can see the <strong>&gt; symbol</strong> in front of the prefix, this means that the router selected this entry as the best one and that it <strong>installed it in the routing table</strong>. Let&#8217;s check R4, it should receive this information from R2:</p>
+<pre><code>R4#<strong>show ip bgp</strong>
+BGP table version is 1, local router ID is 4.4.4.4
+Status codes: s suppressed, d damped, h history, * valid, &gt; best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+<span style="color: #ff0000;">* i1.1.1.0/24       192.168.12.1</span>             0    100      0 1 i</code></pre>
+<p>R4 learned about the prefix, but there&#8217;s something going on here&#8230;there is no &gt; symbol before the prefix, so R4 didn&#8217;t install this in the routing table. Can you tell why this is happening? Take a close look at the next hop&#8230;I&#8217;ll give you the answer in a second, let&#8217;s check R5 first:</p>
+<pre><code>R5#<strong>show ip bgp
+</strong></code></pre>
+<p>There&#8217;s nothing in R5&#8230;that&#8217;s because R4 is having some issues. Look closely:</p>
+<pre><code>   Network          <span style="color: #ff0000;">Next Hop</span>            Metric LocPrf Weight Path
+* i1.1.1.0/24       <span style="color: #ff0000;">192.168.12.1</span>             0    100      0 1 i</code></pre>
+<p>Does R4 have any idea how to reach the next hop? <strong>BGP doesn&#8217;t change the next hop IP address by default,</strong> so this can cause some issues. Let&#8217;s verify if R4 knows how to reach the next hop:</p>
+<pre><code>R4#<strong>show ip route 192.168.12.1</strong>
+<span style="color: #ff0000;">% Network not in table</span></code></pre>
+<p>No next hop, so we can&#8217;t install the prefix from BGP into the routing table&#8230;how are we going to fix this? As always, there are multiple options:</p>
+<ul>
+<li>Advertise network 192.168.12.0 /24 in a routing protocol (IGP or BGP).</li>
+<li>Change the next hop IP address with the <code><strong>next-hop-self command</strong></code>.</li>
+</ul>
+<p>I&#8217;ll change the next hop IP address since it&#8217;s a good practice. Here&#8217;s how it works:</p>
+<pre><code>R2(config)#<strong>router bgp 2</strong>
+R2(config-router)#<strong>neighbor 4.4.4.4 next-hop-self</strong></code></pre>
+<pre><code>R4(config)#<strong>router bgp 2</strong>
+R4(config-router)#<strong>neighbor 2.2.2.2 next-hop-self</strong></code></pre>
+<p>I&#8217;m doing this on both R2 and R4. For this scenario, I don&#8217;t have to do it, but if I would advertise something on R5, then R2 would have the same problem as R4. Take a look again at R4 to see the changes:</p>
+<pre><code>R4#<strong>show ip bgp</strong>
+BGP table version is 2, local router ID is 4.4.4.4
+Status codes: s suppressed, d damped, h history, * valid, &gt; best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          <span style="color: #ff0000;">Next Hop</span>            Metric LocPrf Weight Path
+*&gt;i1.1.1.0/24       <span style="color: #ff0000;">2.2.2.2</span>                  0    100      0 1 i</code></pre>
+<p>Excellent&#8230;.two important changes here. First of all, you see the &gt; symbol, which means R4 was able to install this prefix in the routing table. Secondly, the next hop IP address has been changed to something R4 knows (the loopback interface of R2).</p>
+<p>Since R4 is now able to install it in the routing table, it can advertise the prefix to R5:</p>
+<pre><code>R5#<strong>show ip bgp</strong>
+BGP table version is 2, local router ID is 5.5.5.5
+Status codes: s suppressed, d damped, h history, * valid, &gt; best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+<span style="color: #ff0000;">*&gt; 1.1.1.0/24       192.168.45.4</span>                           0 2 1 i</code></pre>
+<p>R5 has learned about the prefix&#8230;so far, so good. You can see that it&#8217;s in the routing table:</p>
+<pre><code>R5#<strong>show ip route bgp</strong>
+     1.0.0.0/24 is subnetted, 1 subnets
+<span style="color: #ff0000;">B       1.1.1.0 [20/0] via 192.168.45.4</span>, 00:02:08</code></pre>
+<p>That&#8217;s looking good. So, are we done? Is there connectivity? Let&#8217;s find out:</p>
+<pre><code>R5#<strong>ping 1.1.1.1</strong>
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 1.1.1.1, timeout is 2 seconds:
+.....
+<span style="color: #ff0000;">Success rate is 0 percent</span> (0/5)</code></pre>
+<p>Uh-oh&#8230;something went wrong. This is often a very frustrating moment for many BGP students; they see something in the routing table, but it doesn&#8217;t work. What is going on here?</p>
+<p>Let&#8217;s do a quick trace from R5 to see how far we can get to R1:</p>
+<pre><code>R5#<strong>traceroute 1.1.1.1</strong>
+
+Type escape sequence to abort.
+Tracing the route to 1.1.1.1
+
+  <span style="color: #ff0000;">1 192.168.45.4</span> 52 msec 16 msec 32 msec
+  2  *  *  *
+  3  *  *  *</code></pre>
+<p>So, our IP packet reached R4, but after that, it went somewhere into oblivion. R4 is not the problem, so we&#8217;ll have to check the next device in the path towards R1. That&#8217;s R3.</p>
+<p>R3 is an interesting router since it doesn&#8217;t run BGP, only OSPF. Let&#8217;s check R3:</p>
+<pre><code>R3#<strong>show ip route 1.1.1.0</strong>
+<span style="color: #ff0000;">% Network not in table</span></code></pre>
+<p>There&#8217;s our problem: R3 receives an IP packet with destination 1.1.1.1 but has no clue where to send it, so it will be dropped. How do we fix this?</p>
+<p>Once again, you could redistribute BGP into OSPF, but that&#8217;s a bad idea&#8230;1 prefix could work, but an entire internet routing table is not gonna happen!</p>
+<p>This is why you need <strong>IBGP on all your routers in your transit AS</strong>. We need to configure IBGP on R3, so it learns about our 1.1.1.0 /24 prefix and will know how to reach the destination.</p>
+<p>Just like R2 and R4, I&#8217;ll use a loopback interface on R3 as the source of our IBGP session.</p>
+<p>I will configure IBGP between R2/R3 and R3/R4.  Let&#8217;s create a loopback, advertise it in OSPF, and configure BGP:</p>
+<pre><code>R3(config)#<strong>interface loopback 0</strong>
+R3(config-if)#<strong>ip address 3.3.3.3 255.255.255.0</strong></code></pre>
+<pre><code>R3(config)#<strong>router ospf 1</strong>
+R3(config-router)#<strong>network 3.3.3.0 0.0.0.255 area 0</strong></code></pre>
+<pre><code>R3(config)#<strong>router bgp 2</strong>
+R3(config-router)#<strong>neighbor 2.2.2.2 remote-as 2</strong>
+R3(config-router)#<strong>neighbor 2.2.2.2 update-source loopback 0</strong>
+R3(config-router)#<strong>neighbor 4.4.4.4 remote-as 2</strong>
+R3(config-router)#<strong>neighbor 4.4.4.4 update-source loopback 0</strong></code></pre>
+<p>That takes care of R3, now we&#8217;ll configure R2 and R4 to peer with R3:</p>
+<pre><code>R2(config)#<strong>router bgp 2</strong>
+R2(config-router)#<strong>neighbor 3.3.3.3 remote-as 2</strong>
+R2(config-router)#<strong>neighbor 3.3.3.3 update-source loopback 0</strong>
+R2(config-router)#<strong>neighbor 3.3.3.3 next-hop-self
+</strong></code></pre>
+<pre><code>R4(config)#<strong>router bgp 2</strong>
+R4(config-router)#<strong>neighbor 3.3.3.3 remote-as 2</strong>
+R4(config-router)#<strong>neighbor 3.3.3.3 update-source loopback 0</strong>
+R4(config-router)#<strong>neighbor 3.3.3.3 next-hop-self</strong></code></pre>
+<p>This will establish IBGP between R2/R3 and R3/R4. Take a look at the BGP table of R3:</p>
+<pre><code>R3#<strong>show ip bgp</strong>
+BGP table version is 2, local router ID is 3.3.3.3
+Status codes: s suppressed, d damped, h history, * valid, &gt; best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+<span style="color: #ff0000;">*&gt;i1.1.1.0/24       2.2.2.2</span>                  0    100      0 1 i</code></pre>
+<p>Very nice&#8230;R3 now knows how to reach the 1.1.1.0 /24 network, so it&#8217;s no longer the problem. Can R5 finally reach R1? Let&#8217;s find out:</p>
+<pre><code>R5#<strong>ping 1.1.1.1</strong>
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 1.1.1.1, timeout is 2 seconds:
+.....
+<span style="color: #ff0000;">Success rate is 0 percent (0/5)</span></code></pre>
+<p>It still doesn&#8217;t work. I&#8217;ll show you what the problem is here&#8230;</p>
+<p>It&#8217;s a good idea to check some of the routers that are closer to R1, and see if they are able to ping 1.1.1.1. Let&#8217;s start with R2:</p>
+<pre><code>R2#<strong>ping 1.1.1.1</strong>
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 1.1.1.1, timeout is 2 seconds:
+!!!!!
+<span style="color: #ff0000;">Success rate is 100 percent</span> (5/5), round-trip min/avg/max = 16/20/24 ms</code></pre>
+<p>No problem for R2, what about R3?</p>
+<pre><code>R3#<strong>ping 1.1.1.1</strong>
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 1.1.1.1, timeout is 2 seconds:
+.....
+<span style="color: #ff0000;">Success rate is 0 percent</span> (0/5)</code></pre>
+<p>R3 is unable to reach R1&#8230;interesting! Previously, we checked the BGP and routing table of R3, and it has all the information required to reach R1. What could go wrong here? The problem is not R3, but it&#8217;s R1..take a look here:</p>
+<pre><code>R1#<strong>show ip route</strong>
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+C    192.168.12.0/24 is directly connected, FastEthernet0/0
+     1.0.0.0/24 is subnetted, 1 subnets
+C       1.1.1.0 is directly connected, Loopback0</code></pre>
+<p>This is all that R1 has in its routing table. What happens is that R1 receives an IP packet from R3 that looks like this:</p>
+<ul>
+<li>Source IP address: 192.168.23.3</li>
+<li>Destination IP address: 1.1.1.1</li>
+</ul>
+<p>When R1 wants to reply to 192.168.23.3, it has no clue where to send it&#8230;it&#8217;s not in its routing table! If you want you can verify this with a debug:</p>
+<pre><code>R1#<strong>debug ip packet</strong>
+IP packet debugging is on</code></pre>
+<p>This will show us what happens when R1 receives the IP packet. Don&#8217;t do this on a production router, as it will produce way too much debug information:</p>
+<pre><code>R1#
+IP: s=1.1.1.1 (local), d=192.168.23.3, len 100, <span style="color: #ff0000;">unroutable</span></code></pre>
+<p>R1 says it&#8217;s unroutable. The destination is unknown. To fix this problem, we have to advertise some additional networks. I don&#8217;t care about R3 being able to reach R1, but I do want R5 to reach R1.</p>
+<p>What we&#8217;ll do is advertise the 192.168.45.0 /24 prefix into BGP, we can do this on R4 or R5:</p>
+<pre><code>R5(config)#<strong>router bgp 3</strong>
+R5(config-router)#<strong>network 192.168.45.0 mask 255.255.255.0</strong></code></pre>
+<p>Let&#8217;s see if R1 learns this prefix:</p>
+<pre><code>R1#<strong>show ip bgp</strong>
+BGP table version is 3, local router ID is 1.1.1.1
+Status codes: s suppressed, d damped, h history, * valid, &gt; best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*&gt; 1.1.1.0/24       0.0.0.0                  0         32768 i
+<span style="color: #ff0000;">*&gt; 192.168.45.0     192.168.12.2</span>                           0 2 3 i</code></pre>
+<p>It&#8217;s in the BGP table and also in the routing table:</p>
+<pre><code>R1#<strong>show ip route bgp</strong>
+<span style="color: #ff0000;">B    192.168.45.0/24 [20/0] via 192.168.12.2</span>, 00:00:50</code></pre>
+<p>Let&#8217;s try a ping:</p>
+<pre><code>R5#<strong>ping 1.1.1.1</strong>
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 1.1.1.1, timeout is 2 seconds:
+!!!!!
+<span style="color: #ff0000;">Success rate is 100 percent</span> (5/5), round-trip min/avg/max = 84/104/120 ms</code></pre>
+<p>Finally! it&#8217;s working! If you also want to ping R1 from any of the other routers, then you need to make sure R1 knows where to send the return traffic.<br />
+<div class="responsive-tabs">
+<p class="tabtitle">Configurations</p>
+<div class="tabcontent">
+</p>
+<p>Want to take a look for yourself? Here, you will find the final configuration of each device.</p>
+
+</div><p class="tabtitle">R1</p>
+<div class="tabcontent">
+
+<pre><code>hostname R1
+!
+ip cef
+!
+interface Loopback0
+ ip address 1.1.1.1 255.255.255.0
+!
+interface FastEthernet0/0
+ ip address 192.168.12.1 255.255.255.0
+!
+router bgp 1
+ bgp log-neighbor-changes
+ network 1.1.1.0 mask 255.255.255.0
+ neighbor 192.168.12.2 remote-as 2
+!
+end</code></pre>
+
+</div><p class="tabtitle">R2</p>
+<div class="tabcontent">
+
+<pre><code>hostname R2
+!
+ip cef
+!
+interface Loopback0
+ ip address 2.2.2.2 255.255.255.0
+!
+interface FastEthernet0/0
+ ip address 192.168.12.2 255.255.255.0
+!
+interface FastEthernet0/1
+ ip address 192.168.23.2 255.255.255.0
+!
+router ospf 1
+ network 2.2.2.0 0.0.0.255 area 0
+ network 192.168.23.0 0.0.0.255 area 0
+!
+router bgp 2
+ bgp log-neighbor-changes
+ neighbor 3.3.3.3 remote-as 2
+ neighbor 3.3.3.3 update-source Loopback0
+ neighbor 3.3.3.3 next-hop-self
+ neighbor 4.4.4.4 remote-as 2
+ neighbor 4.4.4.4 update-source Loopback0
+ neighbor 4.4.4.4 next-hop-self
+ neighbor 192.168.12.1 remote-as 1
+!
+end</code></pre>
+
+</div><p class="tabtitle">R3</p>
+<div class="tabcontent">
+
+<pre><code>hostname R3
+!
+ip cef
+!
+interface Loopback0
+ ip address 3.3.3.3 255.255.255.0
+!
+interface FastEthernet0/0
+ ip address 192.168.23.3 255.255.255.0
+!
+interface FastEthernet0/1
+ ip address 192.168.34.3 255.255.255.0
+!
+router ospf 1
+ network 3.3.3.0 0.0.0.255 area 0
+ network 192.168.23.0 0.0.0.255 area 0
+ network 192.168.34.0 0.0.0.255 area 0
+!
+router bgp 2
+ bgp log-neighbor-changes
+ neighbor 2.2.2.2 remote-as 2
+ neighbor 2.2.2.2 update-source Loopback0
+ neighbor 4.4.4.4 remote-as 2
+ neighbor 4.4.4.4 update-source Loopback0
+!
+end</code></pre>
+
+</div><p class="tabtitle">R4</p>
+<div class="tabcontent">
+
+<pre><code>hostname R4
+!
+ip cef
+!
+interface Loopback0
+ ip address 4.4.4.4 255.255.255.0
+!
+interface FastEthernet0/0
+ ip address 192.168.34.4 255.255.255.0
+!
+interface FastEthernet0/1
+ ip address 192.168.45.4 255.255.255.0
+!
+router ospf 1
+ network 4.4.4.0 0.0.0.255 area 0
+ network 192.168.34.0 0.0.0.255 area 0
+!
+router bgp 2
+ bgp log-neighbor-changes
+ neighbor 2.2.2.2 remote-as 2
+ neighbor 2.2.2.2 update-source Loopback0
+ neighbor 2.2.2.2 next-hop-self
+ neighbor 3.3.3.3 remote-as 2
+ neighbor 3.3.3.3 update-source Loopback0
+ neighbor 3.3.3.3 next-hop-self
+ neighbor 192.168.45.5 remote-as 3
+!
+end</code></pre>
+
+</div><p class="tabtitle">R5</p>
+<div class="tabcontent">
+
+<pre><code>hostname R5
+!
+ip cef
+!
+interface FastEthernet0/0
+ ip address 192.168.45.5 255.255.255.0
+!
+router bgp 3
+ bgp log-neighbor-changes
+ neighbor 192.168.45.4 remote-as 2
+ network 192.168.45.0 mask 255.255.255.0
+!
+end</code></pre>
+<p></div></div><br />
+Are we done now? Almost&#8230;there&#8217;s one more thing I want to teach you about the IBGP neighbor adjacencies&#8230;</p>
+<h2><span class="ez-toc-section" id="IBGP_Neighbor_Adjacencies"></span>IBGP Neighbor Adjacencies<span class="ez-toc-section-end"></span></h2>
+<p>Right now, our routers within AS2 are configured like this:</p>
+<p><img decoding="async" class="aligncenter size-full wp-image-5124" src="https://cdn.networklessons.com/wp-content/uploads/2014/09/R2-R3-R4-full-mesh-IBGP.png" alt="R2 R3 R4 full mesh IBGP" width="608" height="349" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/09/R2-R3-R4-full-mesh-IBGP.png 608w, https://cdn.networklessons.com/wp-content/uploads/2014/09/R2-R3-R4-full-mesh-IBGP-300x172.png 300w, https://cdn.networklessons.com/wp-content/uploads/2014/09/R2-R3-R4-full-mesh-IBGP-600x344.png 600w" sizes="(max-width: 608px) 100vw, 608px" /></p>
+<p>This is called <strong>full-mesh IBGP</strong>. All routers within AS 2 are neighbors with each other. Do we really need the IBGP peering between R2 and R4? Let&#8217;s find out what happens when I remove it&#8230;</p>
+<pre><code>R2(config)#<strong>router bgp 2</strong>
+R2(config-router)#<strong>no neighbor 4.4.4.4</strong></code></pre>
+<pre><code>R4(config)#<strong>router bgp 2</strong>
+R4(config-router)#<strong>no neighbor 2.2.2.2</strong></code></pre>
+<p>To visualize it, our picture now looks like this:</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-5125" src="https://cdn.networklessons.com/wp-content/uploads/2014/09/R2-R3-R4-partial-mesh-IBGP.png" alt="R2 R3 R4 partial mesh IBGP" width="608" height="349" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/09/R2-R3-R4-partial-mesh-IBGP.png 608w, https://cdn.networklessons.com/wp-content/uploads/2014/09/R2-R3-R4-partial-mesh-IBGP-300x172.png 300w, https://cdn.networklessons.com/wp-content/uploads/2014/09/R2-R3-R4-partial-mesh-IBGP-600x344.png 600w" sizes="(max-width: 608px) 100vw, 608px" /></p>
+<p>Let&#8217;s check out the BGP table of R3 to see what it has:</p>
+<pre><code>R3#<strong>show ip bgp</strong>
+BGP table version is 3, local router ID is 3.3.3.3
+Status codes: s suppressed, d damped, h history, * valid, &gt; best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+<span style="color: #ff0000;">*&gt;i1.1.1.0/24       2.2.2.2</span>                  0    100      0 1 i
+<span style="color: #ff0000;">*&gt;i192.168.45.0     4.4.4.4</span>                  0    100      0 3 i</code></pre>
+<p>R3 learned about 1.1.1.0 /24 from R2 and 192.168.45.0 /24 from R4. This is good. These are prefixes that we advertised before. Now look at R2:</p>
+<pre><code>R2#<strong>show ip bgp</strong>
+BGP table version is 4, local router ID is 2.2.2.2
+Status codes: s suppressed, d damped, h history, * valid, &gt; best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+<span style="color: #ff0000;">*&gt; 1.1.1.0/24       192.168.12.1</span>             0             0 1 i</code></pre>
+<p>R2 only knows about 1.1.1.0 /24, it didn&#8217;t learn about 192.168.45.0 /24 from R3. What about R4?</p>
+<pre><code>R4#<strong>show ip bgp</strong>
+BGP table version is 5, local router ID is 4.4.4.4
+Status codes: s suppressed, d damped, h history, * valid, &gt; best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+<span style="color: #ff0000;">r&gt; 192.168.45.0     192.168.45.5</span>             0             0 3 i</code></pre>
+<p>R4 only learned about 192.168.45.0 /24 from R5, we don&#8217;t see 1.1.1.0 /24 here.</p>
+<p>The problem is that<strong> IBGP does not advertise prefixes from one IBGP neighbor to another IBGP neighbor</strong>. This is called <strong>BGP split horizon</strong>.<br />
+<span class="FcN6XDSW7sO14GJ3TZ5KRmPgoUYq8IuiQvfjtVCnyraHLlbAMzBph20kEx"></p>
+<div class="arve" data-mode="normal" data-oembed="1" data-provider="vimeo" id="arve-vimeo-123820966" style="max-width:700px;" data-reset-after-played data-fullscreen="disabled">
+<div class="arve-inner">
+<div class="arve-embed arve-embed--has-aspect-ratio">
+<span class="arve-ar" style="padding-top:56.250000%"></span><iframe credentialless referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer &#039;none&#039;;ambient-light-sensor &#039;none&#039;;autoplay &#039;none&#039;;battery &#039;none&#039;;bluetooth &#039;none&#039;;browsing-topics &#039;none&#039;;camera &#039;none&#039;;ch-ua &#039;none&#039;;clipboard-read &#039;none&#039;;clipboard-write;display-capture &#039;none&#039;;document-domain &#039;none&#039;;domain-agent &#039;none&#039;;encrypted-media &#039;none&#039;;execution-while-not-rendered &#039;none&#039;;execution-while-out-of-viewport &#039;none&#039;;gamepad &#039;none&#039;;geolocation &#039;none&#039;;gyroscope &#039;none&#039;;hid &#039;none&#039;;identity-credentials-get &#039;none&#039;;idle-detection &#039;none&#039;;keyboard-map &#039;none&#039;;local-fonts &#039;none&#039;;magnetometer &#039;none&#039;;microphone &#039;none&#039;;midi &#039;none&#039;;navigation-override &#039;none&#039;;otp-credentials &#039;none&#039;;payment &#039;none&#039;;picture-in-picture;publickey-credentials-create &#039;none&#039;;publickey-credentials-get &#039;none&#039;;screen-wake-lock &#039;none&#039;;serial &#039;none&#039;;speaker-selection;sync-xhr &#039;none&#039;;usb &#039;none&#039;;web-share;window-management &#039;none&#039;;xr-spatial-tracking &#039;none&#039;;" allowfullscreen class="arve-iframe fitvidsignore" data-arve="arve-vimeo-123820966" data-src-no-ap="https://player.vimeo.com/video/123820966?dnt=0&amp;app_id=122963&amp;html5=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;autoplay=0" frameborder="0" height="393.75" name sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox allow-forms" scrolling="no" src="https://player.vimeo.com/video/123820966?dnt=0&#038;app_id=122963&#038;html5=1&#038;title=0&#038;byline=0&#038;portrait=0&#038;autoplay=0" width="700" title="nwl-ccnp-route-ibgp-split-horizon-720p" loading="lazy"></iframe></p>
+</div>
+</div>
+<p><script type="application/ld+json">{"@context":"http:\/\/schema.org\/","@id":"https:\/\/networklessons.com\/bgp\/internal-bgp-border-gateway-protocol-explained#arve-vimeo-123820966","type":"VideoObject","embedURL":"https:\/\/player.vimeo.com\/video\/123820966?dnt=0&app_id=122963&html5=1&title=0&byline=0&portrait=0&autoplay=0","name":"nwl-ccnp-route-ibgp-split-horizon-720p","thumbnailUrl":"https:\/\/i.vimeocdn.com\/video\/607234858-0756b25b734e8a0d6f69fad4dfd32f4b2a7dd0f42644872b0289a6b5cd9c9581-d_640","uploadDate":"2014-09-12T10:40:14+00:00","author":"NetworkLessons.com","duration":"PT8M15S","description":"1"}</script>
+</div>
+<p></span><br />
+There is a good reason why IBGP works like this&#8230;</p>
+<p>Between different ASes, BGP uses the AS_PATH attribute to avoid routing loops. A prefix will not be accepted by a BGP router if it sees its own AS number in it&#8230;plain and simple. However, within the autonomous system, the AS number does not change, so we can&#8217;t use this loop prevention mechanism.</p>
+<p>Without BGP split horizon, a route could be advertised like this:</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-5126" src="https://cdn.networklessons.com/wp-content/uploads/2014/09/ibgp-no-split-horizon.png" alt="IBGP no split horizon" width="608" height="349" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/09/ibgp-no-split-horizon.png 608w, https://cdn.networklessons.com/wp-content/uploads/2014/09/ibgp-no-split-horizon-300x172.png 300w, https://cdn.networklessons.com/wp-content/uploads/2014/09/ibgp-no-split-horizon-600x344.png 600w" sizes="(max-width: 608px) 100vw, 608px" /></p>
+<p>R1 could receive an update about a prefix that it originated itself&#8230;.not a good idea. With BGP split horizon, this can&#8217;t occur:</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-5127" src="https://cdn.networklessons.com/wp-content/uploads/2014/09/ibgp-split-horizon.png" alt="IBGP split horizon" width="608" height="349" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/09/ibgp-split-horizon.png 608w, https://cdn.networklessons.com/wp-content/uploads/2014/09/ibgp-split-horizon-300x172.png 300w, https://cdn.networklessons.com/wp-content/uploads/2014/09/ibgp-split-horizon-600x344.png 600w" sizes="(max-width: 608px) 100vw, 608px" /><br />
+R2 will never forward the IBGP prefixes that it learns from R1 towards R3. This means that <strong>all your IBGP routers have to become neighbors with all other IBGP routers</strong> (full-mesh!). If you have a lot of IBGP routers, then this can be a lot of work. The number of required adjacencies is:</p>
+<p><strong>X*(X-1)/2</strong></p>
+<p>So, with 10 IBGP routers, you will need to configure 45 IBGP neighbor adjacencies. There are two techniques to reduce this number:</p>
+<ul>
+<li><a href="https://networklessons.com/bgp/bgp-route-reflector">BGP Route Reflectors</a></li>
+<li><a href="https://networklessons.com/bgp/bgp-confederation-explained">BGP Confederations</a></li>
+</ul>
+<p>I will explain both in other lessons in the future! This is the end of the IBGP explanation, I hope you enjoyed it and learned a thing or two. If you have any questions, feel free to leave a comment!</p>
+            </div>
+                	</div>
+</article>
+		</main>
+	</div>
+
+
+<div class="widget-area col-md-4">
+            <div class="site-actions-toolbar d-none d-md-flex">
+            <div class="site-action js--dark-mode">
+                <i class="far fa-adjust"></i>
+            </div>
+        </div>
+        <aside id="secondary">
+        <section id="block-2" class="widget widget_block"><p><div class="urlspecificmenu-toggle">Lessons</div><div class="fullpage-overlay urlspecificmenu-overlay"></div><div class="urlspecificmenu"><div class="urlspecificmenu-close"><i class="far fa-times"></i></div>
+				<h2>Course Contents</h2><p>BGP</p><nav id="bellows-main-650" class="bellows bellows-nojs bellows-main bellows-source-menu bellows-align-full bellows-skin-none bellows-type-accordion bellows-expand-current"><ul id="menu-bgp" class="bellows-nav" data-bellows-config="main"><li id="menu-item-18696" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-current-menu-ancestor bellows-current-menu-parent bellows-menu-item-has-children bellows-menu-item-18696 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 1: Introduction to BGP</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18697" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18697 bellows-item-level-1"><a  href="https://networklessons.com/bgp/introduction-to-bgp" class="bellows-target"><span class="bellows-target-title bellows-target-text">Introduction to BGP</span></a></li>
+	<li id="menu-item-41087" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-41087 bellows-item-level-1"><a  href="https://networklessons.com/bgp/singledual-homed-and-multi-homed-designs" class="bellows-target"><span class="bellows-target-title bellows-target-text">Single/Dual (multi) homed connections</span></a></li>
+	<li id="menu-item-18698" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18698 bellows-item-level-1"><a  href="https://networklessons.com/bgp/how-to-configure-ebgp-external-bgp" class="bellows-target"><span class="bellows-target-title bellows-target-text">eBGP (external BGP)</span></a></li>
+	<li id="menu-item-18699" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18699 bellows-item-level-1"><a  href="https://networklessons.com/bgp/ebgp-multihop" class="bellows-target"><span class="bellows-target-title bellows-target-text">eBGP Multi-Hop</span></a></li>
+	<li id="menu-item-18700" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-current-menu-item bellows-menu-item-18700 bellows-item-level-1 bellows-current-menu-item"><a  href="https://networklessons.com/bgp/internal-bgp-border-gateway-protocol-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">iBGP (internal BGP)</span></a></li>
+	<li id="menu-item-18701" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18701 bellows-item-level-1"><a  href="https://networklessons.com/bgp/how-to-read-the-bgp-table" class="bellows-target"><span class="bellows-target-title bellows-target-text">How to read the BGP Table</span></a></li>
+	<li id="menu-item-18702" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18702 bellows-item-level-1"><a  href="https://networklessons.com/bgp/how-to-advertise-networks-in-bgp" class="bellows-target"><span class="bellows-target-title bellows-target-text">How to advertise networks in BGP</span></a></li>
+	<li id="menu-item-18703" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18703 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-next-hop-self" class="bellows-target"><span class="bellows-target-title bellows-target-text">iBGP Next Hop Self</span></a></li>
+	<li id="menu-item-18704" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18704 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-auto-summary" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Auto-summary</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18705" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18705 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 2: BGP Neighbor Adjacency</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18706" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18706 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-neighbor-adjacency-states" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Neighbor Adjacency States</span></a></li>
+	<li id="menu-item-18707" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18707 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-messages" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Messages</span></a></li>
+	<li id="menu-item-19043" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-19043 bellows-item-level-1"><a  href="https://networklessons.com/bgp/troubleshooting-bgp-neighbor-adjacency" class="bellows-target"><span class="bellows-target-title bellows-target-text">Troubleshooting BGP Neighbor Adjacency</span></a></li>
+	<li id="menu-item-19044" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-19044 bellows-item-level-1"><a  href="https://networklessons.com/bgp/troubleshooting-bgp-route-advertisement" class="bellows-target"><span class="bellows-target-title bellows-target-text">Troubleshooting BGP Route Advertisement</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18708" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18708 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 3: BGP Attributes</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-55984" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55984 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-attributes-and-path-selection" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Attributes and Path Selection</span></a></li>
+	<li id="menu-item-18709" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18709 bellows-item-level-1"><a  href="https://networklessons.com/bgp/how-to-configure-bgp-weight-attribute" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Weight Attribute</span></a></li>
+	<li id="menu-item-18710" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18710 bellows-item-level-1"><a  href="https://networklessons.com/bgp/how-to-configure-bgp-local-preference-attribute" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Local Preference</span></a></li>
+	<li id="menu-item-70348" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-70348 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-attribute-locally-originated" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Attribute Locally Originated</span></a></li>
+	<li id="menu-item-18711" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18711 bellows-item-level-1"><a  href="https://networklessons.com/bgp/how-to-configure-bgp-as-path-prepending" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP AS Path Prepending</span></a></li>
+	<li id="menu-item-18712" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18712 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-origin-code-attribute-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Origin Code</span></a></li>
+	<li id="menu-item-18713" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18713 bellows-item-level-1"><a  href="https://networklessons.com/bgp/how-to-configure-bgp-med-attribute" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP MED (metric) Attribute</span></a></li>
+	<li id="menu-item-70378" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-70378 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-prefer-ebgp-over-ibgp" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Prefer eBGP over iBGP</span></a></li>
+	<li id="menu-item-64483" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-64483 bellows-item-level-1"><a  href="https://networklessons.com/bgp/accumulated-igp-metric-attribute-aigp" class="bellows-target"><span class="bellows-target-title bellows-target-text">Accumulated IGP Metric Attribute (AIGP)</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18714" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18714 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 4: BGP Communities</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18715" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18715 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-communities-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Communities</span></a></li>
+	<li id="menu-item-18716" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18716 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-community-no-advertise" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Community No Advertise</span></a></li>
+	<li id="menu-item-18717" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18717 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-community-no-export" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Community No Export</span></a></li>
+	<li id="menu-item-18718" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18718 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-community-local-as" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Community Local AS</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18719" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18719 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 5: BGP Filtering</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18720" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18720 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-regular-expressions-examples" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Regular Expressions</span></a></li>
+	<li id="menu-item-18721" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18721 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-prevent-transit-as" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Transit AS</span></a></li>
+	<li id="menu-item-18722" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18722 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-ipv6-route-filtering-on-cisco-ios" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP IPv6 route filtering</span></a></li>
+	<li id="menu-item-18723" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18723 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-as-path-filter-example" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP AS Path Filter</span></a></li>
+	<li id="menu-item-18830" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18830 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-extended-access-list-filtering" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Extended Access-List Filtering</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18724" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18724 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 6: Advanced BGP Features</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-66434" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-66434 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-route-dampening" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Route Dampening</span></a></li>
+	<li id="menu-item-18725" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18725 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-peer-groups-on-cisco-ios" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Peer Groups</span></a></li>
+	<li id="menu-item-18726" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18726 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-route-reflector" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Route Reflector</span></a></li>
+	<li id="menu-item-18727" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18727 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-confederation-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Confederations</span></a></li>
+	<li id="menu-item-18728" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18728 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-synchronization" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Synchronization</span></a></li>
+	<li id="menu-item-18729" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18729 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-backdoor-routes" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Backdoor Routes</span></a></li>
+	<li id="menu-item-18730" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18730 bellows-item-level-1"><a  href="https://networklessons.com/bgp/multiprotocol-bgp-mp-bgp-configuration" class="bellows-target"><span class="bellows-target-title bellows-target-text">MP-BGP (multi-protocol BGP)</span></a></li>
+	<li id="menu-item-18731" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18731 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-private-and-public-as-range" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Private and Public AS Numbers</span></a></li>
+	<li id="menu-item-18732" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18732 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-remove-private-as" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Remove Private AS Numbers</span></a></li>
+	<li id="menu-item-55763" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55763 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-4-byte-number" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP 4-byte AS numbers</span></a></li>
+	<li id="menu-item-18733" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18733 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-soft-reset-reconfiguration" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Soft Reconfiguration</span></a></li>
+	<li id="menu-item-18734" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18734 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-route-refresh-capability" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Route Refresh Capability</span></a></li>
+	<li id="menu-item-20533" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-20533 bellows-item-level-1"><a  href="https://networklessons.com/bgp/mpls-layer-3-vpn-bgp-allow-as-in" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Allow AS in</span></a></li>
+	<li id="menu-item-20534" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-20534 bellows-item-level-1"><a  href="https://networklessons.com/bgp/mpls-layer-3-vpn-bgp-override" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP AS Override</span></a></li>
+	<li id="menu-item-55796" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55796 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-aggregate-as-set" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Aggregate AS-SET</span></a></li>
+	<li id="menu-item-55810" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55810 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-multipath-load-sharing-ibgp-and-ebgp" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Multipath eBGP and iBGP</span></a></li>
+</ul>
+</li>
+<li id="menu-item-55838" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-55838 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 7: BGP Convergence</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-70464" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-70464 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-route-leaking" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Route Leaking</span></a></li>
+	<li id="menu-item-70559" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-70559 bellows-item-level-1"><a  href="https://networklessons.com/bgp/resource-public-key-infrastructure-rpki" class="bellows-target"><span class="bellows-target-title bellows-target-text">Resource Public Key Infrastructure (RPKI)</span></a></li>
+	<li id="menu-item-70510" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-70510 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-prefix-origin-as-validation-with-rpki" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Prefix Origin AS Validation with RPKI</span></a></li>
+	<li id="menu-item-55972" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55972 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-next-hop-address-tracking" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Next Hop Tracking</span></a></li>
+	<li id="menu-item-55837" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55837 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-additional-paths" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Additional Paths</span></a></li>
+	<li id="menu-item-55867" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55867 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-pic-prefix-independent-convergence-core-edge" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP PIC (Prefix Independent Convergence)</span></a></li>
+</ul>
+</li>
+</ul></nav></div></p>
+</section>    </aside>
+</div>
+
+</div><!-- end .row -->
+</div><!-- end .container -->
+<div class="container">
+<div class="row">
+
+    <div class="col-12">
+		
+		<div class="cmd_post_nav"><div class="cmd_previous"><a href="https://networklessons.com/bgp/ebgp-multihop" rel="prev"><strong>Previous Lesson</strong><br>eBGP Multi-Hop</a></div><div class="cmd_next"><a href="https://networklessons.com/bgp/how-to-read-the-bgp-table" rel="next"><strong>Next Lesson</strong><br>How to read the BGP Table</a></div></div>	    
+        <hr>
+
+		    <div id="comments" class="comments-area discourse-comments-area">
+        <h2 class="comments-title discourse-comments-title">Forum Replies</h2>
+        <ol class="comment-list">		<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for system" src="https://cdn-forum.networklessons.com/uploads/default/original/1X/1d2ef66728c7fbac8377748594345a3f474fce5f.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/internal-bgp-border-gateway-protocol-explained/1129" rel="external" class="url">system</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Could not understand this…</p>
+<p>“loop prevention van BGP is “als AS hetzelfde is dan hebben we een loop maar dit kan niet met ibgp want AS is altijd hetzelfde.”. dus wat doen we dan….IBGP -&gt; IBGP -&gt; IBGP niet doorsturen.”</p></p></div>
+			</article>
+		</li>
+				<li class="comment odd depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for ReneMolenaar" src="https://cdn-forum.networklessons.com/user_avatar/forum.networklessons.com/renemolenaar/64/488_2.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/internal-bgp-border-gateway-protocol-explained/1129" rel="external" class="url">ReneMolenaar</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>You caught one of my notes in Dutch… Just removed it <img src="https://cdn-forum.networklessons.com/images/emoji/apple/slight_smile.png?v=5" title=":slight_smile:" class="emoji" alt=":slight_smile:"></p></p></div>
+			</article>
+		</li>
+				<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for neerajhclsingh" src="https://cdn-forum.networklessons.com/letter_avatar_proxy/v4/letter/n/7ab992/64.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/internal-bgp-border-gateway-protocol-explained/1129" rel="external" class="url">neerajhclsingh</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Hi Rene,<br>
+Ur explanation was good…plz also describes about BGP Route Reflectors and Confederations.</p></p></div>
+			</article>
+		</li>
+				<li class="comment odd depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for system" src="https://cdn-forum.networklessons.com/uploads/default/original/1X/1d2ef66728c7fbac8377748594345a3f474fce5f.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/internal-bgp-border-gateway-protocol-explained/1129" rel="external" class="url">system</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Thanx . you explained it step by step and it was very informative…</p></p></div>
+			</article>
+		</li>
+				<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for system" src="https://cdn-forum.networklessons.com/uploads/default/original/1X/1d2ef66728c7fbac8377748594345a3f474fce5f.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/internal-bgp-border-gateway-protocol-explained/1129" rel="external" class="url">system</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>your explanation is great and every clear… thanks a lot…</p></p></div>
+			</article>
+		</li>
+		</ol>
+        <div class="respond comment-respond">
+            <p id="reply-title" class="comment-reply-title"><strong><a href="https://forum.networklessons.com/t/internal-bgp-border-gateway-protocol-explained/1129" target="_blank">270 more replies!</a></strong> Ask a question or join the discussion by visiting our <a href="https://forum.networklessons.com/t/internal-bgp-border-gateway-protocol-explained/1129" target="_blank">Community Forum</a></p>
+        </div>
+    </div>
+        </div>
+
+
+		</div>
+	</div>
+
+	<footer class="site-footer">
+        <div class="container">
+            <div class="site-footer-inner">
+                <div class="copyright">
+                    &copy; 2013 - 2024 NetworkLessons.com 65289                </div>
+                <div class="menu-footer-container"><ul id="footer-menu" class="menu"><li id="menu-item-22469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22469"><a href="https://networklessons.com/disclaimer">Disclaimer</a></li>
+<li id="menu-item-22470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-22470"><a rel="privacy-policy" href="https://networklessons.com/privacy-policy">Privacy Policy</a></li>
+<li id="menu-item-22468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22468"><a href="https://networklessons.com/support">Support</a></li>
+<li id="menu-item-59827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59827"><a href="https://networklessons.com/about-networklessons-com">About</a></li>
+</ul></div>            </div>
+        </div>
+    </footer>
+</div>
+
+<script type="text/javascript">var algolia = {"debug":false,"application_id":"JYCQGPKUUY","search_api_key":"294cbcc6c53b2ccb6f80f0410f485afe","powered_by_enabled":false,"query":"","autocomplete":{"sources":[],"input_selector":"input[name='s']:not(.no-autocomplete):not(#adminbar-search)"},"indices":{"searchable_posts":{"name":"wp_searchable_posts","id":"searchable_posts","enabled":true,"replicas":[]}}};</script><link rel='stylesheet' id='tabby-css' href='https://cdn.networklessons.com/wp-content/plugins/tabby-responsive-tabs/css/tabby.css?ver=1.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='tabby-print-css' href='https://cdn.networklessons.com/wp-content/plugins/tabby-responsive-tabs/css/tabby-print.css?ver=1.4.1' type='text/css' media='print' />
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.20.2" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" src="https://player.vimeo.com/api/player.js?ver=1.0" id="gtm4wp-vimeo-api-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-vimeo.js?ver=1.20.2" id="gtm4wp-vimeo-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/bundle.js?ver=1702771200" id="networklessons-script-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/jquery.magnific-popup.min.js?ver=1.1.0" id="magnific-popup-jquery-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/jquery.magnific-popup.js?ver=1.1.0" id="magnific-popup-core-js-js"></script>
+<script type="text/javascript" id="bellows-js-extra">
+/* <![CDATA[ */
+var bellows_data = {"config":{"main":{"folding":"multiple","current":"on","slide_speed":400}},"v":"1.4.3"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/bellows-pro/assets/js/bellows.min.js?ver=1.4.3" id="bellows-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/advanced-responsive-video-embedder/build/main.js?ver=755e5bf2bfafc15e7cc1" id="arve-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/arve-pro/build/main.js?ver=eea34735566740155d0f" id="arve-pro-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/tabby-responsive-tabs/js/tabby.js?ver=1.4.1" id="tabby-js"></script>
+<script type="text/javascript" id="tabby-js-after">
+/* <![CDATA[ */
+jQuery(document).ready(function($) { RESPONSIVEUI.responsiveTabs(); })
+/* ]]> */
+</script>
+
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

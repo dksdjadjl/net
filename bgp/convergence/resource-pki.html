@@ -1,0 +1,686 @@
+
+<!doctype html>
+<html lang="en-US" id="html">
+<head> 
+    <script src="https://www.googleoptimize.com/optimize.js?id=GTM-N6QRZFG"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="shortcut icon" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-180x180.png" />
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v23.4 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Resource Public Key Infrastructure (RPKI)</title><link rel="preload" data-rocket-preload as="image" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/logo.svg" fetchpriority="high">
+	<meta name="description" content="Resource Public Key Infrastructure (RPKI) helps against BGP hijacking and route leaking by signing prefixes and AS numbers." />
+	<link rel="canonical" href="https://networklessons.com/bgp/resource-public-key-infrastructure-rpki" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Resource Public Key Infrastructure (RPKI)" />
+	<meta property="og:description" content="Resource Public Key Infrastructure (RPKI) helps against BGP hijacking and route leaking by signing prefixes and AS numbers." />
+	<meta property="og:url" content="https://networklessons.com/bgp/resource-public-key-infrastructure-rpki" />
+	<meta property="og:site_name" content="NetworkLessons.com" />
+	<meta property="article:published_time" content="2024-01-22T08:34:36+00:00" />
+	<meta property="article:modified_time" content="2024-05-15T07:51:11+00:00" />
+	<meta property="og:image" content="https://cdn.networklessons.com/wp-content/uploads/2024/01/signature-clipboard-scaled.jpg" />
+	<meta property="og:image:width" content="2279" />
+	<meta property="og:image:height" content="2560" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Rene Molenaar" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Rene Molenaar" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="9 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://networklessons.com/bgp/resource-public-key-infrastructure-rpki","url":"https://networklessons.com/bgp/resource-public-key-infrastructure-rpki","name":"Resource Public Key Infrastructure (RPKI)","isPartOf":{"@id":"https://networklessons.com/#website"},"primaryImageOfPage":{"@id":"https://networklessons.com/bgp/resource-public-key-infrastructure-rpki#primaryimage"},"image":{"@id":"https://networklessons.com/bgp/resource-public-key-infrastructure-rpki#primaryimage"},"thumbnailUrl":"https://cdn.networklessons.com/wp-content/uploads/2024/01/signature-clipboard-scaled.jpg","datePublished":"2024-01-22T08:34:36+00:00","dateModified":"2024-05-15T07:51:11+00:00","author":{"@id":"https://networklessons.com/#/schema/person/a210ceb8a2b14b76e03c27d3c65850c2"},"description":"Resource Public Key Infrastructure (RPKI) helps against BGP hijacking and route leaking by signing prefixes and AS numbers.","breadcrumb":{"@id":"https://networklessons.com/bgp/resource-public-key-infrastructure-rpki#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://networklessons.com/bgp/resource-public-key-infrastructure-rpki"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://networklessons.com/bgp/resource-public-key-infrastructure-rpki#primaryimage","url":"https://cdn.networklessons.com/wp-content/uploads/2024/01/signature-clipboard-scaled.jpg","contentUrl":"https://cdn.networklessons.com/wp-content/uploads/2024/01/signature-clipboard-scaled.jpg","width":2279,"height":2560,"caption":"Signature Clipboard"},{"@type":"BreadcrumbList","@id":"https://networklessons.com/bgp/resource-public-key-infrastructure-rpki#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Networklessons.com","item":"https://networklessons.com/"},{"@type":"ListItem","position":2,"name":"BGP","item":"https://networklessons.com/bgp"},{"@type":"ListItem","position":3,"name":"Resource Public Key Infrastructure (RPKI)"}]},{"@type":"WebSite","@id":"https://networklessons.com/#website","url":"https://networklessons.com/","name":"NetworkLessons.com","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://networklessons.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://networklessons.com/#/schema/person/a210ceb8a2b14b76e03c27d3c65850c2","name":"Rene Molenaar","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://networklessons.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/d676347ef395e3b3a6a056aaf5546311?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/d676347ef395e3b3a6a056aaf5546311?s=96&d=mm&r=g","caption":"Rene Molenaar"},"description":"René - CCIE #41726 is the creator of Networklessons.com where he writes about networking topics like Cisco, Routing, Switching, Linux, Wireless &amp; Security. He also created GNS3Vault.com where people can study Cisco labs for free.","sameAs":["https://networklessons.com"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//player.vimeo.com' />
+<link rel='dns-prefetch' href='//cdn.networklessons.com' />
+<link rel='dns-prefetch' href='//googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//googleoptimize.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//tag.getdrip.com' />
+<link rel='dns-prefetch' href='//facebook.com' />
+
+<link href='https://cdn.networklessons.com' rel='preconnect' />
+<link rel='stylesheet' id='mp-theme-css' href='https://cdn.networklessons.com/wp-content/plugins/memberpress/css/ui/theme.css?ver=1.11.34' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://cdn.networklessons.com/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2' type='text/css' media='all' />
+<style id='safe-svg-svg-icon-style-inline-css' type='text/css'>
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='arve-css' href='https://cdn.networklessons.com/wp-content/plugins/advanced-responsive-video-embedder/build/main.css?ver=755e5bf2bfafc15e7cc1' type='text/css' media='all' />
+<link rel='stylesheet' id='arve-pro-css' href='https://cdn.networklessons.com/wp-content/plugins/arve-pro/build/main.css?ver=eea34735566740155d0f' type='text/css' media='all' />
+<link rel='stylesheet' id='emnl-custom-styling-various-plugins-css' href='https://cdn.networklessons.com/wp-content/plugins/emnl-custom-css-various-plugins/emnl-custom-css-various-plugins.css?ver=1720772937' type='text/css' media='all' />
+<link rel='stylesheet' id='affwp-forms-css' href='https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/css/forms.min.css?ver=2.26.0' type='text/css' media='all' />
+<link rel='stylesheet' id='ez-toc-css' href='https://cdn.networklessons.com/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.69.1' type='text/css' media='all' />
+<style id='ez-toc-inline-css' type='text/css'>
+div#ez-toc-container .ez-toc-title {font-size: 100%;}div#ez-toc-container .ez-toc-title {font-weight: 700;}div#ez-toc-container ul li {font-size: 100%;}div#ez-toc-container ul li {font-weight: 500;}div#ez-toc-container nav ul ul li {font-size: 90%;}div#ez-toc-container {background: #f9f9f9;border: 1px solid #e6e6e6;}div#ez-toc-container p.ez-toc-title , #ez-toc-container .ez_toc_custom_title_icon , #ez-toc-container .ez_toc_custom_toc_icon {color: #000000;}div#ez-toc-container ul.ez-toc-list a {color: #5381b5;}div#ez-toc-container ul.ez-toc-list a:hover {color: #5381b5;}div#ez-toc-container ul.ez-toc-list a:visited {color: #5381b5;}
+.ez-toc-container-direction {direction: ltr;}.ez-toc-counter ul{counter-reset: item ;}.ez-toc-counter nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }.ez-toc-widget-direction {direction: ltr;}.ez-toc-widget-container ul{counter-reset: item ;}.ez-toc-widget-container nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }
+</style>
+<link rel='stylesheet' id='if-menu-site-css-css' href='https://cdn.networklessons.com/wp-content/plugins/if-menu/assets/if-menu-site.css?ver=6.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='networklessons-style-css' href='https://cdn.networklessons.com/wp-content/themes/networklessons/dist/app.css?ver=1724843461' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-style-css' href='https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/magnific-popup.css?ver=1.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bellows-css' href='https://cdn.networklessons.com/wp-content/plugins/bellows-pro/pro/assets/css/bellows.min.css?ver=1.4.3' type='text/css' media='all' />
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="jquery-cookie-js-extra">
+/* <![CDATA[ */
+var affwp_scripts = {"ajaxurl":"https:\/\/networklessons.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/js/jquery.cookie.min.js?ver=1.4.0" id="jquery-cookie-js"></script>
+<script type="text/javascript" id="affwp-tracking-js-extra">
+/* <![CDATA[ */
+var affwp_debug_vars = {"integrations":{"memberpress":"MemberPress"},"version":"2.26.0","currency":"USD","ref_cookie":"affwp_ref","visit_cookie":"affwp_ref_visit_id","campaign_cookie":"affwp_campaign"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/js/tracking.min.js?ver=2.26.0" id="affwp-tracking-js"></script>
+<link rel="https://api.w.org/" href="https://networklessons.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://networklessons.com/wp-json/wp/v2/posts/70511" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://networklessons.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.6.2" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://networklessons.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklessons.com%2Fbgp%2Fresource-public-key-infrastructure-rpki" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://networklessons.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklessons.com%2Fbgp%2Fresource-public-key-infrastructure-rpki&#038;format=xml" />
+<style id="bellows-custom-generated-css">
+
+/** Bellows Custom Tweaks (General Settings) **/
+
+/** Bellows Custom Tweaks (General Settings) **/
+/* More compact look of menu */
+.bellows .bellows-nav * { line-height: 1.75em; }
+.bellows .bellows-nav .bellows-submenu .bellows-target { padding-left: 20px;}
+.bellows .bellows-nav .bellows-target,
+.bellows .bellows-nav .bellows-submenu .bellows-target { padding: 2px;}
+
+/* Move toggle icons to left instead of right of text labels */
+.bellows .bellows-nav .bellows-subtoggle { width: 30px; left:0; }
+.bellows .bellows-nav .bellows-menu-item > .bellows-target > .bellows-target-text { margin-left: 30px; }
+.bellows .bellows-nav .bellows-subtoggle .fa { top: 40%; }
+
+/* Move toggle icons and lower level items to the right */
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-1 .bellows-subtoggle { left: 25px; }
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-1 .bellows-target { padding-left: 25px; }
+
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-2 .bellows-subtoggle { left: 50px; }
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-2 .bellows-target { padding-left: 50px; }
+
+
+/* SIDEBAR ONLY STYLING */
+
+/* Set all text to default black */
+#sidebar .bellows .bellows-nav a.bellows-target { color: #000000 }
+
+/* Set parent menu items bold and colored */
+#sidebar .bellows.bellows-main .bellows-nav .bellows-current-menu-item > .bellows-target,
+#sidebar .bellows.bellows-main .bellows-nav .bellows-current-menu-ancestor > .bellows-target { color:#557fae; font-weight: bold; }
+
+/* Set current post bold and colored */
+#sidebar .bellows .bellows-current-menu-item { font-weight: bold; color:#557fae; }
+
+/* Toggle icons on same height */
+#sidebar .bellows .bellows-nav .bellows-subtoggle .fa { top: 44%; }
+
+
+
+/* Status: Loaded from Transient */
+
+</style>		<script type="text/javascript">
+		var AFFWP = AFFWP || {};
+		AFFWP.referral_var = 'affid';
+		AFFWP.expiration = 1;
+		AFFWP.debug = 0;
+
+
+		AFFWP.referral_credit_last = 0;
+		</script>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to manual -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"visitorLoginState":"logged-in","visitorType":"subscriber","visitorEmail":"harthomp@protonmail.com","visitorEmailHash":"30617de159321682ca448e5d89fc5cae66131a43cdfff8865f5d749c58146885","visitorId":65289,"visitorIP":"203.63.201.230","pagePostType":"post","pagePostType2":"single-post","pageCategory":["bgp"],"IsActiveMember":"true","UserFullName":"Harrison Thompson buckley"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script>
+		if (typeof gtag == "undefined") {
+			function gtag(){dataLayer.push(arguments);}
+		}
+
+		gtag("consent", "default", {
+			"analytics_storage": "granted",
+			"ad_storage": "granted",
+			"ad_user_data": "granted",
+			"ad_personalization": "granted",
+			"functionality_storage": "granted",
+			"security_storage": "granted",
+			"personalization_storage": "granted",
+		});
+</script>
+<script data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWFSBS');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel="apple-touch-icon" sizes="180x180" href="/wp-content/uploads/fbrfg/apple-touch-icon.png?v=69P4gG4Gpq">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/fbrfg/favicon-32x32.png?v=69P4gG4Gpq">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/uploads/fbrfg/favicon-16x16.png?v=69P4gG4Gpq">
+<link rel="manifest" href="/wp-content/uploads/fbrfg/site.webmanifest?v=69P4gG4Gpq">
+<link rel="mask-icon" href="/wp-content/uploads/fbrfg/safari-pinned-tab.svg?v=69P4gG4Gpq" color="#5381b5">
+<link rel="shortcut icon" href="/wp-content/uploads/fbrfg/favicon.ico?v=69P4gG4Gpq">
+<meta name="msapplication-TileColor" content="#5381b5">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml?v=69P4gG4Gpq">
+<meta name="theme-color" content="#5381b5">		<style>
+			.algolia-search-highlight {
+				background-color: #fffbcc;
+				border-radius: 2px;
+				font-style: normal;
+			}
+		</style>
+		<script type="application/ld+json" class="emnl-schema-breadcrumbs">{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 0,"name": "Home","item": "https://networklessons.com"},{"@type": "ListItem","position": 1,"name": "BGP","item": "https://networklessons.com/bgp"},{"@type": "ListItem","position": 2,"name": "Resource Public Key Infrastructure (RPKI)","item": "https://networklessons.com/bgp/resource-public-key-infrastructure-rpki"}]}</script>
+</head>
+
+
+<body class="post-template-default single single-post postid-70511 single-format-standard logged-in" data-theme="light">
+
+<!-- GTM Container placement set to manual -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWFSBS" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script>
+  if ( localStorage.getItem('siteTheme') ) {
+    document.body.setAttribute('data-theme', localStorage.getItem('siteTheme'));
+  }
+</script>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+	<header class="site-header">
+		        <div class="site-header-inner">
+            <div class="container">
+                <div class="row sm-gutters main-row">
+                    <div class="col-lg-4 col-8">
+                        <a href="https://networklessons.com/" class="logo">
+                            <img fetchpriority="high" width="524" height="141" src="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/logo.svg" alt="NetworkLessons.com" />
+                        </a>
+                    </div>
+                                                                <div class="col-lg-8 col-4 col-navigation">
+                            <nav id="site-navigation" class="main-navigation">
+                                <div class="menu-primary-container"><ul id="primary-menu" class="menu"><li id="menu-item-10143" class="expanded menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10143"><a href="https://networklessons.com/courses">Courses <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-59830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59830"><a href="https://networklessons.com/cisco">Cisco <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-65214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65214"><a href="https://networklessons.com/cisco/ccna-200-301">CCNA 200-301</a></li>
+		<li id="menu-item-65219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65219"><a href="https://networklessons.com/cisco/ccnp-encor-350-401">CCNP ENCOR 350-401 v1.1</a></li>
+		<li id="menu-item-65218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65218"><a href="https://networklessons.com/cisco/ccnp-enarsi-300-410">CCNP ENARSI 300-410 v1.1</a></li>
+		<li id="menu-item-65217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65217"><a href="https://networklessons.com/cisco/ccie-enterprise-infrastructure">CCIE Enterprise Infrastructure</a></li>
+		<li id="menu-item-65216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65216"><a href="https://networklessons.com/cisco/asa-firewall">ASA Firewall</a></li>
+		<li id="menu-item-65774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65774"><a href="https://networklessons.com/cisco/cisco-sd-wan">Cisco SD-WAN</a></li>
+	</ul>
+</li>
+	<li id="menu-item-59831" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59831"><a href="https://networklessons.com/routing-switching">Routing &#038; Switching <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-65232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65232"><a href="https://networklessons.com/subnetting">Subnetting</a></li>
+		<li id="menu-item-65233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65233"><a href="https://networklessons.com/switching">Switching</a></li>
+		<li id="menu-item-65231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65231"><a href="https://networklessons.com/spanning-tree">Spanning-Tree</a></li>
+		<li id="menu-item-65222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65222"><a href="https://networklessons.com/frame-relay">Frame-Relay</a></li>
+		<li id="menu-item-65230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65230"><a href="https://networklessons.com/rip">RIP</a></li>
+		<li id="menu-item-65221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65221"><a href="https://networklessons.com/eigrp">EIGRP</a></li>
+		<li id="menu-item-65227" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65227"><a href="https://networklessons.com/ospf">OSPF</a></li>
+		<li id="menu-item-65224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65224"><a href="https://networklessons.com/is-is">IS-IS</a></li>
+		<li id="menu-item-65215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65215"><a href="https://networklessons.com/bgp">BGP</a></li>
+		<li id="menu-item-65226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65226"><a href="https://networklessons.com/multicast">Multicast</a></li>
+		<li id="menu-item-65223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65223"><a href="https://networklessons.com/ipv6">IPv6</a></li>
+		<li id="menu-item-65229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65229"><a href="https://networklessons.com/quality-of-service">Quality of Service</a></li>
+		<li id="menu-item-65225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65225"><a href="https://networklessons.com/mpls">MPLS</a></li>
+	</ul>
+</li>
+	<li id="menu-item-73291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-73291"><a href="#">Data Center <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-73294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73294"><a href="https://networklessons.com/vxlan">VXLAN</a></li>
+	</ul>
+</li>
+	<li id="menu-item-65228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65228"><a href="https://networklessons.com/python">Python</a></li>
+	<li id="menu-item-65234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65234"><a href="https://networklessons.com/uncategorized">Miscellaneous</a></li>
+	<li id="menu-item-70698" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70698"><a href="https://networklessons.com/labs">Labs</a></li>
+	<li id="menu-item-64907" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-64907"><a href="#">Legacy <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-33774" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33774"><a href="https://networklessons.com/cisco/ccna-routing-switching-icnd1-100-105">CCNA R&#038;S ICND1 100-105</a></li>
+		<li id="menu-item-40575" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-40575"><a href="https://networklessons.com/cisco/ccna-routing-switching-icnd2-200-105">CCNA R&#038;S ICND2 200-105</a></li>
+		<li id="menu-item-20090" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20090"><a href="https://networklessons.com/cisco/ccnp-route">CCNP ROUTE</a></li>
+		<li id="menu-item-20092" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20092"><a href="https://networklessons.com/cisco/ccnp-switch">CCNP SWITCH</a></li>
+		<li id="menu-item-20093" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20093"><a href="https://networklessons.com/cisco/ccnp-tshoot">CCNP TSHOOT</a></li>
+		<li id="menu-item-20089" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20089"><a href="https://networklessons.com/cisco/ccie-routing-switching">CCIE R&#038;S</a></li>
+		<li id="menu-item-38428" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38428"><a href="https://networklessons.com/cisco/ccie-routing-switching-written">CCIE R&#038;S Written</a></li>
+		<li id="menu-item-65220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65220"><a href="https://networklessons.com/cisco/evolving-technologies">Evolving Technologies</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8339"><a href="https://networklessons.com/new-lessons"><i class="fa fa-plus"></i> New Lessons</a></li>
+	<li id="menu-item-64135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64135"><a href="https://networklessons.com/updated-lessons"><i class="fas fa-pen"></i> Updated Lessons</a></li>
+	<li id="menu-item-7347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7347"><a href="https://networklessons.com/member-ideas"><i class="fa fa-lightbulb"></i> Lesson Ideas</a></li>
+</ul>
+</li>
+<li id="menu-item-8715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8715"><a href="https://forum.networklessons.com">Forum</a></li>
+<li id="menu-item-23483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23483"><a href="https://networklessons.com/support">Support</a></li>
+<li id="menu-item-65967" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-65967"><a href="#">Tools <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-65968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65968"><a href="https://www.cloudshark.org/collections/WTRpgLI-GQSDfgzkQixICg">Packet Captures</a></li>
+	<li id="menu-item-65969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65969"><a href="https://notes.networklessons.com">Notes</a></li>
+	<li id="menu-item-65970" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65970"><a href="https://networklessons.com/tools-and-resources">Resources</a></li>
+	<li id="menu-item-68327" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68327"><a href="https://networklessons.com/networklessons-exams">Practice Exams</a></li>
+</ul>
+</li>
+<li id="menu-item-22148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-22148"><a href="#"><i class="fa fa-user"></i> <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-5629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5629"><a href="https://networklessons.com/myaccount">My Account Settings</a></li>
+	<li id="menu-item-68092" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68092"><a href="https://networklessons.com/member-dashboard">Member Dashboard</a></li>
+	<li id="menu-item-22285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22285"><a href="https://networklessons.com/upgrade-to-annual-membership"><b><font color="#FFC469">UPGRADE TO ANNUAL &#038; Get 2 Months FREE!</font></b></a></li>
+	<li id="menu-item-56969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56969"><a href="https://networklessons.com/wp-login.php?action=logout">Logout</a></li>
+</ul>
+</li>
+</ul></div>                                <div class="main-navigation-close">
+                                    <i class="far fa-times"></i>
+                                </div>
+                            </nav>
+                            <div class="main-navigation-toggle">
+                                <span class="icon"></span>
+                            </div>
+                            <div class="d-none d-xl-block">
+                                
+
+<form role="search" method="get" class="search-form" action="https://networklessons.com/">
+    <label for="search-form-66e2ef4812a65" class="sr-only">
+        <span class="screen-reader-text">Search for:</span>
+    </label>
+
+    <div class="input-group">
+        <input type="search" id="search-form-66e2ef4812a65" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" />
+        <div class="input-group-append">
+            <button type="submit" class="search-submit btn btn-white">
+                <span class="screen-reader-text">Search</span>
+                <i class="far fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="fullpage-overlay main-navigation-overlay"></div>
+	</header>
+    
+            <div class="d-xl-none">
+            
+
+<form role="search" method="get" class="search-form" action="https://networklessons.com/">
+    <label for="search-form-66e2ef4812ac5" class="sr-only">
+        <span class="screen-reader-text">Search for:</span>
+    </label>
+
+    <div class="input-group">
+        <input type="search" id="search-form-66e2ef4812ac5" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" />
+        <div class="input-group-append">
+            <button type="submit" class="search-submit btn btn-white">
+                <span class="screen-reader-text">Search</span>
+                <i class="far fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>        </div>
+    
+	<div class="site-content container">
+    <div class="breadcrumbs" style="font-size: 12px;">You are here: <a href="https://networklessons.com">Home</a> » <a href="https://networklessons.com/bgp">BGP</a></div>	<div class="site-content-row row">
+	<div id="primary" class="content-area col-md-8">
+		<main id="main" class="site-main">
+                            <div class="site-actions-toolbar d-md-none">
+                    <div class="site-action js--dark-mode">
+                        <i class="far fa-adjust"></i>
+                    </div>
+                </div>
+            
+		
+<article id="post-70511" class="main-post post-70511 post type-post status-publish format-standard has-post-thumbnail hentry category-bgp">
+	<header class="entry-header">
+                            <h1 class="entry-title">Resource Public Key Infrastructure (RPKI)</h1>        	</header>
+	<div class="entry-content">
+                    <div class="the-content">
+                <div id="ez-toc-container" class="ez-toc-v2_0_69_1 counter-hierarchy ez-toc-counter ez-toc-custom ez-toc-container-direction">
+<div class="ez-toc-title-container"><p class="ez-toc-title">Lesson Contents</p>
+</div><nav><ul class='ez-toc-list ez-toc-list-level-1 ' ><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-1" href="#Certificates_and_Signing" title="Certificates and Signing">Certificates and Signing</a><ul class='ez-toc-list-level-3' ><li class='ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-2" href="#Trust_Anchors_TA" title="Trust Anchors (TA)">Trust Anchors (TA)</a></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-3" href="#Route_Origin_Authorization_ROA" title="Route Origin Authorization (ROA)">Route Origin Authorization (ROA)</a></li></ul></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-4" href="#Route_Origin_Validation_ROV" title="Route Origin Validation (ROV)">Route Origin Validation (ROV)</a><ul class='ez-toc-list-level-3' ><li class='ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-5" href="#RPKI_Validator" title="RPKI Validator">RPKI Validator</a></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-6" href="#Routers" title="Routers">Routers</a></li></ul></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-7" href="#Conclusion" title="Conclusion">Conclusion</a></li></ul></nav></div>
+<p>On the Internet, we use BGP for routing. BGP has no built-in security mechanisms to check whether a prefix belongs to a specific autonomous system (AS). It&#8217;s all based on trust. You can advertise whatever you want; the only thing stopping those prefixes is outbound or inbound filters if you have any. The Internet is vulnerable to bogus routing information. This is a problem, such as BGP hijacking or <a href="https://networklessons.com/bgp/bgp-route-leaking" target="_blank" rel="noopener">route leaking</a>.<br />
+<br />
+<br />
+<span class="GHvxL7lKuIAJB8q2d0kOiWyYXC1TrNS6"></p>
+<div class="arve" data-mode="normal" data-oembed="1" data-provider="vimeo" id="arve-vimeo-905250730" style="max-width:700px;" data-reset-after-played data-fullscreen="disabled">
+<div class="arve-inner">
+<div class="arve-embed arve-embed--has-aspect-ratio">
+<span class="arve-ar" style="padding-top:56.250000%"></span><iframe credentialless referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer &#039;none&#039;;ambient-light-sensor &#039;none&#039;;autoplay &#039;none&#039;;battery &#039;none&#039;;bluetooth &#039;none&#039;;browsing-topics &#039;none&#039;;camera &#039;none&#039;;ch-ua &#039;none&#039;;clipboard-read &#039;none&#039;;clipboard-write;display-capture &#039;none&#039;;document-domain &#039;none&#039;;domain-agent &#039;none&#039;;encrypted-media &#039;none&#039;;execution-while-not-rendered &#039;none&#039;;execution-while-out-of-viewport &#039;none&#039;;gamepad &#039;none&#039;;geolocation &#039;none&#039;;gyroscope &#039;none&#039;;hid &#039;none&#039;;identity-credentials-get &#039;none&#039;;idle-detection &#039;none&#039;;keyboard-map &#039;none&#039;;local-fonts &#039;none&#039;;magnetometer &#039;none&#039;;microphone &#039;none&#039;;midi &#039;none&#039;;navigation-override &#039;none&#039;;otp-credentials &#039;none&#039;;payment &#039;none&#039;;picture-in-picture;publickey-credentials-create &#039;none&#039;;publickey-credentials-get &#039;none&#039;;screen-wake-lock &#039;none&#039;;serial &#039;none&#039;;speaker-selection;sync-xhr &#039;none&#039;;usb &#039;none&#039;;web-share;window-management &#039;none&#039;;xr-spatial-tracking &#039;none&#039;;" allowfullscreen class="arve-iframe fitvidsignore" data-arve="arve-vimeo-905250730" data-src-no-ap="https://player.vimeo.com/video/905250730?dnt=0&amp;app_id=122963&amp;html5=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;autoplay=0" frameborder="0" height="393.75" name sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox allow-forms" scrolling="no" src="https://player.vimeo.com/video/905250730?dnt=0&#038;app_id=122963&#038;html5=1&#038;title=0&#038;byline=0&#038;portrait=0&#038;autoplay=0" width="700" title="rpki-pp-4k" loading="lazy"></iframe></p>
+</div>
+</div>
+<p><script type="application/ld+json">{"@context":"http:\/\/schema.org\/","@id":"https:\/\/networklessons.com\/bgp\/resource-public-key-infrastructure-rpki#arve-vimeo-905250730","type":"VideoObject","embedURL":"https:\/\/player.vimeo.com\/video\/905250730?dnt=0&app_id=122963&html5=1&title=0&byline=0&portrait=0&autoplay=0","name":"rpki-pp-4k","thumbnailUrl":"https:\/\/i.vimeocdn.com\/video\/1786793760-d17bd374005bf8dfc25b776a3045ebe2af2eeecc49a8a2734cacdfdf07455054-d_640","uploadDate":"2024-01-22T08:34:36+00:00","author":"NetworkLessons.com","duration":"PT17M19S","description":"1"}</script>
+</div>
+<p></span><br />
+<br />
+Prefixes belong to specific ASes with matching autonomous system numbers (ASN). You can look them up in the Internet Routing Registry (IRR).  You can look at the IRR using services such as <a href="https://www.radb.net/">RADb</a>.</p>
+<p>You could configure your routers to use the data from the IRR to filter prefixes. That sounds nice, but the data in IRR is unreliable. There is invalid data, stale records, and even typos. There are multiple data suppliers, and there is not enough control over the creation and verification of data.</p>
+<p>A central list with prefixes and matching ASNs is a good idea, which led the Internet Engineering Task Force (IETF) to create Resource Public Key Infrastructure (RPKI), defined in <a href="https://datatracker.ietf.org/doc/html/rfc6480" target="_blank" rel="noopener">RFC 6480</a>.</p>
+<p>RPKI is a security framework to ensure that BGP routing information is authentic. With RPKI, you can validate BGP announcements. As you&#8217;ll see, most of it works outside of BGP.</p>
+<p>The &#8220;resource&#8221; part refers to Internet number resource information, such as ASNs and IP addresses. The &#8220;PKI&#8221; part means we use a cryptographic method with certificates and signing. RPKI uses X.509 certificates as described in <a href="https://datatracker.ietf.org/doc/html/rfc5280" target="_blank" rel="noopener">RFC 5280</a>. Normally, we use X.509 for user authentication or websites. These include an identity. RPKI certificates don&#8217;t, so there is an extension for IP addresses and AS identifiers, as explained in <a href="https://datatracker.ietf.org/doc/html/rfc3779" target="_blank" rel="noopener">RFC 3779</a>.</p>
+<p>The resource holder owns the prefix and ASN, so this is the only entity that can create a signed object with the prefix and ASN. These signed objects are added to central lists, which we can use for verification.</p>
+<p>Only allowing recourse holders to create objects and using PKI with certificates to enforce and validate the trustworthiness of this data is what IRR lacks and what makes RPKI a reliable solution.</p>
+<p>RPKI makes the Internet more secure because you can check which prefixes belong to what ASes. Another benefit is that when you peer with a remote AS or assign IP addresses to customers, you have proof that you are the legitimate owner of one or more prefixes.</p>
+<p>Now you have an idea of what RPKI is about, to understand its inner workings, we have to dive into two main components:</p>
+<ul>
+<li><strong>Certificates and signing</strong>: We need certificates and tools so resource holders can create objects with prefixes and ASNs.</li>
+<li><strong>Validating origins</strong>: We need something to validate those prefixes and ASNs, and our routers need to compare it with their BGP table.</li>
+</ul>
+<p>We&#8217;ll take a look at these two in detail.</p>
+<h2><span class="ez-toc-section" id="Certificates_and_Signing"></span>Certificates and Signing<span class="ez-toc-section-end"></span></h2>
+<p>We&#8217;ll start with the certificates.</p>
+<p>With most certificates, such as those we use for HTTPS, we use root certificates pre-installed with a browser or operating system. We don&#8217;t use these for RPKI.</p>
+<h3><span class="ez-toc-section" id="Trust_Anchors_TA"></span>Trust Anchors (TA)<span class="ez-toc-section-end"></span></h3>
+<p>The Internet Assigned Numbers Authority (IANA) is responsible for all Internet number resources, such as IP addresses and AS numbers.  IANA further assigns resources to the five Regional Internet Registries (RIR):</p>
+<ul>
+<li>ARIN</li>
+<li>RIPE NCC</li>
+<li>APNIC</li>
+<li>LACNIC</li>
+<li>AFRINIC</li>
+</ul>
+<p>Since these organizations are responsible for IP addresses and ASNs anywhere, they are also the <strong>certificate authorities (CA) for RPKI</strong>. In RPKI terminology, a CA is called a <strong>trust anchor (TA)</strong>.</p>
+<p>The TAs have these responsibilities:</p>
+<ul>
+<li>Provider the infrastructure so that resource holders can sign their prefixes and ASNs.</li>
+<li>Provide a public list so that others can verify these prefixes and ASNs.</li>
+</ul>
+<p>Each RIR operates its own RPKI repository that publishes digital certificates and objects containing prefixes and ASNs. These repositories are accessible over the Internet. To authorize an AS to route prefixes, the resource holder must obtain a resource certificate from their RIR to verify the prefixes allocated to them.</p>
+<h3><span class="ez-toc-section" id="Route_Origin_Authorization_ROA"></span>Route Origin Authorization (ROA)<span class="ez-toc-section-end"></span></h3>
+<p>Most RIRs offer dashboards that resource holders can use to log in and find the ASN and prefixes they own. This is also where they can create a signed object with public key cryptography, which contains three items:</p>
+<ul>
+<li>The authorized AS number.</li>
+<li>The prefix that the AS can originate</li>
+<li>The maximum prefix length (maxLength).</li>
+</ul>
+<p>This object is called a <strong>Route Origin Authorization (ROA)</strong> and defines which AS is authorized to originate a prefix. If you have access to a RIR because you own a prefix and ASN, you can create, edit, or delete ROAs for these. If a prefix is deallocated from you, the ROA will be revoked.</p>
+<p><img fetchpriority="high" decoding="async" class="alignnone size-full wp-image-70543" src="https://cdn.networklessons.com/wp-content/uploads/2024/01/rpki-ca-repository-roa-prefix-asn.png" alt="Rpki Ca Repository Roa Prefix Asn" width="1463" height="1390" srcset="https://cdn.networklessons.com/wp-content/uploads/2024/01/rpki-ca-repository-roa-prefix-asn.png 1463w, https://cdn.networklessons.com/wp-content/uploads/2024/01/rpki-ca-repository-roa-prefix-asn-300x285.png 300w, https://cdn.networklessons.com/wp-content/uploads/2024/01/rpki-ca-repository-roa-prefix-asn-1024x973.png 1024w, https://cdn.networklessons.com/wp-content/uploads/2024/01/rpki-ca-repository-roa-prefix-asn-768x730.png 768w" sizes="(max-width: 1463px) 100vw, 1463px" /></p>
+<p>As the name implies, the maximum length specifies the maximum prefix length. For example, if the ROA contains 192.0.1.0/24 and the maximum length is /25, the AS can advertise one /24 or two adjacent /25 prefixes. Any more specific prefixes, such as a /26, are unauthorized.</p>
+<p>Here is an example of how you can create a ROA for ARIN:</p>
+<p>https://www.youtube.com/watch?v=BLQENAh4WT0</p>
+<p>Here is an example of RIPE NCC:</p>
+<p><span class="LU8QGJt76l"></p>
+<div class="arve" data-mode="normal" data-oembed="1" data-provider="youtube" id="arve-youtube-glwhp12wogw" style="max-width:700px;" data-reset-after-played data-fullscreen="disabled">
+<div class="arve-inner">
+<div class="arve-embed arve-embed--has-aspect-ratio">
+<span class="arve-ar" style="padding-top:56.250000%"></span><iframe credentialless referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer &#039;none&#039;;ambient-light-sensor &#039;none&#039;;autoplay &#039;none&#039;;battery &#039;none&#039;;bluetooth &#039;none&#039;;browsing-topics &#039;none&#039;;camera &#039;none&#039;;ch-ua &#039;none&#039;;clipboard-read &#039;none&#039;;clipboard-write;display-capture &#039;none&#039;;document-domain &#039;none&#039;;domain-agent &#039;none&#039;;encrypted-media &#039;none&#039;;execution-while-not-rendered &#039;none&#039;;execution-while-out-of-viewport &#039;none&#039;;gamepad &#039;none&#039;;geolocation &#039;none&#039;;gyroscope &#039;none&#039;;hid &#039;none&#039;;identity-credentials-get &#039;none&#039;;idle-detection &#039;none&#039;;keyboard-map &#039;none&#039;;local-fonts &#039;none&#039;;magnetometer &#039;none&#039;;microphone &#039;none&#039;;midi &#039;none&#039;;navigation-override &#039;none&#039;;otp-credentials &#039;none&#039;;payment &#039;none&#039;;picture-in-picture;publickey-credentials-create &#039;none&#039;;publickey-credentials-get &#039;none&#039;;screen-wake-lock &#039;none&#039;;serial &#039;none&#039;;speaker-selection;sync-xhr &#039;none&#039;;usb &#039;none&#039;;web-share;window-management &#039;none&#039;;xr-spatial-tracking &#039;none&#039;;" allowfullscreen class="arve-iframe fitvidsignore" data-arve="arve-youtube-glwhp12wogw" data-src-no-ap="https://www.youtube-nocookie.com/embed/gLwHp12wOGw?feature=oembed&amp;iv_load_policy=3&amp;modestbranding=1&amp;rel=0&amp;autohide=1&amp;playsinline=0&amp;autoplay=0&amp;enablejsapi=1" frameborder="0" height="393.75" name sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox" scrolling="no" src="https://www.youtube-nocookie.com/embed/gLwHp12wOGw?feature=oembed&#038;iv_load_policy=3&#038;modestbranding=1&#038;rel=0&#038;autohide=1&#038;playsinline=0&#038;autoplay=0&#038;enablejsapi=1" width="700" title="RPKI Dashboard Quick Tour" loading="lazy"></iframe></p>
+</div>
+</div>
+<p><script type="application/ld+json">{"@context":"http:\/\/schema.org\/","@id":"https:\/\/networklessons.com\/bgp\/resource-public-key-infrastructure-rpki#arve-youtube-glwhp12wogw","type":"VideoObject","embedURL":"https:\/\/www.youtube-nocookie.com\/embed\/gLwHp12wOGw?feature=oembed&iv_load_policy=3&modestbranding=1&rel=0&autohide=1&playsinline=0&autoplay=0&enablejsapi=1","name":"RPKI Dashboard Quick Tour","thumbnailUrl":"https:\/\/i.ytimg.com\/vi_webp\/gLwHp12wOGw\/hqdefault.webp","uploadDate":"2024-01-22T08:34:36+00:00","author":"RIPE NCC","description":"On the Internet, we use BGP for routing. BGP has no built-in security mechanisms to check whether a prefix belongs to a specific autonomous system (AS). It's all based on trust. You can advertise whatever you want; the only thing stopping those prefixes is outbound or inbound filters if you have any"}</script>
+</div>
+<p></span></p>
+<p>Now you know who is responsible for signing and how we create ROAs.</p>
+<h2><span class="ez-toc-section" id="Route_Origin_Validation_ROV"></span>Route Origin Validation (ROV)<span class="ez-toc-section-end"></span></h2>
+<p>The second part of RPKI is to validate ROAs. <strong>Route Origin Validation (ROV)</strong> is the validation of ROA objects and is explained in <a href="https://datatracker.ietf.org/doc/html/rfc6483">RFC 6483</a>.</p>
+<p>If you want to access all RPKI data, you connect to the TA of each RIR. The root certificate has pointers to the certificate tree with subordinate certificates, pointers to more subordinate certificates, and so on.</p>
+<p>The RIR TA is in a <strong>static trust anchor locator (TAL)</strong>. This file contains the URL to the TA and a public key to verify if it is authentic.</p>
+<h3><span class="ez-toc-section" id="RPKI_Validator"></span>RPKI Validator<span class="ez-toc-section-end"></span></h3>
+<p>To verify an ROA, you need to check the certificate(s), and running cryptographic software to check hundreds of thousands of ROAs on a router&#8217;s control plane is not a good idea.</p>
+<p>Instead, to validate ROAs, we can use an <strong>RPKI validator</strong>. It is also known as a relying party software package. Most RPKI validators include the TALs for all RIRs.</p>
+<p>When an RPKI validator starts, it looks up all RIR TAs and downloads all published certificates and ROAs. Originally, this was done with <strong>rsync</strong>, but most RPKI validators nowadays use <strong>RPKI Repository Delta Protocol (RRDP)</strong>, standardized in <a href="https://datatracker.ietf.org/doc/html/rfc8182">RFC 8182</a>.</p>
+<p>The goal of an RPKI validator is:</p>
+<ul>
+<li>Download ROAs from all TAs.</li>
+<li>Validate all ROAs.</li>
+<li>Present a list to routers so they can validate prefixes and ASNs.</li>
+</ul>
+<p>The RPKI validator acts as a local cache. The RPKI validator periodically downloads and processes all ROAs. When a ROA is validated, an object is created that contains these items:</p>
+<ul>
+<li>IP Prefix</li>
+<li>Maximum length</li>
+<li>Origin AS number</li>
+</ul>
+<p>These items are the same as the ROA but validated by the RPKI validator. This object is called a <strong>validated ROA payload (VRP)</strong> and is added to a list.</p>
+<p>The difference between an ROA and a VRP is the context. When the RPKI validator processes the ROA, it checks the digital certificate and certificate chain to ensure the ROA&#8217;s authenticity and integrity. When the ROA is validated, the RPKI validator extracts the information and converts it into a VRP. The collection of VRPs is called the validated cache.</p>
+<p>There are many open-source <a href="https://rpki.readthedocs.io/en/latest/ops/tools.html" target="_blank" rel="noopener">RPKI validator tools</a>. For example:</p>
+<ul>
+<li>FORT Validator</li>
+<li>OctoRPKI</li>
+<li>Routinator</li>
+</ul>
+<p>In the <a href="https://networklessons.com/bgp/bgp-prefix-origin-as-validation-with-rpki">BGP Prefix Origin AS Validation with RPKI lesson</a>, I use Routinator. It has a GUI to manually validate prefixes and ASNs and see some statistics. RIPE has a hosted version so you can <a href="https://rpki-validator.ripe.net/ui/">see it for yourself</a>.</p>
+<h3><span class="ez-toc-section" id="Routers"></span>Routers<span class="ez-toc-section-end"></span></h3>
+<p>Routers can download the validated cache from the RPKI validator using the <strong>RPKI to router protocol (RPKI-RTR)</strong> as described in <a href="https://datatracker.ietf.org/doc/html/rfc6810">RFC 6810</a> and <a href="https://datatracker.ietf.org/doc/html/rfc8210">RFC 8210</a>. Because the RPKI validator does the hard cryptographic work of checking all signatures, RPKI has minimal overhead on routers and doesn&#8217;t impact the convergence time much.</p>
+<p><img decoding="async" class="alignnone size-full wp-image-70545" src="https://cdn.networklessons.com/wp-content/uploads/2024/01/rpki-validator-rtr-router.png" alt="Rpki Validator Rtr Router" width="1389" height="1140" srcset="https://cdn.networklessons.com/wp-content/uploads/2024/01/rpki-validator-rtr-router.png 1389w, https://cdn.networklessons.com/wp-content/uploads/2024/01/rpki-validator-rtr-router-300x246.png 300w, https://cdn.networklessons.com/wp-content/uploads/2024/01/rpki-validator-rtr-router-1024x840.png 1024w, https://cdn.networklessons.com/wp-content/uploads/2024/01/rpki-validator-rtr-router-768x630.png 768w" sizes="(max-width: 1389px) 100vw, 1389px" /></p>
+<p>The router will download a list with VRPs and compare the routing information in the BGP table with the VRP. There can be one of three states per prefix:</p>
+<ul>
+<li><strong>Valid</strong>: The prefix announcement is found in at least one VRP. This means that the prefix is equal or more specific than the prefix in the VRP.</li>
+<li><strong>Invalid</strong>: The prefix is advertised from an unauthorized AS. This can have two causes:
+<ul>
+<li>There is a VRP for this prefix, but it has another AS number. This is BGP hijacking or a route leak.</li>
+<li>The advertised prefix is more specific than what is allowed in the maximum length of the VRP.</li>
+</ul>
+</li>
+<li><strong>Not found</strong>: The advertised prefix is not covered by a VRP.</li>
+</ul>
+<p>Unless you override this behavior, invalid prefixes <strong>can&#8217;t be used as a BGP best path</strong>. It is possible to use not-found prefixes, but BGP prefers valid over not-found prefixes. This selection happens before the <a href="https://networklessons.com/bgp/bgp-attributes-and-path-selection">best path selection</a>, where we check <a href="https://networklessons.com/bgp/how-to-configure-bgp-weight-attribute">weight</a>, <a href="https://networklessons.com/bgp/how-to-configure-bgp-local-preference-attribute">local preference</a>, <a href="https://networklessons.com/bgp/how-to-configure-bgp-as-path-prepending">AS path length</a>, etc.</p>
+<h2><span class="ez-toc-section" id="Conclusion"></span>Conclusion<span class="ez-toc-section-end"></span></h2>
+<p>You have now learned what RPKI is and how it validates BGP prefixes:</p>
+<ul>
+<li>BGP doesn&#8217;t have a built-in security mechanism to check if prefixes belong to the correct AS.</li>
+<li>Possible issues are BGP hijacking or route leaking.</li>
+<li>The IRR has records with prefixes and AS numbers but is unreliable.</li>
+<li>RPKI is a security framework that uses certificates, and only resource holders can create objects named ROAs.</li>
+<li>The five RIRs are the RPKI CAs, named TAs.</li>
+<li>A ROA contains:
+<ul>
+<li>Prefix</li>
+<li>ASN</li>
+<li>Maximum prefix length</li>
+</ul>
+</li>
+<li>Route origin validation is the validation of ROA objects.</li>
+<li>The TAL contains the URLs to the different TAs.</li>
+<li>The RPKI validator checks all ROAs from all TAs and stores them as VRPs in the validated cache.</li>
+<li>Routers download VRPs from the RPKI validator so they can check their BGP prefixes.</li>
+<li>Each prefix can have one of three states:
+<ul>
+<li>Valid</li>
+<li>Invalid</li>
+<li>Not Found</li>
+</ul>
+</li>
+</ul>
+<p>RPKI is a key component of <a href="https://www.manrs.org" target="_blank" rel="noopener">MANRS</a> compliance but not the only security mechanism for BGP. It offers origin validation but doesn&#8217;t check the entire AS path. That&#8217;s something that BGPsec does.</p>
+<p>If you want to see how widespread and the adoption rate of RPKI is, MANRS has a <a href="https://observatory.manrs.org/#/overview">state of routing security overview</a>, and Cloudflare also has an <a href="https://rpki.cloudflare.com/">RPKI dashboard</a>, which offers something similar.</p>
+<p>I hope you enjoyed this lesson. If you have any questions, please leave a comment.</p>
+            </div>
+                	</div>
+</article>
+		</main>
+	</div>
+
+
+<div class="widget-area col-md-4">
+            <div class="site-actions-toolbar d-none d-md-flex">
+            <div class="site-action js--dark-mode">
+                <i class="far fa-adjust"></i>
+            </div>
+        </div>
+        <aside id="secondary">
+        <section id="block-2" class="widget widget_block"><p><div class="urlspecificmenu-toggle">Lessons</div><div class="fullpage-overlay urlspecificmenu-overlay"></div><div class="urlspecificmenu"><div class="urlspecificmenu-close"><i class="far fa-times"></i></div>
+				<h2>Course Contents</h2><p>BGP</p><nav id="bellows-main-650" class="bellows bellows-nojs bellows-main bellows-source-menu bellows-align-full bellows-skin-none bellows-type-accordion bellows-expand-current"><ul id="menu-bgp" class="bellows-nav" data-bellows-config="main"><li id="menu-item-18696" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18696 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 1: Introduction to BGP</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18697" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18697 bellows-item-level-1"><a  href="https://networklessons.com/bgp/introduction-to-bgp" class="bellows-target"><span class="bellows-target-title bellows-target-text">Introduction to BGP</span></a></li>
+	<li id="menu-item-41087" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-41087 bellows-item-level-1"><a  href="https://networklessons.com/bgp/singledual-homed-and-multi-homed-designs" class="bellows-target"><span class="bellows-target-title bellows-target-text">Single/Dual (multi) homed connections</span></a></li>
+	<li id="menu-item-18698" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18698 bellows-item-level-1"><a  href="https://networklessons.com/bgp/how-to-configure-ebgp-external-bgp" class="bellows-target"><span class="bellows-target-title bellows-target-text">eBGP (external BGP)</span></a></li>
+	<li id="menu-item-18699" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18699 bellows-item-level-1"><a  href="https://networklessons.com/bgp/ebgp-multihop" class="bellows-target"><span class="bellows-target-title bellows-target-text">eBGP Multi-Hop</span></a></li>
+	<li id="menu-item-18700" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18700 bellows-item-level-1"><a  href="https://networklessons.com/bgp/internal-bgp-border-gateway-protocol-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">iBGP (internal BGP)</span></a></li>
+	<li id="menu-item-18701" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18701 bellows-item-level-1"><a  href="https://networklessons.com/bgp/how-to-read-the-bgp-table" class="bellows-target"><span class="bellows-target-title bellows-target-text">How to read the BGP Table</span></a></li>
+	<li id="menu-item-18702" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18702 bellows-item-level-1"><a  href="https://networklessons.com/bgp/how-to-advertise-networks-in-bgp" class="bellows-target"><span class="bellows-target-title bellows-target-text">How to advertise networks in BGP</span></a></li>
+	<li id="menu-item-18703" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18703 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-next-hop-self" class="bellows-target"><span class="bellows-target-title bellows-target-text">iBGP Next Hop Self</span></a></li>
+	<li id="menu-item-18704" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18704 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-auto-summary" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Auto-summary</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18705" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18705 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 2: BGP Neighbor Adjacency</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18706" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18706 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-neighbor-adjacency-states" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Neighbor Adjacency States</span></a></li>
+	<li id="menu-item-18707" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18707 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-messages" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Messages</span></a></li>
+	<li id="menu-item-19043" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-19043 bellows-item-level-1"><a  href="https://networklessons.com/bgp/troubleshooting-bgp-neighbor-adjacency" class="bellows-target"><span class="bellows-target-title bellows-target-text">Troubleshooting BGP Neighbor Adjacency</span></a></li>
+	<li id="menu-item-19044" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-19044 bellows-item-level-1"><a  href="https://networklessons.com/bgp/troubleshooting-bgp-route-advertisement" class="bellows-target"><span class="bellows-target-title bellows-target-text">Troubleshooting BGP Route Advertisement</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18708" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18708 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 3: BGP Attributes</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-55984" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55984 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-attributes-and-path-selection" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Attributes and Path Selection</span></a></li>
+	<li id="menu-item-18709" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18709 bellows-item-level-1"><a  href="https://networklessons.com/bgp/how-to-configure-bgp-weight-attribute" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Weight Attribute</span></a></li>
+	<li id="menu-item-18710" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18710 bellows-item-level-1"><a  href="https://networklessons.com/bgp/how-to-configure-bgp-local-preference-attribute" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Local Preference</span></a></li>
+	<li id="menu-item-70348" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-70348 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-attribute-locally-originated" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Attribute Locally Originated</span></a></li>
+	<li id="menu-item-18711" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18711 bellows-item-level-1"><a  href="https://networklessons.com/bgp/how-to-configure-bgp-as-path-prepending" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP AS Path Prepending</span></a></li>
+	<li id="menu-item-18712" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18712 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-origin-code-attribute-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Origin Code</span></a></li>
+	<li id="menu-item-18713" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18713 bellows-item-level-1"><a  href="https://networklessons.com/bgp/how-to-configure-bgp-med-attribute" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP MED (metric) Attribute</span></a></li>
+	<li id="menu-item-70378" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-70378 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-prefer-ebgp-over-ibgp" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Prefer eBGP over iBGP</span></a></li>
+	<li id="menu-item-64483" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-64483 bellows-item-level-1"><a  href="https://networklessons.com/bgp/accumulated-igp-metric-attribute-aigp" class="bellows-target"><span class="bellows-target-title bellows-target-text">Accumulated IGP Metric Attribute (AIGP)</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18714" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18714 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 4: BGP Communities</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18715" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18715 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-communities-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Communities</span></a></li>
+	<li id="menu-item-18716" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18716 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-community-no-advertise" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Community No Advertise</span></a></li>
+	<li id="menu-item-18717" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18717 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-community-no-export" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Community No Export</span></a></li>
+	<li id="menu-item-18718" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18718 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-community-local-as" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Community Local AS</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18719" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18719 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 5: BGP Filtering</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18720" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18720 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-regular-expressions-examples" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Regular Expressions</span></a></li>
+	<li id="menu-item-18721" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18721 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-prevent-transit-as" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Transit AS</span></a></li>
+	<li id="menu-item-18722" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18722 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-ipv6-route-filtering-on-cisco-ios" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP IPv6 route filtering</span></a></li>
+	<li id="menu-item-18723" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18723 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-as-path-filter-example" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP AS Path Filter</span></a></li>
+	<li id="menu-item-18830" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18830 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-extended-access-list-filtering" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Extended Access-List Filtering</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18724" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18724 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 6: Advanced BGP Features</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-66434" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-66434 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-route-dampening" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Route Dampening</span></a></li>
+	<li id="menu-item-18725" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18725 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-peer-groups-on-cisco-ios" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Peer Groups</span></a></li>
+	<li id="menu-item-18726" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18726 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-route-reflector" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Route Reflector</span></a></li>
+	<li id="menu-item-18727" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18727 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-confederation-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Confederations</span></a></li>
+	<li id="menu-item-18728" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18728 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-synchronization" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Synchronization</span></a></li>
+	<li id="menu-item-18729" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18729 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-backdoor-routes" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Backdoor Routes</span></a></li>
+	<li id="menu-item-18730" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18730 bellows-item-level-1"><a  href="https://networklessons.com/bgp/multiprotocol-bgp-mp-bgp-configuration" class="bellows-target"><span class="bellows-target-title bellows-target-text">MP-BGP (multi-protocol BGP)</span></a></li>
+	<li id="menu-item-18731" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18731 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-private-and-public-as-range" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Private and Public AS Numbers</span></a></li>
+	<li id="menu-item-18732" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18732 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-remove-private-as" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Remove Private AS Numbers</span></a></li>
+	<li id="menu-item-55763" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55763 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-4-byte-number" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP 4-byte AS numbers</span></a></li>
+	<li id="menu-item-18733" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18733 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-soft-reset-reconfiguration" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Soft Reconfiguration</span></a></li>
+	<li id="menu-item-18734" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18734 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-route-refresh-capability" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Route Refresh Capability</span></a></li>
+	<li id="menu-item-20533" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-20533 bellows-item-level-1"><a  href="https://networklessons.com/bgp/mpls-layer-3-vpn-bgp-allow-as-in" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Allow AS in</span></a></li>
+	<li id="menu-item-20534" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-20534 bellows-item-level-1"><a  href="https://networklessons.com/bgp/mpls-layer-3-vpn-bgp-override" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP AS Override</span></a></li>
+	<li id="menu-item-55796" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55796 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-aggregate-as-set" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Aggregate AS-SET</span></a></li>
+	<li id="menu-item-55810" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55810 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-multipath-load-sharing-ibgp-and-ebgp" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Multipath eBGP and iBGP</span></a></li>
+</ul>
+</li>
+<li id="menu-item-55838" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-current-menu-ancestor bellows-current-menu-parent bellows-menu-item-has-children bellows-menu-item-55838 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 7: BGP Convergence</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-70464" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-70464 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-route-leaking" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Route Leaking</span></a></li>
+	<li id="menu-item-70559" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-current-menu-item bellows-menu-item-70559 bellows-item-level-1 bellows-current-menu-item"><a  href="https://networklessons.com/bgp/resource-public-key-infrastructure-rpki" class="bellows-target"><span class="bellows-target-title bellows-target-text">Resource Public Key Infrastructure (RPKI)</span></a></li>
+	<li id="menu-item-70510" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-70510 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-prefix-origin-as-validation-with-rpki" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Prefix Origin AS Validation with RPKI</span></a></li>
+	<li id="menu-item-55972" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55972 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-next-hop-address-tracking" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Next Hop Tracking</span></a></li>
+	<li id="menu-item-55837" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55837 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-additional-paths" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP Additional Paths</span></a></li>
+	<li id="menu-item-55867" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55867 bellows-item-level-1"><a  href="https://networklessons.com/bgp/bgp-pic-prefix-independent-convergence-core-edge" class="bellows-target"><span class="bellows-target-title bellows-target-text">BGP PIC (Prefix Independent Convergence)</span></a></li>
+</ul>
+</li>
+</ul></nav></div></p>
+</section>    </aside>
+</div>
+
+</div><!-- end .row -->
+</div><!-- end .container -->
+<div class="container">
+<div class="row">
+
+    <div class="col-12">
+		
+		<div class="cmd_post_nav"><div class="cmd_previous"><a href="https://networklessons.com/bgp/bgp-route-leaking" rel="prev"><strong>Previous Lesson</strong><br>BGP Route Leaking</a></div><div class="cmd_next"><a href="https://networklessons.com/bgp/bgp-prefix-origin-as-validation-with-rpki" rel="next"><strong>Next Lesson</strong><br>BGP Prefix Origin AS Validation with RPKI</a></div></div>	    
+        <hr>
+
+			<div id="comments" class="comments-area">
+		<div class="respond comment-respond">
+			<p id="reply-title" class="comment-reply-title">Ask a question or start a discussion by visiting our <a href="https://forum.networklessons.com/t/resource-public-key-infrastructure-rpki/42424" target="_blank">Community Forum</a></p>
+		</div>
+	</div>
+        </div>
+
+
+		</div>
+	</div>
+
+	<footer class="site-footer">
+        <div class="container">
+            <div class="site-footer-inner">
+                <div class="copyright">
+                    &copy; 2013 - 2024 NetworkLessons.com 65289                </div>
+                <div class="menu-footer-container"><ul id="footer-menu" class="menu"><li id="menu-item-22469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22469"><a href="https://networklessons.com/disclaimer">Disclaimer</a></li>
+<li id="menu-item-22470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-22470"><a rel="privacy-policy" href="https://networklessons.com/privacy-policy">Privacy Policy</a></li>
+<li id="menu-item-22468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22468"><a href="https://networklessons.com/support">Support</a></li>
+<li id="menu-item-59827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59827"><a href="https://networklessons.com/about-networklessons-com">About</a></li>
+</ul></div>            </div>
+        </div>
+    </footer>
+</div>
+
+<script type="text/javascript">var algolia = {"debug":false,"application_id":"JYCQGPKUUY","search_api_key":"294cbcc6c53b2ccb6f80f0410f485afe","powered_by_enabled":false,"query":"","autocomplete":{"sources":[],"input_selector":"input[name='s']:not(.no-autocomplete):not(#adminbar-search)"},"indices":{"searchable_posts":{"name":"wp_searchable_posts","id":"searchable_posts","enabled":true,"replicas":[]}}};</script><script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.20.2" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" src="https://player.vimeo.com/api/player.js?ver=1.0" id="gtm4wp-vimeo-api-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-vimeo.js?ver=1.20.2" id="gtm4wp-vimeo-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/bundle.js?ver=1702771200" id="networklessons-script-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/jquery.magnific-popup.min.js?ver=1.1.0" id="magnific-popup-jquery-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/jquery.magnific-popup.js?ver=1.1.0" id="magnific-popup-core-js-js"></script>
+<script type="text/javascript" id="bellows-js-extra">
+/* <![CDATA[ */
+var bellows_data = {"config":{"main":{"folding":"multiple","current":"on","slide_speed":400}},"v":"1.4.3"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/bellows-pro/assets/js/bellows.min.js?ver=1.4.3" id="bellows-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/advanced-responsive-video-embedder/build/main.js?ver=755e5bf2bfafc15e7cc1" id="arve-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/arve-pro/build/main.js?ver=eea34735566740155d0f" id="arve-pro-js" defer="defer" data-wp-strategy="defer"></script>
+
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

@@ -1,0 +1,808 @@
+
+<!doctype html>
+<html lang="en-US" id="html">
+<head> 
+    <script src="https://www.googleoptimize.com/optimize.js?id=GTM-N6QRZFG"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="shortcut icon" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-180x180.png" />
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v23.4 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>OSPF LSA Types Explained</title><link rel="preload" data-rocket-preload as="image" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/logo.svg" fetchpriority="high">
+	<meta name="description" content="This lesson explains the OSPF LSA Types and where we encounter them. We also look how to check them on Cisco IOS routers." />
+	<link rel="canonical" href="https://networklessons.com/ospf/ospf-lsa-types-explained" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="OSPF LSA Types Explained" />
+	<meta property="og:description" content="This lesson explains the OSPF LSA Types and where we encounter them. We also look how to check them on Cisco IOS routers." />
+	<meta property="og:url" content="https://networklessons.com/ospf/ospf-lsa-types-explained" />
+	<meta property="og:site_name" content="NetworkLessons.com" />
+	<meta property="article:published_time" content="2014-08-28T08:55:59+00:00" />
+	<meta property="article:modified_time" content="2023-10-09T08:42:00+00:00" />
+	<meta property="og:image" content="https://cdn.networklessons.com/wp-content/uploads/2014/08/jigsaw-pieces-utp-cable.jpg" />
+	<meta property="og:image:width" content="401" />
+	<meta property="og:image:height" content="300" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Rene Molenaar" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Rene Molenaar" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="10 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://networklessons.com/ospf/ospf-lsa-types-explained","url":"https://networklessons.com/ospf/ospf-lsa-types-explained","name":"OSPF LSA Types Explained","isPartOf":{"@id":"https://networklessons.com/#website"},"primaryImageOfPage":{"@id":"https://networklessons.com/ospf/ospf-lsa-types-explained#primaryimage"},"image":{"@id":"https://networklessons.com/ospf/ospf-lsa-types-explained#primaryimage"},"thumbnailUrl":"https://cdn.networklessons.com/wp-content/uploads/2014/08/jigsaw-pieces-utp-cable.jpg","datePublished":"2014-08-28T08:55:59+00:00","dateModified":"2023-10-09T08:42:00+00:00","author":{"@id":"https://networklessons.com/#/schema/person/a210ceb8a2b14b76e03c27d3c65850c2"},"description":"This lesson explains the OSPF LSA Types and where we encounter them. We also look how to check them on Cisco IOS routers.","breadcrumb":{"@id":"https://networklessons.com/ospf/ospf-lsa-types-explained#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://networklessons.com/ospf/ospf-lsa-types-explained"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://networklessons.com/ospf/ospf-lsa-types-explained#primaryimage","url":"https://cdn.networklessons.com/wp-content/uploads/2014/08/jigsaw-pieces-utp-cable.jpg","contentUrl":"https://cdn.networklessons.com/wp-content/uploads/2014/08/jigsaw-pieces-utp-cable.jpg","width":401,"height":300,"caption":"jigsaw pieces utp cable"},{"@type":"BreadcrumbList","@id":"https://networklessons.com/ospf/ospf-lsa-types-explained#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Networklessons.com","item":"https://networklessons.com/"},{"@type":"ListItem","position":2,"name":"OSPF","item":"https://networklessons.com/ospf"},{"@type":"ListItem","position":3,"name":"OSPF LSA Types Explained"}]},{"@type":"WebSite","@id":"https://networklessons.com/#website","url":"https://networklessons.com/","name":"NetworkLessons.com","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://networklessons.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://networklessons.com/#/schema/person/a210ceb8a2b14b76e03c27d3c65850c2","name":"Rene Molenaar","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://networklessons.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/d676347ef395e3b3a6a056aaf5546311?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/d676347ef395e3b3a6a056aaf5546311?s=96&d=mm&r=g","caption":"Rene Molenaar"},"description":"René - CCIE #41726 is the creator of Networklessons.com where he writes about networking topics like Cisco, Routing, Switching, Linux, Wireless &amp; Security. He also created GNS3Vault.com where people can study Cisco labs for free.","sameAs":["https://networklessons.com"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//player.vimeo.com' />
+<link rel='dns-prefetch' href='//cdn.networklessons.com' />
+<link rel='dns-prefetch' href='//googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//googleoptimize.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//tag.getdrip.com' />
+<link rel='dns-prefetch' href='//facebook.com' />
+
+<link href='https://cdn.networklessons.com' rel='preconnect' />
+<link rel='stylesheet' id='mp-theme-css' href='https://cdn.networklessons.com/wp-content/plugins/memberpress/css/ui/theme.css?ver=1.11.34' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://cdn.networklessons.com/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2' type='text/css' media='all' />
+<style id='safe-svg-svg-icon-style-inline-css' type='text/css'>
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='arve-css' href='https://cdn.networklessons.com/wp-content/plugins/advanced-responsive-video-embedder/build/main.css?ver=755e5bf2bfafc15e7cc1' type='text/css' media='all' />
+<link rel='stylesheet' id='arve-pro-css' href='https://cdn.networklessons.com/wp-content/plugins/arve-pro/build/main.css?ver=eea34735566740155d0f' type='text/css' media='all' />
+<link rel='stylesheet' id='emnl-custom-styling-various-plugins-css' href='https://cdn.networklessons.com/wp-content/plugins/emnl-custom-css-various-plugins/emnl-custom-css-various-plugins.css?ver=1720772937' type='text/css' media='all' />
+<link rel='stylesheet' id='affwp-forms-css' href='https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/css/forms.min.css?ver=2.26.0' type='text/css' media='all' />
+<link rel='stylesheet' id='ez-toc-css' href='https://cdn.networklessons.com/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.69.1' type='text/css' media='all' />
+<style id='ez-toc-inline-css' type='text/css'>
+div#ez-toc-container .ez-toc-title {font-size: 100%;}div#ez-toc-container .ez-toc-title {font-weight: 700;}div#ez-toc-container ul li {font-size: 100%;}div#ez-toc-container ul li {font-weight: 500;}div#ez-toc-container nav ul ul li {font-size: 90%;}div#ez-toc-container {background: #f9f9f9;border: 1px solid #e6e6e6;}div#ez-toc-container p.ez-toc-title , #ez-toc-container .ez_toc_custom_title_icon , #ez-toc-container .ez_toc_custom_toc_icon {color: #000000;}div#ez-toc-container ul.ez-toc-list a {color: #5381b5;}div#ez-toc-container ul.ez-toc-list a:hover {color: #5381b5;}div#ez-toc-container ul.ez-toc-list a:visited {color: #5381b5;}
+.ez-toc-container-direction {direction: ltr;}.ez-toc-counter ul{counter-reset: item ;}.ez-toc-counter nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }.ez-toc-widget-direction {direction: ltr;}.ez-toc-widget-container ul{counter-reset: item ;}.ez-toc-widget-container nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }
+</style>
+<link rel='stylesheet' id='if-menu-site-css-css' href='https://cdn.networklessons.com/wp-content/plugins/if-menu/assets/if-menu-site.css?ver=6.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='networklessons-style-css' href='https://cdn.networklessons.com/wp-content/themes/networklessons/dist/app.css?ver=1724843461' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-style-css' href='https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/magnific-popup.css?ver=1.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bellows-css' href='https://cdn.networklessons.com/wp-content/plugins/bellows-pro/pro/assets/css/bellows.min.css?ver=1.4.3' type='text/css' media='all' />
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="jquery-cookie-js-extra">
+/* <![CDATA[ */
+var affwp_scripts = {"ajaxurl":"https:\/\/networklessons.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/js/jquery.cookie.min.js?ver=1.4.0" id="jquery-cookie-js"></script>
+<script type="text/javascript" id="affwp-tracking-js-extra">
+/* <![CDATA[ */
+var affwp_debug_vars = {"integrations":{"memberpress":"MemberPress"},"version":"2.26.0","currency":"USD","ref_cookie":"affwp_ref","visit_cookie":"affwp_ref_visit_id","campaign_cookie":"affwp_campaign"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/js/tracking.min.js?ver=2.26.0" id="affwp-tracking-js"></script>
+<link rel="https://api.w.org/" href="https://networklessons.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://networklessons.com/wp-json/wp/v2/posts/5086" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://networklessons.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.6.2" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://networklessons.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklessons.com%2Fospf%2Fospf-lsa-types-explained" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://networklessons.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklessons.com%2Fospf%2Fospf-lsa-types-explained&#038;format=xml" />
+<style id="bellows-custom-generated-css">
+
+/** Bellows Custom Tweaks (General Settings) **/
+
+/** Bellows Custom Tweaks (General Settings) **/
+/* More compact look of menu */
+.bellows .bellows-nav * { line-height: 1.75em; }
+.bellows .bellows-nav .bellows-submenu .bellows-target { padding-left: 20px;}
+.bellows .bellows-nav .bellows-target,
+.bellows .bellows-nav .bellows-submenu .bellows-target { padding: 2px;}
+
+/* Move toggle icons to left instead of right of text labels */
+.bellows .bellows-nav .bellows-subtoggle { width: 30px; left:0; }
+.bellows .bellows-nav .bellows-menu-item > .bellows-target > .bellows-target-text { margin-left: 30px; }
+.bellows .bellows-nav .bellows-subtoggle .fa { top: 40%; }
+
+/* Move toggle icons and lower level items to the right */
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-1 .bellows-subtoggle { left: 25px; }
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-1 .bellows-target { padding-left: 25px; }
+
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-2 .bellows-subtoggle { left: 50px; }
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-2 .bellows-target { padding-left: 50px; }
+
+
+/* SIDEBAR ONLY STYLING */
+
+/* Set all text to default black */
+#sidebar .bellows .bellows-nav a.bellows-target { color: #000000 }
+
+/* Set parent menu items bold and colored */
+#sidebar .bellows.bellows-main .bellows-nav .bellows-current-menu-item > .bellows-target,
+#sidebar .bellows.bellows-main .bellows-nav .bellows-current-menu-ancestor > .bellows-target { color:#557fae; font-weight: bold; }
+
+/* Set current post bold and colored */
+#sidebar .bellows .bellows-current-menu-item { font-weight: bold; color:#557fae; }
+
+/* Toggle icons on same height */
+#sidebar .bellows .bellows-nav .bellows-subtoggle .fa { top: 44%; }
+
+
+
+/* Status: Loaded from Transient */
+
+</style>		<script type="text/javascript">
+		var AFFWP = AFFWP || {};
+		AFFWP.referral_var = 'affid';
+		AFFWP.expiration = 1;
+		AFFWP.debug = 0;
+
+
+		AFFWP.referral_credit_last = 0;
+		</script>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to manual -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"visitorLoginState":"logged-in","visitorType":"subscriber","visitorEmail":"harthomp@protonmail.com","visitorEmailHash":"30617de159321682ca448e5d89fc5cae66131a43cdfff8865f5d749c58146885","visitorId":65289,"visitorIP":"203.63.201.230","pagePostType":"post","pagePostType2":"single-post","pageCategory":["ccie-enterprise-infrastructure","ccie-routing-switching","ccie-routing-switching-written","ccna-routing-switching-icnd2-200-105","ccnp-enarsi-300-410","ccnp-encor-350-401","ccnp-route","ospf"],"IsActiveMember":"true","UserFullName":"Harrison Thompson buckley"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script>
+		if (typeof gtag == "undefined") {
+			function gtag(){dataLayer.push(arguments);}
+		}
+
+		gtag("consent", "default", {
+			"analytics_storage": "granted",
+			"ad_storage": "granted",
+			"ad_user_data": "granted",
+			"ad_personalization": "granted",
+			"functionality_storage": "granted",
+			"security_storage": "granted",
+			"personalization_storage": "granted",
+		});
+</script>
+<script data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWFSBS');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel="apple-touch-icon" sizes="180x180" href="/wp-content/uploads/fbrfg/apple-touch-icon.png?v=69P4gG4Gpq">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/fbrfg/favicon-32x32.png?v=69P4gG4Gpq">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/uploads/fbrfg/favicon-16x16.png?v=69P4gG4Gpq">
+<link rel="manifest" href="/wp-content/uploads/fbrfg/site.webmanifest?v=69P4gG4Gpq">
+<link rel="mask-icon" href="/wp-content/uploads/fbrfg/safari-pinned-tab.svg?v=69P4gG4Gpq" color="#5381b5">
+<link rel="shortcut icon" href="/wp-content/uploads/fbrfg/favicon.ico?v=69P4gG4Gpq">
+<meta name="msapplication-TileColor" content="#5381b5">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml?v=69P4gG4Gpq">
+<meta name="theme-color" content="#5381b5">		<style>
+			.algolia-search-highlight {
+				background-color: #fffbcc;
+				border-radius: 2px;
+				font-style: normal;
+			}
+		</style>
+		<script type="application/ld+json" class="emnl-schema-breadcrumbs">{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 0,"name": "Home","item": "https://networklessons.com"},{"@type": "ListItem","position": 1,"name": "OSPF","item": "https://networklessons.com/ospf"},{"@type": "ListItem","position": 2,"name": "OSPF LSA Types Explained","item": "https://networklessons.com/ospf/ospf-lsa-types-explained"}]}</script>
+</head>
+
+
+<body class="post-template-default single single-post postid-5086 single-format-standard logged-in" data-theme="light">
+
+<!-- GTM Container placement set to manual -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWFSBS" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script>
+  if ( localStorage.getItem('siteTheme') ) {
+    document.body.setAttribute('data-theme', localStorage.getItem('siteTheme'));
+  }
+</script>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+	<header class="site-header">
+		        <div class="site-header-inner">
+            <div class="container">
+                <div class="row sm-gutters main-row">
+                    <div class="col-lg-4 col-8">
+                        <a href="https://networklessons.com/" class="logo">
+                            <img fetchpriority="high" width="524" height="141" src="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/logo.svg" alt="NetworkLessons.com" />
+                        </a>
+                    </div>
+                                                                <div class="col-lg-8 col-4 col-navigation">
+                            <nav id="site-navigation" class="main-navigation">
+                                <div class="menu-primary-container"><ul id="primary-menu" class="menu"><li id="menu-item-10143" class="expanded menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10143"><a href="https://networklessons.com/courses">Courses <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-59830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59830"><a href="https://networklessons.com/cisco">Cisco <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-65214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65214"><a href="https://networklessons.com/cisco/ccna-200-301">CCNA 200-301</a></li>
+		<li id="menu-item-65219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65219"><a href="https://networklessons.com/cisco/ccnp-encor-350-401">CCNP ENCOR 350-401 v1.1</a></li>
+		<li id="menu-item-65218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65218"><a href="https://networklessons.com/cisco/ccnp-enarsi-300-410">CCNP ENARSI 300-410 v1.1</a></li>
+		<li id="menu-item-65217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65217"><a href="https://networklessons.com/cisco/ccie-enterprise-infrastructure">CCIE Enterprise Infrastructure</a></li>
+		<li id="menu-item-65216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65216"><a href="https://networklessons.com/cisco/asa-firewall">ASA Firewall</a></li>
+		<li id="menu-item-65774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65774"><a href="https://networklessons.com/cisco/cisco-sd-wan">Cisco SD-WAN</a></li>
+	</ul>
+</li>
+	<li id="menu-item-59831" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59831"><a href="https://networklessons.com/routing-switching">Routing &#038; Switching <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-65232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65232"><a href="https://networklessons.com/subnetting">Subnetting</a></li>
+		<li id="menu-item-65233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65233"><a href="https://networklessons.com/switching">Switching</a></li>
+		<li id="menu-item-65231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65231"><a href="https://networklessons.com/spanning-tree">Spanning-Tree</a></li>
+		<li id="menu-item-65222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65222"><a href="https://networklessons.com/frame-relay">Frame-Relay</a></li>
+		<li id="menu-item-65230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65230"><a href="https://networklessons.com/rip">RIP</a></li>
+		<li id="menu-item-65221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65221"><a href="https://networklessons.com/eigrp">EIGRP</a></li>
+		<li id="menu-item-65227" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65227"><a href="https://networklessons.com/ospf">OSPF</a></li>
+		<li id="menu-item-65224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65224"><a href="https://networklessons.com/is-is">IS-IS</a></li>
+		<li id="menu-item-65215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65215"><a href="https://networklessons.com/bgp">BGP</a></li>
+		<li id="menu-item-65226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65226"><a href="https://networklessons.com/multicast">Multicast</a></li>
+		<li id="menu-item-65223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65223"><a href="https://networklessons.com/ipv6">IPv6</a></li>
+		<li id="menu-item-65229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65229"><a href="https://networklessons.com/quality-of-service">Quality of Service</a></li>
+		<li id="menu-item-65225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65225"><a href="https://networklessons.com/mpls">MPLS</a></li>
+	</ul>
+</li>
+	<li id="menu-item-73291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-73291"><a href="#">Data Center <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-73294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73294"><a href="https://networklessons.com/vxlan">VXLAN</a></li>
+	</ul>
+</li>
+	<li id="menu-item-65228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65228"><a href="https://networklessons.com/python">Python</a></li>
+	<li id="menu-item-65234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65234"><a href="https://networklessons.com/uncategorized">Miscellaneous</a></li>
+	<li id="menu-item-70698" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70698"><a href="https://networklessons.com/labs">Labs</a></li>
+	<li id="menu-item-64907" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-64907"><a href="#">Legacy <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-33774" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33774"><a href="https://networklessons.com/cisco/ccna-routing-switching-icnd1-100-105">CCNA R&#038;S ICND1 100-105</a></li>
+		<li id="menu-item-40575" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-40575"><a href="https://networklessons.com/cisco/ccna-routing-switching-icnd2-200-105">CCNA R&#038;S ICND2 200-105</a></li>
+		<li id="menu-item-20090" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-20090"><a href="https://networklessons.com/cisco/ccnp-route">CCNP ROUTE</a></li>
+		<li id="menu-item-20092" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20092"><a href="https://networklessons.com/cisco/ccnp-switch">CCNP SWITCH</a></li>
+		<li id="menu-item-20093" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20093"><a href="https://networklessons.com/cisco/ccnp-tshoot">CCNP TSHOOT</a></li>
+		<li id="menu-item-20089" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-20089"><a href="https://networklessons.com/cisco/ccie-routing-switching">CCIE R&#038;S</a></li>
+		<li id="menu-item-38428" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-38428"><a href="https://networklessons.com/cisco/ccie-routing-switching-written">CCIE R&#038;S Written</a></li>
+		<li id="menu-item-65220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65220"><a href="https://networklessons.com/cisco/evolving-technologies">Evolving Technologies</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8339"><a href="https://networklessons.com/new-lessons"><i class="fa fa-plus"></i> New Lessons</a></li>
+	<li id="menu-item-64135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64135"><a href="https://networklessons.com/updated-lessons"><i class="fas fa-pen"></i> Updated Lessons</a></li>
+	<li id="menu-item-7347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7347"><a href="https://networklessons.com/member-ideas"><i class="fa fa-lightbulb"></i> Lesson Ideas</a></li>
+</ul>
+</li>
+<li id="menu-item-8715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8715"><a href="https://forum.networklessons.com">Forum</a></li>
+<li id="menu-item-23483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23483"><a href="https://networklessons.com/support">Support</a></li>
+<li id="menu-item-65967" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-65967"><a href="#">Tools <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-65968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65968"><a href="https://www.cloudshark.org/collections/WTRpgLI-GQSDfgzkQixICg">Packet Captures</a></li>
+	<li id="menu-item-65969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65969"><a href="https://notes.networklessons.com">Notes</a></li>
+	<li id="menu-item-65970" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65970"><a href="https://networklessons.com/tools-and-resources">Resources</a></li>
+	<li id="menu-item-68327" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68327"><a href="https://networklessons.com/networklessons-exams">Practice Exams</a></li>
+</ul>
+</li>
+<li id="menu-item-22148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-22148"><a href="#"><i class="fa fa-user"></i> <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-5629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5629"><a href="https://networklessons.com/myaccount">My Account Settings</a></li>
+	<li id="menu-item-68092" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68092"><a href="https://networklessons.com/member-dashboard">Member Dashboard</a></li>
+	<li id="menu-item-22285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22285"><a href="https://networklessons.com/upgrade-to-annual-membership"><b><font color="#FFC469">UPGRADE TO ANNUAL &#038; Get 2 Months FREE!</font></b></a></li>
+	<li id="menu-item-56969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56969"><a href="https://networklessons.com/wp-login.php?action=logout">Logout</a></li>
+</ul>
+</li>
+</ul></div>                                <div class="main-navigation-close">
+                                    <i class="far fa-times"></i>
+                                </div>
+                            </nav>
+                            <div class="main-navigation-toggle">
+                                <span class="icon"></span>
+                            </div>
+                            <div class="d-none d-xl-block">
+                                
+
+<form role="search" method="get" class="search-form" action="https://networklessons.com/">
+    <label for="search-form-66e2e7fec5376" class="sr-only">
+        <span class="screen-reader-text">Search for:</span>
+    </label>
+
+    <div class="input-group">
+        <input type="search" id="search-form-66e2e7fec5376" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" />
+        <div class="input-group-append">
+            <button type="submit" class="search-submit btn btn-white">
+                <span class="screen-reader-text">Search</span>
+                <i class="far fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="fullpage-overlay main-navigation-overlay"></div>
+	</header>
+    
+            <div class="d-xl-none">
+            
+
+<form role="search" method="get" class="search-form" action="https://networklessons.com/">
+    <label for="search-form-66e2e7fec53d6" class="sr-only">
+        <span class="screen-reader-text">Search for:</span>
+    </label>
+
+    <div class="input-group">
+        <input type="search" id="search-form-66e2e7fec53d6" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" />
+        <div class="input-group-append">
+            <button type="submit" class="search-submit btn btn-white">
+                <span class="screen-reader-text">Search</span>
+                <i class="far fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>        </div>
+    
+	<div class="site-content container">
+    <div class="breadcrumbs" style="font-size: 12px;">You are here: <a href="https://networklessons.com">Home</a> » <a href="https://networklessons.com/ospf">OSPF</a></div>	<div class="site-content-row row">
+	<div id="primary" class="content-area col-md-8">
+		<main id="main" class="site-main">
+                            <div class="site-actions-toolbar d-md-none">
+                    <div class="site-action js--dark-mode">
+                        <i class="far fa-adjust"></i>
+                    </div>
+                </div>
+            
+		
+<article id="post-5086" class="main-post post-5086 post type-post status-publish format-standard has-post-thumbnail hentry category-ccie-enterprise-infrastructure category-ccie-routing-switching category-ccie-routing-switching-written category-ccna-routing-switching-icnd2-200-105 category-ccnp-enarsi-300-410 category-ccnp-encor-350-401 category-ccnp-route category-ospf tag-lsa">
+	<header class="entry-header">
+                            <h1 class="entry-title">OSPF LSA Types Explained</h1>        	</header>
+	<div class="entry-content">
+                    <div class="the-content">
+                <p>OSPF uses a LSDB (link state database) and fills this with LSAs (link state advertisement). Instead of using 1 LSA packet OSPF has many different types of LSAs and in this lesson I’m going to show all of them to you. Let’s start with an overview:</p>
+<ul>
+<li>LSA Type 1:            Router LSA</li>
+<li>LSA Type 2:            Network LSA</li>
+<li>LSA Type 3:            Summary LSA</li>
+<li>LSA Type 4:            Summary ASBR LSA</li>
+<li>LSA Type 5:            Autonomous system external LSA</li>
+<li>LSA Type 6:            Multicast OSPF LSA</li>
+<li>LSA Type 7:            Not-so-stubby area LSA</li>
+<li>LSA Type 8:            External attribute LSA for BGP</li>
+</ul>
+<p><a href="https://cdn.networklessons.com/wp-content/uploads/2014/08/jigsaw-piece.png"><img decoding="async" class="alignleft wp-image-5088" src="https://cdn.networklessons.com/wp-content/uploads/2014/08/jigsaw-piece-150x150.png" alt="jigsaw piece" width="100" height="100" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/08/jigsaw-piece-150x150.png 150w, https://cdn.networklessons.com/wp-content/uploads/2014/08/jigsaw-piece-90x90.png 90w, https://cdn.networklessons.com/wp-content/uploads/2014/08/jigsaw-piece-120x120.png 120w, https://cdn.networklessons.com/wp-content/uploads/2014/08/jigsaw-piece.png 173w" sizes="(max-width: 100px) 100vw, 100px" /></a></p>
+<p>For many people it helps to visualize things in order to understand and remember. I like to visualize OSPF LSAs as jigsaw puzzle pieces. One jigsaw is nothing but all of them together give us the total picture…for OSPF this is the LSDB.</p>
+<p>&nbsp;</p>
+<p>Here&#8217;s the first LSA Type:</p>
+<p><img fetchpriority="high" decoding="async" class="aligncenter size-full wp-image-5089" src="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-1.png" alt="OSPF LSA Type 1" width="585" height="241" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-1.png 585w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-1-300x123.png 300w" sizes="(max-width: 585px) 100vw, 585px" /></p>
+<p>Each router within the area will flood a <strong>type 1 router LSA</strong> within the area. In this LSA you will find a list with all the directly connected links of this router. How do we identify a link?</p>
+<ul>
+<li>The IP prefix on an interface.</li>
+<li>The link type. There are 4 different link types:</li>
+</ul>
+<div class="table-responsive">
+<table>
+<tbody>
+<tr>
+<td>Link Type</td>
+<td>Description</td>
+<td>Link ID</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Point-to-point connection to another router.</td>
+<td>Neighbor router ID</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Connection to transit network.</td>
+<td>IP address of DR</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Connection to stub network.</td>
+<td>IP Network</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Virtual Link</td>
+<td>Neighbor router ID</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Don’t worry too much about the link types for now, we will see them later. Keep in mind that the router LSA <strong>always stays within the area</strong>.</p>
+<p>The second LSA type (network LSA) is created for multi-access networks:</p>
+<p><img decoding="async" class="aligncenter size-full wp-image-5090" src="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-2.png" alt="OSPF LSA Type 2" width="581" height="523" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-2.png 581w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-2-300x270.png 300w" sizes="(max-width: 581px) 100vw, 581px" /></p>
+<p>The <strong>network LSA</strong> or <strong>type 2</strong> is created for each multi-access network. Remember the OSPF network types? The <a title="OSPF Broadcast Network Type over Frame-Relay" href="https://networklessons.com/ospf/ospf-broadcast-network-type-over-frame-relay">broadcast</a> and <a title="OSPF Point-to-Multipoint Non-Broadcast Network Type over Frame-Relay" href="https://networklessons.com/ospf/ospf-point-to-multipoint-non-broadcast-network-type-over-frame-relay">non-broadcast</a> network types require a DR/BDR. If this is the case you will see these network LSAs being generated by the DR. In this LSA we will find all the routers that are connected to the multi-access network, the DR and of course the prefix and subnet mask.</p>
+<p>In my example above we will find R1, R2 and the DR in the network LSA. We will also see the prefix 192.168.123.0 /24 in this LSA. Last thing to mention: the network LSA always <strong>stays within the area</strong>.</p>
+<p>Let&#8217;s look at the third LSA type:</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-5091" src="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-3.png" alt="OSPF LSA Type 3" width="1160" height="464" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-3.png 1160w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-3-300x120.png 300w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-3-1024x409.png 1024w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-3-600x240.png 600w" sizes="(max-width: 1160px) 100vw, 1160px" /></p>
+<p>Type 1 router LSAs <strong>always stay within the area</strong>. OSPF however works with multiple areas and you probably want full connectivity within all of the areas. R1 is flooding a router LSA within the area so R2 will store this in its LSDB. R3 and R4 also need to know about the networks in Area 2.</p>
+<p>R2 is going to create a <strong>Type 3 summary LSA</strong> and flood it into area 0. This LSA will flood into all the other areas of our OSPF network. This way all the routers in other areas will know about the prefixes from <strong>other areas.</strong></p>
+<p>The name “summary” LSA is very misleading. By default OSPF is <strong>not going to summarize</strong> anything for you. There is however a command that let you summarize inter-area routes. Take a look at my <a title="OSPF Summarization" href="https://networklessons.com/ospf/how-to-configure-ospf-summarization">OSPF summarization lesson</a>if you are interested. If you are looking at the routing table of an OSPF router and see some <strong>O IA</strong> entries you are looking at LSA type 3 summary LSAs. Those are your inter-area prefixes!</p>
+<p>Time for the fourth LSA type:</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-5092" src="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-4.png" alt="OSPF LSA Type 4" width="1226" height="446" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-4.png 1226w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-4-300x109.png 300w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-4-1024x372.png 1024w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-4-600x218.png 600w" sizes="(max-width: 1226px) 100vw, 1226px" />In this example we have R1 that is redistributing information from the RIP router into OSPF. This makes R1 an <strong>ASBR (Autonomous System Border Router).</strong> What happens is that R1 will flip a bit in the router LSA to identify itself as an ASBR. When R2 who is an ABR receives this router LSA it will create a <strong>type 4 summary ASBR LSA</strong> and flood it into area 0. This LSA will also be flooded in all other areas and is required so all OSPF routers know where to find the ASBR.</p>
+<p>What about LSA type 5? Let&#8217;s check it out:</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-5093" src="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-5.png" alt="OSPF LSA Type 5" width="1211" height="454" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-5.png 1211w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-5-300x112.png 300w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-5-1024x383.png 1024w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-5-600x224.png 600w" sizes="(max-width: 1211px) 100vw, 1211px" /></p>
+<p>Same topology but I’ve added a prefix (5.5.5.0 /24) at our RIP router. This prefix will be redistributed into OSPF. R1 (our ASBR) will take care of this and create a <strong>type 5 external LSA</strong> for this. Don’t forget we still need type 4 summary ASBR LSA to locate R1. If you ever tried redistribution with OSPF you might have seen <strong>O E1 or E2</strong> entries. Those are the external prefixes and our type 5 LSAs.</p>
+<p>What about OSPF LSA type 6? <strong>Type 6 multicast ospf LSA</strong> I can skip because it’s not being used. It’s not even supported by Cisco. We use PIM (Protocol Independent Multicast) for multicast configurations.</p>
+<div class="notice-box  note   ">If you are studying the LSA types for CCNA R&amp;S then you don&#8217;t have to worry about LSA type 7. These are used for a special area type called <a href="https://networklessons.com/ospf/how-to-configure-ospf-nssa-not-so-stubby-area">NSSA</a>.</div>
+<p>Let&#8217;s look at the last LSA type, number 7:</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-5094" src="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-7.png" alt="OSPF LSA Type 7" width="1211" height="456" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-7.png 1211w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-7-300x112.png 300w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-7-1024x385.png 1024w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-lsa-type-7-600x225.png 600w" sizes="(max-width: 1211px) 100vw, 1211px" /></p>
+<p>Last LSA type…promised! <a title="How to configure OSPF NSSA (Not So Stubby) Area" href="https://networklessons.com/ospf/how-to-configure-ospf-nssa-not-so-stubby-area">NSSA areas</a> do not allow type 5 external LSAs. In my picture R1 is still our ASBR redistributing information from RIP into OSPF.</p>
+<p>Since type 5 is not allowed we have to think of something else. That’s why we have a <strong>type 7 external LSA</strong> that carries the exact same information but is not blocked within the NSSA area. R2 will translate this type 7 into a type 5 and flood it into the other areas.</p>
+<p>Let me summarize the LSA types for you:</p>
+<ul>
+<li><strong>Type 1 – Router LSA:</strong> The Router LSA is generated by each router for each area it is located. In the link-state ID you will find the originating router’s ID.</li>
+<li><strong>Type 2 – Network LSA:</strong> Network LSAs are generated by the DR. The link-state ID will be the interface IP address of the DR.</li>
+<li><strong>Type 3 – Summary LSA:</strong> The summary LSA is created by the ABR and flooded into other areas.</li>
+<li><strong>Type 4 – Summary ASBR LSA:</strong> Other routers need to know where to find the ASBR. This is why the ABR will generate a summary ASBR LSA which will include the router ID of the ASBR in the link-state ID field.</li>
+<li><strong>Type 5 – External LSA:</strong> also known as autonomous system external LSA: The external LSAs are generated by the ASBR.</li>
+<li><strong>Type 6 &#8211; Multicast LSA:</strong> Not supported and not used.</li>
+<li><strong>Type 7 – External LSA:</strong> also known as not-so-stubby-area (NSSA) LSA: As you can see area 2 is a NSSA (not-so-stubby-area) which doesn’t allow external LSAs (type 5). To overcome this issue we are generating type 7 LSAs instead.</li>
+</ul>
+<p>The only thing left to do is take a look at these LSAs in action&#8230;time to configure some routers!</p>
+<h2>Verification</h2>
+<p>We can see all the OSPF types in the LSDB, to demonstrate this I will use the following topology:</p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-7741 size-full" src="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-two-areas-3-routers.png" alt="OSPF Two Areas 3 routers" width="1059" height="265" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-two-areas-3-routers.png 1059w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-two-areas-3-routers-300x75.png 300w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-two-areas-3-routers-1024x256.png 1024w" sizes="(max-width: 1059px) 100vw, 1059px" /></p>
+<p>It’s a simple setup with 3 routers and 2 areas. I’ve added a couple of loopbacks so we have prefixes to look at. Here&#8217;s the configuration:</p>
+<pre><code>R1(config)#<strong>router ospf 1</strong>
+R1(config-router)#<strong>network 192.168.12.0 0.0.0.255 area 0</strong>
+R1(config-router)#<strong>network 1.1.1.0 0.0.0.255 area 0</strong></code></pre>
+<pre><code>R2(config)#<strong>router ospf 1</strong>
+R2(config-router)#<strong>network 192.168.12.0 0.0.0.255 area 0</strong>
+R2(config-router)#<strong>network 192.168.23.0 0.0.0.255 area 1</strong></code></pre>
+<pre><code>R3(config)#<strong>router ospf 1</strong>
+R3(config-router)#<strong>network 192.168.23.0 0.0.0.255 area 1</strong>
+R3(config-router)#<strong>network 3.3.3.0 0.0.0.255 area 1</strong></code></pre>
+<p>Let&#8217;s start by looking at the LSDB of R1:</p>
+<pre><code>R1#<strong>show ip ospf database</strong> 
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+
+                <span style="color: #ff0000;">Router Link States</span> (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+1.1.1.1         1.1.1.1         30          0x80000003 0x004CD9 2
+2.2.2.2         2.2.2.2         31          0x80000002 0x0048E9 1
+
+                <span style="color: #ff0000;">Net Link States</span> (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.12.2    2.2.2.2         31          0x80000001 0x008F1F
+
+                <span style="color: #ff0000;">Summary Net Link States</span> (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+3.3.3.3         2.2.2.2         17          0x80000001 0x00D650
+192.168.23.0    2.2.2.2         66          0x80000001 0x00A70C</code></pre>
+<p>By using the show ip ospf database we can look at the LSDB and we can see the type 1 router LSAs, type 2 network LSAs and the type 3 summary LSAs here. What else do we find here?</p>
+<ul>
+<li>Link ID: This is what identifies each LSA.</li>
+<li>ADV router: the router that is advertising this LSA.</li>
+<li>Age: The maximum age counter in seconds. The maximum is 3600 seconds or 1 hour.</li>
+<li>Seq#: Here you see the sequence number which starts at 0x80000001 and will increase by 1 for each update.</li>
+<li>Checksum: There is a checksum for each LSA.</li>
+<li>Link count: This will show the total number of directly connected links and is only used for the router LSA.</li>
+</ul>
+<p>So that&#8217;s LSA type 1,2 and 3. To show you number 4 and 5 I have to make some changes:</p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-7743 size-full" src="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-two-areas-3-routers-abr-asbr.png" alt="OSPF Two Areas 3 routers ABR ASBR" width="1059" height="324" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-two-areas-3-routers-abr-asbr.png 1059w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-two-areas-3-routers-abr-asbr-300x92.png 300w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-two-areas-3-routers-abr-asbr-1024x313.png 1024w" sizes="(max-width: 1059px) 100vw, 1059px" />To accomplish this I will redistribute something on R1 into OSPF.</p>
+<pre><code>R1(config)#<strong>interface loopback 1</strong>
+R1(config-if)#<strong>ip address 11.11.11.11 255.255.255.0</strong>
+R1(config-if)#<strong>exit</strong>
+R1(config)#<strong>router ospf 1</strong>
+R1(config-router)#<strong>redistribute connected subnets</strong></code></pre>
+<p>I created an additional loopback interface and configured an IP address. Then I’m telling OSPF to redistribute the directly connected interfaces into OSPF. Let’s look at the LSDB of R2 and R3:</p>
+<pre><code>R2#<strong>show ip ospf database | begin Type-5</strong>
+		<span style="color: #ff0000;">Type-5 AS External Link States</span>
+
+Link ID         ADV Router      Age         Seq#       Checksum Tag
+11.11.11.0      1.1.1.1     36          0x80000001 0x000F44 0</code></pre>
+<p>Here you can see the type 5 external LSA in the LSDB of R2. Let&#8217;s look at R3:</p>
+<pre><code>R3#<strong>show ip ospf database | begin Summary</strong>
+		Summary Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+1.1.1.1         2.2.2.2         149         0x80000001 0x0033FB
+192.168.12.0    2.2.2.2         195         0x80000001 0x00219D
+
+		<span style="color: #ff0000;">Summary ASB Link States (Area 1)</span>
+
+Link ID         ADV Router      Age         Seq#       Checksum
+1.1.1.1         2.2.2.2         62          0x80000001 0x004DB9
+
+		<span style="color: #ff0000;">Type-5 AS External Link States</span>
+
+Link ID         ADV Router      Age         Seq#       Checksum Tag
+11.11.11.0      1.1.1.1         68          0x80000001 0x000F44 0</code></pre>
+<p>R3 is in another area than R1 so it needs to know where to find the ASBR. In the LSDB you can see the type 5 external LSA but also the type 4 summary ASBR LSA which is the address of R1. Because of this LSA, R3 knows how to reach the ASBR. This type 4 LSA is being generated by R2 which is the ABR.</p>
+<p>There&#8217;s only one more LSA type to show you and that&#8217;s number 7. I&#8217;ll have to use the NSSA area type for this:</p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-7744 size-full" src="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-two-areas-nssa-r3-asbr.png" alt="OSPF Two Areas NSSA R3 ASBR" width="1059" height="324" srcset="https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-two-areas-nssa-r3-asbr.png 1059w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-two-areas-nssa-r3-asbr-300x92.png 300w, https://cdn.networklessons.com/wp-content/uploads/2014/08/ospf-two-areas-nssa-r3-asbr-1024x313.png 1024w" sizes="(max-width: 1059px) 100vw, 1059px" /></p>
+<p>Area 1 will be an NSSA and I have added an additional loopback on R3. Here&#8217;s the configuration:</p>
+<pre><code>R2(config)#<strong>router ospf 1</strong>
+R2(config-router)#<strong>area 1 nssa</strong></code></pre>
+<pre><code>R3(config)#<strong>router ospf 1</strong>
+R3(config-router)#<strong>area 1 nssa</strong></code></pre>
+<p>Now I’m going to create an additional loopback interface on R3 and redistribute it into OSPF.</p>
+<pre><code>R3(config)#<strong>interface loopback 1</strong>
+R3(config-if)#<strong>ip address 33.33.33.33 255.255.255.0</strong>
+R3(config-if)#<strong>exit</strong> 
+R3(config)#<strong>router ospf 1</strong>
+R3(config-router)#<strong>redistribute connected subnets</strong></code></pre>
+<p>Let’s see what happens to our LSDB:</p>
+<pre><code>R3#<strong>show ip ospf database | begin Type-7</strong>
+		<span style="color: #ff0000;">Type-7 AS External Link States (Area 1</span>)
+
+Link ID         ADV Router      Age         Seq#       Checksum Tag
+33.33.33.0      33.33.33.33     33          0x80000001 0x005F43 0</code></pre>
+<p>You can see R3 has generated a type 7 external LSA for the prefix on my loopback interface.</p>
+<pre><code>R2#<strong>show ip ospf database | begin Type-7</strong>
+		<span style="color: #ff0000;">Type-7 AS External Link States (Area 1)</span>
+
+Link ID         ADV Router      Age         Seq#       Checksum Tag
+33.33.33.0      33.33.33.33     61          0x80000001 0x005F43 0
+
+		<span style="color: #ff0000;">Type-5 AS External Link States</span>
+
+Link ID         ADV Router      Age         Seq#       Checksum Tag
+11.11.11.0      1.1.1.1         220         0x80000001 0x000F44 0
+33.33.33.0      2.2.2.2         54          0x80000001 0x00998F 0</code></pre>
+<p>R2 has the type 7 external LSA in its LSDB since it’s in the same area as R3. It’s also generating a type 5 external LSA to flood into area 0. This is because R2 is an ABR.</p>
+<pre><code>R1#<strong>show ip ospf database | begin Type-5</strong>
+		Type-5 AS External Link States
+
+Link ID         ADV Router      Age         Seq#       Checksum Tag
+11.11.11.0      1.1.1.1         248         0x80000001 0x000F44 0
+<span style="color: #ff0000;">33.33.33.0      2.2.2.2         84          0x80000001 0x00998F 0</span></code></pre>
+<p>R1 only has a type 5 external LSA in the LSDB for this prefix. This proves that our type 7 external LSA only lives within the NSSA.</p>
+<p>That’s it! Those are all the LSA types we have for OSPF and their different functions. I can recommend to look at the OSPF LSDB a couple of times when you are doing labs.</p>
+            </div>
+                	</div>
+</article>
+		</main>
+	</div>
+
+
+<div class="widget-area col-md-4">
+            <div class="site-actions-toolbar d-none d-md-flex">
+            <div class="site-action js--dark-mode">
+                <i class="far fa-adjust"></i>
+            </div>
+        </div>
+        <aside id="secondary">
+        <section id="block-2" class="widget widget_block"><p><div class="urlspecificmenu-toggle">Lessons</div><div class="fullpage-overlay urlspecificmenu-overlay"></div><div class="urlspecificmenu"><div class="urlspecificmenu-close"><i class="far fa-times"></i></div>
+				<h2>Course Contents</h2><p>OSPF</p><nav id="bellows-main-649" class="bellows bellows-nojs bellows-main bellows-source-menu bellows-align-full bellows-skin-none bellows-type-accordion bellows-expand-current"><ul id="menu-ospf" class="bellows-nav" data-bellows-config="main"><li id="menu-item-18659" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18659 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 1: Introduction to OSPF</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18660" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18660 bellows-item-level-1"><a  href="https://networklessons.com/ospf/introduction-to-ospf" class="bellows-target"><span class="bellows-target-title bellows-target-text">Introduction to OSPF</span></a></li>
+	<li id="menu-item-18661" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18661 bellows-item-level-1"><a  href="https://networklessons.com/ospf/basic-ospf-configuration" class="bellows-target"><span class="bellows-target-title bellows-target-text">Basic OSPF Configuration</span></a></li>
+	<li id="menu-item-42663" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-42663 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-multi-area-configuration" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Multi Area Configuration</span></a></li>
+	<li id="menu-item-18662" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18662 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-reference-bandwidth" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Reference Bandwidth</span></a></li>
+	<li id="menu-item-18663" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18663 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-plain-text-authentication" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Plain Text Authentication</span></a></li>
+	<li id="menu-item-18664" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18664 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-md5-authentication" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF MD5 Authentication</span></a></li>
+	<li id="menu-item-47326" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-47326 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-hmac-sha-extended-authentication" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF SHA-HMAC Authentication</span></a></li>
+	<li id="menu-item-47354" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-47354 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-ttl-security-check" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF TTL Security Check</span></a></li>
+	<li id="menu-item-18665" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18665 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-default-route" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Default Route</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18666" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-current-menu-ancestor bellows-current-menu-parent bellows-menu-item-has-children bellows-menu-item-18666 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 2: OSPF Neighbor Adjacency</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18667" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-current-menu-item bellows-menu-item-18667 bellows-item-level-1 bellows-current-menu-item"><a  href="https://networklessons.com/ospf/ospf-lsa-types-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF LSA Types</span></a></li>
+	<li id="menu-item-18668" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18668 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-lsas-and-lsdb-flooding-tutorial" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF LSAs and LSDB Flooding</span></a></li>
+	<li id="menu-item-18669" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18669 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-hello-and-dead-interval" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Hello and Dead Interval</span></a></li>
+	<li id="menu-item-18670" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18670 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-router-id" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Router ID</span></a></li>
+	<li id="menu-item-18671" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18671 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-packets-and-neighbor-discovery" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Packets and Neighbor Discovery</span></a></li>
+	<li id="menu-item-18672" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18672 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-drbdr-election-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF DR/BDR Election</span></a></li>
+	<li id="menu-item-18673" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18673 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-passive-interface" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Passive Interface</span></a></li>
+	<li id="menu-item-18997" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18997 bellows-item-level-1"><a  href="https://networklessons.com/ospf/troubleshooting-ospf-neighbor-adjacency" class="bellows-target"><span class="bellows-target-title bellows-target-text">Troubleshooting OSPF Neighbor Adjacency</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18674" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18674 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 3: OSPF Network Types</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18675" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18675 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-non-broadcast-network-type-over-frame-relay" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Non-Broadcast Network Type</span></a></li>
+	<li id="menu-item-18676" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18676 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-broadcast-network-type-over-frame-relay" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Broadcast Network Type</span></a></li>
+	<li id="menu-item-18677" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18677 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-point-to-multipoint-network-type-over-frame-relay" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Point-to-Multipoint Network Type</span></a></li>
+	<li id="menu-item-18678" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18678 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-point-to-multipoint-non-broadcast-network-type-over-frame-relay" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Point-to-Multipoint Non-Broadcast Network Type</span></a></li>
+	<li id="menu-item-18679" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18679 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-point-to-point-network-type-over-frame-relay" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Point-to-Point Network Type</span></a></li>
+	<li id="menu-item-18680" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18680 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-next-hop-ip-address-with-different-network-types" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Next Hop with Network Types</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18681" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18681 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 4: OSPF Stub Areas</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18682" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18682 bellows-item-level-1"><a  href="https://networklessons.com/ospf/introduction-to-ospf-stub-areas" class="bellows-target"><span class="bellows-target-title bellows-target-text">Introduction to OSPF Stub Areas</span></a></li>
+	<li id="menu-item-18683" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18683 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-stub-area" class="bellows-target"><span class="bellows-target-title bellows-target-text">How to configure OSPF Stub Area</span></a></li>
+	<li id="menu-item-18684" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18684 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-totally-stub-area" class="bellows-target"><span class="bellows-target-title bellows-target-text">How to configure OSPF Totally Stub</span></a></li>
+	<li id="menu-item-18685" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18685 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-nssa-not-so-stubby-area" class="bellows-target"><span class="bellows-target-title bellows-target-text">How to configure OSPF NSSA (Not So Stubby) Area</span></a></li>
+	<li id="menu-item-18686" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18686 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-totally-nssa-area" class="bellows-target"><span class="bellows-target-title bellows-target-text">How to configure OSPF Totally NSSA (Not So Stubby) Area</span></a></li>
+	<li id="menu-item-18687" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18687 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-nssa-p-bit-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF NSSA P-bit explained</span></a></li>
+</ul>
+</li>
+<li id="menu-item-18688" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-18688 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 5: Advanced OSPF Topics</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-18689" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18689 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-summarization" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Summarization</span></a></li>
+	<li id="menu-item-19056" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-19056 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-distribute-list-filtering" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Distribute-List Filtering</span></a></li>
+	<li id="menu-item-18690" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18690 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-abr-type-3-lsa-filtering-on-cisco-ios" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF LSA Type 3 Filtering</span></a></li>
+	<li id="menu-item-18691" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18691 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-lsa-type-5-filtering-on-cisco-ios" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF LSA Type 5 Filtering</span></a></li>
+	<li id="menu-item-18692" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18692 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-configure-ospf-virtual-link" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Virtual Link</span></a></li>
+	<li id="menu-item-55257" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55257 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-virtual-link-authentication" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Virtual Link Authentication</span></a></li>
+	<li id="menu-item-18693" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18693 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-path-selection-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Path Selection Explained</span></a></li>
+	<li id="menu-item-18694" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18694 bellows-item-level-1"><a  href="https://networklessons.com/ospf/how-to-read-the-ospf-database" class="bellows-target"><span class="bellows-target-title bellows-target-text">How to read the OSPF Database</span></a></li>
+	<li id="menu-item-18695" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18695 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospfv3-for-ipv4-configuration" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPFv3 for IPv4</span></a></li>
+	<li id="menu-item-18998" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-18998 bellows-item-level-1"><a  href="https://networklessons.com/ospf/troubleshooting-ospf-route-advertisement" class="bellows-target"><span class="bellows-target-title bellows-target-text">Troubleshooting OSPF Route Advertisement</span></a></li>
+	<li id="menu-item-47412" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-47412 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-spf-scheduling-tuning-with-spf-throttling" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF SPF Scheduling and Throttling</span></a></li>
+	<li id="menu-item-47549" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-47549 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-lsa-throttling" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF LSA Throttling</span></a></li>
+	<li id="menu-item-47668" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-47668 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-incremental-spf" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Incremental SPF</span></a></li>
+	<li id="menu-item-47736" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-47736 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-prefix-suppression" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Prefix Suppression</span></a></li>
+	<li id="menu-item-52180" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-52180 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-stub-router" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Stub Router</span></a></li>
+	<li id="menu-item-52189" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-52189 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-graceful-shutdown" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Graceful Shutdown</span></a></li>
+	<li id="menu-item-53484" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-53484 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-graceful-restart" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Graceful Restart</span></a></li>
+	<li id="menu-item-54702" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-54702 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-loop-free-alternate-lfa-fast-reroute-frr" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Loop-Free Alternate (LFA) Fast Reroute (FRR)</span></a></li>
+	<li id="menu-item-54906" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-54906 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-remote-loop-free-alternate-lfa-fast-reroute-frr" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Remote Loop-Free Alternate (LFA) Fast Reroute (FRR)</span></a></li>
+</ul>
+</li>
+<li id="menu-item-71874" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-71874 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 6: Lab</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-71875" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-71875 bellows-item-level-1"><a  href="https://networklessons.com/ospf/ospf-professional-lab-1" class="bellows-target"><span class="bellows-target-title bellows-target-text">OSPF Professional Lab 1</span></a></li>
+</ul>
+</li>
+</ul></nav></div></p>
+</section>    </aside>
+</div>
+
+</div><!-- end .row -->
+</div><!-- end .container -->
+<div class="container">
+<div class="row">
+
+    <div class="col-12">
+		
+		<div class="cmd_post_nav"><div class="cmd_previous"><a href="https://networklessons.com/ospf/how-to-configure-ospf-default-route" rel="prev"><strong>Previous Lesson</strong><br>OSPF Default Route</a></div><div class="cmd_next"><a href="https://networklessons.com/ospf/ospf-lsas-and-lsdb-flooding-tutorial" rel="next"><strong>Next Lesson</strong><br>OSPF LSAs and LSDB Flooding</a></div></div>	    <p class="tags">Tags: <a href="https://networklessons.com/tag/lsa" rel="tag">LSA</a></p>
+        <hr>
+
+		    <div id="comments" class="comments-area discourse-comments-area">
+        <h2 class="comments-title discourse-comments-title">Forum Replies</h2>
+        <ol class="comment-list">		<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for system" src="https://cdn-forum.networklessons.com/uploads/default/original/1X/1d2ef66728c7fbac8377748594345a3f474fce5f.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/ospf-lsa-types-explained/1127" rel="external" class="url">system</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Great job,your example are very smooth to learn .</p></p></div>
+			</article>
+		</li>
+				<li class="comment odd depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for system" src="https://cdn-forum.networklessons.com/uploads/default/original/1X/1d2ef66728c7fbac8377748594345a3f474fce5f.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/ospf-lsa-types-explained/1127" rel="external" class="url">system</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>very concise exlanation! <img src="https://cdn-forum.networklessons.com/images/emoji/apple/slight_smile.png?v=5" title=":slight_smile:" class="emoji" alt=":slight_smile:"></p></p></div>
+			</article>
+		</li>
+				<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for Openlearner" src="https://cdn-forum.networklessons.com/letter_avatar_proxy/v4/letter/o/ad7895/64.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/ospf-lsa-types-explained/1127" rel="external" class="url">Openlearner</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>I have to tell you that I have seen different videos and took CCNP Training and never understood completely the Area Types but you explain it so easy that I understand now.<br>
+Thanks</p></p></div>
+			</article>
+		</li>
+				<li class="comment odd depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for bruce89012" src="https://cdn-forum.networklessons.com/letter_avatar_proxy/v4/letter/b/a9a28c/64.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/ospf-lsa-types-explained/1127" rel="external" class="url">bruce89012</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>In the above topology, when I  redistribute connected on R2 and R3, R1 sees only one LSA type 4.  It’s for R2 showing how to get to R3.  Why don’t we also see an LSA type 4 for R2’s redistributed routes?  Does a directly connected router not generate an LSA type 4 for its redistributed routes?  Whew!</p></p></div>
+			</article>
+		</li>
+				<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for lucaseki" src="https://cdn-forum.networklessons.com/letter_avatar_proxy/v4/letter/l/fbc32d/64.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/ospf-lsa-types-explained/1127" rel="external" class="url">lucaseki</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Hi,</p>
+<p>In your explanation about LSA type 5, you wrote :<br>
+“Here you can see the type 5 external LSA in the LSDB. Keep in mind that router R2 and R3 both are in area 0.”</p>
+<p>But, in the design, we can see that there are in area 1 ?</p>
+<p>Regards.</p></p></div>
+			</article>
+		</li>
+		</ol>
+        <div class="respond comment-respond">
+            <p id="reply-title" class="comment-reply-title"><strong><a href="https://forum.networklessons.com/t/ospf-lsa-types-explained/1127" target="_blank">182 more replies!</a></strong> Ask a question or join the discussion by visiting our <a href="https://forum.networklessons.com/t/ospf-lsa-types-explained/1127" target="_blank">Community Forum</a></p>
+        </div>
+    </div>
+        </div>
+
+
+		</div>
+	</div>
+
+	<footer class="site-footer">
+        <div class="container">
+            <div class="site-footer-inner">
+                <div class="copyright">
+                    &copy; 2013 - 2024 NetworkLessons.com 65289                </div>
+                <div class="menu-footer-container"><ul id="footer-menu" class="menu"><li id="menu-item-22469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22469"><a href="https://networklessons.com/disclaimer">Disclaimer</a></li>
+<li id="menu-item-22470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-22470"><a rel="privacy-policy" href="https://networklessons.com/privacy-policy">Privacy Policy</a></li>
+<li id="menu-item-22468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22468"><a href="https://networklessons.com/support">Support</a></li>
+<li id="menu-item-59827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59827"><a href="https://networklessons.com/about-networklessons-com">About</a></li>
+</ul></div>            </div>
+        </div>
+    </footer>
+</div>
+
+<script type="text/javascript">var algolia = {"debug":false,"application_id":"JYCQGPKUUY","search_api_key":"294cbcc6c53b2ccb6f80f0410f485afe","powered_by_enabled":false,"query":"","autocomplete":{"sources":[],"input_selector":"input[name='s']:not(.no-autocomplete):not(#adminbar-search)"},"indices":{"searchable_posts":{"name":"wp_searchable_posts","id":"searchable_posts","enabled":true,"replicas":[]}}};</script><script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.20.2" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" src="https://player.vimeo.com/api/player.js?ver=1.0" id="gtm4wp-vimeo-api-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-vimeo.js?ver=1.20.2" id="gtm4wp-vimeo-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/bundle.js?ver=1702771200" id="networklessons-script-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/jquery.magnific-popup.min.js?ver=1.1.0" id="magnific-popup-jquery-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/jquery.magnific-popup.js?ver=1.1.0" id="magnific-popup-core-js-js"></script>
+<script type="text/javascript" id="bellows-js-extra">
+/* <![CDATA[ */
+var bellows_data = {"config":{"main":{"folding":"multiple","current":"on","slide_speed":400}},"v":"1.4.3"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/bellows-pro/assets/js/bellows.min.js?ver=1.4.3" id="bellows-js"></script>
+
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

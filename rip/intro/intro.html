@@ -1,0 +1,709 @@
+
+<!doctype html>
+<html lang="en-US" id="html">
+<head> 
+    <script src="https://www.googleoptimize.com/optimize.js?id=GTM-N6QRZFG"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="shortcut icon" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-180x180.png" />
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v23.4 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>RIP Distance Vector Routing Protocol</title><link rel="preload" data-rocket-preload as="image" href="https://cdn.networklessons.com/wp-content/uploads/2013/02/signpost.jpg" imagesrcset="https://cdn.networklessons.com/wp-content/uploads/2013/02/signpost.jpg 600w, https://cdn.networklessons.com/wp-content/uploads/2013/02/signpost-300x230.jpg 300w" imagesizes="(max-width: 600px) 100vw, 600px" fetchpriority="high">
+	<meta name="description" content="RIP (Routing Information Protocol) is a simple distance vector routing protocol. In this lesson, I explain RIP and how to configure it." />
+	<link rel="canonical" href="https://networklessons.com/rip/rip-distance-vector-routing-protocol" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="RIP Distance Vector Routing Protocol" />
+	<meta property="og:description" content="RIP (Routing Information Protocol) is a simple distance vector routing protocol. In this lesson, I explain RIP and how to configure it." />
+	<meta property="og:url" content="https://networklessons.com/rip/rip-distance-vector-routing-protocol" />
+	<meta property="og:site_name" content="NetworkLessons.com" />
+	<meta property="article:published_time" content="2013-02-15T20:28:40+00:00" />
+	<meta property="article:modified_time" content="2023-10-19T08:59:32+00:00" />
+	<meta property="og:image" content="https://cdn.networklessons.com/wp-content/uploads/2013/02/labyrinth.jpg" />
+	<meta property="og:image:width" content="400" />
+	<meta property="og:image:height" content="300" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Rene Molenaar" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Rene Molenaar" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="8 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://networklessons.com/rip/rip-distance-vector-routing-protocol","url":"https://networklessons.com/rip/rip-distance-vector-routing-protocol","name":"RIP Distance Vector Routing Protocol","isPartOf":{"@id":"https://networklessons.com/#website"},"primaryImageOfPage":{"@id":"https://networklessons.com/rip/rip-distance-vector-routing-protocol#primaryimage"},"image":{"@id":"https://networklessons.com/rip/rip-distance-vector-routing-protocol#primaryimage"},"thumbnailUrl":"https://cdn.networklessons.com/wp-content/uploads/2013/02/labyrinth.jpg","datePublished":"2013-02-15T20:28:40+00:00","dateModified":"2023-10-19T08:59:32+00:00","author":{"@id":"https://networklessons.com/#/schema/person/a210ceb8a2b14b76e03c27d3c65850c2"},"description":"RIP (Routing Information Protocol) is a simple distance vector routing protocol. In this lesson, I explain RIP and how to configure it.","breadcrumb":{"@id":"https://networklessons.com/rip/rip-distance-vector-routing-protocol#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://networklessons.com/rip/rip-distance-vector-routing-protocol"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://networklessons.com/rip/rip-distance-vector-routing-protocol#primaryimage","url":"https://cdn.networklessons.com/wp-content/uploads/2013/02/labyrinth.jpg","contentUrl":"https://cdn.networklessons.com/wp-content/uploads/2013/02/labyrinth.jpg","width":400,"height":300,"caption":"Labyrinth"},{"@type":"BreadcrumbList","@id":"https://networklessons.com/rip/rip-distance-vector-routing-protocol#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Networklessons.com","item":"https://networklessons.com/"},{"@type":"ListItem","position":2,"name":"RIP","item":"https://networklessons.com/rip"},{"@type":"ListItem","position":3,"name":"RIP Distance Vector Routing Protocol"}]},{"@type":"WebSite","@id":"https://networklessons.com/#website","url":"https://networklessons.com/","name":"NetworkLessons.com","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://networklessons.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://networklessons.com/#/schema/person/a210ceb8a2b14b76e03c27d3c65850c2","name":"Rene Molenaar","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://networklessons.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/d676347ef395e3b3a6a056aaf5546311?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/d676347ef395e3b3a6a056aaf5546311?s=96&d=mm&r=g","caption":"Rene Molenaar"},"description":"René - CCIE #41726 is the creator of Networklessons.com where he writes about networking topics like Cisco, Routing, Switching, Linux, Wireless &amp; Security. He also created GNS3Vault.com where people can study Cisco labs for free.","sameAs":["https://networklessons.com"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//player.vimeo.com' />
+<link rel='dns-prefetch' href='//cdn.networklessons.com' />
+<link rel='dns-prefetch' href='//googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//googleoptimize.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//tag.getdrip.com' />
+<link rel='dns-prefetch' href='//facebook.com' />
+
+<link href='https://cdn.networklessons.com' rel='preconnect' />
+<link rel='stylesheet' id='mp-theme-css' href='https://cdn.networklessons.com/wp-content/plugins/memberpress/css/ui/theme.css?ver=1.11.34' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://cdn.networklessons.com/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2' type='text/css' media='all' />
+<style id='safe-svg-svg-icon-style-inline-css' type='text/css'>
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='arve-css' href='https://cdn.networklessons.com/wp-content/plugins/advanced-responsive-video-embedder/build/main.css?ver=755e5bf2bfafc15e7cc1' type='text/css' media='all' />
+<link rel='stylesheet' id='arve-pro-css' href='https://cdn.networklessons.com/wp-content/plugins/arve-pro/build/main.css?ver=eea34735566740155d0f' type='text/css' media='all' />
+<link rel='stylesheet' id='emnl-custom-styling-various-plugins-css' href='https://cdn.networklessons.com/wp-content/plugins/emnl-custom-css-various-plugins/emnl-custom-css-various-plugins.css?ver=1720772937' type='text/css' media='all' />
+<link rel='stylesheet' id='affwp-forms-css' href='https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/css/forms.min.css?ver=2.26.0' type='text/css' media='all' />
+<link rel='stylesheet' id='ez-toc-css' href='https://cdn.networklessons.com/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.69.1' type='text/css' media='all' />
+<style id='ez-toc-inline-css' type='text/css'>
+div#ez-toc-container .ez-toc-title {font-size: 100%;}div#ez-toc-container .ez-toc-title {font-weight: 700;}div#ez-toc-container ul li {font-size: 100%;}div#ez-toc-container ul li {font-weight: 500;}div#ez-toc-container nav ul ul li {font-size: 90%;}div#ez-toc-container {background: #f9f9f9;border: 1px solid #e6e6e6;}div#ez-toc-container p.ez-toc-title , #ez-toc-container .ez_toc_custom_title_icon , #ez-toc-container .ez_toc_custom_toc_icon {color: #000000;}div#ez-toc-container ul.ez-toc-list a {color: #5381b5;}div#ez-toc-container ul.ez-toc-list a:hover {color: #5381b5;}div#ez-toc-container ul.ez-toc-list a:visited {color: #5381b5;}
+.ez-toc-container-direction {direction: ltr;}.ez-toc-counter ul{counter-reset: item ;}.ez-toc-counter nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }.ez-toc-widget-direction {direction: ltr;}.ez-toc-widget-container ul{counter-reset: item ;}.ez-toc-widget-container nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }
+</style>
+<link rel='stylesheet' id='if-menu-site-css-css' href='https://cdn.networklessons.com/wp-content/plugins/if-menu/assets/if-menu-site.css?ver=6.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='networklessons-style-css' href='https://cdn.networklessons.com/wp-content/themes/networklessons/dist/app.css?ver=1724843461' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-style-css' href='https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/magnific-popup.css?ver=1.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bellows-css' href='https://cdn.networklessons.com/wp-content/plugins/bellows-pro/pro/assets/css/bellows.min.css?ver=1.4.3' type='text/css' media='all' />
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="jquery-cookie-js-extra">
+/* <![CDATA[ */
+var affwp_scripts = {"ajaxurl":"https:\/\/networklessons.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/js/jquery.cookie.min.js?ver=1.4.0" id="jquery-cookie-js"></script>
+<script type="text/javascript" id="affwp-tracking-js-extra">
+/* <![CDATA[ */
+var affwp_debug_vars = {"integrations":{"memberpress":"MemberPress"},"version":"2.26.0","currency":"USD","ref_cookie":"affwp_ref","visit_cookie":"affwp_ref_visit_id","campaign_cookie":"affwp_campaign"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/js/tracking.min.js?ver=2.26.0" id="affwp-tracking-js"></script>
+<link rel="https://api.w.org/" href="https://networklessons.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://networklessons.com/wp-json/wp/v2/posts/720" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://networklessons.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.6.2" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://networklessons.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklessons.com%2Frip%2Frip-distance-vector-routing-protocol" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://networklessons.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklessons.com%2Frip%2Frip-distance-vector-routing-protocol&#038;format=xml" />
+<style id="bellows-custom-generated-css">
+
+/** Bellows Custom Tweaks (General Settings) **/
+
+/** Bellows Custom Tweaks (General Settings) **/
+/* More compact look of menu */
+.bellows .bellows-nav * { line-height: 1.75em; }
+.bellows .bellows-nav .bellows-submenu .bellows-target { padding-left: 20px;}
+.bellows .bellows-nav .bellows-target,
+.bellows .bellows-nav .bellows-submenu .bellows-target { padding: 2px;}
+
+/* Move toggle icons to left instead of right of text labels */
+.bellows .bellows-nav .bellows-subtoggle { width: 30px; left:0; }
+.bellows .bellows-nav .bellows-menu-item > .bellows-target > .bellows-target-text { margin-left: 30px; }
+.bellows .bellows-nav .bellows-subtoggle .fa { top: 40%; }
+
+/* Move toggle icons and lower level items to the right */
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-1 .bellows-subtoggle { left: 25px; }
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-1 .bellows-target { padding-left: 25px; }
+
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-2 .bellows-subtoggle { left: 50px; }
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-2 .bellows-target { padding-left: 50px; }
+
+
+/* SIDEBAR ONLY STYLING */
+
+/* Set all text to default black */
+#sidebar .bellows .bellows-nav a.bellows-target { color: #000000 }
+
+/* Set parent menu items bold and colored */
+#sidebar .bellows.bellows-main .bellows-nav .bellows-current-menu-item > .bellows-target,
+#sidebar .bellows.bellows-main .bellows-nav .bellows-current-menu-ancestor > .bellows-target { color:#557fae; font-weight: bold; }
+
+/* Set current post bold and colored */
+#sidebar .bellows .bellows-current-menu-item { font-weight: bold; color:#557fae; }
+
+/* Toggle icons on same height */
+#sidebar .bellows .bellows-nav .bellows-subtoggle .fa { top: 44%; }
+
+
+
+/* Status: Loaded from Transient */
+
+</style>		<script type="text/javascript">
+		var AFFWP = AFFWP || {};
+		AFFWP.referral_var = 'affid';
+		AFFWP.expiration = 1;
+		AFFWP.debug = 0;
+
+
+		AFFWP.referral_credit_last = 0;
+		</script>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to manual -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"visitorLoginState":"logged-in","visitorType":"subscriber","visitorEmail":"harthomp@protonmail.com","visitorEmailHash":"30617de159321682ca448e5d89fc5cae66131a43cdfff8865f5d749c58146885","visitorId":65289,"visitorIP":"203.63.201.230","pagePostType":"post","pagePostType2":"single-post","pageCategory":["ccie-routing-switching","ccna-routing-switching-icnd1-100-105","rip"],"IsActiveMember":"true","UserFullName":"Harrison Thompson buckley"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script>
+		if (typeof gtag == "undefined") {
+			function gtag(){dataLayer.push(arguments);}
+		}
+
+		gtag("consent", "default", {
+			"analytics_storage": "granted",
+			"ad_storage": "granted",
+			"ad_user_data": "granted",
+			"ad_personalization": "granted",
+			"functionality_storage": "granted",
+			"security_storage": "granted",
+			"personalization_storage": "granted",
+		});
+</script>
+<script data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWFSBS');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel="apple-touch-icon" sizes="180x180" href="/wp-content/uploads/fbrfg/apple-touch-icon.png?v=69P4gG4Gpq">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/fbrfg/favicon-32x32.png?v=69P4gG4Gpq">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/uploads/fbrfg/favicon-16x16.png?v=69P4gG4Gpq">
+<link rel="manifest" href="/wp-content/uploads/fbrfg/site.webmanifest?v=69P4gG4Gpq">
+<link rel="mask-icon" href="/wp-content/uploads/fbrfg/safari-pinned-tab.svg?v=69P4gG4Gpq" color="#5381b5">
+<link rel="shortcut icon" href="/wp-content/uploads/fbrfg/favicon.ico?v=69P4gG4Gpq">
+<meta name="msapplication-TileColor" content="#5381b5">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml?v=69P4gG4Gpq">
+<meta name="theme-color" content="#5381b5">		<style>
+			.algolia-search-highlight {
+				background-color: #fffbcc;
+				border-radius: 2px;
+				font-style: normal;
+			}
+		</style>
+		<script type="application/ld+json" class="emnl-schema-breadcrumbs">{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 0,"name": "Home","item": "https://networklessons.com"},{"@type": "ListItem","position": 1,"name": "RIP","item": "https://networklessons.com/rip"},{"@type": "ListItem","position": 2,"name": "RIP Distance Vector Routing Protocol","item": "https://networklessons.com/rip/rip-distance-vector-routing-protocol"}]}</script>
+</head>
+
+
+<body class="post-template-default single single-post postid-720 single-format-standard logged-in" data-theme="light">
+
+<!-- GTM Container placement set to manual -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWFSBS" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script>
+  if ( localStorage.getItem('siteTheme') ) {
+    document.body.setAttribute('data-theme', localStorage.getItem('siteTheme'));
+  }
+</script>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+	<header class="site-header">
+		        <div class="site-header-inner">
+            <div class="container">
+                <div class="row sm-gutters main-row">
+                    <div class="col-lg-4 col-8">
+                        <a href="https://networklessons.com/" class="logo">
+                            <img width="524" height="141" src="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/logo.svg" alt="NetworkLessons.com" />
+                        </a>
+                    </div>
+                                                                <div class="col-lg-8 col-4 col-navigation">
+                            <nav id="site-navigation" class="main-navigation">
+                                <div class="menu-primary-container"><ul id="primary-menu" class="menu"><li id="menu-item-10143" class="expanded menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10143"><a href="https://networklessons.com/courses">Courses <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-59830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59830"><a href="https://networklessons.com/cisco">Cisco <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-65214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65214"><a href="https://networklessons.com/cisco/ccna-200-301">CCNA 200-301</a></li>
+		<li id="menu-item-65219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65219"><a href="https://networklessons.com/cisco/ccnp-encor-350-401">CCNP ENCOR 350-401 v1.1</a></li>
+		<li id="menu-item-65218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65218"><a href="https://networklessons.com/cisco/ccnp-enarsi-300-410">CCNP ENARSI 300-410 v1.1</a></li>
+		<li id="menu-item-65217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65217"><a href="https://networklessons.com/cisco/ccie-enterprise-infrastructure">CCIE Enterprise Infrastructure</a></li>
+		<li id="menu-item-65216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65216"><a href="https://networklessons.com/cisco/asa-firewall">ASA Firewall</a></li>
+		<li id="menu-item-65774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65774"><a href="https://networklessons.com/cisco/cisco-sd-wan">Cisco SD-WAN</a></li>
+	</ul>
+</li>
+	<li id="menu-item-59831" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59831"><a href="https://networklessons.com/routing-switching">Routing &#038; Switching <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-65232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65232"><a href="https://networklessons.com/subnetting">Subnetting</a></li>
+		<li id="menu-item-65233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65233"><a href="https://networklessons.com/switching">Switching</a></li>
+		<li id="menu-item-65231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65231"><a href="https://networklessons.com/spanning-tree">Spanning-Tree</a></li>
+		<li id="menu-item-65222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65222"><a href="https://networklessons.com/frame-relay">Frame-Relay</a></li>
+		<li id="menu-item-65230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65230"><a href="https://networklessons.com/rip">RIP</a></li>
+		<li id="menu-item-65221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65221"><a href="https://networklessons.com/eigrp">EIGRP</a></li>
+		<li id="menu-item-65227" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65227"><a href="https://networklessons.com/ospf">OSPF</a></li>
+		<li id="menu-item-65224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65224"><a href="https://networklessons.com/is-is">IS-IS</a></li>
+		<li id="menu-item-65215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65215"><a href="https://networklessons.com/bgp">BGP</a></li>
+		<li id="menu-item-65226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65226"><a href="https://networklessons.com/multicast">Multicast</a></li>
+		<li id="menu-item-65223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65223"><a href="https://networklessons.com/ipv6">IPv6</a></li>
+		<li id="menu-item-65229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65229"><a href="https://networklessons.com/quality-of-service">Quality of Service</a></li>
+		<li id="menu-item-65225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65225"><a href="https://networklessons.com/mpls">MPLS</a></li>
+	</ul>
+</li>
+	<li id="menu-item-73291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-73291"><a href="#">Data Center <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-73294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73294"><a href="https://networklessons.com/vxlan">VXLAN</a></li>
+	</ul>
+</li>
+	<li id="menu-item-65228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65228"><a href="https://networklessons.com/python">Python</a></li>
+	<li id="menu-item-65234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65234"><a href="https://networklessons.com/uncategorized">Miscellaneous</a></li>
+	<li id="menu-item-70698" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70698"><a href="https://networklessons.com/labs">Labs</a></li>
+	<li id="menu-item-64907" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-64907"><a href="#">Legacy <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-33774" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-33774"><a href="https://networklessons.com/cisco/ccna-routing-switching-icnd1-100-105">CCNA R&#038;S ICND1 100-105</a></li>
+		<li id="menu-item-40575" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-40575"><a href="https://networklessons.com/cisco/ccna-routing-switching-icnd2-200-105">CCNA R&#038;S ICND2 200-105</a></li>
+		<li id="menu-item-20090" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20090"><a href="https://networklessons.com/cisco/ccnp-route">CCNP ROUTE</a></li>
+		<li id="menu-item-20092" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20092"><a href="https://networklessons.com/cisco/ccnp-switch">CCNP SWITCH</a></li>
+		<li id="menu-item-20093" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20093"><a href="https://networklessons.com/cisco/ccnp-tshoot">CCNP TSHOOT</a></li>
+		<li id="menu-item-20089" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-20089"><a href="https://networklessons.com/cisco/ccie-routing-switching">CCIE R&#038;S</a></li>
+		<li id="menu-item-38428" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38428"><a href="https://networklessons.com/cisco/ccie-routing-switching-written">CCIE R&#038;S Written</a></li>
+		<li id="menu-item-65220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65220"><a href="https://networklessons.com/cisco/evolving-technologies">Evolving Technologies</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8339"><a href="https://networklessons.com/new-lessons"><i class="fa fa-plus"></i> New Lessons</a></li>
+	<li id="menu-item-64135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64135"><a href="https://networklessons.com/updated-lessons"><i class="fas fa-pen"></i> Updated Lessons</a></li>
+	<li id="menu-item-7347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7347"><a href="https://networklessons.com/member-ideas"><i class="fa fa-lightbulb"></i> Lesson Ideas</a></li>
+</ul>
+</li>
+<li id="menu-item-8715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8715"><a href="https://forum.networklessons.com">Forum</a></li>
+<li id="menu-item-23483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23483"><a href="https://networklessons.com/support">Support</a></li>
+<li id="menu-item-65967" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-65967"><a href="#">Tools <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-65968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65968"><a href="https://www.cloudshark.org/collections/WTRpgLI-GQSDfgzkQixICg">Packet Captures</a></li>
+	<li id="menu-item-65969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65969"><a href="https://notes.networklessons.com">Notes</a></li>
+	<li id="menu-item-65970" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65970"><a href="https://networklessons.com/tools-and-resources">Resources</a></li>
+	<li id="menu-item-68327" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68327"><a href="https://networklessons.com/networklessons-exams">Practice Exams</a></li>
+</ul>
+</li>
+<li id="menu-item-22148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-22148"><a href="#"><i class="fa fa-user"></i> <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-5629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5629"><a href="https://networklessons.com/myaccount">My Account Settings</a></li>
+	<li id="menu-item-68092" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68092"><a href="https://networklessons.com/member-dashboard">Member Dashboard</a></li>
+	<li id="menu-item-22285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22285"><a href="https://networklessons.com/upgrade-to-annual-membership"><b><font color="#FFC469">UPGRADE TO ANNUAL &#038; Get 2 Months FREE!</font></b></a></li>
+	<li id="menu-item-56969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56969"><a href="https://networklessons.com/wp-login.php?action=logout">Logout</a></li>
+</ul>
+</li>
+</ul></div>                                <div class="main-navigation-close">
+                                    <i class="far fa-times"></i>
+                                </div>
+                            </nav>
+                            <div class="main-navigation-toggle">
+                                <span class="icon"></span>
+                            </div>
+                            <div class="d-none d-xl-block">
+                                
+
+<form role="search" method="get" class="search-form" action="https://networklessons.com/">
+    <label for="search-form-66e2e251d10a9" class="sr-only">
+        <span class="screen-reader-text">Search for:</span>
+    </label>
+
+    <div class="input-group">
+        <input type="search" id="search-form-66e2e251d10a9" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" />
+        <div class="input-group-append">
+            <button type="submit" class="search-submit btn btn-white">
+                <span class="screen-reader-text">Search</span>
+                <i class="far fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="fullpage-overlay main-navigation-overlay"></div>
+	</header>
+    
+            <div class="d-xl-none">
+            
+
+<form role="search" method="get" class="search-form" action="https://networklessons.com/">
+    <label for="search-form-66e2e251d1116" class="sr-only">
+        <span class="screen-reader-text">Search for:</span>
+    </label>
+
+    <div class="input-group">
+        <input type="search" id="search-form-66e2e251d1116" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" />
+        <div class="input-group-append">
+            <button type="submit" class="search-submit btn btn-white">
+                <span class="screen-reader-text">Search</span>
+                <i class="far fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>        </div>
+    
+	<div class="site-content container">
+    <div class="breadcrumbs" style="font-size: 12px;">You are here: <a href="https://networklessons.com">Home</a> » <a href="https://networklessons.com/rip">RIP</a></div>	<div class="site-content-row row">
+	<div id="primary" class="content-area col-md-8">
+		<main id="main" class="site-main">
+                            <div class="site-actions-toolbar d-md-none">
+                    <div class="site-action js--dark-mode">
+                        <i class="far fa-adjust"></i>
+                    </div>
+                </div>
+            
+		
+<article id="post-720" class="main-post post-720 post type-post status-publish format-standard has-post-thumbnail hentry category-ccie-routing-switching category-ccna-routing-switching-icnd1-100-105 category-rip">
+	<header class="entry-header">
+                            <h1 class="entry-title">RIP Distance Vector Routing Protocol</h1>        	</header>
+	<div class="entry-content">
+                    <div class="the-content">
+                <p>RIP is a distance vector routing protocol and the simplest routing protocol to start with. We’ll start by paying attention to the distance vector class. What does the name distance vector mean?</p>
+<ul>
+<li><b>Distance</b>: How far away? In the routing world, we use metrics.</li>
+<li><b>Vector</b>: Which direction? In the routing world, we care about which interface and the IP address of the next router to send it to.</li>
+</ul>
+<p><br />
+<br />
+<span class="YPtkIAJDrCyuUFL5AGpdNcMGaFPnOXfNo70xqLMQ7sQJER3Bt4rghkHgTD3sbi1m8lZijeK"></p>
+<div class="arve" data-mode="normal" data-oembed="1" data-provider="vimeo" id="arve-vimeo-121897396" style="max-width:700px;" data-reset-after-played data-fullscreen="disabled">
+<div class="arve-inner">
+<div class="arve-embed arve-embed--has-aspect-ratio">
+<span class="arve-ar" style="padding-top:56.250000%"></span><iframe credentialless referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer &#039;none&#039;;ambient-light-sensor &#039;none&#039;;autoplay &#039;none&#039;;battery &#039;none&#039;;bluetooth &#039;none&#039;;browsing-topics &#039;none&#039;;camera &#039;none&#039;;ch-ua &#039;none&#039;;clipboard-read &#039;none&#039;;clipboard-write;display-capture &#039;none&#039;;document-domain &#039;none&#039;;domain-agent &#039;none&#039;;encrypted-media &#039;none&#039;;execution-while-not-rendered &#039;none&#039;;execution-while-out-of-viewport &#039;none&#039;;gamepad &#039;none&#039;;geolocation &#039;none&#039;;gyroscope &#039;none&#039;;hid &#039;none&#039;;identity-credentials-get &#039;none&#039;;idle-detection &#039;none&#039;;keyboard-map &#039;none&#039;;local-fonts &#039;none&#039;;magnetometer &#039;none&#039;;microphone &#039;none&#039;;midi &#039;none&#039;;navigation-override &#039;none&#039;;otp-credentials &#039;none&#039;;payment &#039;none&#039;;picture-in-picture;publickey-credentials-create &#039;none&#039;;publickey-credentials-get &#039;none&#039;;screen-wake-lock &#039;none&#039;;serial &#039;none&#039;;speaker-selection;sync-xhr &#039;none&#039;;usb &#039;none&#039;;web-share;window-management &#039;none&#039;;xr-spatial-tracking &#039;none&#039;;" allowfullscreen class="arve-iframe fitvidsignore" data-arve="arve-vimeo-121897396" data-src-no-ap="https://player.vimeo.com/video/121897396?dnt=0&amp;app_id=122963&amp;html5=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;autoplay=0" frameborder="0" height="393.75" name sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox allow-forms" scrolling="no" src="https://player.vimeo.com/video/121897396?dnt=0&#038;app_id=122963&#038;html5=1&#038;title=0&#038;byline=0&#038;portrait=0&#038;autoplay=0" width="700" title="nwl-ccna-rs-distance-vector-720p" loading="lazy"></iframe></p>
+</div>
+</div>
+<p><script type="application/ld+json">{"@context":"http:\/\/schema.org\/","@id":"https:\/\/networklessons.com\/rip\/rip-distance-vector-routing-protocol#arve-vimeo-121897396","type":"VideoObject","embedURL":"https:\/\/player.vimeo.com\/video\/121897396?dnt=0&app_id=122963&html5=1&title=0&byline=0&portrait=0&autoplay=0","name":"nwl-ccna-rs-distance-vector-720p","thumbnailUrl":"https:\/\/i.vimeocdn.com\/video\/515318641-ae7ef0cbb820f4bf25e13d15b7a4cd5c27303ffbcb439a8ad96917b3eec6dc01-d_640","uploadDate":"2013-02-15T21:28:40+00:00","author":"NetworkLessons.com","duration":"PT10M51S","description":"1"}</script>
+</div>
+<p></span><br />
+<br />
+I don’t know if you ever go cycling but here in The Netherlands, we have some nice so-called mushroom signposts telling you which way to go and how far (in kilometers) the destination is. The same principle applies to distance vector routing protocols.</p>
+<p><img fetchpriority="high" decoding="async" class="aligncenter size-full wp-image-721" src="https://cdn.networklessons.com/wp-content/uploads/2013/02/signpost.jpg" alt="signpost" width="600" height="461" srcset="https://cdn.networklessons.com/wp-content/uploads/2013/02/signpost.jpg 600w, https://cdn.networklessons.com/wp-content/uploads/2013/02/signpost-300x230.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p>If you don’t like cycling, you’ll like the highway signs better:</p>
+<p><img decoding="async" class="aligncenter size-full wp-image-722" src="https://cdn.networklessons.com/wp-content/uploads/2013/02/highway-signs.png" alt="highway signs" width="726" height="545" srcset="https://cdn.networklessons.com/wp-content/uploads/2013/02/highway-signs.png 726w, https://cdn.networklessons.com/wp-content/uploads/2013/02/highway-signs-300x225.png 300w" sizes="(max-width: 726px) 100vw, 726px" /></p>
+<p>Enough about cycling and highways. Let’s see how distance vector routing protocols operate.</p>
+<p><img decoding="async" class="alignnone wp-image-34960 size-full" src="https://cdn.networklessons.com/wp-content/uploads/2013/02/three-cisco-routers-routing-tables-1.png" alt="three cisco routers routing tables" width="990" height="277" srcset="https://cdn.networklessons.com/wp-content/uploads/2013/02/three-cisco-routers-routing-tables-1.png 990w, https://cdn.networklessons.com/wp-content/uploads/2013/02/three-cisco-routers-routing-tables-1-300x84.png 300w, https://cdn.networklessons.com/wp-content/uploads/2013/02/three-cisco-routers-routing-tables-1-768x215.png 768w" sizes="(max-width: 990px) 100vw, 990px" /></p>
+<p>In this picture, we have three routers and we are running a distance vector routing protocol (RIP). As we start our routers they build a routing table by default but the only thing they know is their directly connected interfaces. You can see that this information is in their routing table. In <b>red,</b> you can see which interface, and in <b>green,</b> you can see the metric. RIP uses hop count as its metric which is nothing more than counting the number of routers (hops) you have to pass to get to your destination.</p>
+<p>Now I’m going to enable distance vector routing. What will happen is that our routers will <b>copy their routing table</b> to their directly connected neighbor. R1 will copy its routing table to R2. R2 will copy its routing table to R3 and the other way around.</p>
+<p>If a router receives information about a network it doesn’t know about yet, it will add this information to its routing table:</p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-34962 size-full" src="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-copy-rt.png" alt="distance vector copy rt" width="990" height="320" srcset="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-copy-rt.png 990w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-copy-rt-300x97.png 300w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-copy-rt-768x248.png 768w" sizes="(max-width: 990px) 100vw, 990px" /></p>
+<p>Take a look at R1, and you will see that it has learned about the 192.168.23.0 /24 and 3.3.3.0 /24 networks from R2. You see that it has added these two items:</p>
+<ul>
+<li>Interface (Fa1/0. This is the vector part, we know in what direction we have to go.</li>
+<li>Metric (hop count). This is the distance part, we know how far away the network is.</li>
+</ul>
+<p>192.168.23.0 /24 is one hop away, and 3.3.3.0 /24 is two hops away.</p>
+<p>Awesome! You also see that R2 and R3 have filled their routing tables.</p>
+<p>Every 30 seconds our routers will send a full copy of their routing table to their neighbors who can update their own routing table.</p>
+<p>So far so good, our routers are working, and we know the destination to all of our networks…distance vector routing protocols are vulnerable to some problems, however. Let me show you what can go wrong:</p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-34963 size-full" src="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-link-failure.png" alt="distance vector link failure" width="990" height="320" srcset="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-link-failure.png 990w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-link-failure-300x97.png 300w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-link-failure-768x248.png 768w" sizes="(max-width: 990px) 100vw, 990px" /></p>
+<p>The FastEthernet 1/0 link on R3 is going down, so it will change its routing table. Its status went from 0 to Down.</p>
+<p>Every 30 seconds our routers send a full copy of their routing table to their neighbors, and it just happens to be that it’s time for R2 to send a copy. R2 sends his full routing table toward R3. What do you think will happen?</p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-34964 size-full" src="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-routing-update.png" alt="distance vector routing update" width="990" height="358" srcset="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-routing-update.png 990w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-routing-update-300x108.png 300w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-routing-update-768x278.png 768w" sizes="(max-width: 990px) 100vw, 990px" /></p>
+<p>R3 gets the routing table from R2 and will see that R2 is advertising the 3.3.3.0 /24 network with a hop count of 1. That’s excellent is what R3 thinks….a hop count of 1 is better than having a network that is down. R3 will add this information to its routing table.</p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-34965 size-full" src="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-routing-update-back.png" alt="distance vector routing update back" width="990" height="356" srcset="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-routing-update-back.png 990w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-routing-update-back-300x108.png 300w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-routing-update-back-768x276.png 768w" sizes="(max-width: 990px) 100vw, 990px" /></p>
+<p>A few seconds later, it’s time for R3 to send its routing table to its neighbor R2. R2 will come to the following conclusion:</p>
+<p>“I can reach 3.3.3.0 /24 by going to R3 and my hop count used to be 1. I’m receiving a routing table from R3 now, and it now says that the hop count is 2…I need to update myself to include this change”.</p>
+<p>The hop count on R2 is now 3, it received two from R3 and adds the hop towards R3.</p>
+<p>R2 will also send a copy of its routing table to R1 which will update itself as well.</p>
+<p>Do you see where this is going? These routers are going to keep <b>updating themselves</b> <b>to infinity.</b></p>
+<p>What will happen when we send an IP packet to the 3.3.3.0 /24 network?</p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-34966 size-full" src="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-routing-loop.png" alt="distance vector routing loop" width="990" height="410" srcset="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-routing-loop.png 990w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-routing-loop-300x124.png 300w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-routing-loop-768x318.png 768w" sizes="(max-width: 990px) 100vw, 990px" /></p>
+<p>Look at the routing table of R2 and R3. They are pointing to each other. Ladies and Gentleman…we have a routing loop! That’s not a good thing, IP packets have a TTL (Time to Live) field however so they won’t loop around forever as Ethernet Frames do.</p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-34967 size-full" src="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-max-hop-count.png" alt="distance vector max hop count" width="990" height="320" srcset="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-max-hop-count.png 990w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-max-hop-count-300x97.png 300w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-max-hop-count-768x248.png 768w" sizes="(max-width: 990px) 100vw, 990px" /></p>
+<p>To prevent routers from updating themselves over and over again, we have a <b>maximum</b>. For RIP, this is a <b>hop count of 16</b>. 16 is considered unreachable, so the maximum number of hops you can have is 15.</p>
+<p>This problem is called <b>counting to infinity</b>.</p>
+<p>There is something else we use to counter the counting to infinity problem. In our example, R3 advertised the 3.3.3.0 /24 network to R2. How useful is it that R2 advertises this network to R3?</p>
+<p>That’s like telling someone a joke that you just learned from that person…not very effective (unless the joke is extremely good/lame 🙂</p>
+<p>In routing, it’s not very effective, so whatever you learn from your neighbor, you will not advertise back to him. We call this <b>split horizon</b>.</p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-34968 size-full" src="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-route-poison.png" alt="distance vector route poison" width="990" height="367" srcset="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-route-poison.png 990w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-route-poison-300x111.png 300w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-route-poison-768x285.png 768w" sizes="(max-width: 990px) 100vw, 990px" /></p>
+<p>Something else we do is that once a network goes down (3.3.3.0 /24 in our example), the router will send a <b>triggered update</b> immediately to update its neighbors.</p>
+<p>The triggered update will contain the network that is down and an infinite metric (16 in the case of RIP). Sending an update for this network with an infinite metric is called <b>route poisoning.</b></p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-34969 size-full" src="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-poison-reverse.png" alt="distance vector poison reverse" width="990" height="353" srcset="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-poison-reverse.png 990w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-poison-reverse-300x107.png 300w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-poison-reverse-768x274.png 768w" sizes="(max-width: 990px) 100vw, 990px" />xv</p>
+<p>To make sure R3 does not update itself via some other router/path in the network, R2 will send a <b>poison reverse</b> in response to the <b>route poison</b> it received from R3.</p>
+<p>I just explained to you what split horizon is…” don’t advertise whatever you learned from your neighbor back to them.”</p>
+<div class="notice-box  note   ">“Route poisoning overrules split horizon.”</div>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-34970 size-full" src="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-holddown-timer.png" alt="distance vector holddown timer" width="990" height="272" srcset="https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-holddown-timer.png 990w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-holddown-timer-300x82.png 300w, https://cdn.networklessons.com/wp-content/uploads/2013/02/distance-vector-holddown-timer-768x211.png 768w" sizes="(max-width: 990px) 100vw, 990px" /></p>
+<p>There is one more thing we use with distance vector routing protocols. When R2 and R1 find out that our 3.3.3.0 /24 network is down they will also start a hold-down<b> timer</b>. This hold-down timer will run for 180 seconds and it does the following:</p>
+<ul>
+<li>If we receive information about the 3.3.3.0 /24 network from another router with the same or worse metric than we currently have, we ignore this information.</li>
+<li>If we receive information about the 3.3.3.0 /24 network from another router with a better metric, we stop the hold-down timer and update our routing table with this new information.</li>
+<li>If we don’t receive anything and the hold-down timer elapses we remove this network from the routing table.</li>
+</ul>
+<p>What do you think? That’s plenty of information about RIP and distance vector routing protocols, right?</p>
+<p>Let me finish this lesson by giving you an overview between RIP version 1 and version 2. They are similar with a few differences:</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" width="234"><b>RIP</b></td>
+<td valign="top" width="132">
+<p align="center"><b>Version 1</b></p>
+</td>
+<td valign="top" width="132">
+<p align="center"><b>Version 2</b></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="234"><b>Class</b></td>
+<td valign="top" width="132">
+<p align="center">Classful</p>
+</td>
+<td valign="top" width="132">
+<p align="center">Classless</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="234"><b>Addressing Type</b></td>
+<td valign="top" width="132">
+<p align="center">Broadcast</p>
+</td>
+<td valign="top" width="132">
+<p align="center">Multicast</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="234"><b>Support manual summaries</b></td>
+<td valign="top" width="132">
+<p align="center">No</p>
+</td>
+<td valign="top" width="132">
+<p align="center">Yes</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="234"><b>Authentication support</b></td>
+<td valign="top" width="132">
+<p align="center">No</p>
+</td>
+<td valign="top" width="132">
+<p align="center">Yes</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>RIP version 1 is classful, so it does not send a subnet mask along with its routing updates, version 2 is classless so it will send the subnet mask along. RIP version 1 sends everything using broadcasts compared to RIP version 2, which uses multicast (you can also use unicast, btw).</p>
+<p>That&#8217;s all I have for you now. In another lesson, I will show you all the RIP commands you need to know for CCNA! I hope you enjoyed this lesson. If it was helpful to you, please leave a comment!</p>
+            </div>
+                	</div>
+</article>
+		</main>
+	</div>
+
+
+<div class="widget-area col-md-4">
+            <div class="site-actions-toolbar d-none d-md-flex">
+            <div class="site-action js--dark-mode">
+                <i class="far fa-adjust"></i>
+            </div>
+        </div>
+        <aside id="secondary">
+        <section id="block-2" class="widget widget_block"><p><div class="urlspecificmenu-toggle">Lessons</div><div class="fullpage-overlay urlspecificmenu-overlay"></div><div class="urlspecificmenu"><div class="urlspecificmenu-close"><i class="far fa-times"></i></div>
+				<h2>Course Contents</h2><p>RIP</p><nav id="bellows-main-9874" class="bellows bellows-nojs bellows-main bellows-source-menu bellows-align-full bellows-skin-none bellows-type-accordion bellows-expand-current"><ul id="menu-rip" class="bellows-nav" data-bellows-config="main"><li id="menu-item-65380" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-current-menu-ancestor bellows-current-menu-parent bellows-menu-item-has-children bellows-menu-item-65380 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 1: Introduction</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-65382" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-current-menu-item bellows-menu-item-65382 bellows-item-level-1 bellows-current-menu-item"><a  href="https://networklessons.com/rip/rip-distance-vector-routing-protocol" class="bellows-target"><span class="bellows-target-title bellows-target-text">Introduction to RIP</span></a></li>
+	<li id="menu-item-65383" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-65383 bellows-item-level-1"><a  href="https://networklessons.com/rip/how-to-configure-rip-on-a-cisco-router" class="bellows-target"><span class="bellows-target-title bellows-target-text">RIP Configuration</span></a></li>
+	<li id="menu-item-65385" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-65385 bellows-item-level-1"><a  href="https://networklessons.com/rip/rip-maximum-paths" class="bellows-target"><span class="bellows-target-title bellows-target-text">RIP Maximum Paths</span></a></li>
+	<li id="menu-item-65386" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-65386 bellows-item-level-1"><a  href="https://networklessons.com/rip/rip-passive-interface" class="bellows-target"><span class="bellows-target-title bellows-target-text">RIP Passive Interface</span></a></li>
+	<li id="menu-item-65384" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-65384 bellows-item-level-1"><a  href="https://networklessons.com/rip/rip-default-route" class="bellows-target"><span class="bellows-target-title bellows-target-text">RIP Default Route</span></a></li>
+</ul>
+</li>
+<li id="menu-item-65381" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-65381 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 2: Advanced</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-65387" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-65387 bellows-item-level-1"><a  href="https://networklessons.com/rip/introduction-route-summarization" class="bellows-target"><span class="bellows-target-title bellows-target-text">Route Summarization</span></a></li>
+	<li id="menu-item-65389" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-65389 bellows-item-level-1"><a  href="https://networklessons.com/rip/troubleshooting-rip" class="bellows-target"><span class="bellows-target-title bellows-target-text">RIP Troubleshooting</span></a></li>
+	<li id="menu-item-65388" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-65388 bellows-item-level-1"><a  href="https://networklessons.com/rip/rip-timers-debug" class="bellows-target"><span class="bellows-target-title bellows-target-text">RIP Timers Debug</span></a></li>
+	<li id="menu-item-65390" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-65390 bellows-item-level-1"><a  href="https://networklessons.com/rip/ttl-2-eigrp-rip-packets-explained" class="bellows-target"><span class="bellows-target-title bellows-target-text">RIP TTL=2 packets explained</span></a></li>
+	<li id="menu-item-65391" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-65391 bellows-item-level-1"><a  href="https://networklessons.com/rip/rip-reliable-default-route-with-ip-sla" class="bellows-target"><span class="bellows-target-title bellows-target-text">RIP Reliable Routing with IP SLA</span></a></li>
+	<li id="menu-item-65409" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-65409 bellows-item-level-1"><a  href="https://networklessons.com/rip/cisco-offset-list-command" class="bellows-target"><span class="bellows-target-title bellows-target-text">RIP Offset-List</span></a></li>
+</ul>
+</li>
+<li id="menu-item-65394" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-65394 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 3: Redistribution</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-65392" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-65392 bellows-item-level-1"><a  href="https://networklessons.com/rip/how-to-configure-redistribution-between-eigrp-and-rip" class="bellows-target"><span class="bellows-target-title bellows-target-text">RIP and EIGRP Redistribution</span></a></li>
+	<li id="menu-item-65393" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-65393 bellows-item-level-1"><a  href="https://networklessons.com/rip/how-to-configure-redistribution-between-ospf-and-rip" class="bellows-target"><span class="bellows-target-title bellows-target-text">RIP and OSPF Redistribution</span></a></li>
+</ul>
+</li>
+<li id="menu-item-65410" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-65410 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 4: MPLS</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-65408" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-65408 bellows-item-level-1"><a  href="https://networklessons.com/rip/mpls-layer-3-vpn-pe-ce-rip" class="bellows-target"><span class="bellows-target-title bellows-target-text">MPLS L3 VPN PE-CE RIP</span></a></li>
+</ul>
+</li>
+<li id="menu-item-65411" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-65411 bellows-item-level-0"><span  class="bellows-target"><span class="bellows-target-title bellows-target-text">Unit 5: DMVPN</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></span>
+<ul class="bellows-submenu">
+	<li id="menu-item-65406" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-has-children bellows-menu-item-65406 bellows-item-level-1"><a  href="https://networklessons.com/rip/dmvpn-phase-1-rip-routing" class="bellows-target"><span class="bellows-target-title bellows-target-text">DMVPN Phase 1 RIP Routing</span><button class="bellows-subtoggle" aria-label="Toggle Submenu"><i class="bellows-subtoggle-icon-expand fa fa-plus-square"></i><i class="bellows-subtoggle-icon-collapse fa fa-minus-square"></i></button></a>
+	<ul class="bellows-submenu">
+		<li id="menu-item-65407" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-65407 bellows-item-level-2"><a  href="https://networklessons.com/rip/dmvpn-phase-2-rip-routing" class="bellows-target"><span class="bellows-target-title bellows-target-text">DMVPN Phase 2 RIP Routing</span></a></li>
+	</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div></p>
+</section>    </aside>
+</div>
+
+</div><!-- end .row -->
+</div><!-- end .container -->
+<div class="container">
+<div class="row">
+
+    <div class="col-12">
+		
+		<div class="cmd_post_nav"><div class="cmd_next"><a href="https://networklessons.com/rip/how-to-configure-rip-on-a-cisco-router" rel="next"><strong>Next Lesson</strong><br>RIP Configuration</a></div></div>	    
+        <hr>
+
+		    <div id="comments" class="comments-area discourse-comments-area">
+        <h2 class="comments-title discourse-comments-title">Forum Replies</h2>
+        <ol class="comment-list">		<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for system" src="https://cdn-forum.networklessons.com/uploads/default/original/1X/1d2ef66728c7fbac8377748594345a3f474fce5f.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/rip-distance-vector-routing-protocol/876" rel="external" class="url">system</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>i have two question</p>
+<p>1- split horizon  : it’s not useful to advertise network back to the neighbor through interface which came from this neighbor because he is closer to this network than me. the question is what happen when i learned the same network from another neighbor in the following cases 1-with lower metric<br>
+or 2-higher metric<br>
+or 3- equal metric</p>
+<p>2- question two how split horizon works if we have example<br>
+1-RI connected to R2 and R3<br>
+2-R2 connected to R1and R3<br>
+3-R3 connected to R1and R2</p></p></div>
+			</article>
+		</li>
+				<li class="comment odd depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for system" src="https://cdn-forum.networklessons.com/uploads/default/original/1X/1d2ef66728c7fbac8377748594345a3f474fce5f.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/rip-distance-vector-routing-protocol/876" rel="external" class="url">system</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>It was my first time to read about the RIP, the way the Protocol is explained is very clear and straight forward. Thanks</p></p></div>
+			</article>
+		</li>
+				<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for system" src="https://cdn-forum.networklessons.com/uploads/default/original/1X/1d2ef66728c7fbac8377748594345a3f474fce5f.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/rip-distance-vector-routing-protocol/876" rel="external" class="url">system</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Rene,<br>
+I’m using the Boson Netsim 9.0 simulator and I configured a lab to match what you laid out in this lesson, what has me baffled is how and where do you see the hop count message of 16, when I shutdown the interface on my R3 router (LAN) 3.3.3.0/24. I turned on debug IP Rip on my R2 router to view the updates being sent from R3. I did see the metric count reach 4 and after that the route was deleted for network 3.3.3.0/24, I never saw the hop count reach 16…just curious about this.<br>
+Otherwise a very good explanation and write up RIP protocol<br>
+It could be the </p><strong><a href="https://forum.networklessons.com/t/rip-distance-vector-routing-protocol/876/4" target="_blank">... Continue reading in our forum</a></strong></p></div>
+			</article>
+		</li>
+				<li class="comment odd depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for ReneMolenaar" src="https://cdn-forum.networklessons.com/user_avatar/forum.networklessons.com/renemolenaar/64/488_2.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/rip-distance-vector-routing-protocol/876" rel="external" class="url">ReneMolenaar</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Hi Darren,</p>
+<p>It might be the Boson simulator, you could try this in GNS3 with two routers…see if the output is different than in Boson.</p>
+<p>Rene</p></p></div>
+			</article>
+		</li>
+				<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for system" src="https://cdn-forum.networklessons.com/uploads/default/original/1X/1d2ef66728c7fbac8377748594345a3f474fce5f.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/rip-distance-vector-routing-protocol/876" rel="external" class="url">system</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Very Very nice explanation,   Thanks</p></p></div>
+			</article>
+		</li>
+		</ol>
+        <div class="respond comment-respond">
+            <p id="reply-title" class="comment-reply-title"><strong><a href="https://forum.networklessons.com/t/rip-distance-vector-routing-protocol/876" target="_blank">65 more replies!</a></strong> Ask a question or join the discussion by visiting our <a href="https://forum.networklessons.com/t/rip-distance-vector-routing-protocol/876" target="_blank">Community Forum</a></p>
+        </div>
+    </div>
+        </div>
+
+
+		</div>
+	</div>
+
+	<footer class="site-footer">
+        <div class="container">
+            <div class="site-footer-inner">
+                <div class="copyright">
+                    &copy; 2013 - 2024 NetworkLessons.com 65289                </div>
+                <div class="menu-footer-container"><ul id="footer-menu" class="menu"><li id="menu-item-22469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22469"><a href="https://networklessons.com/disclaimer">Disclaimer</a></li>
+<li id="menu-item-22470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-22470"><a rel="privacy-policy" href="https://networklessons.com/privacy-policy">Privacy Policy</a></li>
+<li id="menu-item-22468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22468"><a href="https://networklessons.com/support">Support</a></li>
+<li id="menu-item-59827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59827"><a href="https://networklessons.com/about-networklessons-com">About</a></li>
+</ul></div>            </div>
+        </div>
+    </footer>
+</div>
+
+<script type="text/javascript">var algolia = {"debug":false,"application_id":"JYCQGPKUUY","search_api_key":"294cbcc6c53b2ccb6f80f0410f485afe","powered_by_enabled":false,"query":"","autocomplete":{"sources":[],"input_selector":"input[name='s']:not(.no-autocomplete):not(#adminbar-search)"},"indices":{"searchable_posts":{"name":"wp_searchable_posts","id":"searchable_posts","enabled":true,"replicas":[]}}};</script><script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.20.2" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" src="https://player.vimeo.com/api/player.js?ver=1.0" id="gtm4wp-vimeo-api-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-vimeo.js?ver=1.20.2" id="gtm4wp-vimeo-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/bundle.js?ver=1702771200" id="networklessons-script-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/jquery.magnific-popup.min.js?ver=1.1.0" id="magnific-popup-jquery-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/jquery.magnific-popup.js?ver=1.1.0" id="magnific-popup-core-js-js"></script>
+<script type="text/javascript" id="bellows-js-extra">
+/* <![CDATA[ */
+var bellows_data = {"config":{"main":{"folding":"multiple","current":"on","slide_speed":400}},"v":"1.4.3"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/bellows-pro/assets/js/bellows.min.js?ver=1.4.3" id="bellows-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/advanced-responsive-video-embedder/build/main.js?ver=755e5bf2bfafc15e7cc1" id="arve-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/arve-pro/build/main.js?ver=eea34735566740155d0f" id="arve-pro-js" defer="defer" data-wp-strategy="defer"></script>
+
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

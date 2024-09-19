@@ -1,0 +1,759 @@
+
+<!doctype html>
+<html lang="en-US" id="html">
+<head> 
+    <script src="https://www.googleoptimize.com/optimize.js?id=GTM-N6QRZFG"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="shortcut icon" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/favicon/apple-touch-icon-180x180.png" />
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v23.4 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Introduction to IS-IS</title><link rel="preload" data-rocket-preload as="image" href="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/logo.svg" fetchpriority="high">
+	<meta name="description" content="This lesson explains the basics of the IS-IS routing protocol and its areas, level 1,2,1-2 routers, LSPs (Link State Packets), metrics and more." />
+	<link rel="canonical" href="https://networklessons.com/cisco/ccie-routing-switching-written/introduction-to-is-is" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Introduction to IS-IS" />
+	<meta property="og:description" content="This lesson explains the basics of the IS-IS routing protocol and its areas, level 1,2,1-2 routers, LSPs (Link State Packets), metrics and more." />
+	<meta property="og:url" content="https://networklessons.com/cisco/ccie-routing-switching-written/introduction-to-is-is" />
+	<meta property="og:site_name" content="NetworkLessons.com" />
+	<meta property="article:published_time" content="2017-05-11T13:44:59+00:00" />
+	<meta property="article:modified_time" content="2022-06-18T20:54:22+00:00" />
+	<meta property="og:image" content="https://cdn.networklessons.com/wp-content/uploads/2017/05/black-puzzle-pieces-one-red-puzzle-piece.jpg" />
+	<meta property="og:image:width" content="1718" />
+	<meta property="og:image:height" content="1718" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Rene Molenaar" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Rene Molenaar" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="12 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://networklessons.com/cisco/ccie-routing-switching-written/introduction-to-is-is","url":"https://networklessons.com/cisco/ccie-routing-switching-written/introduction-to-is-is","name":"Introduction to IS-IS","isPartOf":{"@id":"https://networklessons.com/#website"},"primaryImageOfPage":{"@id":"https://networklessons.com/cisco/ccie-routing-switching-written/introduction-to-is-is#primaryimage"},"image":{"@id":"https://networklessons.com/cisco/ccie-routing-switching-written/introduction-to-is-is#primaryimage"},"thumbnailUrl":"https://cdn.networklessons.com/wp-content/uploads/2017/05/black-puzzle-pieces-one-red-puzzle-piece.jpg","datePublished":"2017-05-11T13:44:59+00:00","dateModified":"2022-06-18T20:54:22+00:00","author":{"@id":"https://networklessons.com/#/schema/person/a210ceb8a2b14b76e03c27d3c65850c2"},"description":"This lesson explains the basics of the IS-IS routing protocol and its areas, level 1,2,1-2 routers, LSPs (Link State Packets), metrics and more.","breadcrumb":{"@id":"https://networklessons.com/cisco/ccie-routing-switching-written/introduction-to-is-is#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://networklessons.com/cisco/ccie-routing-switching-written/introduction-to-is-is"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://networklessons.com/cisco/ccie-routing-switching-written/introduction-to-is-is#primaryimage","url":"https://cdn.networklessons.com/wp-content/uploads/2017/05/black-puzzle-pieces-one-red-puzzle-piece.jpg","contentUrl":"https://cdn.networklessons.com/wp-content/uploads/2017/05/black-puzzle-pieces-one-red-puzzle-piece.jpg","width":1718,"height":1718,"caption":"Black Puzzle Pieces One Red Puzzle Piece"},{"@type":"BreadcrumbList","@id":"https://networklessons.com/cisco/ccie-routing-switching-written/introduction-to-is-is#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Networklessons.com","item":"https://networklessons.com/"},{"@type":"ListItem","position":2,"name":"Cisco","item":"https://networklessons.com/cisco"},{"@type":"ListItem","position":3,"name":"CCIE Routing &amp; Switching Written","item":"https://networklessons.com/cisco/ccie-routing-switching-written"},{"@type":"ListItem","position":4,"name":"Introduction to IS-IS"}]},{"@type":"WebSite","@id":"https://networklessons.com/#website","url":"https://networklessons.com/","name":"NetworkLessons.com","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://networklessons.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://networklessons.com/#/schema/person/a210ceb8a2b14b76e03c27d3c65850c2","name":"Rene Molenaar","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://networklessons.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/d676347ef395e3b3a6a056aaf5546311?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/d676347ef395e3b3a6a056aaf5546311?s=96&d=mm&r=g","caption":"Rene Molenaar"},"description":"René - CCIE #41726 is the creator of Networklessons.com where he writes about networking topics like Cisco, Routing, Switching, Linux, Wireless &amp; Security. He also created GNS3Vault.com where people can study Cisco labs for free.","sameAs":["https://networklessons.com"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//player.vimeo.com' />
+<link rel='dns-prefetch' href='//cdn.networklessons.com' />
+<link rel='dns-prefetch' href='//googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//googleoptimize.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//tag.getdrip.com' />
+<link rel='dns-prefetch' href='//facebook.com' />
+
+<link href='https://cdn.networklessons.com' rel='preconnect' />
+<link rel='stylesheet' id='mp-theme-css' href='https://cdn.networklessons.com/wp-content/plugins/memberpress/css/ui/theme.css?ver=1.11.34' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://cdn.networklessons.com/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2' type='text/css' media='all' />
+<style id='safe-svg-svg-icon-style-inline-css' type='text/css'>
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='arve-css' href='https://cdn.networklessons.com/wp-content/plugins/advanced-responsive-video-embedder/build/main.css?ver=755e5bf2bfafc15e7cc1' type='text/css' media='all' />
+<link rel='stylesheet' id='arve-pro-css' href='https://cdn.networklessons.com/wp-content/plugins/arve-pro/build/main.css?ver=eea34735566740155d0f' type='text/css' media='all' />
+<link rel='stylesheet' id='emnl-custom-styling-various-plugins-css' href='https://cdn.networklessons.com/wp-content/plugins/emnl-custom-css-various-plugins/emnl-custom-css-various-plugins.css?ver=1720772937' type='text/css' media='all' />
+<link rel='stylesheet' id='affwp-forms-css' href='https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/css/forms.min.css?ver=2.26.0' type='text/css' media='all' />
+<link rel='stylesheet' id='ez-toc-css' href='https://cdn.networklessons.com/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.69.1' type='text/css' media='all' />
+<style id='ez-toc-inline-css' type='text/css'>
+div#ez-toc-container .ez-toc-title {font-size: 100%;}div#ez-toc-container .ez-toc-title {font-weight: 700;}div#ez-toc-container ul li {font-size: 100%;}div#ez-toc-container ul li {font-weight: 500;}div#ez-toc-container nav ul ul li {font-size: 90%;}div#ez-toc-container {background: #f9f9f9;border: 1px solid #e6e6e6;}div#ez-toc-container p.ez-toc-title , #ez-toc-container .ez_toc_custom_title_icon , #ez-toc-container .ez_toc_custom_toc_icon {color: #000000;}div#ez-toc-container ul.ez-toc-list a {color: #5381b5;}div#ez-toc-container ul.ez-toc-list a:hover {color: #5381b5;}div#ez-toc-container ul.ez-toc-list a:visited {color: #5381b5;}
+.ez-toc-container-direction {direction: ltr;}.ez-toc-counter ul{counter-reset: item ;}.ez-toc-counter nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }.ez-toc-widget-direction {direction: ltr;}.ez-toc-widget-container ul{counter-reset: item ;}.ez-toc-widget-container nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }
+</style>
+<link rel='stylesheet' id='if-menu-site-css-css' href='https://cdn.networklessons.com/wp-content/plugins/if-menu/assets/if-menu-site.css?ver=6.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='networklessons-style-css' href='https://cdn.networklessons.com/wp-content/themes/networklessons/dist/app.css?ver=1724843461' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-style-css' href='https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/magnific-popup.css?ver=1.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bellows-css' href='https://cdn.networklessons.com/wp-content/plugins/bellows-pro/pro/assets/css/bellows.min.css?ver=1.4.3' type='text/css' media='all' />
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="jquery-cookie-js-extra">
+/* <![CDATA[ */
+var affwp_scripts = {"ajaxurl":"https:\/\/networklessons.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/js/jquery.cookie.min.js?ver=1.4.0" id="jquery-cookie-js"></script>
+<script type="text/javascript" id="affwp-tracking-js-extra">
+/* <![CDATA[ */
+var affwp_debug_vars = {"integrations":{"memberpress":"MemberPress"},"version":"2.26.0","currency":"USD","ref_cookie":"affwp_ref","visit_cookie":"affwp_ref_visit_id","campaign_cookie":"affwp_campaign"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/affiliate-wp/assets/js/tracking.min.js?ver=2.26.0" id="affwp-tracking-js"></script>
+<link rel="https://api.w.org/" href="https://networklessons.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://networklessons.com/wp-json/wp/v2/posts/44492" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://networklessons.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.6.2" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://networklessons.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklessons.com%2Fcisco%2Fccie-routing-switching-written%2Fintroduction-to-is-is" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://networklessons.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklessons.com%2Fcisco%2Fccie-routing-switching-written%2Fintroduction-to-is-is&#038;format=xml" />
+<style id="bellows-custom-generated-css">
+
+/** Bellows Custom Tweaks (General Settings) **/
+
+/** Bellows Custom Tweaks (General Settings) **/
+/* More compact look of menu */
+.bellows .bellows-nav * { line-height: 1.75em; }
+.bellows .bellows-nav .bellows-submenu .bellows-target { padding-left: 20px;}
+.bellows .bellows-nav .bellows-target,
+.bellows .bellows-nav .bellows-submenu .bellows-target { padding: 2px;}
+
+/* Move toggle icons to left instead of right of text labels */
+.bellows .bellows-nav .bellows-subtoggle { width: 30px; left:0; }
+.bellows .bellows-nav .bellows-menu-item > .bellows-target > .bellows-target-text { margin-left: 30px; }
+.bellows .bellows-nav .bellows-subtoggle .fa { top: 40%; }
+
+/* Move toggle icons and lower level items to the right */
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-1 .bellows-subtoggle { left: 25px; }
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-1 .bellows-target { padding-left: 25px; }
+
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-2 .bellows-subtoggle { left: 50px; }
+.bellows .bellows-nav .bellows-submenu .bellows-item-level-2 .bellows-target { padding-left: 50px; }
+
+
+/* SIDEBAR ONLY STYLING */
+
+/* Set all text to default black */
+#sidebar .bellows .bellows-nav a.bellows-target { color: #000000 }
+
+/* Set parent menu items bold and colored */
+#sidebar .bellows.bellows-main .bellows-nav .bellows-current-menu-item > .bellows-target,
+#sidebar .bellows.bellows-main .bellows-nav .bellows-current-menu-ancestor > .bellows-target { color:#557fae; font-weight: bold; }
+
+/* Set current post bold and colored */
+#sidebar .bellows .bellows-current-menu-item { font-weight: bold; color:#557fae; }
+
+/* Toggle icons on same height */
+#sidebar .bellows .bellows-nav .bellows-subtoggle .fa { top: 44%; }
+
+
+
+/* Status: Loaded from Transient */
+
+</style>		<script type="text/javascript">
+		var AFFWP = AFFWP || {};
+		AFFWP.referral_var = 'affid';
+		AFFWP.expiration = 1;
+		AFFWP.debug = 0;
+
+
+		AFFWP.referral_credit_last = 0;
+		</script>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to manual -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"visitorLoginState":"logged-in","visitorType":"subscriber","visitorEmail":"harthomp@protonmail.com","visitorEmailHash":"30617de159321682ca448e5d89fc5cae66131a43cdfff8865f5d749c58146885","visitorId":65289,"visitorIP":"203.63.201.230","pagePostType":"post","pagePostType2":"single-post","pageCategory":["ccie-routing-switching-written","is-is"],"IsActiveMember":"true","UserFullName":"Harrison Thompson buckley"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script>
+		if (typeof gtag == "undefined") {
+			function gtag(){dataLayer.push(arguments);}
+		}
+
+		gtag("consent", "default", {
+			"analytics_storage": "granted",
+			"ad_storage": "granted",
+			"ad_user_data": "granted",
+			"ad_personalization": "granted",
+			"functionality_storage": "granted",
+			"security_storage": "granted",
+			"personalization_storage": "granted",
+		});
+</script>
+<script data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWFSBS');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel="apple-touch-icon" sizes="180x180" href="/wp-content/uploads/fbrfg/apple-touch-icon.png?v=69P4gG4Gpq">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/fbrfg/favicon-32x32.png?v=69P4gG4Gpq">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/uploads/fbrfg/favicon-16x16.png?v=69P4gG4Gpq">
+<link rel="manifest" href="/wp-content/uploads/fbrfg/site.webmanifest?v=69P4gG4Gpq">
+<link rel="mask-icon" href="/wp-content/uploads/fbrfg/safari-pinned-tab.svg?v=69P4gG4Gpq" color="#5381b5">
+<link rel="shortcut icon" href="/wp-content/uploads/fbrfg/favicon.ico?v=69P4gG4Gpq">
+<meta name="msapplication-TileColor" content="#5381b5">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml?v=69P4gG4Gpq">
+<meta name="theme-color" content="#5381b5">		<style>
+			.algolia-search-highlight {
+				background-color: #fffbcc;
+				border-radius: 2px;
+				font-style: normal;
+			}
+		</style>
+		<script type="application/ld+json" class="emnl-schema-breadcrumbs">{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 0,"name": "Home","item": "https://networklessons.com"},{"@type": "ListItem","position": 1,"name": "IS-IS","item": "https://networklessons.com/is-is"},{"@type": "ListItem","position": 2,"name": "Introduction to IS-IS","item": "https://networklessons.com/is-is/introduction-to-is-is"}]}</script>
+</head>
+
+
+<body class="post-template-default single single-post postid-44492 single-format-standard logged-in" data-theme="light">
+
+<!-- GTM Container placement set to manual -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWFSBS" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script>
+  if ( localStorage.getItem('siteTheme') ) {
+    document.body.setAttribute('data-theme', localStorage.getItem('siteTheme'));
+  }
+</script>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+	<header class="site-header">
+		        <div class="site-header-inner">
+            <div class="container">
+                <div class="row sm-gutters main-row">
+                    <div class="col-lg-4 col-8">
+                        <a href="https://networklessons.com/" class="logo">
+                            <img fetchpriority="high" width="524" height="141" src="https://cdn.networklessons.com/wp-content/themes/networklessons/assets/images/logo.svg" alt="NetworkLessons.com" />
+                        </a>
+                    </div>
+                                                                <div class="col-lg-8 col-4 col-navigation">
+                            <nav id="site-navigation" class="main-navigation">
+                                <div class="menu-primary-container"><ul id="primary-menu" class="menu"><li id="menu-item-10143" class="expanded menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10143"><a href="https://networklessons.com/courses">Courses <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-59830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59830"><a href="https://networklessons.com/cisco">Cisco <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-65214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65214"><a href="https://networklessons.com/cisco/ccna-200-301">CCNA 200-301</a></li>
+		<li id="menu-item-65219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65219"><a href="https://networklessons.com/cisco/ccnp-encor-350-401">CCNP ENCOR 350-401 v1.1</a></li>
+		<li id="menu-item-65218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65218"><a href="https://networklessons.com/cisco/ccnp-enarsi-300-410">CCNP ENARSI 300-410 v1.1</a></li>
+		<li id="menu-item-65217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65217"><a href="https://networklessons.com/cisco/ccie-enterprise-infrastructure">CCIE Enterprise Infrastructure</a></li>
+		<li id="menu-item-65216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65216"><a href="https://networklessons.com/cisco/asa-firewall">ASA Firewall</a></li>
+		<li id="menu-item-65774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65774"><a href="https://networklessons.com/cisco/cisco-sd-wan">Cisco SD-WAN</a></li>
+	</ul>
+</li>
+	<li id="menu-item-59831" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59831"><a href="https://networklessons.com/routing-switching">Routing &#038; Switching <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-65232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65232"><a href="https://networklessons.com/subnetting">Subnetting</a></li>
+		<li id="menu-item-65233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65233"><a href="https://networklessons.com/switching">Switching</a></li>
+		<li id="menu-item-65231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65231"><a href="https://networklessons.com/spanning-tree">Spanning-Tree</a></li>
+		<li id="menu-item-65222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65222"><a href="https://networklessons.com/frame-relay">Frame-Relay</a></li>
+		<li id="menu-item-65230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65230"><a href="https://networklessons.com/rip">RIP</a></li>
+		<li id="menu-item-65221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65221"><a href="https://networklessons.com/eigrp">EIGRP</a></li>
+		<li id="menu-item-65227" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65227"><a href="https://networklessons.com/ospf">OSPF</a></li>
+		<li id="menu-item-65224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65224"><a href="https://networklessons.com/is-is">IS-IS</a></li>
+		<li id="menu-item-65215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65215"><a href="https://networklessons.com/bgp">BGP</a></li>
+		<li id="menu-item-65226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65226"><a href="https://networklessons.com/multicast">Multicast</a></li>
+		<li id="menu-item-65223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65223"><a href="https://networklessons.com/ipv6">IPv6</a></li>
+		<li id="menu-item-65229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65229"><a href="https://networklessons.com/quality-of-service">Quality of Service</a></li>
+		<li id="menu-item-65225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65225"><a href="https://networklessons.com/mpls">MPLS</a></li>
+	</ul>
+</li>
+	<li id="menu-item-73291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-73291"><a href="#">Data Center <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-73294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73294"><a href="https://networklessons.com/vxlan">VXLAN</a></li>
+	</ul>
+</li>
+	<li id="menu-item-65228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65228"><a href="https://networklessons.com/python">Python</a></li>
+	<li id="menu-item-65234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65234"><a href="https://networklessons.com/uncategorized">Miscellaneous</a></li>
+	<li id="menu-item-70698" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70698"><a href="https://networklessons.com/labs">Labs</a></li>
+	<li id="menu-item-64907" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-64907"><a href="#">Legacy <span class="menu-item-toggle"></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-33774" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33774"><a href="https://networklessons.com/cisco/ccna-routing-switching-icnd1-100-105">CCNA R&#038;S ICND1 100-105</a></li>
+		<li id="menu-item-40575" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-40575"><a href="https://networklessons.com/cisco/ccna-routing-switching-icnd2-200-105">CCNA R&#038;S ICND2 200-105</a></li>
+		<li id="menu-item-20090" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20090"><a href="https://networklessons.com/cisco/ccnp-route">CCNP ROUTE</a></li>
+		<li id="menu-item-20092" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20092"><a href="https://networklessons.com/cisco/ccnp-switch">CCNP SWITCH</a></li>
+		<li id="menu-item-20093" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20093"><a href="https://networklessons.com/cisco/ccnp-tshoot">CCNP TSHOOT</a></li>
+		<li id="menu-item-20089" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20089"><a href="https://networklessons.com/cisco/ccie-routing-switching">CCIE R&#038;S</a></li>
+		<li id="menu-item-38428" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-38428"><a href="https://networklessons.com/cisco/ccie-routing-switching-written">CCIE R&#038;S Written</a></li>
+		<li id="menu-item-65220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65220"><a href="https://networklessons.com/cisco/evolving-technologies">Evolving Technologies</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8339"><a href="https://networklessons.com/new-lessons"><i class="fa fa-plus"></i> New Lessons</a></li>
+	<li id="menu-item-64135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64135"><a href="https://networklessons.com/updated-lessons"><i class="fas fa-pen"></i> Updated Lessons</a></li>
+	<li id="menu-item-7347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7347"><a href="https://networklessons.com/member-ideas"><i class="fa fa-lightbulb"></i> Lesson Ideas</a></li>
+</ul>
+</li>
+<li id="menu-item-8715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8715"><a href="https://forum.networklessons.com">Forum</a></li>
+<li id="menu-item-23483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23483"><a href="https://networklessons.com/support">Support</a></li>
+<li id="menu-item-65967" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-65967"><a href="#">Tools <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-65968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65968"><a href="https://www.cloudshark.org/collections/WTRpgLI-GQSDfgzkQixICg">Packet Captures</a></li>
+	<li id="menu-item-65969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65969"><a href="https://notes.networklessons.com">Notes</a></li>
+	<li id="menu-item-65970" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65970"><a href="https://networklessons.com/tools-and-resources">Resources</a></li>
+	<li id="menu-item-68327" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68327"><a href="https://networklessons.com/networklessons-exams">Practice Exams</a></li>
+</ul>
+</li>
+<li id="menu-item-22148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-22148"><a href="#"><i class="fa fa-user"></i> <span class="menu-item-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-5629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5629"><a href="https://networklessons.com/myaccount">My Account Settings</a></li>
+	<li id="menu-item-68092" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68092"><a href="https://networklessons.com/member-dashboard">Member Dashboard</a></li>
+	<li id="menu-item-22285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22285"><a href="https://networklessons.com/upgrade-to-annual-membership"><b><font color="#FFC469">UPGRADE TO ANNUAL &#038; Get 2 Months FREE!</font></b></a></li>
+	<li id="menu-item-56969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56969"><a href="https://networklessons.com/wp-login.php?action=logout">Logout</a></li>
+</ul>
+</li>
+</ul></div>                                <div class="main-navigation-close">
+                                    <i class="far fa-times"></i>
+                                </div>
+                            </nav>
+                            <div class="main-navigation-toggle">
+                                <span class="icon"></span>
+                            </div>
+                            <div class="d-none d-xl-block">
+                                
+
+<form role="search" method="get" class="search-form" action="https://networklessons.com/">
+    <label for="search-form-66e2e14f7997f" class="sr-only">
+        <span class="screen-reader-text">Search for:</span>
+    </label>
+
+    <div class="input-group">
+        <input type="search" id="search-form-66e2e14f7997f" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" />
+        <div class="input-group-append">
+            <button type="submit" class="search-submit btn btn-white">
+                <span class="screen-reader-text">Search</span>
+                <i class="far fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="fullpage-overlay main-navigation-overlay"></div>
+	</header>
+    
+            <div class="d-xl-none">
+            
+
+<form role="search" method="get" class="search-form" action="https://networklessons.com/">
+    <label for="search-form-66e2e14f799e1" class="sr-only">
+        <span class="screen-reader-text">Search for:</span>
+    </label>
+
+    <div class="input-group">
+        <input type="search" id="search-form-66e2e14f799e1" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" />
+        <div class="input-group-append">
+            <button type="submit" class="search-submit btn btn-white">
+                <span class="screen-reader-text">Search</span>
+                <i class="far fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>        </div>
+    
+	<div class="site-content container">
+    <div class="breadcrumbs" style="font-size: 12px;">You are here: <a href="https://networklessons.com">Home</a> » <a href="https://networklessons.com/is-is">IS-IS</a></div>	<div class="site-content-row row">
+	<div id="primary" class="content-area col-md-8">
+		<main id="main" class="site-main">
+                            <div class="site-actions-toolbar d-md-none">
+                    <div class="site-action js--dark-mode">
+                        <i class="far fa-adjust"></i>
+                    </div>
+                </div>
+            
+		
+<article id="post-44492" class="main-post post-44492 post type-post status-publish format-standard has-post-thumbnail hentry category-ccie-routing-switching-written category-is-is">
+	<header class="entry-header">
+                            <h1 class="entry-title">Introduction to IS-IS</h1>        	</header>
+	<div class="entry-content">
+                    <div class="the-content">
+                <div id="ez-toc-container" class="ez-toc-v2_0_69_1 counter-hierarchy ez-toc-counter ez-toc-custom ez-toc-container-direction">
+<div class="ez-toc-title-container"><p class="ez-toc-title">Lesson Contents</p>
+</div><nav><ul class='ez-toc-list ez-toc-list-level-1 ' ><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-1" href="#Areas_and_Router_Roles" title="Areas and Router Roles">Areas and Router Roles</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-2" href="#LSPs_Link_State_Packets" title="LSPs (Link State Packets)">LSPs (Link State Packets)</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-3" href="#NET_Network_Entity_Title" title="NET (Network Entity Title)">NET (Network Entity Title)</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-4" href="#Metrics" title="Metrics">Metrics</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-5" href="#Conclusion" title="Conclusion">Conclusion</a></li></ul></nav></div>
+<p>IS-IS is an IGP, link-state routing protocol, similar to OSPF. It forms neighbor adjacencies, has areas, exchanges link-state packets, builds a link-state database and runs the Dijkstra SPF algorithm to find the best path to each destination, which is installed in the routing table.</p>
+<p>Back when OSPF and IS-IS were developed, IP wasn&#8217;t the dominant protocol that it is today. When people think of OSI they automatically think of the <em>OSI-model</em> but back then, ISO (International Organization for Standardization) also created something similar to IP and UDP called <strong>CLNP (Connectionless-mode Network Protocol) and CLNS (Connectionless-mode Network Service).</strong></p>
+<p>ISO also uses some different terminology, for example:</p>
+<ul>
+<li>Router =<strong> Intermediate system</strong></li>
+<li>Host = End system</li>
+</ul>
+<p>Unlike OSPF which was developed by the IETF (Internet Engineering Task Force), IS-IS was <strong>originally developed by DEC for CLNS</strong>, not IP and this is why it&#8217;s called IS-IS (<em>Intermediate System &#8211; Intermediate System</em>).</p>
+<p>Later, IS-IS was adapted so that it could also route IP and is then called <strong>integrated IS-IS</strong>.</p>
+<p>Nowadays, we use IP everywhere so you might wonder why we care about this. When working with IS-IS, you will see some references to CLNP/CLNS here and there. For example, when configuring a router ID (called a Network Entity Title), it has to be configured with the <strong>NSAP (Network Service Access Point Address)</strong> format. NSAP is similar to an IP address, and it is not automatically configured so we have to understand its format.</p>
+<p>IS-IS also rides directly on top of an Ethernet header, using its own header format. It&#8217;s not encapsulated in an IP packet like other routing protocols (OSPF and EIGRP) are:</p>
+<p><img decoding="async" class="alignnone size-full wp-image-44684" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-pdu-addressing-ethernet.png" alt="IS-IS PDU Addressing Ethernet" width="594" height="51" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-pdu-addressing-ethernet.png 594w, https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-pdu-addressing-ethernet-300x26.png 300w" sizes="(max-width: 594px) 100vw, 594px" /></p>
+<p>IS-IS is a highly scalable routing protocol, which is why it is used often on large service provider network backbones. In this lesson I will give you an overview of what IS-IS is and how it works.</p>
+<h2><span class="ez-toc-section" id="Areas_and_Router_Roles"></span>Areas and Router Roles<span class="ez-toc-section-end"></span></h2>
+<p>IS-IS uses different areas where the<strong> entire router sits in an area</strong>, not just one of its interfaces like with OSPF. There is <strong>no backbone area, the backbone is formed by a string of routers</strong>.</p>
+<p>There are three types of routers:</p>
+<ul>
+<li><strong>Level 1 system</strong>: this is an <strong>intra-area router</strong>, it only knows what the local area looks like and will only learn prefixes from its own area. It creates a level 1 link-state database and SPF tree for the area.</li>
+<li><strong>Level 2 system</strong>: this is a <strong>backbone router</strong> that <strong>knows all intra-area and inter-area routes</strong>. It creates a level 2 link-state database and SPF tree for the backbone.</li>
+<li><strong>Level 1-2 system</strong>:  this is a router that performs <strong>both roles</strong>. It creates a separate level 1 and 2 link-state database and two SPF trees, one for each database.</li>
+</ul>
+<div class="notice-box  note   ">Level 1-2 is the default on Cisco IOS routers.</div>
+<p>Similar to other routing protocols like OSPF and EIGRP, IS-IS routers will send hello packets. When you send and receive hello packets, you will form a neighbor adjacency. Routers will <strong>only form neighbor adjacencies with routers that use the same level</strong>.</p>
+<p>Let&#8217;s look at some examples to help you visualize this. Let&#8217;s start with a single area:</p>
+<p><img fetchpriority="high" decoding="async" class="alignnone size-full wp-image-44502" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-single-area-level-1-routers-adjacency.png" alt="is-is single area level 1 routers adjacency" width="402" height="209" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-single-area-level-1-routers-adjacency.png 402w, https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-single-area-level-1-routers-adjacency-300x156.png 300w" sizes="(max-width: 402px) 100vw, 402px" /></p>
+<p>Above we have two routers in a single area. There is only one area so these two routers are configured as level 1 routers. These two routers will form a level 1 neighbor adjacency. Let&#8217;s add a second area:</p>
+<p><img decoding="async" class="alignnone size-full wp-image-44503" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-two-areas-level-1-2-routers-adjacency.png" alt="is-is two areas level 1 2 routers adjacency" width="831" height="209" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-two-areas-level-1-2-routers-adjacency.png 831w, https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-two-areas-level-1-2-routers-adjacency-300x75.png 300w, https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-two-areas-level-1-2-routers-adjacency-768x193.png 768w" sizes="(max-width: 831px) 100vw, 831px" /></p>
+<p>Level 1  routers only know what the local area looks like. If a level 1 router wants to reach something outside of its area, <strong>it has to use a level 2 router</strong>. In each area, we configure one router as a level 1-2 router.</p>
+<p>These level 1-2 routers will establish two neighbor adjacencies:</p>
+<ul>
+<li>Level 1 neighbor adjacency with the router in the same area.</li>
+<li>Level 2 neighbor adjacency with the router in the other area.</li>
+</ul>
+<p>Here is one more example, a larger topology that gives a good overview of the different router levels and adjacencies:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-44505" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-multiple-areas-adjacencies.png" alt="is-is multiple areas adjacencies" width="870" height="695" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-multiple-areas-adjacencies.png 870w, https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-multiple-areas-adjacencies-300x240.png 300w, https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-multiple-areas-adjacencies-768x614.png 768w" sizes="(max-width: 870px) 100vw, 870px" /></p>
+<p>Above you see two interesting things:</p>
+<ul>
+<li>The router in area 4 is a level 2 backbone router. There are no level 1 routers in area 4 so we don&#8217;t need a level 1-2 router there.</li>
+<li>Area 3 has two level 1-2 routers. These routers will form two neighbor adjacencies with each other:
+<ul>
+<li>Level 1 adjacency</li>
+<li>Level 2 adjacency</li>
+</ul>
+</li>
+</ul>
+<p>The level two routers form a continuous string of backbone routers:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-44506" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-backbone-string.png" alt="is-is backbone string" width="870" height="695" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-backbone-string.png 870w, https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-backbone-string-300x240.png 300w, https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-backbone-string-768x614.png 768w" sizes="(max-width: 870px) 100vw, 870px" /></p>
+<h2><span class="ez-toc-section" id="LSPs_Link_State_Packets"></span>LSPs (Link State Packets)<span class="ez-toc-section-end"></span></h2>
+<p>Let&#8217;s talk about how IS-IS exchanges routing information. It uses <strong>LSPs (Link State Packet)</strong> which is similar to OSPF&#8217;s LSAs. In the LSP you will find:</p>
+<ul>
+<li>One or more prefixes</li>
+<li>Adjacent neighbors</li>
+<li>Metric</li>
+</ul>
+<div class="notice-box  note   ">Don&#8217;t confuse the LSP with MPLS&#8217; LSP (Label Switched Path), they use the same acronym.</div>
+<p>Let&#8217;s take a closer look at how IS-IS uses LSPs to exchange routing information. Let&#8217;s start with two routers that are configured to use IS-IS but there is no neighbor adjacency yet:</p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-44637 size-full" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-area-12-level-1.png" alt="is-is routers area 12 level 1" width="644" height="291" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-area-12-level-1.png 644w, https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-area-12-level-1-300x136.png 300w" sizes="(max-width: 644px) 100vw, 644px" /></p>
+<p>Each router will create an LSP (illustrated with the <span style="color: #008000;">green jigsaw</span>) . In the LSP we find the <strong>directly connected networks</strong> that are advertised in IS-IS. A few seconds later, these routes become neighbors:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-44638" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-area-12-level-1-adjacency.png" alt="is-is routers area 12 level 1 adjacency" width="644" height="291" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-area-12-level-1-adjacency.png 644w, https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-area-12-level-1-adjacency-300x136.png 300w" sizes="(max-width: 644px) 100vw, 644px" /></p>
+<p>R1 and R2 are in the same area so they will establish a level 1 neighbor adjacency. These routers will <strong>flood their LSPs</strong> within the area so that everyone knows about all LSPs in the area. The two routers add each others LSP in their database. These routers can now run SPF on their level 1 database and figure out the shortest path to each destination.</p>
+<div class="notice-box  note   ">IS-IS uses something called the DIS / Pseudonode which is similar to OSPF&#8217;s DR/BDR to reduce unneeded flooding.</div>
+<p>Let&#8217;s say we want to connect area 12 to another area, this means we need a level 2 router. Let&#8217;s convert R2 into a level 1-2 router so I can show you what will happen. At this moment, we start with a clean slate so there is no neighbor adjacency between R1 and R2:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-44639" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-area-12-level-1-2.png" alt="is-is routers area 12 level 1-2" width="644" height="355" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-area-12-level-1-2.png 644w, https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-area-12-level-1-2-300x165.png 300w" sizes="(max-width: 644px) 100vw, 644px" /></p>
+<p>R2 now has a second database, the level 2 database. Besides its level 1 database and level 1 LSP, it now also has a level 2 database. It generates a level 2 LSP and all prefixes for interfaces that are <strong>directly connected</strong> and advertised in IS-IS.</p>
+<div class="notice-box  note   ">Each IS-IS router only creates a single LSP for each level. This LSP carries multiple prefixes.</div>
+<p>A few seconds later, R1 and R2 form a level 1 neighbor adjacency:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-44640" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-area-12-level-1-2-adjacency.png" alt="is-is routers area 12 level 1-2 adjacency" width="644" height="386" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-area-12-level-1-2-adjacency.png 644w, https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-area-12-level-1-2-adjacency-300x180.png 300w" sizes="(max-width: 644px) 100vw, 644px" /></p>
+<p>Once again, R1 and R2 will exchange their level 1 LSPs. R2 receives the level 1 LSP from R1 and it <strong>copies new prefixes from its level 1 database to the LSP in the level 2 database</strong>. In my example, that is 1.1.1.1/32 from R1.</p>
+<p>Let&#8217;s continue this story. I will add a second area now, similar to area 12. There is no connection yet between the two areas but the routers have formed a level 1 neighbor adjacency within the area:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-44642" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-two-areas-level-1-2-adjacency.png" alt="is-is routers two areas level 1-2 adjacency" width="660" height="831" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-two-areas-level-1-2-adjacency.png 660w, https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-routers-two-areas-level-1-2-adjacency-238x300.png 238w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<p>As you can see above, R4 has learned about the 3.3.3.3/32 prefix from R3 and copies this prefix from the LSP in the level 1 database to its own LSP in the level 2 database.</p>
+<p>Now we will create a connection between the two areas and enable IS-IS on this link Something exciting will happen:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-44699" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-two-areas-full-reachability.png" alt="is-is two areas full reachability" width="647" height="1020" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-two-areas-full-reachability.png 647w, https://cdn.networklessons.com/wp-content/uploads/2017/05/is-is-two-areas-full-reachability-190x300.png 190w" sizes="(max-width: 647px) 100vw, 647px" /></p>
+<p>R2 and R4 are in different areas and will establish a <strong>level 2 neighbor adjacency</strong>. There are a couple of things that will happen:</p>
+<ul>
+<li>The 192.168.24.0/24 prefix is added in the level 1 LSP of R2 and R1 learns about it.</li>
+<li>The 192.168.24.0/24 prefix is added in the level 2 LSP of R2.</li>
+<li>The 192.168.24.0/24 prefix is added in the level 1 LSP of R4 and R3 learns about it.</li>
+<li>The 192.168.24.0/24 prefix is added in the level 2 LSP of R4.</li>
+<li>The level 2 LSPs are flooded within the backbone, R2 and R4 will receive each others level 2 LSPs.
+<ul>
+<li>R2 learns about 192.168.24.0/24, 192.168.34.0/24, 3.3.3.3/32 and 4.4.4.4/32 from R4.</li>
+<li>R4 learns about 192.168.24.0/24, 192.168.12.0/24, 1.1.1.1/32 and 2.2.2.2/32 from R2.</li>
+</ul>
+</li>
+</ul>
+<p>The two backbone routers R2 and R4 now <strong>know about every prefix</strong> out there.</p>
+<p>If you look at the level 1 database of R1 and R3, you can see they don&#8217;t learn about prefixes from the other area. This is how IS-IS works, a level 1 router will <strong>never learn about prefixes from other areas</strong>. So, how do we get out of our own area?</p>
+<p>Once a level 1-2 router is connected to another area, it will set a special bit in its level 1 LSP called the <strong>attached bit</strong>. When a level 1 router sees this, it will <strong>generate a default route that is pointed to the level 1-2 router</strong>.</p>
+<div class="notice-box  note   ">IS-IS also prefers intra-area routes (level 1 database) over inter-area routes (level 2 database). If a prefix is found in both databases, the router will use the information from the level 1 database.</div>
+<p>Since IS-IS is a link-state routing protocol, it is important that the databases are synchronized. Each LSP has a sequence number that is increased whenever there is a change in the LSP. LSPs are acknowledged using an SNP (Sequence Number Packet) that comes in two flavors:</p>
+<ul>
+<li>CSNP (Complete SNP)</li>
+<li>PSNP (Partial SNP)</li>
+</ul>
+<p>The CSNP has a list of all LSPs in the database, it is used to inform other routers that have missing or outdated information. The PSNP is used to request one or more LSPs and also used to acknowledge the receipt of one or more LSPs.</p>
+<h2><span class="ez-toc-section" id="NET_Network_Entity_Title"></span>NET (Network Entity Title)<span class="ez-toc-section-end"></span></h2>
+<p>The NET (Network Entity Title) is the unique identifier for each IS-IS router. Most routing protocols use the highest IP address as a router/system ID but alas, IS-IS was not developed with IP in mind. The NET is based on an NSAP address and has to be configured manually so we have to understand it.</p>
+<p>Here&#8217;s what it looks like:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-44676" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-format-is-is.png" alt="network entity title format is-is" width="697" height="128" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-format-is-is.png 697w, https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-format-is-is-300x55.png 300w" sizes="(max-width: 697px) 100vw, 697px" /></p>
+<p>The NET consists of two &#8220;major&#8221; parts and can be anywhere between 8 and 20 bytes:</p>
+<ul>
+<li><strong>IDP (Initial Domain Part)</strong></li>
+<li><strong>DSP (Domain Specific Part)</strong></li>
+</ul>
+<p>The IDP is used to tell to which routing domain you belong and has two parts:</p>
+<ul>
+<li><strong>AFI (Authority and Format Identifier): </strong>The AFI identifies the administrative authority that is responsible for assigning you addressing. The AFI coding is administered by ISO.</li>
+<li><strong>IDI (Initial Domain Identifier):</strong> The IDI depends on the authority. They will typically use a different value for each customer that refers to a (sub) domain number.</li>
+</ul>
+<p>It&#8217;s very unlikely that you will ever see this as IS-IS is pretty much used only on private networks. A possible scenario could be where a customer runs IS-IS with a service provider, where the provider assigns the IDP to a customer.</p>
+<p>On private networks, you have two options:</p>
+<ul>
+<li>Use <strong>AFI 49</strong> which is reserved for private networks. If you use this, the <strong>IDI is optional</strong>.</li>
+<li><strong>Don&#8217;t use the IDP</strong> at all.</li>
+</ul>
+<p>The second part of the NET is the DSP, these are your &#8220;local&#8221; settings:</p>
+<ul>
+<li><strong>High Order DSP</strong>: this is where we enter the area number.</li>
+<li><strong>System ID: </strong>this is a unique ID for each router. You can enter whatever you want as long as it&#8217;s unique within the area.</li>
+<li><strong>NSEL: </strong>the NSEL is similar to a port or socket in IP/TCP. This always has to be a <strong>value of 0</strong>, which indicates the router itself.</li>
+</ul>
+<p>Let&#8217;s look at some examples. The first NET is an example where an authority has assigned you an IDP:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-44677" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-authority.png" alt="network entity title authority" width="624" height="88" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-authority.png 624w, https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-authority-300x42.png 300w" sizes="(max-width: 624px) 100vw, 624px" /></p>
+<p>The area number is 12 and the unique ID of this router is 0000.0000.0001. This could be an example for R1. If you use a private network, you can set the AFI to 49 and forget about the IDI:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-44679" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-private-49.png" alt="network entity title private 49" width="463" height="88" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-private-49.png 463w, https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-private-49-300x57.png 300w" sizes="(max-width: 463px) 100vw, 463px" /></p>
+<p>This is the most common example. This is for a router in area 12 with system ID 0000.0000.0001. One last example, you can remove the IDP completely if you want:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-44680" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-format-without-idp.png" alt="network entity title format without idp" width="392" height="88" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-format-without-idp.png 392w, https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-format-without-idp-300x67.png 300w" sizes="(max-width: 392px) 100vw, 392px" /></p>
+<p>This only leaves the area number, system ID and the NSEL. Let me show you one example of the previous four routers I used and the NETs we could use for them:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-44688" src="https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-is-is-assignment-example.png" alt="network entity title is-is assignment example" width="647" height="543" srcset="https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-is-is-assignment-example.png 647w, https://cdn.networklessons.com/wp-content/uploads/2017/05/network-entity-title-is-is-assignment-example-300x252.png 300w" sizes="(max-width: 647px) 100vw, 647px" /></p>
+<p>Above you can see that all routers use AF 49. R1 and R2 use <span style="color: #0000ff;">0012</span> to indicate their area number, R3 and R4 use <span style="color: #0000ff;">0034</span> as the area number. Here are the system IDs:</p>
+<ul>
+<li>R1: 0000.0000.0001</li>
+<li>R2: 0000.0000.0002</li>
+<li>R3: 0000.0000.0003</li>
+<li>R4: 0000.0000.0004</li>
+</ul>
+<p>The NSEL has to be set to 0 on all routers.</p>
+<h2><span class="ez-toc-section" id="Metrics"></span>Metrics<span class="ez-toc-section-end"></span></h2>
+<p>IS-IS has four metric values that it can work with:</p>
+<ul>
+<li><strong>Default Metric</strong>: every interface has a default metric of 10, no matter the bandwidth. A gigabit interface gets the same metric as a serial link. We can manually configure a different metric for each interface.</li>
+<li><strong>Delay</strong>: similar to how EIGRP uses delay.</li>
+<li><strong>Expense</strong>: the actual monetary cost of a link.</li>
+<li><strong>Error</strong>: similar to how EIGRP uses reliability.</li>
+</ul>
+<p>Cisco IOS routers, however, <strong>only support the default metric </strong>so that&#8217;s one one thing less to worry about.</p>
+<p>The maximum metric to reach any destination is 1023. This is something that can be changed by enabling wide metrics, this increases the maximum metric up to 4261412864.</p>
+<h2><span class="ez-toc-section" id="Conclusion"></span>Conclusion<span class="ez-toc-section-end"></span></h2>
+<p>You have now learned the basics of IS-IS, enough to configure a small network with some areas to get started:</p>
+<ul>
+<li>IS-IS is a link-state routing protocol, similar to OSPF.</li>
+<li>Routers send hello packets and establish neighbor adjacencies.</li>
+<li>We use areas, link-state packets and build one or two link-state databases.</li>
+<li>Not originally created for IP but modified so it supports IP, called integrated IS-IS.</li>
+<li>There are three types of routers:
+<ul>
+<li>level 1: intra-area router</li>
+<li>level 2: inter-area router (backbone router)</li>
+<li>level 1-2: has both roles</li>
+</ul>
+</li>
+<li>Neighbor adjacencies are only formed between routers with the same level.</li>
+<li>The default on Cisco IOS is level 1-2.</li>
+<li>A &#8220;string&#8221; of level 2 routers forms the backbone.</li>
+<li>Each router generates one LSP for each level that it is configured for. Each LSP contains:
+<ul>
+<li>One or more prefixes</li>
+<li>Adjacent neighbors</li>
+<li>Metric</li>
+</ul>
+</li>
+<li>Directly connected interfaces that are configured for IS-IS are added to level 1 LSPs.</li>
+<li>Directly connected interfaces that are configured for IS-IS are added to level 2 LSPs.</li>
+<li>Level 1-2 routers will add prefixes learned from level 1 LSPs to their level 2 LSP.</li>
+<li>Level 1 LSPs are flooded within the area.</li>
+<li>Level 2 LSPs are flooded within the backbone.</li>
+<li>Level 1-2 routers that are connected to another area will set the attached bit in their level 1 LSP.
+<ul>
+<li>Level 1 routers will generate a default route towards the level 1-2 router when they see the attached bit.</li>
+</ul>
+</li>
+<li>Each router requires a NET (Network Entity Title) where we configure the area number and unique system ID.
+<ul>
+<li>AFI 49 without the IDI is the most common option.</li>
+</ul>
+</li>
+<li>There are four metric values:
+<ul>
+<li>Default Metric</li>
+<li>Delay</li>
+<li>Expense</li>
+<li>Error</li>
+</ul>
+</li>
+<li>Cisco IOS only supports the default metric which is always 10, no matter what interface you use. This can be manually configured.</li>
+</ul>
+<p>There is more to explain about IS-IS which I will do in future lessons where we talk about the pseudonode, filtering, leaking- NBMA networks, redistribution and more. For now, I hope this has been useful to understand the basics of IS-IS.</p>
+            </div>
+                	</div>
+</article>
+		</main>
+	</div>
+
+
+<div class="widget-area col-md-4">
+            <div class="site-actions-toolbar d-none d-md-flex">
+            <div class="site-action js--dark-mode">
+                <i class="far fa-adjust"></i>
+            </div>
+        </div>
+        <aside id="secondary">
+        <section id="block-2" class="widget widget_block"><p><div class="urlspecificmenu-toggle">Lessons</div><div class="fullpage-overlay urlspecificmenu-overlay"></div><div class="urlspecificmenu"><div class="urlspecificmenu-close"><i class="far fa-times"></i></div>
+				<h2>Course Contents</h2><p>IS-IS</p><nav id="bellows-main-9020" class="bellows bellows-nojs bellows-main bellows-source-menu bellows-align-full bellows-skin-none bellows-type-accordion bellows-expand-current"><ul id="menu-is-is" class="bellows-nav" data-bellows-config="main"><li id="menu-item-55349" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-current-menu-item bellows-menu-item-55349 bellows-item-level-0 bellows-current-menu-item"><a  href="https://networklessons.com/is-is/introduction-to-is-is" class="bellows-target"><span class="bellows-target-title bellows-target-text">Introduction to IS-IS</span></a></li>
+<li id="menu-item-55350" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55350 bellows-item-level-0"><a  href="https://networklessons.com/is-is/integrated-is-is-configuration-on-cisco-ios" class="bellows-target"><span class="bellows-target-title bellows-target-text">Integrated IS-IS Configuration</span></a></li>
+<li id="menu-item-55351" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55351 bellows-item-level-0"><a  href="https://networklessons.com/is-is/is-is-authentication" class="bellows-target"><span class="bellows-target-title bellows-target-text">IS-IS Authentication</span></a></li>
+<li id="menu-item-55352" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55352 bellows-item-level-0"><a  href="https://networklessons.com/is-is/is-is-dis-and-pseudonode" class="bellows-target"><span class="bellows-target-title bellows-target-text">IS-IS DIS and Pseudonode</span></a></li>
+<li id="menu-item-55353" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55353 bellows-item-level-0"><a  href="https://networklessons.com/is-is/is-is-metric-on-cisco-ios" class="bellows-target"><span class="bellows-target-title bellows-target-text">IS-IS Metric on Cisco IOS</span></a></li>
+<li id="menu-item-55354" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55354 bellows-item-level-0"><a  href="https://networklessons.com/is-is/is-is-redistribution" class="bellows-target"><span class="bellows-target-title bellows-target-text">IS-IS Redistribution</span></a></li>
+<li id="menu-item-55355" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55355 bellows-item-level-0"><a  href="https://networklessons.com/is-is/is-is-summarization" class="bellows-target"><span class="bellows-target-title bellows-target-text">IS-IS Summarization</span></a></li>
+<li id="menu-item-55356" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55356 bellows-item-level-0"><a  href="https://networklessons.com/is-is/is-is-filtering" class="bellows-target"><span class="bellows-target-title bellows-target-text">IS-IS Filtering</span></a></li>
+<li id="menu-item-55357" class="bellows-menu-item bellows-menu-item-type-custom bellows-menu-item-object-custom bellows-menu-item-55357 bellows-item-level-0"><a  href="https://networklessons.com/is-is/is-is-route-leaking" class="bellows-target"><span class="bellows-target-title bellows-target-text">IS-IS Route Leaking</span></a></li>
+</ul></nav></div></p>
+</section>    </aside>
+</div>
+
+</div><!-- end .row -->
+</div><!-- end .container -->
+<div class="container">
+<div class="row">
+
+    <div class="col-12">
+		
+		<div class="cmd_post_nav"><div class="cmd_next"><a href="https://networklessons.com/is-is/integrated-is-is-configuration-on-cisco-ios" rel="next"><strong>Next Lesson</strong><br>Integrated IS-IS Configuration</a></div></div>	    
+        <hr>
+
+		    <div id="comments" class="comments-area discourse-comments-area">
+        <h2 class="comments-title discourse-comments-title">Forum Replies</h2>
+        <ol class="comment-list">		<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for waqar675" src="https://cdn-forum.networklessons.com/letter_avatar_proxy/v4/letter/w/f475e1/64.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/introduction-to-is-is/1725" rel="external" class="url">waqar675</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Dear Rene,</p>
+<p>Great stuff to read.<br>
+Can you please bit more elaborate CSNP and PSNP with examples its good if you capture it in Wireshare as well.</p>
+<p>Thanks<br>
+Waqar</p></p></div>
+			</article>
+		</li>
+				<li class="comment odd depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for Zaman.rubd" src="https://cdn-forum.networklessons.com/letter_avatar_proxy/v4/letter/z/45deac/64.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/introduction-to-is-is/1725" rel="external" class="url">Zaman.rubd</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Hi Rene,<br>
+I have little bit confusion about <strong>CLNP (Connectionless-mode Network Protocol) and CLNS (Connectionless-mode Network Service)</strong>. Could you please help me to understand it more easily ? Thx</p>
+<p>br//zaman</p></p></div>
+			</article>
+		</li>
+				<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for lagapidis" src="https://cdn-forum.networklessons.com/user_avatar/forum.networklessons.com/lagapidis/64/4949_2.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/introduction-to-is-is/1725" rel="external" class="url">lagapidis</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Hello Mohammad.</p>
+<p>Think about the CSNP as a packet that contains all of the LSPs from the current database.  If this packet is sent to another router, the recipient will have a complete list of LSPs, in other words, it will have the sending router’s current view of the network.  These packets are similar to OSPF database description packets.</p>
+<p>The PSNP is a partial list of LSPs.  This is sent as a response to a specific request for specific information (for specific prefixes).  This can be used to request an LSP (or LSPs) and also to acknowledge the recipt of an LS</p><strong><a href="https://forum.networklessons.com/t/introduction-to-is-is/1725/4" target="_blank">... Continue reading in our forum</a></strong></p></div>
+			</article>
+		</li>
+				<li class="comment odd depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for lagapidis" src="https://cdn-forum.networklessons.com/user_avatar/forum.networklessons.com/lagapidis/64/4949_2.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/introduction-to-is-is/1725" rel="external" class="url">lagapidis</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Hello Mohammad Zaman</p>
+<p>CLNS is the OSI based service that provides connectionless network services, that is, connectivity between nodes.  It essentially provides capabilities in an OSI network environment similar to those provided by IP and UDP together.  UDP is mentioned here and not TCP because CLNS is strictly a best-effort service.  CLNP is the actual protocol that is used to implement it.</p>
+<p>ISO (the governing body that defines these standards) makes a distiction between the service offered to higher layers (CLNS) and the protocol used to implement it (CLNP).  </p><strong><a href="https://forum.networklessons.com/t/introduction-to-is-is/1725/5" target="_blank">... Continue reading in our forum</a></strong></p></div>
+			</article>
+		</li>
+				<li class="comment even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="Avatar for waqar675" src="https://cdn-forum.networklessons.com/letter_avatar_proxy/v4/letter/w/f475e1/64.png" class="avatar avatar-64 photo avatar-default" height="64" width="64">
+						<b class="fn"><a href="https://forum.networklessons.com/t/introduction-to-is-is/1725" rel="external" class="url">waqar675</a></b>
+						<span class="says screen-reader-text">says:</span><!-- screen reader text -->
+					</div>
+					<div class="comment-metadata">
+						<time datetime=""></time>
+					</div>
+				</footer>
+				<div class="comment-content"><p><p>Hi Laz,</p>
+<p>Thanks for this informative feedback.<br>
+Intermediate system ( Level 1 or Level 2 ) generate only one LSP per level and that LSP contain all prefixes that ISIS is originating.<br>
+-If one LSP is carrying all prefixes,how CSNP comes into play.<br>
+-Is PSNP behaviour is same for Broadcast and Point to Point network types.<br>
+Thanks</p>
+<p>//BR<br>
+Mohammed Waqar</p></p></div>
+			</article>
+		</li>
+		</ol>
+        <div class="respond comment-respond">
+            <p id="reply-title" class="comment-reply-title"><strong><a href="https://forum.networklessons.com/t/introduction-to-is-is/1725" target="_blank">58 more replies!</a></strong> Ask a question or join the discussion by visiting our <a href="https://forum.networklessons.com/t/introduction-to-is-is/1725" target="_blank">Community Forum</a></p>
+        </div>
+    </div>
+        </div>
+
+
+		</div>
+	</div>
+
+	<footer class="site-footer">
+        <div class="container">
+            <div class="site-footer-inner">
+                <div class="copyright">
+                    &copy; 2013 - 2024 NetworkLessons.com 65289                </div>
+                <div class="menu-footer-container"><ul id="footer-menu" class="menu"><li id="menu-item-22469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22469"><a href="https://networklessons.com/disclaimer">Disclaimer</a></li>
+<li id="menu-item-22470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-22470"><a rel="privacy-policy" href="https://networklessons.com/privacy-policy">Privacy Policy</a></li>
+<li id="menu-item-22468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22468"><a href="https://networklessons.com/support">Support</a></li>
+<li id="menu-item-59827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59827"><a href="https://networklessons.com/about-networklessons-com">About</a></li>
+</ul></div>            </div>
+        </div>
+    </footer>
+</div>
+
+<script type="text/javascript">var algolia = {"debug":false,"application_id":"JYCQGPKUUY","search_api_key":"294cbcc6c53b2ccb6f80f0410f485afe","powered_by_enabled":false,"query":"","autocomplete":{"sources":[],"input_selector":"input[name='s']:not(.no-autocomplete):not(#adminbar-search)"},"indices":{"searchable_posts":{"name":"wp_searchable_posts","id":"searchable_posts","enabled":true,"replicas":[]}}};</script><script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.20.2" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" src="https://player.vimeo.com/api/player.js?ver=1.0" id="gtm4wp-vimeo-api-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-vimeo.js?ver=1.20.2" id="gtm4wp-vimeo-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/bundle.js?ver=1702771200" id="networklessons-script-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/jquery.magnific-popup.min.js?ver=1.1.0" id="magnific-popup-jquery-js"></script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/themes/networklessons/dist/magnific-popup/jquery.magnific-popup.js?ver=1.1.0" id="magnific-popup-core-js-js"></script>
+<script type="text/javascript" id="bellows-js-extra">
+/* <![CDATA[ */
+var bellows_data = {"config":{"main":{"folding":"multiple","current":"on","slide_speed":400}},"v":"1.4.3"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cdn.networklessons.com/wp-content/plugins/bellows-pro/assets/js/bellows.min.js?ver=1.4.3" id="bellows-js"></script>
+
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
